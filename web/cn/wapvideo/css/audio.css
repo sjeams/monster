@@ -1,0 +1,237 @@
+.web{
+    overflow: inherit;
+}
+.page-title{
+    height: 50px;
+    display: flex;
+    border-bottom: 1px solid #D2D2D2;
+    align-items: center;
+}
+.go-back{
+    margin-left: 4%;
+    line-height: 50px;
+    vertical-align: middle;
+    width: 11px;
+}
+.go-back img{
+    width: 100%;
+    vertical-align: middle;
+}
+.title-text{
+    font-size: 20.9963px;
+    line-height: 50px;
+    text-align: center;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+    overflow: hidden;
+}
+.close-teacher{
+    font-size: 15px;
+    margin-right: 10px;
+    color: rgba(51,51,51,1);
+}
+.audio-list{
+    padding-left: 3%;
+    box-sizing: border-box;
+    padding-top: 7%;
+    margin-top: 35px;
+}
+.audio-list .audio-title{
+    font-size: 22px;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    color:rgba(51,51,51,1);
+    margin-bottom: 4%;
+}
+.audio-list .audio-box{
+    max-height: 300px;
+    overflow: scroll;
+}
+.audio-list .audio-box a{
+    display: block;
+    height: 57px;
+    line-height: 57px;
+    font-size: 18px;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(68,68,68,1);
+    border-bottom: 1px solid #D2D2D2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 4%;
+    box-sizing: border-box;
+}
+.audio-list .audio-box a span:last-child{
+    width: 20px;
+}
+.audio-list .audio-box a span:last-child img{
+    width: 100%;
+}
+.ui-slider .ui-slider-handle{
+    background:rgba(255,255,255,1);
+    box-shadow: 0 0 7px rgba(8, 177, 233, 0.62);
+}
+.video_scaling{
+    float: inherit;
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    right: 3%;
+}
+.play_area{
+    float: inherit;
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    left: 2%;
+}
+#topHalf{
+    min-height: 300px !important;
+}
+.video-box{
+	position: absolute;
+	width: 33%;
+    height: 33%;
+	top: 0px;
+	right: 0px;
+	z-index: 99;
+    overflow: hidden;
+}
+#toolArea{
+    background: rgba(0, 0, 0, 0.6);
+}
+.progress_area{
+    height: 3.5px;
+    width: 50%;
+    left: 23%;
+    top: 15px;
+    border-radius: 5px;
+}
+#topHalf{
+	/*height: auto !important;*/
+}
+#doc-box{
+	/*height: 30vh !important;*/
+}
+.play_time{
+    float: inherit;
+    position: absolute;
+    right: 10%;
+    font-size: 14px;
+}
+.videoScaling{
+	display: inline-block !important;
+}
+#play_now{
+    position: absolute;
+    left: 7%;
+    color: #fff;
+    top: 10px;
+    font-size: 14px;
+}
+/* SDK弹窗 */
+.SDK-big-box{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.56);
+    display: none;
+}
+.SDK-min-box{
+    margin: 0 auto;
+    margin-top: 45%;
+    width: 90%;
+    /* height: 64%; */
+    border-radius:18px;
+    background: #fff;
+    /* overflow: hidden; */
+}
+.SDK-top{
+    height: 74px;
+    position: relative;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    background:rgba(90, 94, 228, 1);
+}
+.SDK-top .SDK-img-box{
+    height: 103.5px;
+    width: 119px;
+    position: absolute;
+    top: -35px;
+    left: calc((100% - 119px) / 2);
+}
+.SDK-top .SDK-img-box img{
+    width: 100%;
+    height: 100%;
+}
+.SDK-input{
+    height: 70px;
+    border-bottom: 1px solid rgba(221, 221, 221, 1);
+    margin-left: 4%;
+    margin-right: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.SDK-input-img{
+    width: 18px;
+}
+.SDK-input-img img{
+    width: 100%;
+}
+.pass-input{
+    width: 80%;
+    height: 60px;
+    line-height: 60px;
+    font-size:17px;
+    font-family:PingFang-SC-Regular;
+    font-weight:normal;
+    vertical-align: middle;
+    float: left;
+    padding-left: 2%;
+    box-sizing: border-box;
+    outline-style: none;
+}
+.pass-input:empty:before{
+    content: attr(placeholder);   /* element attribute*/
+    color: #ccc;
+}
+/*焦点时内容为空*/
+.pass-input:focus:before{
+    content:none;
+}
+.SDK-bottom{
+    height: 98px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size:18px;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+}
+.SDK-cancel{
+    width:120px;
+    height:33px;
+    background:rgba(193,193,193,1);
+    border-radius:7px;
+    text-align: center;
+    line-height: 33px;
+    color:rgba(255,255,255,1); 
+}
+.SDK-sure{
+    width:120px;
+    height:33px;
+    background:#5A5EE4;
+    border-radius:7px;
+    text-align: center;
+    line-height: 33px;
+    color:rgba(255,255,255,1);
+}

@@ -1,0 +1,37 @@
+.studyPlan{
+    width: 95%;
+    margin: auto;
+}
+.planTitle{
+    font-size:18px;
+    font-family:Microsoft YaHei;
+    font-weight:400;
+    color:rgba(34,34,34,1);
+    text-align: center;
+    margin: 40px auto;
+}
+.studentPlan{
+    margin: auto;
+    line-height: 40px;
+    width:320px;
+    height:40px;
+    border:1px solid rgba(229,229,229,1);
+    text-align: center;
+    font-size:14px;
+    font-family:Microsoft YaHei;
+    font-weight:400;
+    color:rgba(34,34,34,1);
+}
+.studentPlan span{
+    margin: 0 10px;
+    font-size: 16px!important;
+    color: #E5E5E5!important;
+}
+.planContent{
+    font-size:14px;
+    font-family:Microsoft YaHei;
+    font-weight:400;
+    color:rgba(34,34,34,1);
+    line-height:28px;
+    margin-top: 40px;
+}

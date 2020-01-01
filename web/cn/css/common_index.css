@@ -1,0 +1,152 @@
+/*----------导航栏------------*/
+.nav-wrap {
+    width: 100%;
+    min-width: 1200px;
+    border-bottom: 1px #eee solid;
+}
+
+.nav_list {
+    position: relative;
+    padding: 5px 0 0 0;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.nav_bar {
+    margin-top: -4px;
+    vertical-align: text-top !important;
+}
+
+.logo_wrap {
+    /*margin-top: 8px;*/
+    margin-right: 15px;
+}
+
+.nav_bar li.bar-li {
+    position: relative;
+    /*padding: 0 9px;*/
+    float: left;
+    margin-left: 17px;
+}
+
+.nav_bar li.bar-li a {
+    width: 100%;
+    display: block;
+    padding: 15px 0;
+    color: #4a4a4a;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.nav_bar li.bar-li:hover .nav2-wrap {
+    display: block;
+}
+
+.nav_bar li.bar-li a:hover {
+    color: #2f318b;
+}
+
+.nav_bar li.bar-li.on {
+    border-bottom: 2px #2f318b solid;
+}
+
+.nav_bar li.bar-li.on a {
+    color: #2f318b;
+}
+
+.search-wrap {
+    position: absolute;
+    bottom: 12px;
+    font-size: 0;
+    height: 28px;
+    right: 0;
+    border: 1px #3e4093 solid;
+    border-radius: 20px;
+}
+
+.search_int {
+    vertical-align: middle;
+    outline: none;
+    padding: 0 10px 0 20px;
+    width: 70px;
+    height: 28px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: none;
+}
+
+.search_int::-webkit-input-placeholder {
+    color: #6f71e7;
+}
+
+.search_int:-moz-input-placeholder {
+    color: #6f71e7;
+}
+
+.search_int:-ms-input-placeholder {
+    color: #6f71e7;
+}
+
+.search_btn {
+    background: #3e4093;
+    width: 48px;
+    height: 28px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    line-height: 28px;
+}
+
+.search_btn:hover {
+    cursor: pointer;
+}
+
+.nav2-wrap {
+    z-index: 99;
+    display: none;
+    position: absolute;
+    left: -6px;
+    /*width: 100%;*/
+    top: 33px;
+    padding: 18px 5px 0;
+    background: url("../images-3/crow-6.png") no-repeat 24px 13px;
+}
+
+.nav2-list {
+    min-width: 100px;
+    border-top: 2px solid #5A5EE4;
+    background: #ffffff;
+}
+
+.nav2-list li {
+    text-align: left;
+    float: none;
+    margin: 0 7px;
+    padding: 0;
+    border-bottom: 1px dashed #cccccc;
+}
+.nav2-list li a:hover {
+    color: #5A5EE4!important;
+}
+
+
+.nav2-list li:last-child {
+    border-bottom: none;
+}
+
+.nav2-list li a {
+    font-size: 16px!important;
+    color: #4a4a4a!important;
+    padding: 5px 0 5px 0!important;
+    line-height: 38px;
+}
+.kfz_icon {
+    width: 38px;
+    top: -5px;
+    right: 15px;
+}
+.hotImg {
+    height: 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

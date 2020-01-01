@@ -1,0 +1,134 @@
+.w12 {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.color_r {
+    color: #ff0000;
+}
+
+.details_wrap {
+    background: url("/cn/images/c_bg2.png") no-repeat 0 0, #ffffff;
+}
+
+.top_btn_wrap {
+    padding: 100px 0 0 0;
+}
+
+.top_btn {
+    width: 105px;
+    height: 36px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 36px;
+    font-size: 22px;
+    display: block;
+    margin: 25px auto 40px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;;
+    background: #ffffff;
+    color: #ff0000;
+}
+
+.banner_1 {
+    height: 370px;
+    background: rgba(62, 59, 73, 0.4);
+}
+
+.pusher_info {
+    width: 415px;
+    height: 370px;
+    background: rgba(151, 150, 156, 0.4);
+}
+
+.details_text {
+    padding: 15px 20px;
+    /*font-size: 14px;*/
+    line-height: 24px;
+    border: 2px solid #93a6a9;
+}
+
+.pusher_name {
+    font-size: 26px;
+    color: #ffff00;
+    width: 280px;
+   height: 70px;
+    overflow: hidden;
+}
+
+.pusher_mark {
+    margin: 15px 0;
+    font-size: 22px;
+    color: #ffff00;
+}
+
+.data_info p {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.mark_wrap {
+    margin-top: 70px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.crow_3 {
+    left: -50px;
+    top: 10px;
+}
+
+.slide-box {
+    width: 440px;
+    height: 290px;
+    padding: 0 100px;
+    margin-top: 40px;
+    margin-right: 70px;
+    overflow: hidden;
+}
+
+.slide-box .up-img {
+    width: 440px;
+    height: 290px;
+    /*overflow: hidden;*/
+}
+
+.crow {
+    width: 53px;
+    height: 53px;
+    text-align: center;
+    line-height: 53px;
+    top: 50%;
+    margin-top: -26px;
+    background: #bfbfbf;
+}
+
+.crow:hover {
+    background: #959595;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.page_wrap {
+    padding: 40px 25px;
+}
+
+.page_wrap a {
+    font-size: 18px;
+    line-height: 40px;
+    color: #000000;
+}
+
+.page_wrap a:hover {
+    color: #ff0000;
+}
