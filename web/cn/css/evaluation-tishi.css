@@ -1,0 +1,123 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.tishi-bg{
+    width: 100%;
+    height: 100%;
+    background: url("../images/evaluation/test-bigBG.jpg") no-repeat;
+    background-size: cover;
+}
+.tishi-in{
+    width: 1000px;
+    height: 90%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -500px;
+    transform: translate(0,-50%);
+}
+.tishi-top{
+    width: 100%;
+    height: 84px;
+    background-color: #3a4d58;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.tishi-con{
+    width: 100%;
+    height:auto;
+    overflow: auto;
+    position: absolute;
+    top: 84px;
+    bottom: 0;
+    left: 0;
+}
+
+
+.t-t-c{
+    width: 660px;
+    font-size: 30px;
+    color: white;
+    padding-left: 50px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.t-t-r:hover{
+    cursor: pointer;
+}
+.t-c-center h4{
+    font-size: 22px;
+    color: #333333;
+    margin: 20px 0;
+    text-align: center;
+}
+.t-c-border{
+    width: 456px;
+    margin: 0 auto;
+    border: 1px #d2d2d2 solid;
+    padding: 20px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+@media screen and (min-width:1900px){
+    .t-c-border{
+       margin-bottom: 80px;
+    }
+}
+.t-c-border ul li{
+    color: #333333;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+.t-c-border ul li span{
+    color: #959595;
+    margin-right: 6px;
+}
+.t-c-border ul li:last-child{
+    margin-bottom: 0;
+}
+.come_cp{
+    width: 188px;
+    height: 46px;
+    line-height: 46px;
+    background-color: #2e373d;
+    color: white;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 38px;
+    font-size: 18px;
+}
+@media screen and (min-width:1400px){
+    .tishi-con{
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/*小屏幕缩小间距 尽量不要出现滚动条*/
+@media screen and (max-width:1400px){
+    .tishi-con{
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .t-c-center h4{
+        margin: 10px 0;
+    }
+    .come_cp{
+        margin-top: 10px;
+    }
+}
