@@ -14,11 +14,11 @@ class AdminController extends ApiControl {
 
     public $enableCsrfValidation = false;
 
-
+    public $layout = false;
     public function actionAdminMeanu()
     {
-        // var_dump(111);die;
        return $this->render("AdminMeanu");
+    // return  $this->renderPartial("AdminMeanu");
     }
 
 
