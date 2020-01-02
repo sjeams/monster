@@ -10,6 +10,8 @@ namespace app\modules\admin\controllers;
 
 use yii;
 use app\libs\ApiControl;
+
+use app\modules\admin\models\AdminInit;
 class ApiController extends ApiControl {
 
     public $enableCsrfValidation = false;
@@ -34,23 +36,26 @@ class ApiController extends ApiControl {
         "href"=>"/layuimini/page/welcome-1.html?mpi=m-p-i-0", 
       ));
       //列表
-      $menuInfo=array('menuInfo'=>array(
-        'currency'=>array(
-            "title"=>"常规管理", 
-            "icon"=>"fa fa-address-book", 
-            "child"=> array(),
-        ),
-        'component'=>array(
-            "title"=>"组件管理", 
-            "icon"=>"fa fa-lemon-o", 
-            "child"=> array(),      
-        ),
-        'other'=>array(
-          "title"=>"其它管理", 
-          "icon"=>"fa fa-slideshare", 
-          "child"=> array(),      
-        ),
-      ));
+      // $menuInfo=array('menuInfo'=>array(
+      //   'currency'=>array(
+      //       "title"=>"常规管理", 
+      //       "icon"=>"fa fa-address-book", 
+      //       "child"=> array(),
+      //   ),
+      //   'component'=>array(
+      //       "title"=>"组件管理", 
+      //       "icon"=>"fa fa-lemon-o", 
+      //       "child"=> array(),      
+      //   ),
+      //   'other'=>array(
+      //     "title"=>"其它管理", 
+      //     "icon"=>"fa fa-slideshare", 
+      //     "child"=> array(),      
+      //   ),
+      // ));
+      $menuInfo= AdminInit::getAdminIint();  //后台界面菜单
+      // var_dump($menuInfo['menuInfo']['currency']['child'][0]['child']);die;
+      // print_r(json_encode($menuInfo['menuInfo']['currency']['child'][0]['child']));die;
       $data= array_merge($clearInfo,$homeInfo,$logoInfo,$menuInfo);
       echo json_encode($data);
     }

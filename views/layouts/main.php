@@ -23,8 +23,14 @@
 </head>
 <body class="layui-layout-body layuimini-all">
 <div class="layui-layout layui-layout-admin">
-
-    <div class="layui-header header">
+<?php use app\commands\background\NavWidget;?>
+<?php NavWidget::begin(['data' => Yii::$app->controller->module->id]);?>
+<?php NavWidget::end();?>
+<?php use app\commands\background\LeftWidget;?>
+<?php LeftWidget::begin(['controller' => Yii::$app->controller->id,'module' => Yii::$app->controller->module->id]);?>
+<?php LeftWidget::end();?>
+<?= $content ?>
+    <!-- <div class="layui-header header">
         <div class="layui-logo">
         </div>
         <a>
@@ -92,7 +98,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 </div>
 
