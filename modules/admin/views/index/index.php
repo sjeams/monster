@@ -1,4 +1,4 @@
-<div class="span10">
+<!-- <div class="span10">
     <ul class="breadcrumb">
         <li><a href="/basic/index/index">全局</a> <span class="divider">/</span></li>
         <li class="active">首页</li>
@@ -28,4 +28,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
