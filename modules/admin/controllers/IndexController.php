@@ -25,11 +25,7 @@ class IndexController extends ApiControl {
 
 
 
-    public function actionAdminMeanu()
-    {
-        // var_dump(111);die;
-       return $this->render("AdminMeanu");
-    }
+
 
 
 }
