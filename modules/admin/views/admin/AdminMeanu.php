@@ -44,19 +44,23 @@
         // 渲染表格
         layer.load(2);
         treetable.render({
-            treeColIndex: 1,
-            treeSpid: -1,
-            treeIdName: 'authorityId',
-            treePidName: 'parentId',
+            treeColIndex: 1, //树形图标显示在第几列
+            treeSpid: 0, //最上级的父级id
+            treeIdName: 'authorityId', //id字段的名称
+            treePidName: 'parentId', //pid字段的名称
+            treeDefaultClose: false,//是否默认折叠
+            treeLinkage: false,//父级展开时是否自动展开所有子级
             elem: '#munu-table',
-            url: '/layuimini/api/menus.json',
-            page: false,
+            url: '/admin/api/admin',
+            // cellMinWidth: 80,
+            page: false, // 是否开启分页：true/false，默认true
             cols: [[
                 {type: 'numbers'},
-                {field: 'authorityName', minWidth: 200, title: '权限名称'},
-                {field: 'authority', title: '权限标识'},
-                {field: 'menuUrl', title: '菜单url'},
-                {field: 'orderNumber', width: 80, align: 'center', title: '排序号'},
+                {field: 'title', minWidth: 200, title: '权限名称'},
+                {field: 'name', title: '权限标识'},
+                {field: 'icon', title: '权限标签'},
+                {field: 'href', title: '权限Url'},
+                // {field: 'orderNumber', width: 80, align: 'center', title: '排序号'},
                 {
                     field: 'isMenu', width: 80, align: 'center', templet: function (d) {
                         if (d.isMenu == 1) {
@@ -71,6 +75,7 @@
                 },
                 {templet: '#auth-state', width: 120, align: 'center', title: '操作'}
             ]],
+
             done: function () {
                 layer.closeAll('loading');
             }
@@ -97,5 +102,6 @@
         });
     });
 </script>
+
 </body>
 </html>
