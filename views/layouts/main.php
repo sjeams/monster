@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/layuimini/lib/layui-v2.5.4/css/layui.css" media="all">
     <link rel="stylesheet" href="/layuimini/css/layuimini.css" media="all">
     <link rel="stylesheet" href="/layuimini/lib/font-awesome-4.7.0/css/font-awesome.min.css" media="all">
+   
     <!--[if lt IE 9]>
     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
@@ -29,7 +30,7 @@
 <?php use app\commands\background\LeftWidget;?>
 <?php LeftWidget::begin(['controller' => Yii::$app->controller->id,'module' => Yii::$app->controller->module->id]);?>
 <?php LeftWidget::end();?>
-<?php //$content ?>
+<?php // echo $content ?>
 
 <div class="layui-body">
         <div class="layui-tab" lay-filter="layuiminiTab" id="top_tabs_box">
