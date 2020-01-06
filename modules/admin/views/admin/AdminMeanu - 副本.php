@@ -22,8 +22,6 @@
             <div class="layui-btn-group">
                 <button class="layui-btn" id="btn-expand">全部展开</button>
                 <button class="layui-btn" id="btn-fold">全部折叠</button>
-                <button class="layui-btn layui-btn-normal" id="addIframe">添加</button>
-                
             </div>
             <table id="munu-table" class="layui-table" lay-filter="munu-table"></table>
         </div>
@@ -59,9 +57,9 @@
                 elem: '#munu-table',
                 url: '/admin/api/admin',
                 // cellMinWidth: 80,
-                page: false, // 是否开启分页：true/false，默认true
-                // limit: 2,   //默认十条数据一页        我这里设置了两条每页
-                // limits: [10, 20, 30, 50],  //数据分页条
+                page: true, // 是否开启分页：true/false，默认true
+                limit: 2,   //默认十条数据一页        我这里设置了两条每页
+                limits: [10, 20, 30, 50],  //数据分页条
                 // where :data,
                 cols: [[
                     {type: 'numbers'},
@@ -119,15 +117,15 @@
     layer.open({
         type: 2,
         title: "修改",
-        area: ['700px','650px'],
+        area: ['700px', '650px'],
         fixed: true, //固定
         maxmin: true,
         content: '/admin/admin/admin-update',
         btnAlign: 'c', //按钮居中
         shadeClose: true,
         shade: 0.4,
-        // btn: ['确定', '取消',],
-        offset: '50px',  //居中
+        btn: ['确定', '取消',],
+        offset: 'center',  //居中
         yes: function(index){
             // var newsFrom = layer.getChildFrame('#newsFrom',index); 
             $.ajax({
