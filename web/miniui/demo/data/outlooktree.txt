@@ -1,19 +1,19 @@
 ﻿[
-	{id: "user", text: "用户管理"},
+	{id: "1", text: "用户管理"},
 		
-	{id: "lists", text: "Lists", pid: "user" },
+	{id: "lists", text: "Lists", pid: "1" },
 			
 	{id: "datagrid", text: "DataGrid", pid: "lists"},			
 	{id: "tree", text: "Tree" , pid: "lists"},
 	{id: "treegrid", text: "TreeGrid " , pid: "lists"},
 		
-	{id: "layouts", text: "Layouts", pid: "user"},
+	{id: "layouts", text: "Layouts", pid: "1"},
 		
 	{id: "panel", text: "Panel", pid: "layouts"},
 	{id: "splitter", text: "Splitter", pid: "layouts"},
 	{id: "layout", text: "Layout ", pid: "layouts"},
 		
-	{ id: "right", text: "权限管理"},
+	{id: "right", text: "权限管理"},
 		
 	{id: "base", text: "Base",  pid: "right" },
 				
