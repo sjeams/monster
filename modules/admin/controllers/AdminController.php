@@ -15,6 +15,13 @@ class AdminController extends ApiControl {
     public $enableCsrfValidation = false;
 
     public $layout = 'not';
+
+    public function actionIndex()
+    {
+       return $this->render("index");
+    // return  $this->renderPartial("AdminMeanu");
+    }
+
     public function actionAdminMeanu()
     {
        return $this->render("AdminMeanu");

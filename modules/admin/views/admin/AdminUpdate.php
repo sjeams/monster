@@ -12,7 +12,7 @@
 <body>
 <div class="layuimini-container">
     <div class="layuimini-main">
-        <form class="layui-form" action="">
+        <form class="layui-form" action="" id ="newsFrom">
             <div class="layui-form-item">
                 <label class="layui-form-label">单行输入框</label>
                 <div class="layui-input-block">
@@ -145,10 +145,11 @@
 
         //监听提交
         form.on('submit(demo1)', function (data) {
-            layer.alert(JSON.stringify(data.field), {
-                title: '最终的提交信息'
-            })
-            return false;
+            // layer.alert(JSON.stringify(data.field), {
+            //     title: '最终的提交信息'
+            // })
+            return data.field;
+            // return false;
         });
 
         //表单初始赋值
