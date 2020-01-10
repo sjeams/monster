@@ -2,13 +2,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>jQuery MiniUI V3.0 Demo</title>
+    <title>召唤师后台模板</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
     <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
    
     <link rel="stylesheet" href="/miniui/demo/index.css" media="all">
     <script src="/miniui/scripts/boot.js" type="text/javascript"></script>
+    <script src="/monster/scripts/miniui/miniui.js" type="text/javascript"></script>
+    <script src="/monster/scripts/jquery.min.js" type="text/javascript"></script>
+
     <script src="/miniui/demo/core.js" type="text/javascript"></script>
 
 </head>
@@ -60,10 +63,10 @@
             }
         }
 
-        function onClick(e) {
-            var text = this.getText();
-            alert(text);
-        }
+        // function onClick(e) {
+        //     var text = this.getText();
+        //     alert(text);
+        // }
         function onQuickClick(e) {
             tree.expandPath("datagrid");
             tree.selectNode("datagrid");

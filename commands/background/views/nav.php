@@ -1,5 +1,5 @@
 <div title="north" region="north" class="app-header" bodyStyle="overflow:hidden;" height="80" showHeader="false" showSplit="false">
-<div class="logo">管理系统v1.0</div>
+<div class="logo">Monster1.0</div>
  
 
 <div class="topNav">    

@@ -59,7 +59,7 @@ class AdminInit extends ActiveRecord
      * @sjeam
      */
      public static function getAdminMenus(){
-        $adminIint = AdminInit::find()->select("id as authorityId,name,title,icon,href,createTime,id,pid")->asarray()->All();
+        $adminIint = AdminInit::find()->select("pid as ParentTaskUID,name,title,icon as imgPath,href,createTime,id,pid")->asarray()->All();
         $data=  AdminInit::getTree($adminIint);
         return $data;
     }
@@ -70,14 +70,16 @@ class AdminInit extends ActiveRecord
         foreach($data as $k=>$v){
             if($v['pid']==$pid){
                 $key++;
-                $v['parentId']=$level;  //$level 用于识别当前分类的级别
+                $v['_level']=$level;  //$level 用于识别当前分类的级别
                 // if($v['pid']==0){  $v['parentId']='-1';}else{ $v['parentId']=1; }
                 $isMenu  = AdminInit::find()->where("pid = {$v['id']}")->asarray()->One();
-                if($isMenu){  $v['isMenu']=0;}else{ $v['isMenu']=1;}
-                $v['checked']= 0;
+                if($isMenu){  $v['Summary']=1;}else{ $v['Summary']=0;}
+                $v['Milestone']= 0;
+                $v['Critical']= 0;
+                
                 // $v['menuIcon']=$v['icon'];
                 // $v['authorityId']= $v['id'];
-                $v['authorityId']=$key;
+                $v['UID']=$key;
                 
                 $res[]=$v;
                 AdminInit::getTree($data,$v['id'],$level+1);//将查询出的$v['id']，作为参数进行递归
