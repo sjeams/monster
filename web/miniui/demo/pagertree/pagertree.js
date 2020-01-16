@@ -158,8 +158,10 @@ mini.extend(mini.PagerTree, mini.DataGrid, {
     },
     collapseAll: function () {
         var all = this.getResultObject().allIds || [];   ///........
+        console.log(all);
         this._collapseNodes.length = 0;
         this._collapseNodes.addRange(all);
+console.log(this._collapseNodes);
         this.reload();
     },
     expandAll: function () {

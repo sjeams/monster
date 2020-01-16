@@ -33,6 +33,16 @@ class AdminController extends ApiControl {
        return $this->render("AdminUpdate");
     // return  $this->renderPartial("AdminMeanu");
     }
-
+    public function actionMeanuAdd()
+    {
+       return $this->render("meanuAdd");
+    // return  $this->renderPartial("AdminMeanu");
+    }
+    public function actionMeanuTree()
+    {
+       return $this->render("meanuTree");
+    // return  $this->renderPartial("AdminMeanu");
+    }
+   
 
 }

@@ -82,7 +82,7 @@ mini.extend(mini.PagerTree, mini.DataGrid, {
 
         //_level
         var ii = 0;
-        for (var i = ii; i < level; i++) {
+        for (var i = ii; i < level - 1; i++) {
             sb[sb.length] = '<span class="mini-tree-indent " ></span>';
         }
 
@@ -158,8 +158,10 @@ mini.extend(mini.PagerTree, mini.DataGrid, {
     },
     collapseAll: function () {
         var all = this.getResultObject().allIds || [];   ///........
+        console.log(all);
         this._collapseNodes.length = 0;
         this._collapseNodes.addRange(all);
+console.log(this._collapseNodes);
         this.reload();
     },
     expandAll: function () {

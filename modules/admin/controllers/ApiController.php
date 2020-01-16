@@ -1,4 +1,5 @@
 <?php
+
 /**
  * 全局首页
  * Created by PhpStorm.
@@ -53,14 +54,27 @@ class ApiController extends ApiControl {
       //树状列表
       $data= AdminInit::getAdminMenus();  //后台界面菜单
       $count =count($data);
+      echo json_encode($data,true);
       // var_dump($adminList);die;
       // header('Content-Type: application/json; charset=utf-8'); //加上这行,前端那边就不需要var result = $.parseJSON(data);
     //  var_dump(json_encode($data));die;
-      $json=array('code'=>0,'msg'=>"请求成功",'count'=>$count,'data'=>$data);
+      // $json=array('code'=>0,'msg'=>"请求成功",'count'=>$count,'data'=>$data);
       // var_dump(array_values($json));die;
       // echo json_encode($json,JSON_UNESCAPED_UNICODE);
-      echo json_encode($json,true);
+      // echo json_encode($json,true);
     }
+    //清理缓存
+    public function actionMeanuUpdate(){
+      // header('content-type:application/json ;charset=utf-8;');
+      $data=Yii::$app->request->post('data');
+      // print_r($data);
+      $data= json_decode($data,JSON_UNESCAPED_UNICODE);
+      // var_dump($data[0]['children']);die;
+      AdminInit::updateMeanAll($data);
+      var_dump($data);die;
+      echo json_encode(true);
+    } 
+    
 
-  
+
 }
