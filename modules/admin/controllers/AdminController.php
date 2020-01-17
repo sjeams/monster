@@ -40,6 +40,9 @@ class AdminController extends ApiControl {
     }
     public function actionMeanuTree()
     {
+
+      $blockData = Yii::$app->request->post();
+      var_dump( $blockData);die;
        return $this->render("meanuTree");
     // return  $this->renderPartial("AdminMeanu");
     }

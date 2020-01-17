@@ -104,10 +104,10 @@ mini.extend(TreeSelectWindow, mini.Window, {
         this._okBtn.on("click", function (e) {
             //不能选择父节点
             var node = this.tree.getSelectedNode();
-            if (node && this.tree.isLeaf(node) == false) {
-                alert("不能选中父节点");
-                return;
-            }
+            // if (node && this.tree.isLeaf(node) == false) {
+            //     alert("不能选中父节点");
+            //     return;
+            // }
 
             var ret = true;
             if (this._Callback) ret = this._Callback('ok');
@@ -166,15 +166,17 @@ mini.extend(TreeSelectWindow, mini.Window, {
             if (node) nodes.push(node);
         }
 
-        var ids = [], texts = [];
+        var ids = [], texts = [], pids = [];
         for (var i = 0, l = nodes.length; i < l; i++) {
             var node = nodes[i];
             ids.push(node.id);
             texts.push(node.text);
+            pids.push(node.pid);
         }
         var data = {};
         data.id = ids.join(",");
         data.text = texts.join(",");
+        data.pid = pids.join(",");
         return data;
 
     }
