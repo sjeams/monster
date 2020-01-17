@@ -140,13 +140,22 @@
             var tree = mini.get("treegrid1");
             var node = tree.getSelectedNode();
             if (node) {
-                if (confirm("确定编辑选中节点?")) {
-                    console.log(node);
-                    ditForm1 = new mini.Form("#editForm1");
-                    // tree.removeNode(node);
-                }
+                    mini.open({
+                        url: "/admin/admin/meanu-add",
+                        title: "编辑菜单", width: 480, height: 340,
+                        onload: function () {
+                            var iframe = this.getIFrameEl();
+                            var data = { action: "edit", id: node.id };
+                            iframe.contentWindow.SetData(data);
+                            
+                        },
+                        ondestroy: function (action) {
+                            tree.reload();
+                            
+                        }
+                    });
             }
-            tree.beginEdit(node);
+            // tree.beginEdit(node);
         }
 
         function add() {

@@ -5,8 +5,9 @@
     <title>菜单管理</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     
-    <!-- <script src="../../scripts/boot.js" type="text/javascript"></script> -->
-    
+    <script src="/miniui/scripts/boot.js" type="text/javascript"></script>
+    <script src="/miniui/demo/CommonLibs/TreeSelectWindow.js" type="text/javascript"></script>   
+    <script src="/miniui/scripts/miniui/miniui.js" type="text/javascript"></script>    
 
     <style type="text/css">
     html, body
@@ -29,11 +30,11 @@
                 <tr>
                     <td >标题：</td>
                     <td >    
-                        <input name="educational" class="mini-textbox"  required="true"  emptyText="请输入标题"/> 
+                        <input name="title" class="mini-textbox"  required="true"  emptyText="请输入标题"/> 
                     </td>
                     <td >模块：</td>
                     <td >    
-                        <input name="school" class="mini-textbox" style="width:99%;" />
+                        <input name="name" class="mini-textbox" style="width:99%;" />
                     </td>
                 </tr>    
                 <tr>
@@ -46,7 +47,8 @@
                     <td >分类：</td>
                     <td colspan="3">    
                         <!-- <input name="url" class="mini-textarea" style="width:386px;" /> -->
-                        <input id="btnEdit1" class="mini-buttonedit" onbuttonclick="onButtonEdit"/> (默认父级为0)
+                        <input id="pid" class="mini-buttonedit" onbuttonclick="onButtonEdit"/>
+                        <!-- <input id="btnEdit1" class="mini-buttonedit" onbuttonclick="onButtonEdit"/> (默认父级为0) -->
                     </td>
                 </tr>   
                 <tr>
@@ -168,17 +170,18 @@
             if (data.action == "edit") {
                 //跨页面传递的数据对象，克隆后才可以安全使用
                 data = mini.clone(data);
-
                 $.ajax({
-                    url: "../data/AjaxService.php?method=GetEmployee&id=" + data.id,
+                    url: "/admin/api/meanu-findone",
+                    type: "post",
+                    data: { id: data.id },
                     cache: false,
                     success: function (text) {
                         var o = mini.decode(text);
+                        console.log(o);
                         form.setData(o);
                         form.setChanged(false);
-
-                        onDeptChanged();
-                        mini.getbyName("position").setValue(o.position);
+                        // onDeptChanged();
+                        // mini.getbyName("title").setValue(o.title);
                     }
                 });
             }
@@ -202,14 +205,17 @@
         }
         function onCancel(e) {
             CloseWindow("cancel");
+            // CloseWindow();
+      
         }
         //////////////////////////////////
         function onDeptChanged(e) {
-            var deptCombo = mini.getbyName("dept_id");
+            var deptCombo = mini.getbyName("id");
+            console.log(deptCombo);
             var positionCombo = mini.getbyName("position");
             var dept_id = deptCombo.getValue();
-
-            positionCombo.load("../data/AjaxService.php?method=GetPositionsByDepartmenId&id=" + dept_id);
+            console.log(dept_id);
+            // positionCombo.load("../data/AjaxService.php?method=GetPositionsByDepartmenId&id=" + dept_id);
             positionCombo.setValue("");
         }
 
@@ -221,28 +227,36 @@
         mini.parse();
 
         function onButtonEdit(e) {
-            var btnEdit = this;
-            mini.open({
-                url:  "/admin/admin/meanu-tree",
-                showMaxButton: false,
-                title: "选择树",
+            var buttonEdit = e.sender;
+            
+            var win = new TreeSelectWindow();
+            win.set({
+//                multiSelect: true,
+//                showFolderCheckBox: true,
+//                checkRecursive: true,                
+                url: "/admin/api/meanu-tree",    
+                title: "选择树形",
                 width: 350,
-                height: 350,
-                ondestroy: function (action) {                    
-                    if (action == "ok") {
-                        var iframe = this.getIFrameEl();
-                        var data = iframe.contentWindow.GetData();
-                        data = mini.clone(data);
-                        if (data) {
-                            btnEdit.setValue(data.id);
-                            btnEdit.setText(data.text);
-                        }
+                height: 320
+            });
+            
+            win.show();
+
+            //初始化数据
+            win.setData(null, function (action) {
+                if (action == "ok") {
+                    //获取数据
+                    var data = win.getData();
+                    console.log(data);
+                    if (data) {
+                        buttonEdit.setValue(data.id);
+                        buttonEdit.setText(data.text);
+                        buttonEdit.setText(data.pid);
                     }
                 }
-            });            
-             
-        }        
-
+            });
+        }
+        
     </script>
 </body>
 </html>
