@@ -64,7 +64,7 @@ class AdminInit extends ActiveRecord
         return $data;
     }
     //生成树方法
-    public static function getTree($data,$pid=1,$level=0){
+    public static function getTree($data,$pid=0,$level=0){
         static $res=array();
         static $key=0;
         foreach($data as $k=>$v){

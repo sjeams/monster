@@ -28,24 +28,26 @@ class AdminController extends ApiControl {
     // return  $this->renderPartial("AdminMeanu");
     }
 
+   //  修改页面
     public function actionAdminUpdate()
     {
        return $this->render("AdminUpdate");
     // return  $this->renderPartial("AdminMeanu");
     }
+   //  添加页面
     public function actionMeanuAdd()
     {
        return $this->render("meanuAdd");
     // return  $this->renderPartial("AdminMeanu");
     }
-    public function actionMeanuTree()
-    {
+   //  public function actionMeanuTree()
+   //  {
 
-      $blockData = Yii::$app->request->post();
-      var_dump( $blockData);die;
-       return $this->render("meanuTree");
-    // return  $this->renderPartial("AdminMeanu");
-    }
+   //    $blockData = Yii::$app->request->post();
+   //    var_dump( $blockData);die;
+   //     return $this->render("meanuTree");
+   //  // return  $this->renderPartial("AdminMeanu");
+   //  }
    
 
 }

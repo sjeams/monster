@@ -8,9 +8,11 @@
     
 </head>
 
-<style>                                                     
-
-
+<style> 
+    /* 快速编辑                                                     */
+    .edit-none{
+        display:none;
+    }
 </style>
 
 <body>
@@ -26,9 +28,14 @@
         <a class="mini-button" iconCls="icon-add" onclick="add()" plain="true">增加</a>
         <span class="separator"></span>
         <a class="mini-button" iconCls="icon-remove" onclick="removeRow()" plain="true">取消修改</a>
+        <span id="saveEdit" class="">
         <span class="separator"></span>
-        <a class="mini-button" iconCls="icon-save" onclick="saveData()" plain="true">保存全部</a>  
-        
+        <a class="mini-button" iconCls="icon-edit" onclick="saveEdit()" id="saveEdit" plain="true">快速编辑</a>  
+        </span>   
+        <span id="saveData" class="edit-none">
+            <span class="separator"></span>
+            <a class="mini-button" iconCls="icon-save" onclick="saveData()"  plain="true">保存全部</a>  
+        </span>  
         <div style="float:right; margin-right:40px;" >
         <label >名称：</label>
         <input id="key" class="mini-textbox" style="width:150px;" onenter="onKeyEnter"/>
@@ -41,7 +48,7 @@
     url="/admin/api/admin" showTreeIcon="true"   
     treeColumn="taskname" idField="id" parentField="pid" resultAsTree="false" 
     allowResize="true" expandOnLoad="true"
-    allowCellEdit="true" allowCellSelect="true"  frozenStartColumn="0" frozenEndColumn="1" 
+    allowCellEdit="false" allowCellSelect="true"  frozenStartColumn="0" frozenEndColumn="1" 
     editNextOnEnterKey="true"
 >
     <div property="columns"> 
@@ -49,7 +56,7 @@
         <div field="id" width="40" headerAlign="center"  cellStyle="text-align:center;vertical-align:middle;" >id
             <!-- <input property="editor" class="mini-spinner"  minValue="0" maxValue="1000000" value="0" style="width:100%;"/> -->
         </div>
-        <div name="taskname" field="title" width="160"  headerAlign="center"   >标题
+        <div name="taskname" field="title" width="240"  headerAlign="center"   >标题
             <input property="editor" class="mini-textbox" style="width:100%;" />
         </div>
         <!-- <div field="pid" width="60" align="right">工期
@@ -169,7 +176,7 @@
                 },
                 ondestroy: function (action) {
 
-                    grid.reload();
+                    tree.reload();
                 }
             });
         }
@@ -181,12 +188,36 @@
         function onRemoveNode(e) {
             var tree = mini.get("treegrid1");
             var node = tree.getSelectedNode();
-            if (node) {
-                if (confirm("确定删除选中节点?")) {
-                    tree.removeNode(node);
-                }
+                if (node) {
+                    $.ajax({
+                        url: "/admin/api/meanu-delete",
+                        data: node,
+                        type: "post",
+                        contentType:'application/x-www-form-urlencoded;charset=utf-8',
+                        async : false,
+                        dataType: "json",
+                        success: function (data) {
+                            console.log(data);
+                            if(!data){
+                                alert('删除失败，请先删除子类！');
+                            }else{
+                                tree.reload();
+                            }
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            alert('操作出错！');
+                            tree.reload();
+                        }
+                    });
+                // if (confirm("确定删除选中节点?")) {
+                //     tree.removeNode(node);
+                // }
             }
         }
+
+
+
+
         function onMoveNode(e) {
             var tree = mini.get("treegrid1");
             var node = tree.getSelectedNode();
@@ -196,9 +227,23 @@
 
         // 取消修改  刷新树
         function   removeRow() {
+            $('#saveEdit').removeClass('edit-none');
+            $('#saveData').addClass('edit-none');
+            tree. allowCellEdit=false;
             tree.reload();
         }
-        
+        //快速编辑
+        function saveEdit() {
+            var tree = mini.get("treegrid1");
+            var data = tree.getData();
+            $('#saveEdit').addClass('edit-none');
+            $('#saveData').removeClass('edit-none');
+            tree. allowCellEdit=true;
+            // tree.reload();
+        }
+
+
+
         //保存快速修改        
         function saveData() {
             var tree = mini.get("treegrid1");
@@ -224,7 +269,10 @@
                     // alert('操作出错！');
                     tree.reload();
                 }
-            });
+            }); 
+            $('#saveEdit').removeClass('edit-none');
+            $('#saveData').addClass('edit-none');
+            tree. allowCellEdit=false;
         }
     </script>
 
