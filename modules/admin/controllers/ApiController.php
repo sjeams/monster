@@ -58,7 +58,8 @@ class ApiController extends ApiControl {
       $count =count($data);
       echo json_encode($data,true);
     }
-    //菜单修改
+    
+    //菜单快速修改
     public function actionMeanuUpdate(){
       // header('content-type:application/json ;charset=utf-8;');
       $data=Yii::$app->request->post('data');
@@ -66,7 +67,45 @@ class ApiController extends ApiControl {
       AdminInit::updateMeanAll($data);
       echo json_encode(true);
     } 
-    //菜单弹出树
+    
+    //菜单弹窗新增--和修改
+    public function actionMeanuAdd(){
+    $data = Yii::$app->request->post('data');
+    $data= json_decode($data)[0];
+    if(!empty($data->id)){ //修改
+      $adminInt =  AdminInit::find()->where("id=$data->id")->one();
+    }else{ //新增
+      $adminInt = new AdminInit();
+      unset($data->id);
+      !empty($data->pid)? $data->pid :$data->pid=0; //默认为最顶级
+    }
+      foreach($data as $key=>$v){
+        $adminInt->$key =$v;
+      }
+      $adminInt->createTime=time();
+      $res= $adminInt->save();
+      echo json_encode($res);
+    }
+    
+    //菜单删除
+    public function actionMeanuDelete(){
+      $id = Yii::$app->request->post('id');
+      $adminInt =  AdminInit::find()->where("pid=$id")->asarray()->one();
+      // var_dump($adminInt);die;
+      $res =0;
+      if(empty($adminInt)){
+        $findOne =  AdminInit::find()->where("id=$id")->one();
+     
+        $res =$findOne->delete();
+      }
+      // var_dump($res);die;
+      return $res;
+    }
+
+
+
+
+    //菜单弹出树 -- 和首页列表树
     public function actionMeanuTree(){
       $meanuInfo= AdminInit::getAdminMenusTree();  //后台界面菜单
       // var_dump( $meanuInfo);die;

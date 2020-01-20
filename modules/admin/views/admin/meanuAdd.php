@@ -47,7 +47,7 @@
                     <td >分类：</td>
                     <td colspan="3">    
                         <!-- <input name="url" class="mini-textarea" style="width:386px;" /> -->
-                        <input id="pid" class="mini-buttonedit" onbuttonclick="onButtonEdit"/>
+                        <input name="pid" id="pid" class="mini-buttonedit" onbuttonclick="onButtonEdit"/>
                         <!-- <input id="btnEdit1" class="mini-buttonedit" onbuttonclick="onButtonEdit"/> (默认父级为0) -->
                     </td>
                 </tr>   
@@ -150,7 +150,7 @@
 
             var json = mini.encode([o]);
             $.ajax({
-                url: "../data/AjaxService.php?method=SaveEmployees",
+                url: "/admin/api/meanu-add",
 		        type: 'post',
                 data: { data: json },
                 cache: false,
@@ -211,10 +211,10 @@
         //////////////////////////////////
         function onDeptChanged(e) {
             var deptCombo = mini.getbyName("id");
-            console.log(deptCombo);
+            // console.log(deptCombo);
             var positionCombo = mini.getbyName("position");
             var dept_id = deptCombo.getValue();
-            console.log(dept_id);
+            // console.log(dept_id);
             // positionCombo.load("../data/AjaxService.php?method=GetPositionsByDepartmenId&id=" + dept_id);
             positionCombo.setValue("");
         }
@@ -251,7 +251,7 @@
                     if (data) {
                         buttonEdit.setValue(data.id);
                         buttonEdit.setText(data.text);
-                        buttonEdit.setText(data.pid);
+                        // buttonEdit.setText(data.pid);
                     }
                 }
             });
