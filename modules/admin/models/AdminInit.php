@@ -121,7 +121,7 @@ class AdminInit extends ActiveRecord
      * @sjeam
      */
     public static function getAdminMenusTree(){
-        $data = AdminInit::find()->select("id,title as text,pid")->asarray()->All();
+        $data = AdminInit::find()->select("id,title as text,pid,url")->asarray()->All();
         // $data=  AdminInit::getTree($adminIint);
         return $data;
     }

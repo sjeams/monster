@@ -47,7 +47,7 @@
 <div id="treegrid1" class="mini-treegrid" style="width:98%;height:92%"  
     url="/admin/api/admin" showTreeIcon="true"   
     treeColumn="taskname" idField="id" parentField="pid" resultAsTree="false" 
-    allowResize="true" expandOnLoad="true"
+    allowResize="false" expandOnLoad="true"
     allowCellEdit="false" allowCellSelect="true"  frozenStartColumn="0" frozenEndColumn="1" 
     editNextOnEnterKey="true"
 >
@@ -106,7 +106,7 @@
             //第一个节点选中并滚动到视图
             var firstNode = nodes[0];
             if (firstNode) {
-                tree.selectNode(firstNode);
+                tree.selectNode(firstNode);    
                 tree.scrollIntoView(firstNode);
             }
         }
@@ -149,7 +149,7 @@
             if (node) {
                     mini.open({
                         url: "/admin/admin/meanu-add",
-                        title: "编辑菜单", width: 480, height: 340,
+                        title: "编辑菜单", width: 480, height: 360,
                         onload: function () {
                             var iframe = this.getIFrameEl();
                             var data = { action: "edit", id: node.id };
@@ -197,7 +197,7 @@
                         async : false,
                         dataType: "json",
                         success: function (data) {
-                            console.log(data);
+                            // console.log(data);
                             if(!data){
                                 alert('删除失败，请先删除子类！');
                             }else{
@@ -243,7 +243,6 @@
         }
 
 
-
         //保存快速修改        
         function saveData() {
             var tree = mini.get("treegrid1");
@@ -274,6 +273,9 @@
             $('#saveData').addClass('edit-none');
             tree. allowCellEdit=false;
         }
+
+
+        
     </script>
 
     

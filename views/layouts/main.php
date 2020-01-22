@@ -48,7 +48,9 @@
                 tab.showCloseButton = true;
                 //这里拼接了url，实际项目，应该从后台直接获得完整的url地址
                 // tab.url = mini_JSPath + "../../docs/api/" + node.id + ".html";
-                tab.url = "/admin/index/index";
+                // tab.url = "/admin/index/index";
+                console.log(node);
+                tab.url = node.url;
                 tabs.addTab(tab);
             }
             tabs.activeTab(tab);
