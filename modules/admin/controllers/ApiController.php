@@ -1,11 +1,9 @@
 <?php
 
 /**
- * 全局首页
+ * 全局首页---树形接口
  * Created by PhpStorm.
- * User: obelisk
- * Date: 15-6-17
- * Time: 下午2:37
+ * User: sjeam
  */
 namespace app\modules\admin\controllers;
 
@@ -18,22 +16,22 @@ class ApiController extends ApiControl {
     public $enableCsrfValidation = false;
 
     public function actionInit(){
-      // 清除缓存
-      $clearInfo=array('clearInfo'=>array(
-          "clearUrl"=>"/admin/api/clear",  //定义清除接口
-      ));
-      //首页
-      $homeInfo=array('homeInfo'=>array(
-        "title"=>"首页", 
-        "icon"=>"fa fa-home", 
-        "href"=>"/layuimini/page/welcome-1.html?mpi=m-p-i-0", 
-      ));
-      //logo
-      $logoInfo=array('logoInfo'=>array(
-        "title"=>"LayuiMini", 
-        "image"=>"/layuimini/images/logo.png", 
-        "href"=>"/layuimini/page/welcome-1.html?mpi=m-p-i-0", 
-      ));
+      // // 清除缓存
+      // $clearInfo=array('clearInfo'=>array(
+      //     "clearUrl"=>"/admin/api/clear",  //定义清除接口
+      // ));
+      // //首页
+      // $homeInfo=array('homeInfo'=>array(
+      //   "title"=>"首页", 
+      //   "icon"=>"fa fa-home", 
+      //   "href"=>"/layuimini/page/welcome-1.html?mpi=m-p-i-0", 
+      // ));
+      // //logo
+      // $logoInfo=array('logoInfo'=>array(
+      //   "title"=>"LayuiMini", 
+      //   "image"=>"/layuimini/images/logo.png", 
+      //   "href"=>"/layuimini/page/welcome-1.html?mpi=m-p-i-0", 
+      // ));
       //列表
       $menuInfo= AdminInit::getAdminIint();  //后台界面菜单
       // var_dump($menuInfo['menuInfo']['currency']['child'][0]['child']);die;
@@ -102,9 +100,6 @@ class ApiController extends ApiControl {
       return $res;
     }
 
-
-
-
     //菜单弹出树 -- 和首页列表树
     public function actionMeanuTree(){
       $meanuInfo= AdminInit::getAdminMenusTree();  //后台界面菜单
@@ -118,4 +113,8 @@ class ApiController extends ApiControl {
       $meanuInfo=  AdminInit::find()->where("id=$id")->asarray()->One();
       echo json_encode($meanuInfo);
     }
+
+
+
+
 }

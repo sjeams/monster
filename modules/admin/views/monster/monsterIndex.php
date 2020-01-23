@@ -12,10 +12,8 @@
     
 </head>
 <body>
-    <h1>CellEdit 单元格编辑</h1>
-
-    
-    <div style="width:800px;">
+    <!-- <h1>CellEdit 单元格编辑</h1> -->
+    <div style="width:100%;">
         <div class="mini-toolbar" style="border-bottom:0;padding:0px;">
             <table style="width:100%;">
                 <tr>
@@ -33,8 +31,8 @@
             </table>           
         </div>
     </div>
-    <div id="datagrid1" class="mini-datagrid" style="width:800px;height:280px;" 
-        url="/miniui/demo/data/AjaxService.php?method=SearchEmployees" idField="id" 
+    <div id="datagrid1" class="mini-datagrid" style="width:98%;height:96%" 
+        url="/admin/biology/api-index" idField="id" 
         allowResize="true" pageSize="20" 
         allowCellEdit="true" allowCellSelect="true" multiSelect="true" 
         editNextOnEnterKey="true"
@@ -66,6 +64,9 @@
             <div type="checkboxcolumn" field="married" trueValue="1" falseValue="0" width="60" headerAlign="center">婚否</div>                        
         </div>
     </div>
+
+    </body>
+</html>
     <script type="text/javascript">
      
         var Genders = [{ id: 1, text: '男' }, { id: 2, text: '女'}];
@@ -150,15 +151,3 @@
         
     </script>
 
-    <div class="description">
-        <h3>Description</h3>
-        <ul>
-            <li>方向键导航单元格</li>
-            <li>按回车键进入编辑</li>
-            <li>按ESC键取消编辑</li>
-            <li>按Tab键进入下一个单元格编辑</li>
-            <li>editNextOnEnterKey="true"后，按回车键进入下一个单元格编辑</li>
-        </ul>
-    </div>
-</body>
-</html>
