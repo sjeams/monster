@@ -2,9 +2,7 @@
 /**
  * 全局首页
  * Created by PhpStorm.
- * User: obelisk
- * Date: 15-6-17
- * Time: 下午2:37
+ * User: sjeam
  */
 namespace app\modules\admin\controllers;
 

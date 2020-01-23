@@ -1,16 +1,16 @@
 <?php
 /**
- * 全局首页
+ * 生物管理
  * Created by PhpStorm.
- * User: obelisk
- * Date: 15-6-17
- * Time: 下午2:37
+ * User: sjeam
  */
 namespace app\modules\admin\controllers;
 
 use yii;
 use app\libs\ApiControl;
-class MonsterController extends ApiControl {
+use app\modules\admin\models\Biology;
+use app\modules\admin\models\BiologySkill;
+class BiologyController extends ApiControl {
 
     public $enableCsrfValidation = false;
 
@@ -18,9 +18,31 @@ class MonsterController extends ApiControl {
 
     public function actionIndex()
     {
-       return $this->render("index");
+       return $this->render("biologyIndex");
     // return  $this->renderPartial("AdminMeanu");
     }
+
+    // 生物列表
+    public function actionApiIndex()
+    {
+      $data= Biology::getBiologyList();
+      // var_dump($data);die;
+      echo json_encode($data);
+    }
+
+
+    // 生物技能
+    public function actionApiSkill()
+    {
+      $data= BiologySkill::getSkillList();
+      // var_dump($data);die;
+      echo json_encode($data);
+    }
+
+
+    
+
+
 
     public function actionAdminMeanu()
     {

@@ -12,7 +12,7 @@ mini.extend(UserSelectWindow, mini.Window, {
 
     url: "",
     keyField: "key",
-    multiSelect: false,
+    multiSelect: true,
 
     title: "选择用户",
     keyLable: "名称：",
@@ -141,9 +141,32 @@ mini.extend(UserSelectWindow, mini.Window, {
         this._Callback = callback;
         //this.grid.selects(data);
     },
+
+    //单选框
+    // getData: function () {
+    //     var row = this.grid.getSelected();
+    //     return row;
+    // }
+    // 多选框
     getData: function () {
-        var row = this.grid.getSelected();
-        return row;
+        var rows = this.grid.getSelecteds();
+        console.log(rows)
+        // var ids = [], texts = [];
+        // for (var i = 0, l = rows.length; i < l; i++) {
+        //     var row = rows[i];
+        //     ids.push(row.id);
+        //     texts.push(row.name);
+        // }
+        // var data = {};
+        // console.log(data)
+        // data.id = ids.join(",");
+        // data.text = texts.join(",");
+        // //取值
+        // var row=data.id;
+
+        return rows;
     }
+
+
 });
 mini.regClass(UserSelectWindow, "userselectwindow");

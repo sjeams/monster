@@ -10,4 +10,6 @@
 <script src="/miniui/scripts/miniui/locale/en_US.js" type="text/javascript"></script>
 <script src="/miniui/scripts/tongji.js" type="text/javascript"></script>
 
+<script src="/miniui/demo/CommonLibs/UserSelectWindow.js" type="text/javascript"></script>   
+
 <?=$content?>

@@ -36,7 +36,7 @@
             <span class="separator"></span>
             <a class="mini-button" iconCls="icon-save" onclick="saveData()"  plain="true">保存全部</a>  
         </span>  
-        <div style="float:right; margin-right:40px;" >
+        <div style="float:left; " >
         <label >名称：</label>
         <input id="key" class="mini-textbox" style="width:150px;" onenter="onKeyEnter"/>
         <a class="mini-button" style="width:60px;" onclick="search()">查询</a> 
@@ -44,7 +44,7 @@
         </div>
 
 </div>
-<div id="treegrid1" class="mini-treegrid" style="width:98%;height:92%"  
+<div id="treegrid1" class="mini-treegrid" style="width:98%;height:95%" 
     url="/admin/api/admin" showTreeIcon="true"   
     treeColumn="taskname" idField="id" parentField="pid" resultAsTree="false" 
     allowResize="false" expandOnLoad="true"
