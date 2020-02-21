@@ -42,13 +42,13 @@
 <!--    <script type="text/javascript" src="/cn/js/swiper.js"></script>-->
 
     <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?50f3347ce318df3cd25f2d8ffcf35273";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
+        // var _hmt = _hmt || [];
+        // (function () {
+        //     var hm = document.createElement("script");
+        //     hm.src = "https://hm.baidu.com/hm.js?50f3347ce318df3cd25f2d8ffcf35273";
+        //     var s = document.getElementsByTagName("script")[0];
+        //     s.parentNode.insertBefore(hm, s);
+        // })();
 
         /*  var _hmt = _hmt || [];
           (function() { var hm = document.createElement("script");

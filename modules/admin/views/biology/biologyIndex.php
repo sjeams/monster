@@ -65,7 +65,7 @@
             </div>  
             <div name="skill"  field="skill" headerAlign="center" allowSort="true" width="150" >生物技能
                 <!-- <input property="editor" class="mini-textbox" style="width:100%;" minWidth="200" /> -->
-                <input property="editor" name="skill"  id="btnEdit1" class="mini-buttonedit" style="width:100%;" minWidth="200" onbuttonclick="onButtonEdit"/>
+                <input property="editor" name="skill"  class="mini-buttonedit" style="width:100%;" minWidth="200" onbuttonclick="onButtonEdit"/>
             </div>
             
 
@@ -216,9 +216,11 @@
                     data.id = ids.join(",");
                     data.text = texts.join(",");
                     console.log(data.id);
-                    console.log(data.name);
+                    console.log(data.text);
                     buttonEdit.setValue(data.id);
                     buttonEdit.setText(data.text);
+                    console.log( buttonEdit);
+                    // grid.get('input').setValue(data.text);
                     // alert("选中记录: " + row.name);
                 }
             }
