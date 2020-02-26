@@ -14,7 +14,7 @@ class BiologySkill extends ActiveRecord
      * @sjeam
      */
     public static function getSkillList(){
-        $data = BiologySkill::find()->asarray()->All();
+        $data = BiologySkill::find()->select("*,name as key")->asarray()->All();
         // $data=  AdminInit::getChildren($adminIint);
         return $data;
     }
