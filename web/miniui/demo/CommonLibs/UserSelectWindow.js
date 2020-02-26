@@ -59,8 +59,11 @@ mini.extend(UserSelectWindow, mini.Window, {
             columns: [
                 { type: "checkcolumn", header: "#" },
             //{ type: "indexcolumn", header: "#", headerAlign: "center" },
-                {header: "帐号", field: "loginname" },
-                { header: "姓名", field: "name" }
+                // {header: "帐号", field: "loginname" },
+                {header: "类型", field: "wuxingid" },
+                { header: "姓名", field: "name" },
+                { header: "描述", field: "describe" }
+                
             ]
         });
         this.grid.setUrl(this.url);

@@ -14,7 +14,7 @@ class Biology extends ActiveRecord
      * @sjeam
      */
     public static function getBiologyList(){
-        $data = Biology::find()->asarray()->All();
+        $data = Biology::find()->select("*,name as key")->asarray()->All();
         // $data=  AdminInit::getChildren($adminIint);
         return $data;
     }

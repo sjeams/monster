@@ -33,7 +33,7 @@
             </table>           
         </div>
     </div>
-    <div id="datagrid1" class="mini-datagrid" style="width:98%;height:95%"
+    <div id="datagrid1" class="mini-datagrid" style="width:98%;height:94%"
         url="/admin/biology/api-index" idField="id" 
         allowResize="true" pageSize="20" 
         allowCellEdit="true" allowCellSelect="true" multiSelect="true" 
@@ -47,30 +47,30 @@
                 <input name="name" property="editor" class="mini-textbox" style="width:100%;" minWidth="200" />
             </div>
             <!--ComboBox：本地数据-->         
-            <div type="comboboxcolumn" autoShowPopup="true" name="biology" field="biology" width="100"  allowSort="true"  align="center" headerAlign="center">种族
-                <input property="editor" class="mini-combobox" style="width:100%;" data="Biologys" />                
+            <div type="comboboxcolumn" autoShowPopup="true"  field="biology" width="100"  allowSort="true"  align="center" headerAlign="center">种族
+                <input name="biology" property="editor" class="mini-combobox" style="width:100%;"  data="Biologys" />                
             </div>
             <div field="grade" width="100"  allowSort="true" >等级
                 <input name="grade" property="editor" class="mini-spinner"  minValue="1" maxValue="200" value="25" style="width:100%;"/>
             </div>  
 
             <div field="photo" width="100"  allowSort="true" >头像
-                <input name="photo" property="editor" class="mini-htmlfile" name="uploadFile" limitType="*.png;*.jpg;*.xls,*.dwg;*.vsd" />       
+                <input name="photo" property="editor" class="mini-htmlfile"  limitType="*.png;*.jpg;*.xls,*.dwg;*.vsd" />       
                 <!-- <a class="mini-button" id="blabla" iconCls="blabla">上传</a> -->
             </div>  
 
             <div field="image" width="100"  allowSort="true" >造型
-                <input  name="image"  property="editor" class="mini-htmlfile" name="uploadFile" limitType="*.png;*.jpg;*.xls,*.dwg;*.vsd" />       
+                <input  name="image"  property="editor" class="mini-htmlfile"  limitType="*.png;*.jpg;*.xls,*.dwg;*.vsd" />       
                 <!-- <a class="mini-button" id="blabla" iconCls="blabla">上传</a> -->
             </div>  
-            <div name="skill"  field="skill" headerAlign="center" allowSort="true" width="150" >生物技能
+            <div field="skill" headerAlign="center" allowSort="true" width="150" >生物技能
                 <!-- <input property="editor" class="mini-textbox" style="width:100%;" minWidth="200" /> -->
                 <input property="editor" name="skill"  class="mini-buttonedit" style="width:100%;" minWidth="200" onbuttonclick="onButtonEdit"/>
             </div>
             
 
-            <div name="birthday" field="birthday" width="100"  allowSort="true" dateFormat="yyyy-MM-dd">出生日期
-                <input property="editor" class="mini-datepicker" style="width:100%;"/>
+            <div field="birthday" width="100"  allowSort="true" dateFormat="yyyy-MM-dd">出生日期
+                <input name="birthday"  property="editor" class="mini-datepicker" style="width:100%;"/>
             </div>    
             <div field="descript" width="150" headerAlign="center" allowSort="true">描述
                 <input name="descript" property="editor" class="mini-textarea mini-textbox" style="width:200px;" minWidth="200" minHeight="50"/>
@@ -114,10 +114,16 @@
         }
 
         function addRow() {          
-            var newRow = { name: "New Row" };
+            var newRow = { name: "New Row",biology: 1,grade: 1,photo: "",image: "",skill: "",birthday: "",descript: ""};
             grid.addRow(newRow, 0);
-
-            grid.beginEditCell(newRow, "LoginName");
+            grid.beginEditCell(newRow, "name");
+            // grid.beginEditCell(newRow, "biology");
+            // grid.beginEditCell(newRow, "grade");
+            // grid.beginEditCell(newRow, "photo");
+            // grid.beginEditCell(newRow, "image");
+            // grid.beginEditCell(newRow, "skill");
+            // grid.beginEditCell(newRow, "birthday");
+            // grid.beginEditCell(newRow, "descript");
         }
         function removeRow() {
             var rows = grid.getSelecteds();
@@ -186,7 +192,7 @@
 
     function onButtonEdit(e) {
         var buttonEdit = e.sender;
-
+        // var buttonEdit = this;
         var win = new UserSelectWindow();
         win.set({
             url: "/admin/biology/api-skill",                    
@@ -203,7 +209,11 @@
             if (action == "ok") {
                 //获取数据
                 var rows = win.getData();
-                console.log(rows);
+                // console.log(rows);
+                console.log(e);
+                console.log( mini.get("datagrid1").getRow());
+
+               
                 if (rows) {    
                     //循环取值  
                     var ids = [], texts = [];
@@ -215,13 +225,18 @@
                     var data = {};
                     data.id = ids.join(",");
                     data.text = texts.join(",");
-                    console.log(data.id);
-                    console.log(data.text);
+                    // console.log(data.id);
+                    // console.log(data.text);
+
                     buttonEdit.setValue(data.id);
-                    buttonEdit.setText(data.text);
-                    console.log( buttonEdit);
-                    // grid.get('input').setValue(data.text);
-                    // alert("选中记录: " + row.name);
+                    buttonEdit.setText(data.id);
+                
+                    var newRow = {skill: data.text};
+                    // grid.addRow(newRow,buttonEdit.ownerRowID0);
+                    grid.getChanges(data.text, "skill");
+                    grid.beginEditCell(newRow, "skill");
+                    // e.source._oldValue = data.id;
+                    e.source.value=data.id;
                 }
             }
         });
