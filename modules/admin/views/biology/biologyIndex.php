@@ -54,15 +54,14 @@
                 <input name="grade" property="editor" class="mini-spinner"  minValue="1" maxValue="200" value="25" style="width:100%;"/>
             </div>  
 
-            <div field="photo" width="100"  allowSort="true" >头像
-                <input name="photo" property="editor" class="mini-htmlfile"  limitType="*.png;*.jpg;*.xls,*.dwg;*.vsd" />       
-                <!-- <a class="mini-button" id="blabla" iconCls="blabla">上传</a> -->
-            </div>  
+            <div field="model" width="100"  allowSort="true" >生物模型
+                <input name="model" property="editor" class="mini-spinner"  minValue="1" maxValue="200" value="25" style="width:100%;"/>
+            </div>
 
-            <div field="image" width="100"  allowSort="true" >造型
-                <input  name="image"  property="editor" class="mini-htmlfile"  limitType="*.png;*.jpg;*.xls,*.dwg;*.vsd" />       
-                <!-- <a class="mini-button" id="blabla" iconCls="blabla">上传</a> -->
-            </div>  
+            <div type="comboboxcolumn" autoShowPopup="true"  field="state" width="100"  allowSort="true"  align="center" headerAlign="center">生物境界
+                <input name="state" property="editor" class="mini-combobox" style="width:100%;"  data="States" />  
+            </div>
+            
             <div field="skill" headerAlign="center" allowSort="true" width="150" >生物技能
                 <!-- <input property="editor" class="mini-textbox" style="width:100%;" minWidth="200" /> -->
                 <input property="editor" name="skill"  class="mini-buttonedit" style="width:100%;" minWidth="200" onbuttonclick="onButtonEdit"/>
@@ -92,7 +91,8 @@
     <script type="text/javascript">
 
         var Biologys = [{ id: 1, text: '人' }, { id: 2, text: '鬼'},{ id: 3, text: '妖'},{ id: 4, text: '神'},{ id: 5, text: '异'},{ id: 6, text: '魔'}];
-
+        var States = [{ id: 1, text: '先天' }, { id: 2, text: '筑基'},{ id: 3, text: '金丹'},{ id: 4, text: '元婴'},{ id: 5, text: '渡劫'},{ id: 6, text: '地仙'},{ id: 7, text: '天仙'},{ id: 8, text: '金仙'}];
+        
         var Genders = [{ id: 1, text: '男' }, { id: 2, text: '女'}];
         
         mini.parse();

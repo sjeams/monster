@@ -1,6 +1,6 @@
 <div title="north" region="north" class="app-header" bodyStyle="overflow:hidden;" height="80" showHeader="false" showSplit="false">
 <div class="logo">Monster</div>
- 
+ <!-- <a class="mini-button" iconCls="fa-home">首页</a> -->
     <div class="topNav">    
         皮肤：
         <select id="selectSkin" onchange="onSkinChange(this.value)" style="width:100px;margin-right:10px;" >
