@@ -11,6 +11,7 @@ use yii;
 use app\libs\ApiControl;
 
 use app\modules\admin\models\AdminInit;
+use app\modules\admin\models\Biology;
 class ApiController extends ApiControl {
 
     public $enableCsrfValidation = false;
@@ -39,16 +40,11 @@ class ApiController extends ApiControl {
       $data= array_merge($clearInfo,$homeInfo,$logoInfo,$menuInfo);
       echo json_encode($data);
     }
-        
-
     //清理缓存
     public function actionClear(){
       $data=array('code'=>1,'msg'=>'服务端清理缓存成功');
       echo json_encode($data);
     }
-
-
-
     //菜单列表-首页
     public function actionAdmin(){
       //树状列表
@@ -56,7 +52,6 @@ class ApiController extends ApiControl {
       $count =count($data);
       echo json_encode($data,true);
     }
-    
     //菜单快速修改
     public function actionMeanuUpdate(){
       // header('content-type:application/json ;charset=utf-8;');
@@ -65,7 +60,6 @@ class ApiController extends ApiControl {
       AdminInit::updateMeanAll($data);
       echo json_encode(true);
     } 
-    
     //菜单弹窗新增--和修改
     public function actionMeanuAdd(){
     $data = Yii::$app->request->post('data');
@@ -84,7 +78,6 @@ class ApiController extends ApiControl {
       $res= $adminInt->save();
       echo json_encode($res);
     }
-    
     //菜单删除
     public function actionMeanuDelete(){
       $id = Yii::$app->request->post('id');
@@ -99,19 +92,68 @@ class ApiController extends ApiControl {
       // var_dump($res);die;
       return $res;
     }
-
     //菜单弹出树 -- 和首页列表树
     public function actionMeanuTree(){
       $meanuInfo= AdminInit::getAdminMenusTree();  //后台界面菜单
       // var_dump( $meanuInfo);die;
       echo json_encode($meanuInfo);
     }
-
     //菜单弹出树
     public function actionMeanuFindone(){
       $id =  Yii::$app->request->post('id');
       $meanuInfo=  AdminInit::find()->where("id=$id")->asarray()->One();
       echo json_encode($meanuInfo);
+    }
+
+
+
+
+    // 生物管理---数据操作接口
+    // 增-改
+    public function actionBiologyAdd()
+    {
+      $data = Yii::$app->request->post('data');  
+      $data = json_decode($data);
+      // var_dump($data);die;
+      foreach($data as $v){
+        if($v->_state=='modified'){ //改
+          $model = Biology::find()->where("id=$v->id")->One();
+          $model->name=$v->name;
+          $model->biology=$v->biology;
+          $model->state=$v->state;
+          $model->power=$v->power;
+          $model->agile=$v->agile;
+          $model->intelligence=$v->intelligence;
+          $model->wuXing=$v->wuXing;
+          $model->skill=$v->skill;
+          $model->type=$v->type;
+          $model->descript=$v->descript;
+          $model->sex=$v->sex;
+          $model->yiXing=$v->yiXing;
+          $model->save();
+          // $result = Biology::updateAll($v,['id'=>$v->id]);
+        }else if($v->_state=='added') { // 增
+          unset($v->key);
+          unset($v->_id);
+          unset($v->_uid);
+          unset($v->_state);
+          Yii::$app->db->createCommand()->insert('x2_biology',$v)->execute();
+          // $model = new Biology();
+        } 
+      }
+      echo true;
+    }
+    // 删
+    public function actionBiologyDelete()
+    {
+      $data = Yii::$app->request->post();  
+    }
+    // 改
+    public function actionBiologyUpdate()
+    {
+      $data = Yii::$app->request->post('data');  
+      $data = json_decode($data);
+      var_dump($data);die;
     }
 
 

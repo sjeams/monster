@@ -29,4 +29,14 @@ class Biology extends ActiveRecord
         return $data;
     }
 
+    /**
+     * 
+     * @sjeam
+     */
+     public static function updateBiologyAll(){
+   
+        return $data;
+    }
+
+
 }
