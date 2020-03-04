@@ -19,6 +19,7 @@
                 <tr>
                     <td style="width:100%;">
                         <a class="mini-button" iconCls="icon-add" onclick="addRow()" plain="true" tooltip="增加...">增加</a>
+                        <a class="mini-button" iconCls="icon-add" onclick="addRow()" plain="true" tooltip="增加...">编辑</a>
                         <a class="mini-button" iconCls="icon-remove" onclick="removeRow()" plain="true">删除</a>
                         <span class="separator"></span>
                         <a class="mini-button" iconCls="icon-save" onclick="saveData()" plain="true">保存</a>   
@@ -26,7 +27,7 @@
                         <a class="mini-button" iconCls="icon-reload" onclick="BrushData()" plain="true">刷新</a>            
                     </td>
                     <td style="white-space:nowrap;">
-                        <input id="key" class="mini-textbox" emptyText="请输入姓名" style="width:150px;" onenter="onKeyEnter"/>   
+                        <input id="key" class="mini-textbox" emptyText="请输入生物名称" style="width:150px;" onenter="onKeyEnter"/>   
                         <a class="mini-button" onclick="search()">查询</a>
                     </td>
                 </tr>
@@ -50,16 +51,22 @@
             <div type="comboboxcolumn" autoShowPopup="true"  field="biology" width="100"  allowSort="true"  align="center" headerAlign="center">种族
                 <input name="biology" property="editor" class="mini-combobox" style="width:100%;"  data="Biologys" />                
             </div>
-            <div field="grade" width="100"  allowSort="true" >等级
-                <input name="grade" property="editor" class="mini-spinner"  minValue="1" maxValue="200" value="25" style="width:100%;"/>
-            </div>  
-
-            <div field="model" width="100"  allowSort="true" >生物模型
-                <input name="model" property="editor" class="mini-spinner"  minValue="1" maxValue="200" value="25" style="width:100%;"/>
-            </div>
 
             <div type="comboboxcolumn" autoShowPopup="true"  field="state" width="100"  allowSort="true"  align="center" headerAlign="center">生物境界
                 <input name="state" property="editor" class="mini-combobox" style="width:100%;"  data="States" />  
+            </div>
+
+            <div field="power" width="100"  allowSort="true" >力量
+                <input name="power" property="editor" class="mini-spinner"  minValue="1" maxValue="200" value="25" style="width:100%;"/>
+            </div>
+            <div field="agile" width="100"  allowSort="true" >敏捷
+                <input name="agile" property="editor" class="mini-spinner"  minValue="1" maxValue="200" value="25" style="width:100%;"/>
+            </div>
+            <div field="intelligence" width="100"  allowSort="true" >智力
+                <input name="intelligence" property="editor" class="mini-spinner"  minValue="1" maxValue="200" value="25" style="width:100%;"/>
+            </div>
+            <div field="wuXing" width="100"  allowSort="true" >悟性
+                <input name="wuXing" property="editor" class="mini-spinner"  minValue="1" maxValue="200" value="25" style="width:100%;"/>
             </div>
             
             <div field="skill" headerAlign="center" allowSort="true" width="150" >生物技能
@@ -67,22 +74,27 @@
                 <input property="editor" name="skill"  class="mini-buttonedit" style="width:100%;" minWidth="200" onbuttonclick="onButtonEdit"/>
             </div>
             
+            <div type="comboboxcolumn" autoShowPopup="true"  field="type" width="100"  allowSort="true"  align="center" headerAlign="center">生物类型
+                <input name="type" property="editor" class="mini-combobox" style="width:100%;"  data="Type" />                
+            </div>
 
-            <div field="birthday" width="100"  allowSort="true" dateFormat="yyyy-MM-dd">出生日期
+
+            <!-- <div field="birthday" width="100"  allowSort="true" dateFormat="yyyy-MM-dd">出生日期
                 <input name="birthday"  property="editor" class="mini-datepicker" style="width:100%;"/>
-            </div>    
+            </div>     -->
             <div field="descript" width="150" headerAlign="center" allowSort="true">描述
                 <input name="descript" property="editor" class="mini-textarea mini-textbox" style="width:200px;" minWidth="200" minHeight="50"/>
             </div>
             <!--ComboBox：本地数据-->         
-            <!-- <div type="comboboxcolumn" autoShowPopup="true" name="special" field="special" width="100"  allowSort="true"  align="center" headerAlign="center">评分
+            <div type="comboboxcolumn" autoShowPopup="true" name="sex" field="sex" width="100"  allowSort="true"  align="center" headerAlign="center">性别
                 <input property="editor" class="mini-combobox" style="width:100%;" data="Genders" />                
-            </div> -->
+            </div>
             <!--ComboBox：远程数据-->
             <!-- <div type="comboboxcolumn" field="country" width="100"  headerAlign="center" >国家
                 <input property="editor" class="mini-combobox" style="width:100%;" url="/miniui/demo/data/countrys.txt" />                
             </div>    -->
-            <div type="checkboxcolumn" field="married" trueValue="1" falseValue="0" width="60" headerAlign="center">是否异形</div>                        
+            <div type="checkboxcolumn" field="yiXing" name="yiXing" trueValue="1" falseValue="0" width="60" headerAlign="center">是否异形</div> 
+                      
         </div>
     </div>
 
@@ -90,10 +102,10 @@
 </html>
     <script type="text/javascript">
 
-        var Biologys = [{ id: 1, text: '人' }, { id: 2, text: '鬼'},{ id: 3, text: '妖'},{ id: 4, text: '神'},{ id: 5, text: '异'},{ id: 6, text: '魔'}];
+        var Biologys = [{ id: 1, text: '人' }, { id: 2, text: '鬼'},{ id: 3, text: '妖'},{ id: 4, text: '神'},{ id: 5, text: '魔'},{ id: 6, text: '异'}];
         var States = [{ id: 1, text: '先天' }, { id: 2, text: '筑基'},{ id: 3, text: '金丹'},{ id: 4, text: '元婴'},{ id: 5, text: '渡劫'},{ id: 6, text: '地仙'},{ id: 7, text: '天仙'},{ id: 8, text: '金仙'}];
-        
-        var Genders = [{ id: 1, text: '男' }, { id: 2, text: '女'}];
+        var Type = [{ id: 1, text: '普通' }, { id: 2, text: '商店'}, { id: 3, text: 'NPC'}];
+        var Genders = [{ id: 1, text: '男' }, { id: 2, text: '女'}, { id: 3, text: '未知'}];
         
         mini.parse();
 
@@ -114,7 +126,7 @@
         }
 
         function addRow() {          
-            var newRow = { name: "New Row",biology: 1,grade: 1,photo: "",image: "",skill: "",birthday: "",descript: ""};
+            var newRow = { name: "未知生物",biology: 1,grade: 1,state: 1,power: 1,agile: 1,intelligence: 1,wuXing: 1,skill: 1,type: 1,descript: "",sex: 3,yiXing: 0};
             grid.addRow(newRow, 0);
             grid.beginEditCell(newRow, "name");
             // grid.beginEditCell(newRow, "biology");
@@ -135,10 +147,10 @@
             
             var data = grid.getChanges();
             var json = mini.encode(data);
-            
+            // alert(111);
             grid.loading("保存中，请稍后......");
             $.ajax({
-                url: "/miniui/demo/data/AjaxService.php?method=SaveEmployees",
+                url: "/admin/api/biology-add",
                 data: { data: json },
                 type: "post",
                 success: function (text) {
