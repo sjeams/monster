@@ -167,7 +167,7 @@
             if (row) {
                 mini.open({
                     url: "/admin/biology/employee-window",
-                    title: "生物详情", width: 800, height: 750,
+                    title: "生物详情", width: 800, height: 700,
                     onload: function () {
                         var iframe = this.getIFrameEl();
                         var data = { action: "edit", id: row.id };

@@ -25,14 +25,18 @@
                     <input name="name" class="mini-textbox"/>
                 </td>
                 <td style="width:80px;">头像</td>
-                <td rowspan="5" style="border:1px solid #cccccc">      
-                    <img src="" alt="头像"> 
-                    <input type="hidden" name="headerPicture" >                 
+                <td rowspan="5" style="border:1px solid #cccccc">       
+                    <a href="#" class="btn btn-info" onclick="upImage(1);">   
+                        <img src="" id ="infor-headerpicture" alt="头像" style="width:100%;height:160px">
+                        <input name="headerPicture" class="headerpicture mini-textbox" style="display:none"  placeholder="图片地址">
+                    </a>             
                 </td>
                 <td style="width:80px;">形象</td>
-                <td rowspan="5" style="border:1px solid #cccccc">      
-                    <img src="" alt="形象">                  
-                    <input type="hidden" name="headerPicture">     
+                <td rowspan="5" style="border:1px solid #cccccc">   
+                    <a href="#" class="btn btn-info" onclick="upImage(2);">   
+                        <img src="" id ="infor-picture" alt="形象" style="width:100%;height:160px">
+                        <input name="picture" class="picture mini-textbox" style="display:none"  placeholder="图片地址">
+                    </a>
                 </td>
             </tr>
             <tr>
@@ -52,12 +56,10 @@
                 </td>
             </tr>
             <tr>
-                <td style="width:80px;">种族</td>
-                <td style="width:150px;">    
-                    <input name="biology" class="mini-combobox" valueField="id" textField="name" 
-                        url="" onvaluechanged="onDeptChanged" 
-                        emptyText="请选择种族"
-                        />
+                <td >颜色  <input id="full" ></td>
+                <td class="colorPicker">
+                    <!-- <input type="hidden" labelField="true" label="选择颜色:" id="textbox1" name="color"  emptyText="请选择颜色"> -->
+                    <input name="color" class="mini-textbox">
                 </td>
             </tr> 
             <tr>
@@ -74,78 +76,81 @@
             <tr>
                 <td >幸运</td>
                 <td >    
-                    <input name="lucky" class="mini-spinner" value="1" minValue="1" maxValue="200" />
+                    <input name="lucky" class="mini-spinner" value="1" minValue="1" maxValue="1000" />
                 </td>  
                 <td style="width:80px;">境界</td>
                 <td style="width:150px;">    
                     <input  name="state" class="mini-combobox" style="width:100%;" url="/admin/biology/biology-stateall" emptyText="请选择境界" />    
                 </td>
-                <td >血脉</td>
-                <td >    
-                    <input name="xueMai" class="mini-combobox" url="" />
+                <td style="width:80px;">种族</td>
+                <td style="width:150px;">    
+                    <input name="biology" class="mini-combobox" valueField="id" textField="name" 
+                        url="" onvaluechanged="onDeptChanged" 
+                        emptyText="请选择种族"
+                        />
                 </td>
             </tr>   
             <tr>
                 <td >力量</td>
                 <td >    
-                    <input name="power"  class="mini-spinner" value="1" minValue="1" maxValue="200" />
+                    <input name="power"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
                 <td >敏捷</td>
                 <td >    
-                    <input name="agile"  class="mini-spinner" value="1" minValue="1" maxValue="200" />
+                    <input name="agile"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
                 <td >智力</td>
                 <td >    
-                    <input name="intelligence"  class="mini-spinner" value="1" minValue="1" maxValue="200" />
+                    <input name="intelligence"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
             </tr>  
             <tr>
                 <td >自由属性</td>
                 <td >    
-                    <input name="maxNature" class="mini-combobox" valueField="id" textField="name" url="" />
+                    <input name="maxNature" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
                 <td >潜能</td>
                 <td >    
-                    <input name="qianNeng" class="mini-textbox" />
+                    <input name="qianNeng" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
                 <td >性格</td>
                 <td >    
-                    <input name="character" class="mini-textbox" />
+                    <input name="character" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
             </tr> 
             <tr>
                 <td >等级</td>
                 <td >    
-                    <input name="grade" class="mini-textbox" />
+                    <input name="grade" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
                 <td >进阶(升星)</td>
                 <td >    
-                    <input name="jinJie" class="mini-textbox" />
+                    <input name="jinJie" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
                 <td >灵气</td>
                 <td >    
-                    <input name="reiki" class="mini-textbox" />
+                    <input name="reiki" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
             </tr> 
             <tr>
                 <td >训练</td>
                 <td >    
-                    <input name="xunLian" class="mini-combobox" valueField="id" textField="name" url="" />
+                    <input name="xunLian" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
                 <td >刷新</td>
                 <td >    
-                    <input name="shuaXin" class="mini-textbox" />
+                    <input name="shuaXin" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
                 <td >悟性</td>
                 <td >    
-                    <input name="wuXing" class="mini-textbox" />
+                    <input name="wuXing" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
             </tr> 
             
             <tr>
                 <td >技能</td>
                 <td >    
-                    <input name="skill" class="mini-combobox" valueField="id" textField="name" url="" />
+                    <input name="skill" class="mini-combobox" valueField="id" textField="name" url=""  onbuttonclick="onButtonEdit" />
                 </td>
                 <td >元神</td>
                 <td >    
@@ -153,7 +158,7 @@
                 </td>
                 <td >缘分</td>
                 <td >    
-                    <input name="Fate" class="mini-textbox" />
+                    <input name="fate" class="mini-textbox" />
                 </td>
             </tr> 
             <tr>
@@ -224,21 +229,33 @@
                     <td >    
                         <input name="baojilv" class="mini-textbox readonly" readonly  />
                     </td>
-                </tr>   
+                </tr>  
                 <tr>
-                    <td >颜色          <input id="full" ></td>
-                    <td class="colorPicker">
-                        <!-- <input type="hidden" labelField="true" label="选择颜色:" id="textbox1" name="color"  emptyText="请选择颜色"> -->
-                        <input name="color" class="mini-textbox">
-              
-                    </td>
-                    <td >战力</td>
+                    <td >丹毒</td>
                     <td >    
-                        <input name="special" class="mini-textbox readonly" readonly  />
+                        <input name="danDu" class="mini-textbox readonly" readonly  />
                     </td>
                     <td >评分</td>
                     <td >    
                         <input name="score" class="mini-textbox readonly" readonly  />
+                    </td>
+                    <td >评分等级</td>
+                    <td >    
+                        <input name="scoreGrade" class="mini-textbox readonly" readonly  />
+                    </td>
+                </tr>   
+                <tr>
+                    <td >战力</td>
+                    <td >    
+                        <input name="special" class="mini-textbox readonly" readonly  />
+                    </td>
+                    <td >金币</td>
+                    <td >    
+                        <input name="jingBi" class="mini-textbox readonly" readonly  />
+                    </td>
+                    <td >经验</td>
+                    <td >    
+                        <input name="jingYan" class="mini-textbox readonly" readonly  />
                     </td>
                 </tr>     
             </table>
@@ -256,14 +273,20 @@
     var Sex = [{ id: 1, text: '男' }, { id: 2, text: '女'},{ id: 3, text: '未知'}];  
     var form = new mini.Form("form1");
 
+    var extend =['reiki','lucky','state','power','agile','intelligence','maxNature','qianNeng','character','grade','jinJie','wuXing','skill']
+    for(var i=0;i<extend.length;i++){   
+            mini.getbyName(extend[i]).on("valuechanged", function () {
+            // mini.getbyName("shengMing").setValue(123); 
+            extenCount();
+        });
+    } 
+
+
     function SaveData() {
         var o = form.getData();            
-
         form.validate();
         if (form.isValid() == false) return;
-
         var json = mini.encode([o]);
-
         console.log(json);
         // $.ajax({
         //     url: "../data/AjaxService.php?method=SaveEmployees",
@@ -279,7 +302,6 @@
         //     }
         // });
     }
-
     ////////////////////
     //标准方法接口定义
     function SetData(data) {
@@ -321,10 +343,19 @@
     }
     ////////////////////////////////// 初始化数据
     function onDeptChanged(e) {  
+
+            extenCount(); //初始化属性
+            // 初始化图片--头像
+            var headerpicture = mini.getbyName("headerPicture");
+            headerpicture = headerpicture.getValue();
+            document.getElementById("infor-headerpicture").src=headerpicture;
+            // 初始化图片--形象
+            var picture = mini.getbyName("picture");
+            picture = picture.getValue();
+            document.getElementById("infor-picture").src=picture;
             //初始化数据--颜色
             var colorname = mini.getbyName("color");
             colorvalue = colorname.getValue();
-            
             $("#full").spectrum({
                 color: colorvalue,  //初始化颜色
                 preferredFormat: "hex3", //输入框颜色格式
@@ -345,7 +376,7 @@
             });
     }
 
-
+    // 颜色选择器
     $(function () {
         $('#full').change(function() {
             var color = mini.getbyName("color");
@@ -353,4 +384,203 @@
         });
 
     })
+
+</script>
+<script>
+    //实例化编辑器
+    var o_ueditorupload = UE.getEditor('j_ueditorupload',
+        {
+            autoHeightEnabled:false
+        });
+    o_ueditorupload.ready(function ()
+    {
+
+        o_ueditorupload.hide();//隐藏编辑器
+
+        //监听图片上传
+        // o_ueditorupload.addListener('beforeInsertImage', function (t,arg)
+        // {
+            // var picture = mini.getbyName("picture");
+            // color.setValue($("#full").val())
+            // document.getElementById("infor-full").src=arg[0].src;
+        // });
+
+        /* 文件上传监听
+         * 需要在ueditor.all.min.js文件中找到
+         * d.execCommand("insertHtml",l)
+         * 之后插入d.fireEvent('afterUpfile',b)
+         */
+        o_ueditorupload.addListener('afterUpfile', function (t, arg)
+        {
+
+        });
+    });
+
+    //弹出图片上传的对话框
+    function upImage(e)
+    {
+        var myImage = o_ueditorupload.getDialog("insertimage");
+        var arg= myImage.open();
+        //监听图片上传
+        o_ueditorupload.addListener('beforeInsertImage', function (t,arg)
+        {
+            if(e==1){//头像
+                document.getElementById("infor-headerpicture").src=arg[0].src;
+                var headerpicture = mini.getbyName("headerPicture");
+                headerpicture.setValue(arg[0].src);
+            }
+            if(e==2){ // 形象
+                document.getElementById("infor-picture").src=arg[0].src;
+                var picture = mini.getbyName("picture");
+                picture.setValue(arg[0].src); 
+            }
+        });
+    }
+</script>
+<script type="text/plain" id="j_ueditorupload"></script>
+
+
+
+<script>
+
+    // var extend =['lucky','state','power','agile','intelligence','maxNature','qianNeng','character','grade','jinJie','wuXing','skill']
+    // 生物属性计算
+    function extenCount(){
+        // 获取表单数据
+        var o = form.getData(); 
+        
+        // 处理境界
+        var inter = 0;  //境界增加属性值
+        var state= parseInt(o.state);
+        if(state>1){   var inter = inter+10;  }
+        if(state>2){   var inter = inter+20;  }
+        if(state>3){   var inter = inter+50;  }
+        if(state>4){   var inter = inter+100;  }
+        if(state>5){   var inter = inter+150;  }
+        if(state>6){   var inter = inter+200;  }
+        if(state>7){   var inter = inter+300;  }
+        if(state>8){   var inter = inter+500;  }
+        if(state>9){   var inter = inter+750;  }
+        if(state>10){   var inter = inter+1000;  }
+        if(state>11){   var inter = inter+2500;  }
+        if(state>12){   var inter = inter+5000;  }
+
+
+        var skill =o.skill; //技能
+        var skillleng =  skill.split(',').length;
+        // console.log(skillleng);
+        // console.log(skillleng.length);
+        var reiki =parseInt(o.reiki); //悟性
+        var wuXing =parseInt(o.wuXing); //悟性
+        var grade =parseInt(o.grade); //等级
+        var lucky =parseInt(o.lucky); //幸运
+
+        var power =parseInt(o.power)*(1+wuXing/10)*grade+inter;  //力
+        var agile =parseInt(o.agile)*(1+wuXing/10)*grade+inter;  //敏
+        var intelligence =parseInt(o.intelligence)*(1+wuXing/10)*grade+inter; //智
+
+        var  shengMing = parseInt(100+grade*100+power*10+agile*2+intelligence*2+reiki*10); //等级+力量 
+        var  moFa =parseInt(20+grade*1+intelligence*0.3+reiki*0.15); // 等级+智力
+        var  gongJi = parseInt((power*0.3+agile+intelligence*0.3+reiki*0.15)*1.2);
+        var  huJia = parseInt(power*0.1+agile*0.3+intelligence*0.1+reiki*0.15);
+        var  faGong = parseInt((power*0.3+agile*0.3+intelligence+reiki*0.15)*1.2);
+        var  fakang = parseInt(power*0.1+agile*0.1+intelligence*0.3+reiki*0.15);
+
+        var  jianShang = parseInt(reiki*0.3+reiki*lucky*(1+wuXing/10)*0.1);
+        var  zhenShang = parseInt(reiki*lucky*0.15+reiki*0.5);
+        var  shanbi = parseInt((lucky*0.25+(lucky*10+reiki+grade*10)*0.0075));  // 最大值为1000
+        var  suDu = parseInt(100+agile*0.25+reiki*0.3); //速度
+        // var  baoji = 10;
+        // var  baojilv = 10;
+        // var  danDu = 10;
+  
+
+        var  special = parseInt(shengMing+moFa+gongJi+huJia+faGong+fakang+jianShang+zhenShang+shanbi+suDu);
+        var  score = parseInt(wuXing*3+skillleng*5+parseInt(o.power)+parseInt(o.agile)+parseInt(o.intelligence));  //属性最大值为100/10 ,评分满值为350
+        if(score>1){   var inter = 'D';  }
+        if(score>100){   var inter = 'C';  }
+        if(score>120){   var inter = 'B';  }
+        if(score>160){   var inter = 'A';  }
+        if(score>180){   var inter = 'S';  }
+        if(score>210){   var inter = 'SS';  }
+        if(score>240){   var inter = 'SSS';  }
+        if(score>300){   var scoreGrade = '传说';  }
+
+        var  jingBi =  score*2+grade+state*3;
+        var  jingYan = score+grade+state*5;
+        
+        mini.getbyName("shengMing").setValue(shengMing); 
+        mini.getbyName("moFa").setValue(moFa); 
+        mini.getbyName("gongJi").setValue(gongJi); 
+        mini.getbyName("huJia").setValue(huJia); 
+        mini.getbyName("faGong").setValue(faGong); 
+        mini.getbyName("fakang").setValue(fakang); 
+        mini.getbyName("faGong").setValue(faGong); 
+        mini.getbyName("fakang").setValue(fakang); 
+        mini.getbyName("jianShang").setValue(jianShang); 
+        mini.getbyName("zhenShang").setValue(zhenShang); 
+        mini.getbyName("shanbi").setValue(shanbi); 
+        mini.getbyName("suDu").setValue(suDu); 
+        mini.getbyName("special").setValue(special); 
+        mini.getbyName("score").setValue(score); 
+        mini.getbyName("scoreGrade").setValue(scoreGrade); 
+        mini.getbyName("jingBi").setValue(jingBi); 
+        mini.getbyName("jingYan").setValue(jingYan); 
+
+    }
+</script>
+
+
+
+<!-- 技能弹窗 -->
+<script type="text/javascript">
+    mini.parse();
+
+    function onButtonEdit(e) {
+        var buttonEdit = e.sender;
+        // var buttonEdit = this;
+        var win = new UserSelectWindow();
+        win.set({
+            url: "/admin/biology/api-skill",                    
+            title: "生物技能",
+            width: 600,
+            height: 350
+        });
+        
+        win.show();
+        win.search();
+
+        //初始化数据
+        win.setData(null, function (action) {
+            if (action == "ok") {
+                //获取数据
+                var rows = win.getData();
+                // console.log(rows);
+                // console.log(e);
+                // console.log( mini.get("datagrid1").getRow());
+                if (rows) {    
+                    //循环取值  
+                    var ids = [], texts = [];
+                    for (var i = 0, l = rows.length; i < l; i++) {
+                        var row = rows[i];
+                        ids.push(row.id);
+                        texts.push(row.name);
+                    }
+                    var data = {};
+                    data.id = ids.join(",");
+                    data.text = texts.join(",");
+                    // console.log(data.id);
+                    // console.log(data.text);
+
+                    buttonEdit.setValue(data.id);
+                    buttonEdit.setText(data.id);
+                
+                    var newRow = {skill: data.text};
+                    // e.source.value=data.id;
+                    win.focus();
+                }
+            }
+        });
+    }
+    
 </script>
