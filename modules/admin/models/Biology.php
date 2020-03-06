@@ -13,8 +13,11 @@ class Biology extends ActiveRecord
      * 获取所有模块
      * @sjeam
      */
-    public static function getBiologyList(){
-        $data = Biology::find()->select("*,name as key")->asarray()->All();
+    public static function getBiologyList($page=1,$pageSize=20){
+        
+
+        $data['data'] = Biology::find()->select("*,name as key")->offset($page*$pageSize)->limit($pageSize)->asarray()->All();
+        $data ['total'] = Biology::find()->select("id")->asarray()->count();
         // $data=  AdminInit::getChildren($adminIint);
         return $data;
     }

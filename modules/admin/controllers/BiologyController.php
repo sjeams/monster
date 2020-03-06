@@ -10,6 +10,7 @@ use yii;
 use app\libs\ApiControl;
 use app\modules\admin\models\Biology;
 use app\modules\admin\models\BiologySkill;
+use app\modules\admin\models\BiologyState;
 class BiologyController extends ApiControl {
 
     public $enableCsrfValidation = false;
@@ -26,7 +27,11 @@ class BiologyController extends ApiControl {
     // 生物列表
     public function actionApiIndex()
     {
-      $data= Biology::getBiologyList();
+      $pageIndex=Yii::$app->request->post('pageIndex',1);
+      $pageSize=Yii::$app->request->post('pageSize',20);
+      // $sortField=Yii::$app->request->post('sortField');
+      // $sortOrder=Yii::$app->request->post('sortOrder');
+      $data= Biology::getBiologyList($pageIndex,$pageSize);
       echo json_encode($data);
     }
 
@@ -55,6 +60,17 @@ class BiologyController extends ApiControl {
     }
    
 
-
-
+   //  生物详情弹窗
+   public function actionEmployeeWindow()
+   {  
+      return $this->render("EmployeeWindow");
+   }
+    
+   //  生物详情弹窗
+   public function actionBiologyStateall()
+   {  
+      $data= BiologyState:: getBiologyStateall();
+      echo json_encode($data);
+   }
+ 
 }
