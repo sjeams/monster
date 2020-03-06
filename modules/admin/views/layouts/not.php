@@ -1,6 +1,7 @@
 <link href="/miniui/demo/demo.css" rel="stylesheet" type="text/css" />
 <link href="/miniui/scripts/miniui/themes/icons.css" rel="stylesheet" type="text/css">
 <link href="/miniui/scripts/miniui/themes/default/miniui.css" rel="stylesheet" type="text/css">
+<link href="/miniui/scripts/miniui/themes/blue/skin.css" rel="stylesheet" type="text/css" />
 
 
 <script src="/miniui/scripts/boot.js" type="text/javascript"></script>
@@ -11,5 +12,10 @@
 <script src="/miniui/scripts/tongji.js" type="text/javascript"></script>
 
 <script src="/miniui/demo/CommonLibs/UserSelectWindow.js" type="text/javascript"></script>   
+
+<link href="/miniui/res/third-party/spectrum/spectrum.css" rel="stylesheet" type="text/css" />
+<script src="/miniui/res/third-party/spectrum/spectrum.js" type="text/javascript"></script>
+    
+
 
 <?=$content?>

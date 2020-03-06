@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50711
 File Encoding         : 65001
 
-Date: 2020-01-23 18:05:08
+Date: 2020-03-06 10:07:21
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -78,25 +78,79 @@ DROP TABLE IF EXISTS `x2_biology`;
 CREATE TABLE `x2_biology` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(25) DEFAULT NULL COMMENT '生物名称',
-  `biology` tinyint(3) DEFAULT '1' COMMENT '生物属性(神魔人鬼妖五行混沌) 0未知',
-  `grade` tinyint(11) DEFAULT '1' COMMENT '等级',
-  `photo` varchar(255) DEFAULT NULL COMMENT '生物头像',
-  `image` varchar(255) DEFAULT NULL COMMENT '生物造型',
-  `special` tinyint(11) DEFAULT '1' COMMENT '评分 (与属性有关*30.0的基础评分) 悟性 和基础属性',
-  `skill` varchar(11) DEFAULT NULL COMMENT '技能编号',
-  `maxNature` int(11) DEFAULT NULL COMMENT '最大属性',
-  `genGu` int(11) DEFAULT NULL COMMENT '根骨',
-  `wuXing` int(11) DEFAULT NULL COMMENT '悟性（成长）',
-  `character` int(11) DEFAULT NULL COMMENT '性格',
-  `birthday` datetime DEFAULT NULL,
+  `biology` tinyint(3) DEFAULT '1' COMMENT '种族(人鬼妖神魔异) 0未知',
+  `state` int(3) DEFAULT '1' COMMENT '生物境界',
+  `grade` int(11) DEFAULT '1' COMMENT '等级',
+  `shengMing` int(11) DEFAULT '1' COMMENT '生命',
+  `moFa` int(11) DEFAULT '1' COMMENT '魔法',
+  `gongJi` int(11) DEFAULT '1' COMMENT '攻击',
+  `huJia` int(11) DEFAULT '1' COMMENT '护甲',
+  `faGong` int(11) DEFAULT '1' COMMENT '特攻',
+  `fakang` int(11) DEFAULT '1' COMMENT '法抗',
+  `suDu` int(11) DEFAULT '1' COMMENT '速度',
+  `shanbi` int(11) DEFAULT '0' COMMENT '闪避',
+  `baoji` int(11) DEFAULT '0' COMMENT '暴击',
+  `baojilv` int(11) DEFAULT '0' COMMENT '暴击率',
+  `shuaXin` int(11) DEFAULT '1' COMMENT '刷新次数',
+  `xunLian` int(11) DEFAULT '3' COMMENT '训练次数',
+  `jinJie` int(11) DEFAULT '1' COMMENT '进阶',
+  `biologyid` int(11) DEFAULT '0' COMMENT '生物id',
+  `reiki` int(11) DEFAULT '1' COMMENT '灵气',
+  `power` int(11) DEFAULT '1' COMMENT '力量',
+  `agile` int(11) DEFAULT '1' COMMENT '敏捷',
+  `intelligence` int(11) DEFAULT '1' COMMENT '智力',
+  `special` int(11) DEFAULT '1' COMMENT '评分 战力 (与属性有关*30.0的基础评分) 悟性 和基础属性',
+  `score` int(11) DEFAULT '1' COMMENT '评分',
+  `wuXing` int(11) DEFAULT '3' COMMENT '悟性-成长率 1-10  自由属性 ',
+  `skill` varchar(255) DEFAULT '1' COMMENT '技能编号',
+  `yuanShen` int(11) DEFAULT '0' COMMENT '元神',
+  `Fate` int(11) DEFAULT '1' COMMENT '缘分(武器缘分) 本命法宝（只有一个）武器库随机-命中注定',
+  `type` int(3) DEFAULT '1' COMMENT '1普通 2商店 3NPC',
   `descript` varchar(255) DEFAULT NULL COMMENT '描述',
+  `lucky` int(3) DEFAULT '1' COMMENT ' 幸运值-成长值-潜能-技能进阶-境界突破',
+  `maxNature` int(11) DEFAULT '10' COMMENT '自由属性点',
+  `qianNeng` int(3) DEFAULT '1' COMMENT '潜能--1-10次，战斗中有几率进化-增加1-10 悟性（越低级潜能越大）',
+  `character` int(3) DEFAULT '1' COMMENT '性格',
+  `headerPicture` varchar(255) DEFAULT NULL COMMENT '头像',
+  `Picture` varchar(255) DEFAULT NULL COMMENT '生物图片 形象',
+  `yiXing` tinyint(1) DEFAULT '0' COMMENT '异性 0 否1是',
+  `sex` int(255) DEFAULT '1' COMMENT '性别',
+  `xueMai` int(255) DEFAULT '1' COMMENT '血脉',
+  `jianShang` int(255) DEFAULT '0' COMMENT '减伤',
+  `zhenShang` int(255) DEFAULT '0' COMMENT '增伤（真实伤害）',
+  `color` varchar(25) DEFAULT '#fff' COMMENT '颜色（普通默认为白色）',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_biology
 -- ----------------------------
-INSERT INTO `x2_biology` VALUES ('1', '盘古', '1', '1', '/file/image/sc.jpg', '/file/image/sc.jpg', '1', '1,2,3', '80', '80', '80', '1', '2020-01-15 00:00:00', null);
+INSERT INTO `x2_biology` VALUES ('1', '盘古c', '3', '2', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '2', '3', '1', '1', '1', '3', '2', '0', '1', '1', '盘古开天辟地，第二元神', '1', '10', '1', '1', null, null, '0', '1', null, '0', '0', '#444');
+INSERT INTO `x2_biology` VALUES ('2', '未知生物', '5', '4', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '3', '4', '1', '1', '1', '1', '2,3', '0', '1', '3', null, '1', '10', '1', '1', null, null, '0', '2', null, '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('3', '女娲', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', null, '1', '10', '1', '1', null, null, '0', '2', null, '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('8', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', null, '1', '10', '1', '1', null, null, '0', '3', null, '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('9', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('10', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('11', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('12', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('13', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('14', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('15', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('16', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('17', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('18', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('19', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('20', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('21', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('22', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('23', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('24', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('25', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('26', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('27', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('28', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('29', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
+INSERT INTO `x2_biology` VALUES ('30', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1', '', '1', '10', '1', '1', null, null, '0', '3', '1', '0', '0', '#fff');
 
 -- ----------------------------
 -- Table structure for x2_biology_character
@@ -154,32 +208,83 @@ INSERT INTO `x2_biology_skill` VALUES ('2', '6', '雷击', '1', null, '0', '100'
 INSERT INTO `x2_biology_skill` VALUES ('3', '6', '灵魂锁链', '2', null, '0', '30', null, '生命分摊');
 
 -- ----------------------------
+-- Table structure for x2_biology_state
+-- ----------------------------
+DROP TABLE IF EXISTS `x2_biology_state`;
+CREATE TABLE `x2_biology_state` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(25) DEFAULT NULL,
+  `point` varchar(255) DEFAULT NULL,
+  `value` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of x2_biology_state
+-- ----------------------------
+INSERT INTO `x2_biology_state` VALUES ('1', '凡人', null, null);
+INSERT INTO `x2_biology_state` VALUES ('2', '先天', null, null);
+INSERT INTO `x2_biology_state` VALUES ('3', '金丹', null, null);
+INSERT INTO `x2_biology_state` VALUES ('4', '筑基', null, null);
+INSERT INTO `x2_biology_state` VALUES ('5', '金丹', null, null);
+INSERT INTO `x2_biology_state` VALUES ('6', '元婴', null, null);
+INSERT INTO `x2_biology_state` VALUES ('7', '渡劫', null, null);
+INSERT INTO `x2_biology_state` VALUES ('8', '地仙', null, null);
+INSERT INTO `x2_biology_state` VALUES ('9', '天仙', null, null);
+INSERT INTO `x2_biology_state` VALUES ('10', '金仙', null, null);
+INSERT INTO `x2_biology_state` VALUES ('11', '大罗', null, null);
+INSERT INTO `x2_biology_state` VALUES ('12', '玄仙', null, null);
+INSERT INTO `x2_biology_state` VALUES ('13', '圣人', null, null);
+
+-- ----------------------------
 -- Table structure for x2_user_biology
 -- ----------------------------
 DROP TABLE IF EXISTS `x2_user_biology`;
 CREATE TABLE `x2_user_biology` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Biology` varchar(25) DEFAULT NULL COMMENT '生物属性(神魔人鬼妖五行混沌)',
   `name` varchar(25) DEFAULT NULL COMMENT '生物名称',
-  `photo` varchar(255) DEFAULT NULL COMMENT '头像编号',
-  `image` varchar(255) DEFAULT NULL COMMENT '生物造型',
-  `special` int(11) DEFAULT '0' COMMENT '是否异形 0不是1是',
-  `skill` varchar(11) DEFAULT NULL COMMENT '技能编号',
-  `fiveElements` varchar(25) DEFAULT NULL COMMENT '五行（金木水火土）技能编号',
-  `reiki` int(11) DEFAULT NULL COMMENT '灵气',
-  `power` int(11) DEFAULT NULL COMMENT '力量',
-  `agile` int(11) DEFAULT NULL COMMENT '敏捷',
-  `intelligence` int(11) DEFAULT NULL COMMENT '智力',
-  `score` int(11) DEFAULT NULL COMMENT '评分',
-  `grade` varchar(25) DEFAULT NULL COMMENT '评分等级',
-  `Fate` varchar(25) DEFAULT NULL COMMENT '缘分(武器缘分)',
+  `biology` tinyint(3) DEFAULT '1' COMMENT '生物属性(神魔人鬼妖五行混沌) 0未知',
+  `grade` int(11) DEFAULT '1' COMMENT '等级',
+  `shengMing` int(11) DEFAULT '1' COMMENT '生命',
+  `moFa` int(11) DEFAULT '1' COMMENT '魔法',
+  `gongJi` int(11) DEFAULT '1' COMMENT '攻击',
+  `huJia` int(11) DEFAULT '1' COMMENT '护甲',
+  `faGong` int(11) DEFAULT '1' COMMENT '特攻',
+  `fakang` int(11) DEFAULT '1' COMMENT '法抗',
+  `suDu` int(11) DEFAULT '1' COMMENT '速度',
+  `shanbi` int(11) DEFAULT '0' COMMENT '闪避',
+  `baoji` int(11) DEFAULT '0' COMMENT '暴击',
+  `baojilv` int(11) DEFAULT '0' COMMENT '暴击率',
+  `shuaXin` int(11) DEFAULT '1' COMMENT '刷新次数',
+  `xunLian` int(11) DEFAULT '3' COMMENT '训练次数',
+  `state` int(3) DEFAULT '1' COMMENT '生物境界',
+  `jinJie` int(11) DEFAULT '1' COMMENT '生物id',
+  `biologyid` int(11) NOT NULL DEFAULT '0' COMMENT '生物id',
+  `reiki` int(11) DEFAULT '1' COMMENT '灵气',
+  `power` int(11) DEFAULT '1' COMMENT '力量',
+  `agile` int(11) DEFAULT '1' COMMENT '敏捷',
+  `intelligence` int(11) DEFAULT '1' COMMENT '智力',
+  `special` int(11) DEFAULT '1' COMMENT '评分 战力 (与属性有关*30.0的基础评分) 悟性 和基础属性',
+  `score` int(11) DEFAULT '1' COMMENT '评分',
+  `wuXing` int(11) DEFAULT '3' COMMENT '悟性-成长率 1-10  自由属性 ',
+  `skill` int(11) DEFAULT '1' COMMENT '技能编号',
+  `yuanShen` int(11) DEFAULT '0' COMMENT '元神',
+  `Fate` int(11) DEFAULT '1' COMMENT '缘分(武器缘分) 本命法宝（只有一个）武器库随机-命中注定',
+  `type` int(3) DEFAULT '1' COMMENT '1普通 2商店 3NPC',
+  `descript` int(255) DEFAULT NULL COMMENT '描述',
+  `lucky` int(3) DEFAULT '1' COMMENT ' 幸运值-成长值-潜能-技能进阶-境界突破',
+  `maxNature` int(11) DEFAULT '10' COMMENT '自由属性点',
+  `qianNeng` int(3) DEFAULT '1' COMMENT '潜能--1-10次，战斗中有几率进化-增加1-10 悟性（越低级潜能越大）',
+  `character` int(3) DEFAULT '1' COMMENT '性格',
+  `headerPicture` varchar(255) DEFAULT NULL COMMENT '头像',
+  `Picture` varchar(255) DEFAULT NULL COMMENT '生物图片',
+  `yiXing` tinyint(1) DEFAULT '0' COMMENT '异性 0 否1是',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_user_biology
 -- ----------------------------
-INSERT INTO `x2_user_biology` VALUES ('1', '魔', '盘古', null, null, '0', '1,2,3', '1', '80', '60', '36', '20', '176', 'S', null);
 
 -- ----------------------------
 -- Table structure for x2_user_biology_attribute
@@ -187,20 +292,43 @@ INSERT INTO `x2_user_biology` VALUES ('1', '魔', '盘古', null, null, '0', '1,
 DROP TABLE IF EXISTS `x2_user_biology_attribute`;
 CREATE TABLE `x2_user_biology_attribute` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `shengMing` int(11) DEFAULT NULL COMMENT '生命',
-  `moFa` int(11) DEFAULT NULL COMMENT '魔法',
-  `gongJi` int(11) DEFAULT NULL COMMENT '攻击',
-  `huJia` int(11) DEFAULT NULL COMMENT '护甲',
-  `faGong` int(11) DEFAULT NULL COMMENT '法攻',
-  `fakang` int(11) DEFAULT NULL COMMENT '法抗',
-  `suDu` int(11) DEFAULT NULL COMMENT '速度',
-  `chengZhang` int(11) DEFAULT NULL COMMENT '成长率',
-  `baoJi` int(11) DEFAULT NULL,
-  `wuXing` int(11) DEFAULT NULL COMMENT '悟性',
-  `shuaXin` int(11) DEFAULT NULL COMMENT '刷新次数',
-  `xunLian` int(11) DEFAULT NULL COMMENT '训练次数',
-  `quanNeng` int(11) DEFAULT NULL COMMENT '潜能',
-  `jinJie` int(255) DEFAULT NULL COMMENT '进阶',
+  `name` varchar(25) DEFAULT NULL COMMENT '生物名称',
+  `biology` tinyint(3) DEFAULT '1' COMMENT '生物属性(神魔人鬼妖五行混沌) 0未知',
+  `grade` int(11) DEFAULT '1' COMMENT '等级',
+  `shengMing` int(11) DEFAULT '1' COMMENT '生命',
+  `moFa` int(11) DEFAULT '1' COMMENT '魔法',
+  `gongJi` int(11) DEFAULT '1' COMMENT '攻击',
+  `huJia` int(11) DEFAULT '1' COMMENT '护甲',
+  `faGong` int(11) DEFAULT '1' COMMENT '特攻',
+  `fakang` int(11) DEFAULT '1' COMMENT '法抗',
+  `suDu` int(11) DEFAULT '1' COMMENT '速度',
+  `shanbi` int(11) DEFAULT '0' COMMENT '闪避',
+  `baoji` int(11) DEFAULT '0' COMMENT '暴击',
+  `baojilv` int(11) DEFAULT '0' COMMENT '暴击率',
+  `shuaXin` int(11) DEFAULT '1' COMMENT '刷新次数',
+  `xunLian` int(11) DEFAULT '3' COMMENT '训练次数',
+  `state` int(3) DEFAULT '1' COMMENT '生物境界',
+  `jinJie` int(11) DEFAULT '1' COMMENT '生物id',
+  `biologyid` int(11) NOT NULL DEFAULT '0' COMMENT '生物id',
+  `reiki` int(11) DEFAULT '1' COMMENT '灵气',
+  `power` int(11) DEFAULT '1' COMMENT '力量',
+  `agile` int(11) DEFAULT '1' COMMENT '敏捷',
+  `intelligence` int(11) DEFAULT '1' COMMENT '智力',
+  `special` int(11) DEFAULT '1' COMMENT '评分 战力 (与属性有关*30.0的基础评分) 悟性 和基础属性',
+  `score` int(11) DEFAULT '1' COMMENT '评分',
+  `wuXing` int(11) DEFAULT '3' COMMENT '悟性-成长率 1-10  自由属性 ',
+  `skill` int(11) DEFAULT '1' COMMENT '技能编号',
+  `yuanShen` int(11) DEFAULT '0' COMMENT '元神',
+  `Fate` int(11) DEFAULT '1' COMMENT '缘分(武器缘分) 本命法宝（只有一个）武器库随机-命中注定',
+  `type` int(3) DEFAULT '1' COMMENT '1普通 2商店 3NPC',
+  `descript` int(255) DEFAULT NULL COMMENT '描述',
+  `lucky` int(3) DEFAULT '1' COMMENT ' 幸运值-成长值-潜能-技能进阶-境界突破',
+  `maxNature` int(11) DEFAULT '10' COMMENT '自由属性点',
+  `qianNeng` int(3) DEFAULT '1' COMMENT '潜能--1-10次，战斗中有几率进化-增加1-10 悟性（越低级潜能越大）',
+  `character` int(3) DEFAULT '1' COMMENT '性格',
+  `headerPicture` varchar(255) DEFAULT NULL COMMENT '头像',
+  `Picture` varchar(255) DEFAULT NULL COMMENT '生物图片',
+  `yiXing` tinyint(1) DEFAULT '0' COMMENT '异性 0 否1是',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 

@@ -131,7 +131,7 @@
         // btn: ['确定', '取消',],
         offset: 'top',  //居中
         yes: function(index,layero){
-            alert(111);
+            // alert(111);
             var newsFrom = layer.getChildFrame('#newsFrom',index); 
             console.log(newsFrom);
             $.ajax({

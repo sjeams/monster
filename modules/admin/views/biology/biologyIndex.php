@@ -4,11 +4,6 @@
 <head>
     <title>CellEdit 单元格编辑 </title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <!-- <link href="../demo.css" rel="stylesheet" type="text/css" />
-    
-    <script src="../../scripts/boot.js" type="text/javascript"></script> 
-    
-    <link href="../../scripts/miniui/themes/blue/skin.css" rel="stylesheet" type="text/css" /> -->
     
 </head>
 <body>
@@ -19,7 +14,7 @@
                 <tr>
                     <td style="width:100%;">
                         <a class="mini-button" iconCls="icon-add" onclick="addRow()" plain="true" tooltip="增加...">增加</a>
-                        <a class="mini-button" iconCls="icon-add" onclick="addRow()" plain="true" tooltip="增加...">编辑</a>
+                        <a class="mini-button" iconCls="icon-add" onclick="editRow()" plain="true" tooltip="增加...">编辑</a>
                         <a class="mini-button" iconCls="icon-remove" onclick="removeRow()" plain="true">删除</a>
                         <span class="separator"></span>
                         <a class="mini-button" iconCls="icon-save" onclick="saveData()" plain="true">保存</a>   
@@ -36,7 +31,7 @@
     </div>
     <div id="datagrid1" class="mini-datagrid" style="width:98%;height:94%"
         url="/admin/biology/api-index" idField="id" 
-        allowResize="true" pageSize="20" 
+        allowResize="true" pageSize="20" sizeList="[10,20,30,50,100]"
         allowCellEdit="true" allowCellSelect="true" multiSelect="true" 
         editNextOnEnterKey="true"
         
@@ -45,15 +40,15 @@
             <div type="indexcolumn"></div>
             <div type="checkcolumn"></div>
             <div  field="name" headerAlign="center" allowSort="true" width="150" >生物名称
-                <input name="name" property="editor" class="mini-textbox" style="width:100%;" minWidth="200" />
+                <input name="name" property="editor" class="mini-textbox" style="width:100%;" minWidth="150" />
             </div>
             <!--ComboBox：本地数据-->         
             <div type="comboboxcolumn" autoShowPopup="true"  field="biology" width="100"  allowSort="true"  align="center" headerAlign="center">种族
                 <input name="biology" property="editor" class="mini-combobox" style="width:100%;"  data="Biologys" />                
             </div>
-
+            <!-- data="States"   定义属性 也可以用url  -->
             <div type="comboboxcolumn" autoShowPopup="true"  field="state" width="100"  allowSort="true"  align="center" headerAlign="center">生物境界
-                <input name="state" property="editor" class="mini-combobox" style="width:100%;"  data="States" />  
+                <input name="state" property="editor" class="mini-combobox" style="width:100%;" url="/admin/biology/biology-stateall" />   
             </div>
 
             <div field="power" width="100"  allowSort="true" >力量
@@ -71,7 +66,7 @@
             
             <div field="skill" headerAlign="center" allowSort="true" width="150" >生物技能
                 <!-- <input property="editor" class="mini-textbox" style="width:100%;" minWidth="200" /> -->
-                <input property="editor" name="skill"  class="mini-buttonedit" style="width:100%;" minWidth="200" onbuttonclick="onButtonEdit"/>
+                <input property="editor" name="skill"  class="mini-buttonedit" style="width:100%;" minWidth="150" onbuttonclick="onButtonEdit"/>
             </div>
             
             <div type="comboboxcolumn" autoShowPopup="true"  field="type" width="100"  allowSort="true"  align="center" headerAlign="center">生物类型
@@ -101,12 +96,11 @@
     </body>
 </html>
     <script type="text/javascript">
-
         var Biologys = [{ id: 1, text: '人' }, { id: 2, text: '鬼'},{ id: 3, text: '妖'},{ id: 4, text: '神'},{ id: 5, text: '魔'},{ id: 6, text: '异'}];
-        var States = [{ id: 1, text: '先天' }, { id: 2, text: '筑基'},{ id: 3, text: '金丹'},{ id: 4, text: '元婴'},{ id: 5, text: '渡劫'},{ id: 6, text: '地仙'},{ id: 7, text: '天仙'},{ id: 8, text: '金仙'}];
+        // var States = [{ id: 1, text: '先天' }, { id: 2, text: '筑基'},{ id: 3, text: '金丹'},{ id: 4, text: '元婴'},{ id: 5, text: '渡劫'},{ id: 6, text: '地仙'},{ id: 7, text: '天仙'},{ id: 8, text: '金仙'}];
         var Type = [{ id: 1, text: '普通' }, { id: 2, text: '商店'}, { id: 3, text: 'NPC'}];
         var Genders = [{ id: 1, text: '男' }, { id: 2, text: '女'}, { id: 3, text: '未知'}];
-        
+
         mini.parse();
 
         var grid = mini.get("datagrid1");
@@ -129,25 +123,29 @@
             var newRow = { name: "未知生物",biology: 1,grade: 1,state: 1,power: 1,agile: 1,intelligence: 1,wuXing: 1,skill: 1,type: 1,descript: "",sex: 3,yiXing: 0};
             grid.addRow(newRow, 0);
             grid.beginEditCell(newRow, "name");
-            // grid.beginEditCell(newRow, "biology");
-            // grid.beginEditCell(newRow, "grade");
-            // grid.beginEditCell(newRow, "photo");
-            // grid.beginEditCell(newRow, "image");
-            // grid.beginEditCell(newRow, "skill");
-            // grid.beginEditCell(newRow, "birthday");
-            // grid.beginEditCell(newRow, "descript");
         }
         function removeRow() {
             var rows = grid.getSelecteds();
+            var json = mini.encode(rows);
+            // console.log(json);
             if (rows.length > 0) {
-                grid.removeRows(rows, true);
+                if (confirm("删除不可恢复，是否继续本次操作？")) {
+                    $.ajax({
+                    url: "/admin/api/biology-delete",
+                    data: { data: json },
+                    type: "post",
+                    success: function (text) {
+                        // 移除列
+                        grid.removeRows(rows, true);
+                        }  
+                    });
+                }
             }
         }
+        //保存和修改
         function saveData() {            
-            
             var data = grid.getChanges();
             var json = mini.encode(data);
-            // alert(111);
             grid.loading("保存中，请稍后......");
             $.ajax({
                 url: "/admin/api/biology-add",
@@ -162,6 +160,32 @@
             });
         }
 
+        // 编辑详情
+        function editRow() {
+            var row = grid.getSelected();
+            // console.log(row);
+            if (row) {
+                mini.open({
+                    url: "/admin/biology/employee-window",
+                    title: "生物详情", width: 800, height: 750,
+                    onload: function () {
+                        var iframe = this.getIFrameEl();
+                        var data = { action: "edit", id: row.id };
+                        iframe.contentWindow.SetData(data);
+                        
+                    },
+                    ondestroy: function (action) {
+                        grid.reload();
+                        
+                    }
+                });
+                
+            } else {
+                alert("请选中一条记录");
+            }
+            
+        }
+
 
         grid.on("celleditenter", function (e) {
             var index = grid.indexOf(e.record);
@@ -173,7 +197,7 @@
 
         grid.on("beforeload", function (e) {
             if (grid.getChanges().length > 0) {
-                if (confirm("有增删改的数据未保存，是否取消本次操作？")) {
+                if (confirm("有增删改的数据未保存，是否继续本次操作？")) {
                     e.cancel = true;
                 }
             }
@@ -188,7 +212,6 @@
 //                }
 //            }
 //        });
-
 
 
     function BrushData(){
@@ -222,10 +245,8 @@
                 //获取数据
                 var rows = win.getData();
                 // console.log(rows);
-                console.log(e);
-                console.log( mini.get("datagrid1").getRow());
-
-               
+                // console.log(e);
+                // console.log( mini.get("datagrid1").getRow());
                 if (rows) {    
                     //循环取值  
                     var ids = [], texts = [];

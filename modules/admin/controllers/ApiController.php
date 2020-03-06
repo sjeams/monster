@@ -109,7 +109,7 @@ class ApiController extends ApiControl {
 
 
     // 生物管理---数据操作接口
-    // 增-改
+    // 增-改(批量修改)
     public function actionBiologyAdd()
     {
       $data = Yii::$app->request->post('data');  
@@ -146,17 +146,18 @@ class ApiController extends ApiControl {
     // 删
     public function actionBiologyDelete()
     {
-      $data = Yii::$app->request->post();  
+      $data = json_decode(Yii::$app->request->post('data'));
+      foreach($data as $v){
+        //删除主键
+        Biology::deleteAll(['id'=>$v->id]);
+      }
+      echo true;
     }
-    // 改
-    public function actionBiologyUpdate()
+    //改(单个修改)
+    public function actionBiologyUpdateone()
     {
-      $data = Yii::$app->request->post('data');  
-      $data = json_decode($data);
-      var_dump($data);die;
+      $id = Yii::$app->request->get('id');  
+      $data = Biology::find()->where("id=$id")->asarray()->One();
+      echo json_encode($data);
     }
-
-
-
-
 }
