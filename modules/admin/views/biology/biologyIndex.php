@@ -44,7 +44,7 @@
             </div>
             <!--ComboBox：本地数据-->         
             <div type="comboboxcolumn" autoShowPopup="true"  field="biology" width="100"  allowSort="true"  align="center" headerAlign="center">种族
-                <input name="biology" property="editor" class="mini-combobox" style="width:100%;"  data="Biologys" />                
+                <input name="biology" property="editor" class="mini-combobox" style="width:100%;" url="/admin/biology/biologyall" />                
             </div>
             <!-- data="States"   定义属性 也可以用url  -->
             <div type="comboboxcolumn" autoShowPopup="true"  field="state" width="100"  allowSort="true"  align="center" headerAlign="center">生物境界
@@ -96,7 +96,7 @@
     </body>
 </html>
     <script type="text/javascript">
-        var Biologys = [{ id: 1, text: '人' }, { id: 2, text: '鬼'},{ id: 3, text: '妖'},{ id: 4, text: '神'},{ id: 5, text: '魔'},{ id: 6, text: '异'}];
+        // var Biologys = [{ id: 1, text: '人' }, { id: 2, text: '鬼'},{ id: 3, text: '妖'},{ id: 4, text: '神'},{ id: 5, text: '魔'},{ id: 6, text: '异'}];
         // var States = [{ id: 1, text: '先天' }, { id: 2, text: '筑基'},{ id: 3, text: '金丹'},{ id: 4, text: '元婴'},{ id: 5, text: '渡劫'},{ id: 6, text: '地仙'},{ id: 7, text: '天仙'},{ id: 8, text: '金仙'}];
         var Type = [{ id: 1, text: '普通' }, { id: 2, text: '商店'}, { id: 3, text: 'NPC'}];
         var Genders = [{ id: 1, text: '男' }, { id: 2, text: '女'}, { id: 3, text: '未知'}];
@@ -119,7 +119,8 @@
             search();
         }
 
-        function addRow() {          
+        function addRow() {  
+                 
             var newRow = { name: "未知生物",biology: 1,grade: 1,state: 1,power: 1,agile: 1,intelligence: 1,wuXing: 1,skill: 1,type: 1,descript: "",sex: 3,yiXing: 0};
             grid.addRow(newRow, 0);
             grid.beginEditCell(newRow, "name");
@@ -162,12 +163,25 @@
 
         // 编辑详情
         function editRow() {
+            if (grid.getChanges().length > 0) {
+                if (confirm("有增删改的数据未保存，是否保存本次操作？")) {
+                    saveData();
+                }
+            }else{
+                editmethod();
+            }
+            
+        }
+
+
+        // 编辑调用方法
+        function editmethod() {
             var row = grid.getSelected();
             // console.log(row);
             if (row) {
                 mini.open({
                     url: "/admin/biology/employee-window",
-                    title: "生物详情", width: 800, height: 700,
+                    title: "生物详情", width: 800, height: 750,
                     onload: function () {
                         var iframe = this.getIFrameEl();
                         var data = { action: "edit", id: row.id };
@@ -183,9 +197,7 @@
             } else {
                 alert("请选中一条记录");
             }
-            
         }
-
 
         grid.on("celleditenter", function (e) {
             var index = grid.indexOf(e.record);

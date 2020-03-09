@@ -13,7 +13,10 @@
 <script src="/miniui/scripts/miniui/locale/en_US.js" type="text/javascript"></script>
 <script src="/miniui/scripts/tongji.js" type="text/javascript"></script>
 
-<script src="/miniui/demo/CommonLibs/UserSelectWindow.js" type="text/javascript"></script>   
+<!-- 技能弹窗 -->
+<script src="/miniui/demo/CommonLibs/UserSelectWindow.js" type="text/javascript"></script>
+<!-- 世界弹窗 -->   
+<!-- <script src="/miniui/demo/CommonLibs/UserSelectWindowWords.js" type="text/javascript"></script> -->
 
 <!-- 颜色选择器 -->
 <script src="/miniui/res/third-party/spectrum/spectrum.js" type="text/javascript"></script>

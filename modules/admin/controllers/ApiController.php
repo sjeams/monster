@@ -148,8 +148,11 @@ class ApiController extends ApiControl {
     {
       $data = json_decode(Yii::$app->request->post('data'));
       foreach($data as $v){
-        //删除主键
-        Biology::deleteAll(['id'=>$v->id]);
+        // var_dump($v);die;
+        if(isset($v->id)){
+          //删除主键
+          Biology::deleteAll(['id'=>$v->id]);
+        }
       }
       echo true;
     }
@@ -159,5 +162,17 @@ class ApiController extends ApiControl {
       $id = Yii::$app->request->get('id');  
       $data = Biology::find()->where("id=$id")->asarray()->One();
       echo json_encode($data);
+    }
+
+
+    // 弹窗修改(单个修改)
+    public function actionBiologyUpdate()
+    {
+      $data = Yii::$app->request->post('data');  
+      $data = json_decode($data);
+      foreach($data as $v){
+        $result = Biology::updateAll((array)$v,['id'=>$v->id]);
+      }
+      echo true;
     }
 }

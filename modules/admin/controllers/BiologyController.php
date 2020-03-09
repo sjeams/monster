@@ -11,6 +11,12 @@ use app\libs\ApiControl;
 use app\modules\admin\models\Biology;
 use app\modules\admin\models\BiologySkill;
 use app\modules\admin\models\BiologyState;
+use app\modules\admin\models\Words;
+use app\modules\admin\models\BiologyBiology;
+use app\modules\admin\models\BiologyCharacter;
+
+
+
 class BiologyController extends ApiControl {
 
     public $enableCsrfValidation = false;
@@ -66,11 +72,40 @@ class BiologyController extends ApiControl {
       return $this->render("EmployeeWindow");
    }
     
-   //  生物详情弹窗
+
+   //  生物境界弹窗
    public function actionBiologyStateall()
    {  
-      $data= BiologyState:: getBiologyStateall();
+      $data= BiologyState:: getValueList();
       echo json_encode($data);
    }
- 
+
+    //  世界详情弹窗
+    public function actionWordsall()
+    {  
+        $data= Words:: getValueList();
+        echo json_encode($data);
+    }
+    //  种族详情弹窗
+   public function actionBiologyall()
+   {  
+      $data= BiologyBiology:: getValueList(); 
+      echo json_encode($data);
+   }
+     //  性格详情弹窗
+     public function actionBiologyCharacterall()
+     {  
+        $data= BiologyCharacter:: getValueList(); 
+        echo json_encode($data);
+     }
+
+   
+
+    // 生物管理---生物生成属性
+    public function actionBiologyExtend()
+    {
+      $data= Biology:: getValueList(); 
+      echo json_encode($data);
+    }
+
 }
