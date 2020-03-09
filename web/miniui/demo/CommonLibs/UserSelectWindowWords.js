@@ -12,7 +12,7 @@ mini.extend(UserSelectWindow, mini.Window, {
 
     url: "",
     keyField: "key",
-    multiSelect: true,
+    multiSelect: false,
 
     title: "选择用户",
     keyLable: "名称：",
@@ -60,9 +60,10 @@ mini.extend(UserSelectWindow, mini.Window, {
                 { type: "checkcolumn", header: "#" },
             //{ type: "indexcolumn", header: "#", headerAlign: "center" },
                 // {header: "帐号", field: "loginname" },
-                {header: "类型", field: "type" },
-                { header: "姓名", field: "name" },
-                { header: "描述", field: "describe" }
+                {header: "id", field: "id" },
+                {header: "名称", field: "name" },
+                {header: "难度", field: "grade" },
+                {header: "世界", field: "gradeName" }
                 
             ]
         });
@@ -145,7 +146,7 @@ mini.extend(UserSelectWindow, mini.Window, {
         //this.grid.selects(data);
     },
 
-    //单选框
+    // 单选框
     getDataOne: function () {
         var row = this.grid.getSelected();
         return row;

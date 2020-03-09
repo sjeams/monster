@@ -80,14 +80,11 @@
                 </td>  
                 <td style="width:80px;">境界</td>
                 <td style="width:150px;">    
-                    <input  name="state" class="mini-combobox" style="width:100%;" url="/admin/biology/biology-stateall" emptyText="请选择境界" />    
+                    <input  name="state" class="mini-combobox"  emptyText="请选择境界" url="/admin/biology/biology-stateall" />    
                 </td>
                 <td style="width:80px;">种族</td>
                 <td style="width:150px;">    
-                    <input name="biology" class="mini-combobox" valueField="id" textField="name" 
-                        url="" onvaluechanged="onDeptChanged" 
-                        emptyText="请选择种族"
-                        />
+                    <input name="biology" class="mini-combobox"  emptyText="请选择种族" url="/admin/biology/biologyall" /> 
                 </td>
             </tr>   
             <tr>
@@ -115,7 +112,7 @@
                 </td>
                 <td >性格</td>
                 <td >    
-                    <input name="character" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
+                    <input name="character" class="mini-combobox" url="/admin/biology/biology-characterall" /> 
                 </td>
             </tr> 
             <tr>
@@ -150,7 +147,7 @@
             <tr>
                 <td >技能</td>
                 <td >    
-                    <input name="skill" class="mini-combobox" valueField="id" textField="name" url=""  onbuttonclick="onButtonEdit" />
+                    <input name="skill" class="mini-combobox"   onbuttonclick="onButtonEdit" />
                 </td>
                 <td >元神</td>
                 <td >    
@@ -160,6 +157,20 @@
                 <td >    
                     <input name="fate" class="mini-textbox" />
                 </td>
+            </tr> 
+            <tr>
+                <td >触发</td>
+                <td >    
+                    <input name="chuFa" class="mini-textbox"  />
+                </td>
+                <td >世界编号</td>
+                <td >    
+                    <input name="wordId" class="mini-combobox" onbuttonclick="onButtonEditWords"  url="/admin/biology/wordsall" /> 
+                </td>
+                <!-- <td ></td>
+                <td >    
+                    <input name="fate" class="mini-textbox" />
+                </td> -->
             </tr> 
             <tr>
                 <td >描述</td>
@@ -282,25 +293,25 @@
     } 
 
 
+    // 修改弹窗--请求修改
     function SaveData() {
         var o = form.getData();            
         form.validate();
         if (form.isValid() == false) return;
         var json = mini.encode([o]);
-        console.log(json);
-        // $.ajax({
-        //     url: "../data/AjaxService.php?method=SaveEmployees",
-        //     type: 'post',
-        //     data: { data: json },
-        //     cache: false,
-        //     success: function (text) {
-        //         CloseWindow("save");
-        //     },
-        //     error: function (jqXHR, textStatus, errorThrown) {
-        //         alert(jqXHR.responseText);
-        //         CloseWindow();
-        //     }
-        // });
+        $.ajax({
+            url: "/admin/api/biology-update",
+            type: 'post',
+            data: { data: json },
+            cache: false,
+            success: function (text) {
+                CloseWindow("save");
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                // alert(jqXHR.responseText);
+                CloseWindow();
+            }
+        });
     }
     ////////////////////
     //标准方法接口定义
@@ -535,7 +546,6 @@
 <!-- 技能弹窗 -->
 <script type="text/javascript">
     mini.parse();
-
     function onButtonEdit(e) {
         var buttonEdit = e.sender;
         // var buttonEdit = this;
@@ -544,12 +554,12 @@
             url: "/admin/biology/api-skill",                    
             title: "生物技能",
             width: 600,
-            height: 350
+            height: 350,
+            multiSelect: true,
         });
         
         win.show();
         win.search();
-
         //初始化数据
         win.setData(null, function (action) {
             if (action == "ok") {
@@ -582,5 +592,42 @@
             }
         });
     }
-    
+</script>
+
+
+
+<!-- 世界弹窗 -->
+<script type="text/javascript">
+        mini.parse();
+
+    function onButtonEditWords(e) {
+        var buttonEdit = e.sender;
+
+        var win = new UserSelectWindow();
+        
+        win.set({
+            url: "/admin/biology/wordsall",                    
+            title: "用户选择",
+            width: 600,
+            height: 350,
+            multiSelect: false,
+        });
+        
+        win.show();
+        win.search();
+
+        //初始化数据
+        win.setData(null, function (action) {
+            if (action == "ok") {
+                //获取数据
+                var row = win.getDataOne();
+                // console.log(row)
+                if (row) {                        
+                    buttonEdit.setValue(row.id);
+                    buttonEdit.setText(row.name);
+                    // alert("选中记录: " + row.name);
+                }
+            }
+        });
+    }
 </script>
