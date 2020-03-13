@@ -69,10 +69,12 @@
                 <input property="editor" name="skill"  class="mini-buttonedit" style="width:100%;" minWidth="150" onbuttonclick="onButtonEdit"/>
             </div>
             
-            <div type="comboboxcolumn" autoShowPopup="true"  field="type" width="100"  allowSort="true"  align="center" headerAlign="center">生物类型
+            <!-- <div type="comboboxcolumn" autoShowPopup="true"  field="type" width="100"  allowSort="true"  align="center" headerAlign="center">生物类型
                 <input name="type" property="editor" class="mini-combobox" style="width:100%;"  data="Type" />                
+            </div> -->
+            <div type="comboboxcolumn" autoShowPopup="true"  field="wordId" width="100"  allowSort="true"  align="center" headerAlign="center">生物世界
+                <input name="wordId" property="editor" class="mini-combobox" style="width:100%;" url="/admin/biology/wordslist" />   
             </div>
-
 
             <!-- <div field="birthday" width="100"  allowSort="true" dateFormat="yyyy-MM-dd">出生日期
                 <input name="birthday"  property="editor" class="mini-datepicker" style="width:100%;"/>
@@ -98,7 +100,7 @@
     <script type="text/javascript">
         // var Biologys = [{ id: 1, text: '人' }, { id: 2, text: '鬼'},{ id: 3, text: '妖'},{ id: 4, text: '神'},{ id: 5, text: '魔'},{ id: 6, text: '异'}];
         // var States = [{ id: 1, text: '先天' }, { id: 2, text: '筑基'},{ id: 3, text: '金丹'},{ id: 4, text: '元婴'},{ id: 5, text: '渡劫'},{ id: 6, text: '地仙'},{ id: 7, text: '天仙'},{ id: 8, text: '金仙'}];
-        var Type = [{ id: 1, text: '普通' }, { id: 2, text: '商店'}, { id: 3, text: 'NPC'}];
+        // var Type = [{ id: 1, text: '普通' }, { id: 2, text: '特殊'}, { id: 3, text: 'NPC'}, { id: 4, text: '不可用'}
         var Genders = [{ id: 1, text: '男' }, { id: 2, text: '女'}, { id: 3, text: '未知'}];
 
         mini.parse();
@@ -118,10 +120,15 @@
         function onKeyEnter(e) {
             search();
         }
-
+        // 随机数
+        function roundNum(one,two) { 
+            // var num =  parseInt (Math.random()*two+one);
+            var num = Math.floor(Math.random()*two+one);
+            return num;
+        }
         function addRow() {  
-                 
-            var newRow = { name: "未知生物",biology: 1,grade: 1,state: 1,power: 1,agile: 1,intelligence: 1,wuXing: 1,skill: 1,type: 1,descript: "",sex: 3,yiXing: 0};
+            //智力敏+悟性+技能 决定评分上限 210+40+50
+            var newRow = { name: "未知生物",biology: 1,state: 1,power: roundNum(1,70),agile:roundNum(1,70),intelligence: roundNum(1,70),wuXing: 1,skill: "",wordId:"",descript: "",sex: 3,yiXing: 0};
             grid.addRow(newRow, 0);
             grid.beginEditCell(newRow, "name");
         }
@@ -181,7 +188,7 @@
             if (row) {
                 mini.open({
                     url: "/admin/biology/employee-window",
-                    title: "生物详情", width: 800, height: 750,
+                    title: "生物详情", width: 800, height: 780,
                     onload: function () {
                         var iframe = this.getIFrameEl();
                         var data = { action: "edit", id: row.id };
@@ -245,7 +252,7 @@
             url: "/admin/biology/api-skill",                    
             title: "生物技能",
             width: 600,
-            height: 350
+            height: 500,
         });
         
         win.show();

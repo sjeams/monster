@@ -24,16 +24,13 @@
                 <td style="width:150px;">    
                     <input name="name" class="mini-textbox"/>
                 </td>
-                <td style="width:80px;">头像</td>
-                <td rowspan="5" style="border:1px solid #cccccc">       
-                    <a href="#" class="btn btn-info" onclick="upImage(1);">   
-                        <img src="" id ="infor-headerpicture" alt="头像" style="width:100%;height:160px">
-                        <input name="headerPicture" class="headerpicture mini-textbox" style="display:none"  placeholder="图片地址">
-                    </a>             
+                <td >训练</td>
+                <td >    
+                    <input name="xunLian" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
                 <td style="width:80px;">形象</td>
                 <td rowspan="5" style="border:1px solid #cccccc">   
-                    <a href="#" class="btn btn-info" onclick="upImage(2);">   
+                    <a href="#" class="btn btn-info" onclick="upImage();">   
                         <img src="" id ="infor-picture" alt="形象" style="width:100%;height:160px">
                         <input name="picture" class="picture mini-textbox" style="display:none"  placeholder="图片地址">
                     </a>
@@ -48,11 +45,19 @@
                         <option value="3">未知</option>
                     </select>
                 </td>
+                <td >刷新</td>
+                <td >    
+                    <input name="shuaXin" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
+                </td>
             </tr>
             <tr>
                 <td >是否异形</td>
                 <td >    
                     <input name="yiXing" class="mini-checkbox" text="异形" trueValue="1" falseValue="0" />
+                </td>
+                <td >悟性</td>
+                <td >    
+                    <input name="wuXing" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
             </tr>
             <tr>
@@ -61,32 +66,23 @@
                     <!-- <input type="hidden" labelField="true" label="选择颜色:" id="textbox1" name="color"  emptyText="请选择颜色"> -->
                     <input name="color" class="mini-textbox">
                 </td>
-            </tr> 
-            <tr>
-                <td >类型</td>
-                <td >                        
-                    <select name="type" class="mini-combobox">
-                        <option value="1">普通</option>
-                        <option value="2">商店</option>
-                        <option value="3">NPC</option>
-                    </select>
-                </td>
-            </tr> 
-
-            <tr>
                 <td >幸运</td>
                 <td >    
                     <input name="lucky" class="mini-spinner" value="1" minValue="1" maxValue="1000" />
                 </td>  
-                <td style="width:80px;">境界</td>
-                <td style="width:150px;">    
-                    <input  name="state" class="mini-combobox"  emptyText="请选择境界" url="/admin/biology/biology-stateall" />    
+            </tr> 
+
+            <tr>
+                <td >进阶(升星)</td>
+                <td >    
+                    <input name="jinJie" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
-                <td style="width:80px;">种族</td>
-                <td style="width:150px;">    
-                    <input name="biology" class="mini-combobox"  emptyText="请选择种族" url="/admin/biology/biologyall" /> 
+                <td >灵气</td>
+                <td >    
+                    <input name="reiki" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
-            </tr>   
+            </tr> 
+
             <tr>
                 <td >力量</td>
                 <td >    
@@ -110,44 +106,16 @@
                 <td >    
                     <input name="qianNeng" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
-                <td >性格</td>
+                <td >触发</td>
                 <td >    
-                    <input name="character" class="mini-combobox" url="/admin/biology/biology-characterall" /> 
+                    <input name="chuFa" class="mini-textbox"  />
                 </td>
             </tr> 
+
             <tr>
                 <td >等级</td>
                 <td >    
                     <input name="grade" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
-                </td>
-                <td >进阶(升星)</td>
-                <td >    
-                    <input name="jinJie" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
-                </td>
-                <td >灵气</td>
-                <td >    
-                    <input name="reiki" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
-                </td>
-            </tr> 
-            <tr>
-                <td >训练</td>
-                <td >    
-                    <input name="xunLian" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
-                </td>
-                <td >刷新</td>
-                <td >    
-                    <input name="shuaXin" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
-                </td>
-                <td >悟性</td>
-                <td >    
-                    <input name="wuXing" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
-                </td>
-            </tr> 
-            
-            <tr>
-                <td >技能</td>
-                <td >    
-                    <input name="skill" class="mini-combobox"   onbuttonclick="onButtonEdit" />
                 </td>
                 <td >元神</td>
                 <td >    
@@ -158,19 +126,40 @@
                     <input name="fate" class="mini-textbox" />
                 </td>
             </tr> 
+
             <tr>
-                <td >触发</td>
-                <td >    
-                    <input name="chuFa" class="mini-textbox"  />
+                <td style="width:80px;">境界</td>
+                <td style="width:150px;">    
+                    <input  name="state" class="mini-combobox"  emptyText="请选择境界" url="/admin/biology/biology-stateall" />    
                 </td>
-                <td >世界编号</td>
-                <td >    
-                    <input name="wordId" class="mini-combobox" onbuttonclick="onButtonEditWords"  url="/admin/biology/wordsall" /> 
+                <td style="width:80px;">种族</td>
+                <td style="width:150px;">    
+                    <input name="biology" class="mini-combobox"  emptyText="请选择种族" url="/admin/biology/biologyall" /> 
                 </td>
-                <!-- <td ></td>
+                <td >性格</td>
                 <td >    
-                    <input name="fate" class="mini-textbox" />
-                </td> -->
+                    <input name="character" class="mini-combobox" url="/admin/biology/biology-characterall" /> 
+                </td>
+            </tr>   
+
+            <tr>
+                <td >类型</td>
+                <td >                        
+                    <select name="type" class="mini-combobox">
+                        <option value="1">普通</option>
+                        <option value="2">商店</option>
+                        <option value="3">NPC</option>
+                        <option value="4">不可用</option>
+                    </select>
+                </td>
+                <td >生物世界</td>
+                <td >    
+                    <input name="wordId" class="mini-combobox" onbuttonclick="onButtonEditWords"  url="/admin/biology/wordslist" /> 
+                </td>
+                <td >技能</td>
+                <td >    
+                    <input name="skill" class="mini-combobox"   onbuttonclick="onButtonEdit" />
+                </td>
             </tr> 
             <tr>
                 <td >描述</td>
@@ -178,7 +167,12 @@
                     <input name="descript" class="mini-textarea" style="width:100%;" />
                 </td>
             </tr>   
-
+            <!-- <tr>
+                <td >升级经验</td>
+                <td >    
+                    <input name="experience" class="mini-textbox"   onbuttonclick="onButtonEdit" />
+                </td>
+            </tr>  -->
         </table>  
     </div>
     <fieldset style="border:solid 1px #aaa;padding:3px;">
@@ -356,10 +350,6 @@
     function onDeptChanged(e) {  
 
             extenCount(); //初始化属性
-            // 初始化图片--头像
-            var headerpicture = mini.getbyName("headerPicture");
-            headerpicture = headerpicture.getValue();
-            document.getElementById("infor-headerpicture").src=headerpicture;
             // 初始化图片--形象
             var picture = mini.getbyName("picture");
             picture = picture.getValue();
@@ -428,24 +418,20 @@
     });
 
     //弹出图片上传的对话框
-    function upImage(e)
+    function upImage()
     {
         var myImage = o_ueditorupload.getDialog("insertimage");
         var arg= myImage.open();
         //监听图片上传
         o_ueditorupload.addListener('beforeInsertImage', function (t,arg)
         {
-            if(e==1){//头像
-                document.getElementById("infor-headerpicture").src=arg[0].src;
-                var headerpicture = mini.getbyName("headerPicture");
-                headerpicture.setValue(arg[0].src);
-            }
-            if(e==2){ // 形象
-                document.getElementById("infor-picture").src=arg[0].src;
-                var picture = mini.getbyName("picture");
-                picture.setValue(arg[0].src); 
-            }
+            // 形象
+            document.getElementById("infor-picture").src=arg[0].src;
+            var picture = mini.getbyName("picture");
+            picture.setValue(arg[0].src); 
+            
         });
+        return false;
     }
 </script>
 <script type="text/plain" id="j_ueditorupload"></script>
@@ -459,22 +445,21 @@
     function extenCount(){
         // 获取表单数据
         var o = form.getData(); 
-        
         // 处理境界
         var inter = 0;  //境界增加属性值
         var state= parseInt(o.state);
-        if(state>1){   var inter = inter+10;  }
-        if(state>2){   var inter = inter+20;  }
-        if(state>3){   var inter = inter+50;  }
-        if(state>4){   var inter = inter+100;  }
-        if(state>5){   var inter = inter+150;  }
-        if(state>6){   var inter = inter+200;  }
-        if(state>7){   var inter = inter+300;  }
-        if(state>8){   var inter = inter+500;  }
-        if(state>9){   var inter = inter+750;  }
-        if(state>10){   var inter = inter+1000;  }
-        if(state>11){   var inter = inter+2500;  }
-        if(state>12){   var inter = inter+5000;  }
+        if(state>1){   var inter = inter+200;  }
+        if(state>2){   var inter = inter+300;  }
+        if(state>3){   var inter = inter+500;  }
+        if(state>4){   var inter = inter+800;  }
+        if(state>5){   var inter = inter+1000;  }
+        if(state>6){   var inter = inter+1500;  }
+        if(state>7){   var inter = inter+2000;  }
+        if(state>8){   var inter = inter+2500;  }
+        if(state>9){   var inter = inter+3000;  }
+        if(state>10){   var inter = inter+4000;  }
+        if(state>11){   var inter = inter+6000;  }
+        if(state>12){   var inter = inter+10000;  }
 
 
         var skill =o.skill; //技能
@@ -490,11 +475,11 @@
         var agile =parseInt(o.agile)*(1+wuXing/10)*grade+inter;  //敏
         var intelligence =parseInt(o.intelligence)*(1+wuXing/10)*grade+inter; //智
 
-        var  shengMing = parseInt(100+grade*100+power*10+agile*2+intelligence*2+reiki*10); //等级+力量 
-        var  moFa =parseInt(20+grade*1+intelligence*0.3+reiki*0.15); // 等级+智力
-        var  gongJi = parseInt((power*0.3+agile+intelligence*0.3+reiki*0.15)*1.2);
+        var  shengMing = parseInt(100+grade*100+power*10+agile*3+intelligence*3+reiki*10); //等级+力量 
+        var  moFa =parseInt(20+grade*1+intelligence*0.2+reiki*0.15); // 等级+智力
+        var  gongJi = parseInt((power*0.1+agile*0.3+intelligence*0.1+reiki*0.15)*1.2);
         var  huJia = parseInt(power*0.1+agile*0.3+intelligence*0.1+reiki*0.15);
-        var  faGong = parseInt((power*0.3+agile*0.3+intelligence+reiki*0.15)*1.2);
+        var  faGong = parseInt((power*0.1+agile*0.1+intelligence*0.3+reiki*0.15)*1.2);
         var  fakang = parseInt(power*0.1+agile*0.1+intelligence*0.3+reiki*0.15);
 
         var  jianShang = parseInt(reiki*0.3+reiki*lucky*(1+wuXing/10)*0.1);
@@ -504,21 +489,21 @@
         // var  baoji = 10;
         // var  baojilv = 10;
         // var  danDu = 10;
-  
 
         var  special = parseInt(shengMing+moFa+gongJi+huJia+faGong+fakang+jianShang+zhenShang+shanbi+suDu);
-        var  score = parseInt(wuXing*3+skillleng*5+parseInt(o.power)+parseInt(o.agile)+parseInt(o.intelligence));  //属性最大值为100/10 ,评分满值为350
-        if(score>1){   var inter = 'D';  }
-        if(score>100){   var inter = 'C';  }
-        if(score>120){   var inter = 'B';  }
-        if(score>160){   var inter = 'A';  }
-        if(score>180){   var inter = 'S';  }
-        if(score>210){   var inter = 'SS';  }
-        if(score>240){   var inter = 'SSS';  }
-        if(score>300){   var scoreGrade = '传说';  }
+        var  score = parseInt(wuXing*2+skillleng*10+parseInt(o.power)+parseInt(o.agile)+parseInt(o.intelligence));  //属性最大值为100/10 ,评分满值为350
+        if(score>1){   var scoreGrade = 'D';  }
+        if(score>80){   var scoreGrade = 'C';  }
+        if(score>120){   var scoreGrade = 'B';  }
+        if(score>150){   var scoreGrade = 'A';  }
+        if(score>160){   var scoreGrade = 'S';  }
+        if(score>180){   var scoreGrade = 'SS';  }
+        if(score>210){   var scoreGrade = 'SSS';  }
+        if(score>240){   var scoreGrade = '传说';  }
+        if(score>280){   var scoreGrade = '神话';  }
 
-        var  jingBi =  score*2+grade+state*3;
-        var  jingYan = score+grade+state*5;
+        var  jingBi =  score*2+grade+state*2;
+        var  jingYan = score+grade+state*3;
         
         mini.getbyName("shengMing").setValue(shengMing); 
         mini.getbyName("moFa").setValue(moFa); 
@@ -554,7 +539,7 @@
             url: "/admin/biology/api-skill",                    
             title: "生物技能",
             width: 600,
-            height: 350,
+            height: 500,
             multiSelect: true,
         });
         
@@ -609,7 +594,7 @@
             url: "/admin/biology/wordsall",                    
             title: "用户选择",
             width: 600,
-            height: 350,
+            height: 500,
             multiSelect: false,
         });
         

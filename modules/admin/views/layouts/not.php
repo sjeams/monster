@@ -9,7 +9,7 @@
 <script src="/miniui/scripts/boot.js" type="text/javascript"></script>
 <script src="/miniui/scripts/jquery.min.js" type="text/javascript"></script>
 <script src="/miniui/scripts/miniui/miniui.js" type="text/javascript"></script>
-<!-- <script src="/monster/scripts/jquery-1.6.2.min.js" type="text/javascript"></script> -->
+<!-- <script src="/miniui/scripts/jquery-1.6.2.min.js" type="text/javascript"></script> -->
 <script src="/miniui/scripts/miniui/locale/en_US.js" type="text/javascript"></script>
 <script src="/miniui/scripts/tongji.js" type="text/javascript"></script>
 

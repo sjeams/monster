@@ -57,19 +57,21 @@ mini.extend(UserSelectWindow, mini.Window, {
             style: "width: 100%;height: 100%;",
             borderStyle: "border:0",
             columns: [
-                { type: "checkcolumn", header: "#" },
+                { type: "checkcolumn", header: "#", field: "id" },
             //{ type: "indexcolumn", header: "#", headerAlign: "center" },
                 // {header: "帐号", field: "loginname" },
-                {header: "类型", field: "type" },
-                { header: "姓名", field: "name" },
-                { header: "描述", field: "describe" }
+                {header: "类型", field: "words" },
+                { header: "名称", field: "name" },
+                { header: "描述", field: "describe" },
+                // { type: "checkboxcolumn", trueValue:"1" , falseValue: "0" ,field: "checked"}
                 
             ]
         });
+        
         this.grid.setUrl(this.url);
         this.grid.render(bodyEl);
         /////////////////////////////////////////////////////
-
+     
         //组件对象
         mini.parse(this.el);
         this._okBtn = mini.getbyName("okBtn", this);
