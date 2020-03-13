@@ -14,6 +14,9 @@ use app\modules\admin\models\BiologyState;
 use app\modules\admin\models\Words;
 use app\modules\admin\models\BiologyBiology;
 use app\modules\admin\models\BiologyCharacter;
+use app\modules\admin\models\BiologyNature;
+
+
 
 
 
@@ -35,16 +38,32 @@ class BiologyController extends ApiControl {
     {
       $pageIndex=Yii::$app->request->post('pageIndex',1);
       $pageSize=Yii::$app->request->post('pageSize',20);
-      // $sortField=Yii::$app->request->post('sortField');
-      // $sortOrder=Yii::$app->request->post('sortOrder');
-      $data= Biology::getBiologyList($pageIndex,$pageSize);
+      $sortField=Yii::$app->request->post('sortField');
+      $sortOrder=Yii::$app->request->post('sortOrder');
+      $key=Yii::$app->request->post('key');
+      $where="1=1 ";
+      if(!empty($key)){  $where.=" and name like '%$key%' "; }
+      if($sortField){ // 排序
+        $where.="order by $sortField $sortOrder";
+      }else{$where.="";}
+      $data= Biology::getBiologyList($pageIndex,$pageSize,$where);
       echo json_encode($data);
     }
 
     // 生物技能
     public function actionApiSkill()
     {
-      $data= BiologySkill::getSkillList();
+      // $pageIndex=Yii::$app->request->post('pageIndex',1);
+      // $pageSize=Yii::$app->request->post('pageSize',20);
+      $sortField=Yii::$app->request->post('sortField');
+      $sortOrder=Yii::$app->request->post('sortOrder');
+      $key=Yii::$app->request->post('key');
+      $where="1=1 ";
+      if(!empty($key)){  $where.=" and name like '%$key%' or words like'%$key%'"; }
+      if($sortField){ // 排序
+        $where.="order by $sortField $sortOrder";
+      }
+      $data= BiologySkill::getSkillList($where);
       echo json_encode($data);
     }
 
@@ -80,10 +99,28 @@ class BiologyController extends ApiControl {
       echo json_encode($data);
    }
 
+
+    //  世界详情列表
+    public function actionWordslist()
+    {  
+        $data= Words:: getValueList();
+        echo json_encode($data);
+    }
+
     //  世界详情弹窗
     public function actionWordsall()
     {  
-        $data= Words:: getValueList();
+        $pageIndex=Yii::$app->request->post('pageIndex',1);
+        $pageSize=Yii::$app->request->post('pageSize',20);
+        $sortField=Yii::$app->request->post('sortField');
+        $sortOrder=Yii::$app->request->post('sortOrder');
+        $key=Yii::$app->request->post('key');
+        $where="1=1 ";
+        if(!empty($key)){  $where.=" and name like '%$key%' or typeName like'%$key%'"; }
+        if($sortField){ // 排序
+          $where.="order by $sortField $sortOrder";
+        }else{$where.="";}
+        $data= Words:: getValueListtype($pageIndex,$pageSize,$where);
         echo json_encode($data);
     }
     //  种族详情弹窗
@@ -104,7 +141,7 @@ class BiologyController extends ApiControl {
     // 生物管理---生物生成属性
     public function actionBiologyExtend()
     {
-      $data= Biology:: getValueList(); 
+      $data= BiologyNature:: getValueList(); 
       echo json_encode($data);
     }
 

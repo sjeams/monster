@@ -13,8 +13,13 @@ class BiologySkill extends ActiveRecord
      * 获取所有模块
      * @sjeam
      */
-    public static function getSkillList(){
-        $data = BiologySkill::find()->select("*,name as key")->asarray()->All();
+    public static function getSkillList($where=""){
+        // 技能勾选不做分页
+        $data['data'] = BiologySkill::find()->select("*,name as key")->where("$where")->asarray()->All();
+        $data ['total'] = BiologySkill::find()->select("id")->asarray()->count();
+        foreach($data['data'] as$key=> $v){
+            $data['data'][$key]['checked']='1';
+        }
         // $data=  AdminInit::getChildren($adminIint);
         return $data;
     }

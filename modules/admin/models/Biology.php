@@ -13,10 +13,10 @@ class Biology extends ActiveRecord
      * 获取所有模块
      * @sjeam
      */
-    public static function getBiologyList($page=1,$pageSize=20){
+    public static function getBiologyList($page=1,$pageSize=20,$where=""){
         
 
-        $data['data'] = Biology::find()->select("*,name as key")->offset($page*$pageSize)->limit($pageSize)->asarray()->All();
+        $data['data'] = Biology::find()->select("*,name as key")->where(" $where")->offset($page*$pageSize)->limit($pageSize)->asarray()->All();
         $data ['total'] = Biology::find()->select("id")->asarray()->count();
         // $data=  AdminInit::getChildren($adminIint);
         return $data;
@@ -36,15 +36,13 @@ class Biology extends ActiveRecord
 
 
     /**
-     * 
-     * @sjeam
+     * 查询境界列表
      */
-    //  public static function updateBiologyAll(){
-   
-    //     return $data;
-    // }
-
-
+     public static function getValueList(){
+            
+        // $data = BiologyBiology::find()->select('id,name as text')->asarray()->All();
+        return $data;
+      }
 
 
 }

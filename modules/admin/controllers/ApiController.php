@@ -126,7 +126,7 @@ class ApiController extends ApiControl {
           $model->intelligence=$v->intelligence;
           $model->wuXing=$v->wuXing;
           $model->skill=$v->skill;
-          $model->type=$v->type;
+          $model->wordId=$v->wordId;
           $model->descript=$v->descript;
           $model->sex=$v->sex;
           $model->yiXing=$v->yiXing;
@@ -175,4 +175,30 @@ class ApiController extends ApiControl {
       }
       echo true;
     }
+
+
+
+    // 经验修改与升级
+    public function actionExperience(){
+      $exp = Yii::$app->request->post('exp');
+      $grade=1;
+      $exp=160;
+      // ，每级叠加经验150
+      $sum=0;
+      for($i=1;$i<=130;$i++) {
+          $sum+= $i*150;
+          if($sum>=$exp){
+            $res['newGrade'] =$i;
+            $res['newExp'] = $i*150;
+            $res['nowExp']= $sum-$exp;
+            break;
+          }
+      }
+      echo "等级 : ".$res['newGrade'];
+      echo "<br>";
+      echo "exp : ".$res['nowExp']."/".$res['newExp'];
+      echo $res;
+      // var_dump($res);die;
+    }
+
 }

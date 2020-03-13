@@ -4,7 +4,6 @@
 <head>
     <title>PagerTree 树形分页表格</title>  
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <!-- <script src="/monster/pagertree/pagertree.js" type="text/javascript"></script> -->
     
 </head>
 

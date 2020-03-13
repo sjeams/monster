@@ -9,8 +9,8 @@
    
     <link rel="stylesheet" href="/miniui/demo/index.css" media="all">
     <script src="/miniui/scripts/boot.js" type="text/javascript"></script>
-    <script src="/monster/scripts/miniui/miniui.js" type="text/javascript"></script>
-    <script src="/monster/scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="/miniui/scripts/miniui/miniui.js" type="text/javascript"></script>
+    <script src="/miniui/scripts/jquery.min.js" type="text/javascript"></script>
 
     <script src="/miniui/demo/core.js" type="text/javascript"></script>
 
