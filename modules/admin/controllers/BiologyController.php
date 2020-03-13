@@ -26,11 +26,19 @@ class BiologyController extends ApiControl {
 
     public $layout = 'not';
 
+    // 生物模板页面
     public function actionIndex()
     {
        return $this->render("biologyIndex");
       // return  $this->renderPartial("AdminMeanu");
     }
+    //生物创造页面
+    public function actionCreate()
+    {
+       return $this->render("biologyCreate");
+      // return  $this->renderPartial("AdminMeanu");
+    }
+
 
     // 数据加载--->
     // 生物列表
@@ -136,7 +144,6 @@ class BiologyController extends ApiControl {
         echo json_encode($data);
      }
 
-   
 
     // 生物管理---生物生成属性
     public function actionBiologyExtend()
@@ -144,5 +151,12 @@ class BiologyController extends ApiControl {
       $data= BiologyNature:: getValueList(); 
       echo json_encode($data);
     }
+
+
+
+
+
+
+
 
 }
