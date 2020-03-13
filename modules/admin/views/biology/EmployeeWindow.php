@@ -592,7 +592,7 @@
         
         win.set({
             url: "/admin/biology/wordsall",                    
-            title: "用户选择",
+            title: "世界选择",
             width: 600,
             height: 500,
             multiSelect: false,
