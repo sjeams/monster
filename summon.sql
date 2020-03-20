@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50711
 File Encoding         : 65001
 
-Date: 2020-03-13 18:29:11
+Date: 2020-03-20 18:33:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,41 +34,41 @@ CREATE TABLE `x2_admin_init` (
 -- ----------------------------
 -- Records of x2_admin_init
 -- ----------------------------
-INSERT INTO `x2_admin_init` VALUES ('1', '0', 'menuInfo', '后台管理', '', '', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('2', '1', 'currency', '生物系统', '测试s', '', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('3', '1', 'component', '组件管理', '', '', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('4', '1', 'other', '其它管理', '', '', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('5', '2', '', '生物模板', '', '/admin/biology/index', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('6', '2', '', '生物创造', '', '/admin/biology/create', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('40', '0', 'app', 'APP管理', '', '', '1584092493', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('41', '0', 'user', '用户管理', '', '', '1584092493', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('8', '2', '', '世界管理', '', '/layuimini/page/menu.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('9', '2', '', '技能管理', '', '/layuimini/page/setting.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('10', '2', '', '性格管理', '反倒是', '/layuimini/page/table.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('48', '1', '', '物品管理', '', '', '1584092493', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('49', '48', '', '武器管理', '', '', '1584092493', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('14', '2', '', '登录模板', '', '', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('15', '14', '', '登录-1', '', '/layuimini/page/login-1.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('16', '14', '', '登录-2', null, '/layuimini/page/login-2.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('17', '2', '', '异常页面', null, '', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('18', '2', '', '404页面', '', '/layuimini/page/404.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('19', '2', '', '其它界面', null, '', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('20', '19', '', '按钮示例', null, '/layuimini/page/button.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('21', '19', '', '弹出层', null, '/layuimini/page/layer.html\"', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('22', '3', '', '组件管理', null, '', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('23', '22', '', '图标列表', null, '/layuimini/page/icon.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('24', '22', '', '图标选择', null, '/layuimini/page/icon-picker.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('25', '22', '', '颜色选择', null, '/layuimini/page/color-select.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('26', '22', '', '下拉选择', null, '/layuimini/page/table-select.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('27', '22', '', '文件上传', '', '/layuimini/page/upload.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('28', '22', '', '富文本编辑器', '', '/layuimini/page/editor.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('29', '4', '', '多级菜单', null, '', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('30', '29', '', '按钮1', null, '/layuimini/page/button.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('31', '29', '', '按钮2', null, '/layuimini/page/button.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('32', '29', '', '按钮3', null, '/layuimini/page/button.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('33', '29', '', '表单4', null, '/layuimini/page/form.html', '1584092493', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('45', '0', 'order', '商城', '', '', '1584092493', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('43', '41', 'cc', 'cc', '', 'cc', '1584092493', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('1', '0', 'menuInfo', '后台管理', '', '', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('2', '1', 'currency', '生物系统', '测试s', '', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('3', '1', 'component', '组件管理', '', '', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('4', '1', 'other', '其它管理', '', '', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('5', '2', '', '生物模板', '', '/admin/biology/index', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('6', '2', '', '生物创造', '', '/admin/biology-create/index', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('40', '0', 'app', 'APP管理', '', '', '1584329715', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('41', '0', 'user', '用户管理', '', '', '1584329715', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('8', '2', '', '世界管理', '', '/layuimini/page/menu.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('9', '2', '', '技能管理', '', '/layuimini/page/setting.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('10', '2', '', '性格管理', '反倒是', '/layuimini/page/table.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('48', '1', '', '物品管理', '', '', '1584329715', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('49', '48', '', '武器管理', '', '', '1584329715', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('14', '2', '', '登录模板', '', '', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('15', '14', '', '登录-1', '', '/layuimini/page/login-1.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('16', '14', '', '登录-2', null, '/layuimini/page/login-2.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('17', '2', '', '异常页面', null, '', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('18', '2', '', '404页面', '', '/layuimini/page/404.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('19', '2', '', '其它界面', null, '', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('20', '19', '', '按钮示例', null, '/layuimini/page/button.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('21', '19', '', '弹出层', null, '/layuimini/page/layer.html\"', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('22', '3', '', '组件管理', null, '', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('23', '22', '', '图标列表', null, '/layuimini/page/icon.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('24', '22', '', '图标选择', null, '/layuimini/page/icon-picker.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('25', '22', '', '颜色选择', null, '/layuimini/page/color-select.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('26', '22', '', '下拉选择', null, '/layuimini/page/table-select.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('27', '22', '', '文件上传', '', '/layuimini/page/upload.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('28', '22', '', '富文本编辑器', '', '/layuimini/page/editor.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('29', '4', '', '多级菜单', null, '', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('30', '29', '', '按钮1', null, '/layuimini/page/button.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('31', '29', '', '按钮2', null, '/layuimini/page/button.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('32', '29', '', '按钮3', null, '/layuimini/page/button.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('33', '29', '', '表单4', null, '/layuimini/page/form.html', '1584329715', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('45', '0', 'order', '商城', '', '', '1584329715', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('43', '41', 'cc', 'cc', '', 'cc', '1584329715', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
 
 -- ----------------------------
 -- Table structure for x2_biology
@@ -125,41 +125,32 @@ CREATE TABLE `x2_biology` (
   `jiBan` int(3) NOT NULL DEFAULT '1' COMMENT '羁绊',
   `experience` int(11) DEFAULT '0' COMMENT '升级经验 每级 等级*500的经验',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_biology
 -- ----------------------------
-INSERT INTO `x2_biology` VALUES ('2', '吕布', '1', '2', '1', '6792', '84', '207', '172', '189', '158', '208', '1', '0', '0', '1', '3', '1', '0', '100', '74', '44', '16', '7932', '196', '16', '6,7,5', '0', '1', '1', '', '1', '7', '1', '1', '', '0', '1', '397', '203', '56', '65', '#00f', '0', 'SS', '0', '5', '1', '0');
+INSERT INTO `x2_biology` VALUES ('2', '吕布', '1', '2', '1', '6880', '84', '206', '172', '190', '158', '207', '1', '0', '0', '1', '3', '1', '0', '100', '78', '42', '16', '8019', '228', '16', '10,9', '0', '1', '1', '', '1', '6', '1', '1', '', '0', '1', '461', '235', '56', '65', '#00f', '0', 'SSS', '0', '7', '1', '0');
 INSERT INTO `x2_biology` VALUES ('3', '貂蝉', '1', '2', '1', '5944', '111', '196', '163', '220', '183', '199', '2', '0', '0', '1', '3', '1', '0', '100', '30', '30', '68', '7303', '210', '16', '1,2,3,4,5', '0', '1', '1', '', '5', '10', '1', '1', '', '0', '3', '427', '221', '160', '125', '#dd1d13', '0', 'SS', '0', '5', '1', '0');
 INSERT INTO `x2_biology` VALUES ('1', '马元义', '1', '1', '1', '228', '21', '2', '0', '2', '0', '100', '0', '0', '0', '1', '3', '1', '0', '1', '36', '20', '56', '353', '17', '6', '1', '0', '1', '1', '东汉末年，天下大乱，黄巾起义。天公张角的首徒马元义攻入广宗城，卢值、刘关张等人前支增援。 张角将死，元义及墨家钜子心赶到，心告诉角天数已尽，并要抢走《太平要术》，角虽战退心却也知大限已到。是夜，角吹奏悲曲，少年吕布寻埙声而至。角告知布貂蝉是他的宿命所在，并将埙赠与布。次日，广宗失陷，张角归天，元义得到藏有《太平要术》秘密的天公布袍。心知道元义即将出生的女儿是角是转世传人，跟着布找到难产而死的马夫人，布接生下貂蝉。', '1', '10', '1', '1', '', '0', '1', '38', '23', '0', '0', '#fff', '0', '', '0', '5', '1', '0');
 INSERT INTO `x2_biology` VALUES ('4', '墨家巨子·心', '1', '1', '1', '225', '21', '2', '0', '2', '0', '100', '0', '0', '0', '1', '3', '1', '0', '1', '40', '20', '60', '350', '11', '12', '1', '0', '1', '1', '', '1', '10', '1', '1', '', '0', '3', '26', '17', '0', '0', '#fff', '0', '', '0', '5', '1', '0');
 INSERT INTO `x2_biology` VALUES ('5', '张宝', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '26', '66', '10', '1', '1', '8', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', '5', '1', '0');
 INSERT INTO `x2_biology` VALUES ('6', '张角', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '30', '51', '66', '1', '1', '10', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', '5', '1', '0');
 INSERT INTO `x2_biology` VALUES ('7', '张梁', '1', '1', '1', '3150', '84', '403', '105', '403', '105', '152', '3', '0', '0', '1', '3', '1', '0', '1', '56', '32', '27', '4410', '330', '12', '1,2,3,4,5,6,7,8', '0', '1', '1', '', '12', '10', '1', '1', '', '0', '3', '664', '336', '3', '2', '#fff', '0', '神话', '0', '5', '1', '0');
-INSERT INTO `x2_biology` VALUES ('8', '树妖', '2', '1', '1', '951', '34', '28', '23', '33', '28', '111', '0', '0', '0', '1', '3', '1', '0', '1', '38', '39', '59', '1208', '148', '1', '', '0', '1', '1', '', '1', '10', '1', '1', '/files/attach/images/20200311/1583918704313142.png', '0', '3', '299', '152', '0', '0', '#fff', '0', 'B', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('9', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '40', '27', '42', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('10', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '63', '64', '68', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('11', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '23', '35', '7', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('12', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '21', '41', '47', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('13', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '45', '22', '21', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('14', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '6', '53', '64', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('15', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '6', '38', '11', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('16', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '25', '4', '15', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('17', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '12', '23', '55', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('18', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '7', '42', '40', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('19', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '52', '45', '10', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('20', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '57', '41', '21', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('21', 'vv', '1', '1', '1', '1281', '36', '30', '25', '40', '33', '108', '0', '0', '0', '1', '3', '1', '0', '1', '68', '30', '68', '1553', '178', '1', '', '0', '1', '4', '', '1', '10', '2', '1', '', '0', '3', '359', '182', '0', '0', '#fff', '0', 'S', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('22', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '26', '62', '23', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('23', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '25', '68', '60', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('24', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '8', '35', '28', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('25', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '24', '25', '5', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('26', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '3', '65', '68', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('27', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '22', '48', '22', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('28', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '66', '63', '23', '1', '1', '1', '', '0', '1', '4', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('29', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '13', '18', '35', '1', '1', '1', '', '0', '1', '4', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
-INSERT INTO `x2_biology` VALUES ('30', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '53', '39', '3', '1', '1', '1', '', '0', '1', '4', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
+INSERT INTO `x2_biology` VALUES ('8', '树妖', '2', '1', '1', '951', '34', '28', '23', '33', '28', '111', '0', '0', '0', '1', '3', '1', '0', '1', '38', '39', '59', '1208', '148', '1', '', '0', '1', '1', '', '1', '10', '1', '1', '/files/attach/images/20200311/1583918704313142.png', '0', '3', '299', '152', '0', '0', '#fff', '0', 'B', '0', '2', '1', '0');
+INSERT INTO `x2_biology` VALUES ('10', '水电费', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '63', '64', '68', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', '4', '1', '0');
+INSERT INTO `x2_biology` VALUES ('11', '啊', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '23', '35', '7', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', '2', '1', '0');
+INSERT INTO `x2_biology` VALUES ('12', '擦', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '21', '41', '47', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', '2', '1', '0');
+INSERT INTO `x2_biology` VALUES ('13', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '45', '22', '21', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', '3', '1', '0');
+INSERT INTO `x2_biology` VALUES ('14', '发', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '6', '53', '64', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', '2', '1', '0');
+INSERT INTO `x2_biology` VALUES ('15', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '6', '38', '11', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', '2', '1', '0');
+INSERT INTO `x2_biology` VALUES ('16', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '25', '4', '15', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', '4', '1', '0');
+INSERT INTO `x2_biology` VALUES ('17', '周星星', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '12', '23', '55', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0');
+INSERT INTO `x2_biology` VALUES ('18', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '7', '42', '40', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', '2', '1', '0');
+INSERT INTO `x2_biology` VALUES ('19', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '52', '45', '10', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', '3', '1', '0');
+INSERT INTO `x2_biology` VALUES ('20', '未知生物', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '57', '41', '21', '1', '1', '1', '', '0', '1', '1', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', '6', '1', '0');
+INSERT INTO `x2_biology` VALUES ('21', 'vv', '1', '1', '1', '1281', '36', '30', '25', '40', '33', '108', '0', '0', '0', '1', '3', '1', '0', '1', '68', '30', '68', '1553', '178', '1', '', '0', '1', '4', '', '1', '10', '2', '1', '', '0', '3', '359', '182', '0', '0', '#fff', '0', 'S', '0', '7', '1', '0');
+INSERT INTO `x2_biology` VALUES ('32', 'vvv', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '0', '1', '3', '1', '0', '1', '47', '55', '52', '1', '1', '1', '', '0', '0', '4', '', '1', '10', '1', '1', null, '0', '3', '1', '1', '0', '0', '#fff', '0', 'D', '0', null, '1', '0');
 
 -- ----------------------------
 -- Table structure for x2_biology_biology
@@ -225,7 +216,7 @@ CREATE TABLE `x2_biology_create` (
   `shuaXin` int(11) DEFAULT '1' COMMENT '刷新次数',
   `xunLian` int(11) DEFAULT '3' COMMENT '训练次数',
   `jinJie` int(11) DEFAULT '1' COMMENT '进阶',
-  `biologyid` int(11) DEFAULT '0' COMMENT '生物id',
+  `biologyid` int(11) DEFAULT '0' COMMENT '生物模板id（生物属性刷新上限）',
   `reiki` int(11) DEFAULT '1' COMMENT '灵气',
   `power` int(11) DEFAULT '1' COMMENT '力量',
   `agile` int(11) DEFAULT '1' COMMENT '敏捷',
@@ -256,12 +247,15 @@ CREATE TABLE `x2_biology_create` (
   `wordId` int(11) DEFAULT NULL COMMENT '世界编号',
   `jiBan` int(3) NOT NULL DEFAULT '1' COMMENT '羁绊',
   `experience` int(11) DEFAULT '0' COMMENT '升级经验 每级 等级*500的经验',
+  `userid` int(11) DEFAULT '0' COMMENT '创建人',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_biology_create
 -- ----------------------------
+INSERT INTO `x2_biology_create` VALUES ('1', '林冲', '1', '1', '1', '768', '21', '8', '7', '7', '6', '101', '0', '0', '0', '1', '3', '1', '0', '1', '49', '4', '2', '918', '77', '1', '4,5', '0', '0', '4', '', '1', '10', '1', '1', '', '0', '3', '157', '81', '0', '0', '#fff', '0', 'D', '0', '4', '1', '0', '0');
+INSERT INTO `x2_biology_create` VALUES ('2', '鲁智深', '1', '1', '1', '708', '26', '25', '21', '18', '15', '113', '0', '0', '0', '1', '3', '1', '0', '1', '24', '48', '23', '926', '107', '1', '', '0', '0', '4', '', '1', '10', '1', '1', '', '0', '3', '217', '111', '0', '0', '#fff', '0', 'C', '0', '4', '1', '0', '0');
 
 -- ----------------------------
 -- Table structure for x2_biology_godhood
@@ -419,6 +413,24 @@ INSERT INTO `x2_biology_state` VALUES ('12', '玄仙', null, null);
 INSERT INTO `x2_biology_state` VALUES ('13', '圣人', null, null);
 
 -- ----------------------------
+-- Table structure for x2_user
+-- ----------------------------
+DROP TABLE IF EXISTS `x2_user`;
+CREATE TABLE `x2_user` (
+  `userid` int(11) NOT NULL COMMENT '用户userid',
+  `occupation` int(2) DEFAULT '1' COMMENT '职业 1炼器2 寻道 3炼魂 4炼丹 5炼体',
+  `vip` int(2) DEFAULT '0' COMMENT 'vip等级',
+  `grade` int(11) DEFAULT '1',
+  `state` int(11) DEFAULT '1' COMMENT '境界',
+  `biologyknow` int(11) DEFAULT '1' COMMENT '生物图鉴数',
+  PRIMARY KEY (`userid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of x2_user
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for x2_user_biology
 -- ----------------------------
 DROP TABLE IF EXISTS `x2_user_biology`;
@@ -536,6 +548,25 @@ CREATE TABLE `x2_user_biology_skill` (
 INSERT INTO `x2_user_biology_skill` VALUES ('1', '1', '1', '1');
 
 -- ----------------------------
+-- Table structure for x2_user_words
+-- ----------------------------
+DROP TABLE IF EXISTS `x2_user_words`;
+CREATE TABLE `x2_user_words` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户标记世界',
+  `past` int(3) DEFAULT '0' COMMENT '通过率--正常10关',
+  `wordId` int(11) DEFAULT '0' COMMENT '世界id',
+  `userid` int(11) DEFAULT NULL,
+  `complete` int(2) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of x2_user_words
+-- ----------------------------
+INSERT INTO `x2_user_words` VALUES ('1', '100', '1', '1', '1');
+INSERT INTO `x2_user_words` VALUES ('2', '100', '2', '1', '1');
+
+-- ----------------------------
 -- Table structure for x2_words
 -- ----------------------------
 DROP TABLE IF EXISTS `x2_words`;
@@ -550,43 +581,46 @@ CREATE TABLE `x2_words` (
   `describe` varchar(255) DEFAULT NULL COMMENT '描述',
   `down` varchar(255) DEFAULT NULL COMMENT '掉落',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_words
 -- ----------------------------
-INSERT INTO `x2_words` VALUES ('1', '功夫', '1', null, null, '3', '古武世界', null, null);
-INSERT INTO `x2_words` VALUES ('2', '黄飞鸿', '1', null, null, '2', '古武世界', null, null);
-INSERT INTO `x2_words` VALUES ('3', '叶问', '1', null, null, '1', '古武世界', null, null);
-INSERT INTO `x2_words` VALUES ('4', '水浒', '1', null, null, '2', '古武世界', null, null);
-INSERT INTO `x2_words` VALUES ('5', '蝶舞天涯', '1', null, null, '3', '古武世界', '《吕布与貂蝉》（全名《三国群英会之吕布与貂蝉》，原定名《三国传说》。', null);
-INSERT INTO `x2_words` VALUES ('6', '寻情记', '1', null, null, '5', '古武世界', '《三官经》：《太上三元赐福赦罪解厄消灾延生保命妙经》也作《三官经》或《三官感应妙经》。三官，指天、地、水三官大帝。转诵此经至满千遍，大作踊跃；悔过愆尤，断恶修善,即能除无妄之灾，解有仇之愆；赐千祥之福，脱九厄之难，离三途之苦。', '《三官经》');
-INSERT INTO `x2_words` VALUES ('7', '鹿鼎记', '1', null, null, '4', '古武世界', null, null);
-INSERT INTO `x2_words` VALUES ('8', '倚天屠龙记', '2', null, null, '1', '小千世界', null, '《九阳真经》《九阴真经》');
-INSERT INTO `x2_words` VALUES ('9', '笑傲江湖', '2', null, null, '2', '小千世界', null, '《道藏》');
-INSERT INTO `x2_words` VALUES ('10', '神雕侠侣', '2', null, null, '2', '小千世界', null, '《周易参同契》');
-INSERT INTO `x2_words` VALUES ('11', '天龙八部', '2', null, null, '3', '小千世界', '《南华经》：《南华真经》即《庄子》，战国时庄周撰。唐玄宗于天宝元年诏封庄子为“南华真人”，尊其书为《南华真经》。到宋徽宗时,又追封庄周为“微妙无通真君”', '《不老长春功》 《南华经》 《易筋经》 ');
-INSERT INTO `x2_words` VALUES ('12', '天下第一', '2', null, null, '2', '小千世界', '《抱朴子》：《抱朴子》是对战国以来、直至汉代的神仙思想和炼丹养生方术所作的系统的总结，为魏晋神仙道教奠定理论基础的道教经典。作者是晋代葛洪祖师。', '《抱朴子》');
-INSERT INTO `x2_words` VALUES ('13', '侠客行', '2', null, null, '4', '小千世界', '《太玄经》，汉扬雄撰，也称《扬子太玄经》，其书模仿《周易》，以天地人三才为本，著重阐发宇宙生成、天地运行及人事变化之哲理，具有辩证法因素。该书对东汉以来天文象数学发展影响甚大，但其文辞艰深晦涩，故历代学者为之注释训诂者颇多。', '《太玄经》');
-INSERT INTO `x2_words` VALUES ('14', '秦时明月', '2', null, null, '4', '小千世界', '《道德经》：《道德经》又称《老子》、《五千言》，是中国古代先秦诸子分家前的一部著作，是中国历史上首部完整的哲学著作，是道家哲学思想的重要来源,春秋时期的老子李耳所撰写', '《道德经》');
-INSERT INTO `x2_words` VALUES ('15', '仙剑奇侠传', '3', null, null, '4', '中千世界', '《北斗经》：《北斗经》，全称《太上玄灵北斗本命延生真经》。经中称，北斗七星君乃造化之枢机，人神之主宰，有回生注死之功，消灾度厄之力。凡人性命五体，悉属本命星官主掌。', '《北斗经》');
-INSERT INTO `x2_words` VALUES ('16', '蜀山传奇', '3', null, null, '5', '中千世界', '《通玄经》：《通玄真经》即《文子》，战国时文子所著。唐玄宗崇道，于天宝元年（742）封文子为「通玄真人」，尊称其书为《通玄真经》。', '《通玄真经》');
-INSERT INTO `x2_words` VALUES ('17', '诛仙', '3', null, null, '4', '中千世界', null, '《天书》');
-INSERT INTO `x2_words` VALUES ('18', '大唐双龙传', '2', null, null, '5', '小千世界', '《冲虚经》：《冲虚经》即《列子》，旧题周列御寇撰。唐玄宗崇道，于天宝元年（742）封 列子为冲虚真人，尊称其书《冲虚真经》。至宋真宗景德（1004－1007）中加封列子为「冲虚至德真人」，故又名《冲虚至德真经》', '《长生诀》《冲虚经》');
-INSERT INTO `x2_words` VALUES ('19', '西游记', '4', null, null, '3', '大千世界', null, null);
-INSERT INTO `x2_words` VALUES ('20', '盘龙', '4', null, null, '3', '大千世界', '《阴符经》：《阴符经》，全称《黄帝阴符经》或《轩辕黄帝阴符经》，也称《黄帝天机经》，总共只有300多字。《阴符经》是唐朝著名道士李筌发现于嵩山，在骊山经骊山老母点化，此后才传抄流行于世。', '《阴符经》');
-INSERT INTO `x2_words` VALUES ('21', '斗破苍穹', '4', null, null, '2', '大千世界', '《常清静经》：《常清静经》是《太上老君说常清静经》的简称，大约成书于唐代，收录于《正统道藏》洞神部。它是多数道教学人必须背诵的经典，被视为道教在心性修练上的法宝。', '《常清静经》');
-INSERT INTO `x2_words` VALUES ('22', '遮天', '4', null, null, '4', '大千世界', '《度人经》：全称《太上洞玄灵宝无量度人上品妙经》，或称《元始无量度人上品妙经》。由《元始洞玄灵宝本章》、《元洞玉历章》和《前序》、《中序》、《后序》及《元始灵书》上、中、下篇组成。', '《度人经》');
-INSERT INTO `x2_words` VALUES ('23', '永生', '4', null, null, '5', '大千世界', '《心印经》：气功内丹术著作。全称《高上玉皇心印妙经》。一卷，唐代著作。此经为四言韵文，共五十句。主要讲述内丹术的基本理论，阐发精、气、神的含义及它们之间的关系，对后世有较大影响。', '《心印经');
-INSERT INTO `x2_words` VALUES ('24', '诸神黄昏', '4', null, null, '2', '大千世界', '', '《圣经》');
-INSERT INTO `x2_words` VALUES ('25', '凡人修仙传', '4', null, null, '4', '大千世界', '《玉皇经》：全称《高上玉皇本行集经》，有3卷。道士斋醮祈禳及道门功课的必诵经文。经文由《清微天宫神通品》、《太上大光明圆满大神咒品》、《诵持功德品》、《天真护持品》及《报应神验品》组成。', '《玉皇经》');
+INSERT INTO `x2_words` VALUES ('1', '太极张三丰', '1', null, null, '1', '低武世界', null, null);
+INSERT INTO `x2_words` VALUES ('2', '黄飞鸿', '1', null, null, '2', '低武世界', null, null);
+INSERT INTO `x2_words` VALUES ('3', '叶问', '1', null, null, '1', '低武世界', null, null);
+INSERT INTO `x2_words` VALUES ('4', '水浒', '1', null, null, '2', '低武世界', null, null);
+INSERT INTO `x2_words` VALUES ('5', '蝶舞天涯', '1', null, null, '3', '低武世界', '《吕布与貂蝉》（全名《三国群英会之吕布与貂蝉》，原定名《三国传说》。', null);
+INSERT INTO `x2_words` VALUES ('6', '寻情记', '1', null, null, '5', '低武世界', '《三官经》：《太上三元赐福赦罪解厄消灾延生保命妙经》也作《三官经》或《三官感应妙经》。三官，指天、地、水三官大帝。转诵此经至满千遍，大作踊跃；悔过愆尤，断恶修善,即能除无妄之灾，解有仇之愆；赐千祥之福，脱九厄之难，离三途之苦。', '《三官经》');
+INSERT INTO `x2_words` VALUES ('7', '鹿鼎记', '1', null, null, '4', '低武世界', null, null);
+INSERT INTO `x2_words` VALUES ('8', '倚天屠龙记', '2', null, null, '1', '古武世界', null, '《九阳真经》《九阴真经》');
+INSERT INTO `x2_words` VALUES ('9', '笑傲江湖', '2', null, null, '2', '古武世界', null, '《道藏》');
+INSERT INTO `x2_words` VALUES ('10', '神雕侠侣', '2', null, null, '2', '古武世界', null, '《周易参同契》');
+INSERT INTO `x2_words` VALUES ('11', '天龙八部', '2', null, null, '3', '古武世界', '《南华经》：《南华真经》即《庄子》，战国时庄周撰。唐玄宗于天宝元年诏封庄子为“南华真人”，尊其书为《南华真经》。到宋徽宗时,又追封庄周为“微妙无通真君”', '《不老长春功》 《南华经》 《易筋经》 ');
+INSERT INTO `x2_words` VALUES ('12', '天下第一', '2', null, null, '2', '古武世界', '《抱朴子》：《抱朴子》是对战国以来、直至汉代的神仙思想和炼丹养生方术所作的系统的总结，为魏晋神仙道教奠定理论基础的道教经典。作者是晋代葛洪祖师。', '《抱朴子》');
+INSERT INTO `x2_words` VALUES ('13', '侠客行', '2', null, null, '4', '古武世界', '《太玄经》，汉扬雄撰，也称《扬子太玄经》，其书模仿《周易》，以天地人三才为本，著重阐发宇宙生成、天地运行及人事变化之哲理，具有辩证法因素。该书对东汉以来天文象数学发展影响甚大，但其文辞艰深晦涩，故历代学者为之注释训诂者颇多。', '《太玄经》');
+INSERT INTO `x2_words` VALUES ('14', '秦时明月', '2', null, null, '4', '古武世界', '《道德经》：《道德经》又称《老子》、《五千言》，是中国古代先秦诸子分家前的一部著作，是中国历史上首部完整的哲学著作，是道家哲学思想的重要来源,春秋时期的老子李耳所撰写', '《道德经》');
+INSERT INTO `x2_words` VALUES ('15', '仙剑奇侠传', '3', null, null, '4', '仙侠世界', '《北斗经》：《北斗经》，全称《太上玄灵北斗本命延生真经》。经中称，北斗七星君乃造化之枢机，人神之主宰，有回生注死之功，消灾度厄之力。凡人性命五体，悉属本命星官主掌。', '《北斗经》');
+INSERT INTO `x2_words` VALUES ('16', '蜀山传奇', '3', null, null, '5', '仙侠世界', '《通玄经》：《通玄真经》即《文子》，战国时文子所著。唐玄宗崇道，于天宝元年（742）封文子为「通玄真人」，尊称其书为《通玄真经》。', '《通玄真经》');
+INSERT INTO `x2_words` VALUES ('17', '诛仙', '3', null, null, '4', '仙侠世界', null, '《天书》');
+INSERT INTO `x2_words` VALUES ('18', '大唐双龙传', '2', null, null, '5', '古武世界', '《冲虚经》：《冲虚经》即《列子》，旧题周列御寇撰。唐玄宗崇道，于天宝元年（742）封 列子为冲虚真人，尊称其书《冲虚真经》。至宋真宗景德（1004－1007）中加封列子为「冲虚至德真人」，故又名《冲虚至德真经》', '《长生诀》《冲虚经》');
+INSERT INTO `x2_words` VALUES ('19', '西游记', '4', null, null, '3', '神话世界', null, null);
+INSERT INTO `x2_words` VALUES ('20', '盘龙', '4', null, null, '3', '神话世界', '《阴符经》：《阴符经》，全称《黄帝阴符经》或《轩辕黄帝阴符经》，也称《黄帝天机经》，总共只有300多字。《阴符经》是唐朝著名道士李筌发现于嵩山，在骊山经骊山老母点化，此后才传抄流行于世。', '《阴符经》');
+INSERT INTO `x2_words` VALUES ('21', '斗破苍穹', '4', null, null, '2', '神话世界', '《常清静经》：《常清静经》是《太上老君说常清静经》的简称，大约成书于唐代，收录于《正统道藏》洞神部。它是多数道教学人必须背诵的经典，被视为道教在心性修练上的法宝。', '《常清静经》');
+INSERT INTO `x2_words` VALUES ('22', '遮天', '4', null, null, '4', '神话世界', '《度人经》：全称《太上洞玄灵宝无量度人上品妙经》，或称《元始无量度人上品妙经》。由《元始洞玄灵宝本章》、《元洞玉历章》和《前序》、《中序》、《后序》及《元始灵书》上、中、下篇组成。', '《度人经》');
+INSERT INTO `x2_words` VALUES ('23', '永生', '4', null, null, '5', '神话世界', '《心印经》：气功内丹术著作。全称《高上玉皇心印妙经》。一卷，唐代著作。此经为四言韵文，共五十句。主要讲述内丹术的基本理论，阐发精、气、神的含义及它们之间的关系，对后世有较大影响。', '《心印经');
+INSERT INTO `x2_words` VALUES ('24', '诸神黄昏', '4', null, null, '2', '神话世界', '', '《圣经》');
+INSERT INTO `x2_words` VALUES ('25', '凡人修仙传', '4', null, null, '4', '神话世界', '《玉皇经》：全称《高上玉皇本行集经》，有3卷。道士斋醮祈禳及道门功课的必诵经文。经文由《清微天宫神通品》、《太上大光明圆满大神咒品》、《诵持功德品》、《天真护持品》及《报应神验品》组成。', '《玉皇经》');
 INSERT INTO `x2_words` VALUES ('26', '玄黄', '5', null, null, '2', '起源世界', '玄黄，天地玄黄宇宙洪荒混沌', null);
 INSERT INTO `x2_words` VALUES ('27', '鸿蒙', '5', null, null, '1', '起源世界', '天地，天地玄黄宇宙洪荒混沌', null);
 INSERT INTO `x2_words` VALUES ('28', '洪荒', '5', null, null, '4', '起源世界', '洪荒，天地玄黄宇宙洪荒混沌', null);
 INSERT INTO `x2_words` VALUES ('29', '混沌', '5', null, null, '5', '起源世界', '混沌，天地玄黄宇宙洪荒混沌', null);
-INSERT INTO `x2_words` VALUES ('30', '我和僵尸有个约会', '3', null, null, '5', '中千世界', null, '《地书》《人书》');
-INSERT INTO `x2_words` VALUES ('31', '僵尸道长', '1', null, null, '5', '古武世界', '《上清经》被视为道家“三奇第一之奇”，历代流传不绝，宣称如果得到《上清 经》，根本不需要再炼丹修道，只需读上一万遍，便可以成仙。《上清经》的全称是 《上清大洞真经三十九章》，又称《大洞真经》、《三天龙书》、《九天太真道经》、 《三十九章经》，为上清派首经。', '《六甲天书 》《上清经》 ');
-INSERT INTO `x2_words` VALUES ('32', '神话', '2', null, null, '1', '小千世界', '《太平经》：《太平经》又名《太平清领书》。据《后汉书·襄楷传》称：汉顺帝时，琅玡人宫崇诣阙，献其师于吉所得神书，号曰《太平清领书》。此神书即《太平经》，系东汉原始道教重要经典。', '《太平经》');
-INSERT INTO `x2_words` VALUES ('33', '漫威', '4', null, null, '1', '大千世界', null, null);
-INSERT INTO `x2_words` VALUES ('34', '封神榜', '4', null, null, '4', '大千世界', null, null);
+INSERT INTO `x2_words` VALUES ('30', '我和僵尸有个约会', '3', null, null, '5', '仙侠世界', null, '《地书》《人书》');
+INSERT INTO `x2_words` VALUES ('31', '僵尸道长', '1', null, null, '5', '低武世界', '《上清经》被视为道家“三奇第一之奇”，历代流传不绝，宣称如果得到《上清 经》，根本不需要再炼丹修道，只需读上一万遍，便可以成仙。《上清经》的全称是 《上清大洞真经三十九章》，又称《大洞真经》、《三天龙书》、《九天太真道经》、 《三十九章经》，为上清派首经。', '《六甲天书 》《上清经》 ');
+INSERT INTO `x2_words` VALUES ('32', '神话', '2', null, null, '1', '古武世界', '《太平经》：《太平经》又名《太平清领书》。据《后汉书·襄楷传》称：汉顺帝时，琅玡人宫崇诣阙，献其师于吉所得神书，号曰《太平清领书》。此神书即《太平经》，系东汉原始道教重要经典。', '《太平经》');
+INSERT INTO `x2_words` VALUES ('33', '漫威', '4', null, null, '1', '神话世界', null, null);
+INSERT INTO `x2_words` VALUES ('34', '封神榜', '4', null, null, '4', '神话世界', null, null);
 INSERT INTO `x2_words` VALUES ('35', '宇宙', '5', null, null, '3', '起源世界', '宇宙，天地玄黄宇宙洪荒混沌', null);
+INSERT INTO `x2_words` VALUES ('36', '风云', '1', null, null, '3', '低武世界', null, null);
+INSERT INTO `x2_words` VALUES ('37', '古惑仔', '1', null, null, '1', '低武世界', null, null);
+INSERT INTO `x2_words` VALUES ('38', '功夫', '1', null, null, '1', '低武世界', null, null);

@@ -130,15 +130,15 @@
             <tr>
                 <td style="width:80px;">境界</td>
                 <td style="width:150px;">    
-                    <input  name="state" class="mini-combobox"  emptyText="请选择境界" url="/admin/biology/biology-stateall" />    
+                    <input  name="state" class="mini-combobox"  emptyText="请选择境界" url="/admin/api/biology-stateall" />    
                 </td>
                 <td style="width:80px;">种族</td>
                 <td style="width:150px;">    
-                    <input name="biology" class="mini-combobox"  emptyText="请选择种族" url="/admin/biology/biologyall" /> 
+                    <input name="biology" class="mini-combobox"  emptyText="请选择种族" url="/admin/api/biologyall" /> 
                 </td>
                 <td >性格</td>
                 <td >    
-                    <input name="character" class="mini-combobox" url="/admin/biology/biology-characterall" /> 
+                    <input name="character" class="mini-combobox" url="/admin/api/biology-characterall" /> 
                 </td>
             </tr>   
 
@@ -154,7 +154,7 @@
                 </td>
                 <td >生物世界</td>
                 <td >    
-                    <input name="wordId" class="mini-combobox" onbuttonclick="onButtonEditWords"  url="/admin/biology/wordslist" /> 
+                    <input name="wordId" class="mini-combobox" onbuttonclick="onButtonEditWords"  url="/admin/api/wordslist" /> 
                 </td>
                 <td >技能</td>
                 <td >    
@@ -294,7 +294,7 @@
         if (form.isValid() == false) return;
         var json = mini.encode([o]);
         $.ajax({
-            url: "/admin/biology/biology-update",
+            url: "/admin/biology-create/biology-update",
             type: 'post',
             data: { data: json },
             cache: false,
@@ -314,7 +314,7 @@
             //跨页面传递的数据对象，克隆后才可以安全使用
             data = mini.clone(data);
             $.ajax({
-                url: "/admin/biology/biology-updateone?id="+data.id,
+                url: "/admin/biology-create/biology-updateone?id="+data.id,
                 cache: false,
                 success: function (text) {
                     var o = mini.decode(text);
@@ -536,7 +536,7 @@
         // var buttonEdit = this;
         var win = new UserSelectWindow();
         win.set({
-            url: "/admin/biology/api-skill",                    
+            url: "/admin/api/api-skill",                    
             title: "生物技能",
             width: 600,
             height: 500,
@@ -591,7 +591,7 @@
         var win = new UserSelectWindow();
         
         win.set({
-            url: "/admin/biology/wordsall",                    
+            url: "/admin/api/wordsall",                    
             title: "世界选择",
             width: 600,
             height: 500,
