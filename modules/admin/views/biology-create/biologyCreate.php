@@ -25,12 +25,22 @@
                         <input id="key" class="mini-textbox" emptyText="请输入生物名称" style="width:150px;" onenter="onKeyEnter"/>   
                         <a class="mini-button" onclick="search()">查询</a>
                     </td>
+                    <td>
+                        <select name="type" id="using">
+                            <option value="">全部</option>
+                            <option value="1">普通</option>
+                            <option value="2">商店</option>
+                            <option value="3">NPC</option>
+                            <option value="4">不可用</option>
+                        </select>
+                    </td>
                 </tr>
             </table>           
         </div>
     </div>
+
     <div id="datagrid1" class="mini-datagrid" style="width:98%;height:94%"
-        url="/admin/biology/api-index" idField="id" 
+        url="/admin/biology-create/api-index" idField="id" 
         allowResize="true" pageSize="20" sizeList="[10,20,30,50,100]"
         allowCellEdit="true" allowCellSelect="true" multiSelect="true" 
         editNextOnEnterKey="true"
@@ -44,11 +54,11 @@
             </div>
             <!--ComboBox：本地数据-->         
             <div type="comboboxcolumn" autoShowPopup="true"  field="biology" width="100"  allowSort="true"  align="center" headerAlign="center">种族
-                <input name="biology" property="editor" class="mini-combobox" style="width:100%;" url="/admin/biology/biologyall" />                
+                <input name="biology" property="editor" class="mini-combobox" style="width:100%;" url="/admin/api/biologyall" />                
             </div>
             <!-- data="States"   定义属性 也可以用url  -->
             <div type="comboboxcolumn" autoShowPopup="true"  field="state" width="100"  allowSort="true"  align="center" headerAlign="center">生物境界
-                <input name="state" property="editor" class="mini-combobox" style="width:100%;" url="/admin/biology/biology-stateall" />   
+                <input name="state" property="editor" class="mini-combobox" style="width:100%;" url="/admin/api/biology-stateall" />   
             </div>
 
             <div field="power" width="100"  allowSort="true" >力量
@@ -73,7 +83,7 @@
                 <input name="type" property="editor" class="mini-combobox" style="width:100%;"  data="Type" />                
             </div> -->
             <div type="comboboxcolumn" autoShowPopup="true"  field="wordId" width="100"  allowSort="true"  align="center" headerAlign="center">生物世界
-                <input name="wordId" property="editor" class="mini-combobox" style="width:100%;" url="/admin/biology/wordslist" />   
+                <input name="wordId" property="editor" class="mini-combobox" style="width:100%;" url="/admin/api/wordslist" />   
             </div>
 
             <!-- <div field="birthday" width="100"  allowSort="true" dateFormat="yyyy-MM-dd">出生日期
@@ -83,8 +93,8 @@
                 <input name="descript" property="editor" class="mini-textarea mini-textbox" style="width:200px;" minWidth="200" minHeight="50"/>
             </div>
             <!--ComboBox：本地数据-->         
-            <div type="comboboxcolumn" autoShowPopup="true" name="sex" field="sex" width="100"  allowSort="true"  align="center" headerAlign="center">性别
-                <input property="editor" class="mini-combobox" style="width:100%;" data="Genders" />                
+            <div type="comboboxcolumn" autoShowPopup="true" name="biologyid" field="biologyid" width="100"  allowSort="true"  align="center" headerAlign="center">生物模板
+                <input property="editor" class="mini-combobox" style="width:100%;" url="/admin/api/wordslist" />                
             </div>
             <!--ComboBox：远程数据-->
             <!-- <div type="comboboxcolumn" field="country" width="100"  headerAlign="center" >国家
@@ -97,11 +107,12 @@
 
     </body>
 </html>
+
     <script type="text/javascript">
         // var Biologys = [{ id: 1, text: '人' }, { id: 2, text: '鬼'},{ id: 3, text: '妖'},{ id: 4, text: '神'},{ id: 5, text: '魔'},{ id: 6, text: '异'}];
         // var States = [{ id: 1, text: '先天' }, { id: 2, text: '筑基'},{ id: 3, text: '金丹'},{ id: 4, text: '元婴'},{ id: 5, text: '渡劫'},{ id: 6, text: '地仙'},{ id: 7, text: '天仙'},{ id: 8, text: '金仙'}];
         // var Type = [{ id: 1, text: '普通' }, { id: 2, text: '特殊'}, { id: 3, text: 'NPC'}, { id: 4, text: '不可用'}
-        var Genders = [{ id: 1, text: '男' }, { id: 2, text: '女'}, { id: 3, text: '未知'}];
+        // var Genders = [{ id: 1, text: '男' }, { id: 2, text: '女'}, { id: 3, text: '未知'}];
 
         mini.parse();
 
@@ -110,11 +121,14 @@
         
 
         //////////////////////////////////////////////////////
-
+        // 查询
+        $("#using").change(function(){
+            search();
+        });
         function search() {
             var key = mini.get("key").getValue();
-
-            grid.load({ key: key });
+            var type = $("#using").val();
+            grid.load({ key: key,type: type  });
         }
 
         function onKeyEnter(e) {
@@ -127,10 +141,17 @@
             return num;
         }
         function addRow() {  
-            //智力敏+悟性+技能 决定评分上限 210+40+50
-            var newRow = { name: "未知生物",biology: 1,state: 1,power: roundNum(1,70),agile:roundNum(1,70),intelligence: roundNum(1,70),wuXing: 1,skill: "",wordId:"",descript: "",sex: 3,yiXing: 0};
-            grid.addRow(newRow, 0);
-            grid.beginEditCell(newRow, "name");
+            $.ajax({
+            url: "/admin/biology-create/biology-round",
+            data: { data: json },
+            type: "post",
+            success: function (text) {
+                //智力敏+悟性+技能 决定评分上限 210+40+50
+                var newRow = { name: "未知生物",biology: 1,state: 1,power: roundNum(1,70),agile:roundNum(1,70),intelligence: roundNum(1,70),wuXing: 1,skill: "",wordId:"",descript: "",biologyid: 0,yiXing: 0};
+                grid.addRow(newRow, 0);
+                grid.beginEditCell(newRow, "name");
+                }  
+            });
         }
         function removeRow() {
             var rows = grid.getSelecteds();
@@ -139,7 +160,7 @@
             if (rows.length > 0) {
                 if (confirm("删除不可恢复，是否继续本次操作？")) {
                     $.ajax({
-                    url: "/admin/api/biology-delete",
+                    url: "/admin/biology-create/biology-delete",
                     data: { data: json },
                     type: "post",
                     success: function (text) {
@@ -156,7 +177,7 @@
             var json = mini.encode(data);
             grid.loading("保存中，请稍后......");
             $.ajax({
-                url: "/admin/api/biology-add",
+                url: "/admin/biology-create/biology-add",
                 data: { data: json },
                 type: "post",
                 success: function (text) {
@@ -187,7 +208,7 @@
             // console.log(row);
             if (row) {
                 mini.open({
-                    url: "/admin/biology/employee-window",
+                    url: "/admin/biology-create/employee-window",
                     title: "生物详情", width: 800, height: 780,
                     onload: function () {
                         var iframe = this.getIFrameEl();
@@ -249,7 +270,7 @@
         // var buttonEdit = this;
         var win = new UserSelectWindow();
         win.set({
-            url: "/admin/biology/api-skill",                    
+            url: "/admin/api/api-skill",                    
             title: "生物技能",
             width: 600,
             height: 500,

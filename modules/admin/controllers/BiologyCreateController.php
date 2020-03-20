@@ -16,75 +16,32 @@ use app\modules\admin\models\BiologyBiology;
 use app\modules\admin\models\BiologyCharacter;
 use app\modules\admin\models\BiologyNature;
 use app\modules\admin\models\BiologyCreate;
+use app\modules\admin\models\UserWords;
 
 
 
-
-
-class BiologyController extends ApiControl {
+class BiologyCreateController extends ApiControl {
 
     public $enableCsrfValidation = false;
 
     public $layout = 'not';
 
-  //   //列表页
-  //   public function actionAdminMeanu()
-  //   {
-  //      return $this->render("AdminMeanu");
-  //   }
-
-  //  //  修改页面
-  //   public function actionAdminUpdate()
-  //   {
-  //      return $this->render("AdminUpdate");
-  //   }
-  //  //  添加页面
-  //   public function actionMeanuAdd()
-  //   {
-  //      return $this->render("meanuAdd");
-  //   }
-   
-    // 生物模板页面
+    //生物创造页面
     public function actionIndex()
     {
-       return $this->render("biologyIndex");
+       return $this->render("biologyCreate");
       // return  $this->renderPartial("AdminMeanu");
     }
-
 
     //  生物详情弹窗
    public function actionEmployeeWindow()
    {  
       return $this->render("EmployeeWindow");
    }
+    
     // 数据加载--->
     // 生物列表
     public function actionApiIndex()
-    {
-      $pageIndex=Yii::$app->request->post('pageIndex',1);
-      $pageSize=Yii::$app->request->post('pageSize',20);
-      $sortField=Yii::$app->request->post('sortField');
-      $sortOrder=Yii::$app->request->post('sortOrder');
-      $key=Yii::$app->request->post('key');
-      $type=Yii::$app->request->post('type');
-      $where="1=1 ";
-      if(!empty($type)){  $where.=" and type =$type "; }
-      if(!empty($key)){  $where.=" and name like '%$key%' "; }
-      if($sortField){ // 排序
-        $where.="order by $sortField $sortOrder";
-      }else{$where.="";}
-      $data= Biology::getBiologyList($pageIndex,$pageSize,$where);
-      echo json_encode($data);
-    }
-    //生物创造页面
-    public function actionCreate()
-    {
-       return $this->render("biologyCreate");
-      // return  $this->renderPartial("AdminMeanu");
-    }
-    // 数据加载--->
-    // 生物创造
-    public function actionApiCreate()
     {
       $pageIndex=Yii::$app->request->post('pageIndex',1);
       $pageSize=Yii::$app->request->post('pageSize',20);
@@ -113,7 +70,7 @@ class BiologyController extends ApiControl {
       // var_dump($data);die;
       foreach($data as $v){
         if($v->_state=='modified'){ //改
-          $model = Biology::find()->where("id=$v->id")->One();
+          $model = BiologyCreate::find()->where("id=$v->id")->One();
           $model->name=$v->name;
           $model->biology=$v->biology;
           $model->state=$v->state;
@@ -133,7 +90,7 @@ class BiologyController extends ApiControl {
           unset($v->_id);
           unset($v->_uid);
           unset($v->_state);
-          Yii::$app->db->createCommand()->insert('x2_biology',$v)->execute();
+          Yii::$app->db->createCommand()->insert('x2_biology_create',$v)->execute();
           // $model = new Biology();
         } 
       }
@@ -147,7 +104,7 @@ class BiologyController extends ApiControl {
         // var_dump($v);die;
         if(isset($v->id)){
           //删除主键
-          Biology::deleteAll(['id'=>$v->id]);
+          BiologyCreate::deleteAll(['id'=>$v->id]);
         }
       }
       echo true;
@@ -156,7 +113,7 @@ class BiologyController extends ApiControl {
     public function actionBiologyUpdateone()
     {
       $id = Yii::$app->request->get('id');  
-      $data = Biology::find()->where("id=$id")->asarray()->One();
+      $data = BiologyCreate::find()->where("id=$id")->asarray()->One();
       echo json_encode($data);
     }
 
@@ -167,13 +124,36 @@ class BiologyController extends ApiControl {
       $data = Yii::$app->request->post('data');  
       $data = json_decode($data);
       foreach($data as $v){
-        $result = Biology::updateAll((array)$v,['id'=>$v->id]);
+        $result = BiologyCreate::updateAll((array)$v,['id'=>$v->id]);
       }
       echo true;
     }
 
 
+    // 弹窗修改(单个修改)
+    // admin/biology-create/biology-rand
+    public function actionBiologyRand()
+    {
+      // $id = Yii::$app->request->get('id');  
+      // $biologyid = Biology::find()->asarray()->orderBy('rand()')->One();
+      $userid =1;
+      $wordId= UserWords::find()->select('wordId')->where("userid =$userid and complete = 1")->asarray()->All();
+      // $wordId=  implode(',',array_column($wordId, 'wordId'));
+     
+      $biologyid = (new \yii\db\Query())
+      ->select("a.wordId,a.name")
+      ->from("x2_biology AS a")
+      ->leftJoin("x2_words AS b","a.wordId = b.id")
+      // ->where(  ['in', 'wordId', $wordId ])
+      ->where(['or' , ['wordId' =>'1,2,3'] ,['wordId' => $wordId]] )
+      // ->andWhere()
+      // ->limit(1)
+      ->orderBy("rand()")
+      ->One();
 
+      var_dump($biologyid);die;
+      // echo json_encode($data);
+    }
 
 
 

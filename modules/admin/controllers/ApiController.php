@@ -12,6 +12,15 @@ use app\libs\ApiControl;
 
 use app\modules\admin\models\AdminInit;
 use app\modules\admin\models\Biology;
+use app\modules\admin\models\BiologySkill;
+use app\modules\admin\models\BiologyState;
+use app\modules\admin\models\Words;
+use app\modules\admin\models\BiologyBiology;
+use app\modules\admin\models\BiologyCharacter;
+use app\modules\admin\models\BiologyNature;
+use app\modules\admin\models\BiologyCreate;
+
+
 class ApiController extends ApiControl {
 
     public $enableCsrfValidation = false;
@@ -108,54 +117,54 @@ class ApiController extends ApiControl {
 
 
 
-    // 生物管理---数据操作接口
-    // 增-改(批量修改)
-    public function actionBiologyAdd()
-    {
-      $data = Yii::$app->request->post('data');  
-      $data = json_decode($data);
-      // var_dump($data);die;
-      foreach($data as $v){
-        if($v->_state=='modified'){ //改
-          $model = Biology::find()->where("id=$v->id")->One();
-          $model->name=$v->name;
-          $model->biology=$v->biology;
-          $model->state=$v->state;
-          $model->power=$v->power;
-          $model->agile=$v->agile;
-          $model->intelligence=$v->intelligence;
-          $model->wuXing=$v->wuXing;
-          $model->skill=$v->skill;
-          $model->wordId=$v->wordId;
-          $model->descript=$v->descript;
-          $model->sex=$v->sex;
-          $model->yiXing=$v->yiXing;
-          $model->save();
-          // $result = Biology::updateAll($v,['id'=>$v->id]);
-        }else if($v->_state=='added') { // 增
-          unset($v->key);
-          unset($v->_id);
-          unset($v->_uid);
-          unset($v->_state);
-          Yii::$app->db->createCommand()->insert('x2_biology',$v)->execute();
-          // $model = new Biology();
-        } 
-      }
-      echo true;
-    }
-    // 删
-    public function actionBiologyDelete()
-    {
-      $data = json_decode(Yii::$app->request->post('data'));
-      foreach($data as $v){
-        // var_dump($v);die;
-        if(isset($v->id)){
-          //删除主键
-          Biology::deleteAll(['id'=>$v->id]);
-        }
-      }
-      echo true;
-    }
+    // // 生物管理---数据操作接口
+    // // 增-改(批量修改)
+    // public function actionBiologyAdd()
+    // {
+    //   $data = Yii::$app->request->post('data');  
+    //   $data = json_decode($data);
+    //   // var_dump($data);die;
+    //   foreach($data as $v){
+    //     if($v->_state=='modified'){ //改
+    //       $model = Biology::find()->where("id=$v->id")->One();
+    //       $model->name=$v->name;
+    //       $model->biology=$v->biology;
+    //       $model->state=$v->state;
+    //       $model->power=$v->power;
+    //       $model->agile=$v->agile;
+    //       $model->intelligence=$v->intelligence;
+    //       $model->wuXing=$v->wuXing;
+    //       $model->skill=$v->skill;
+    //       $model->wordId=$v->wordId;
+    //       $model->descript=$v->descript;
+    //       $model->sex=$v->sex;
+    //       $model->yiXing=$v->yiXing;
+    //       $model->save();
+    //       // $result = Biology::updateAll($v,['id'=>$v->id]);
+    //     }else if($v->_state=='added') { // 增
+    //       unset($v->key);
+    //       unset($v->_id);
+    //       unset($v->_uid);
+    //       unset($v->_state);
+    //       Yii::$app->db->createCommand()->insert('x2_biology',$v)->execute();
+    //       // $model = new Biology();
+    //     } 
+    //   }
+    //   echo true;
+    // }
+    // // 删
+    // public function actionBiologyDelete()
+    // {
+    //   $data = json_decode(Yii::$app->request->post('data'));
+    //   foreach($data as $v){
+    //     // var_dump($v);die;
+    //     if(isset($v->id)){
+    //       //删除主键
+    //       Biology::deleteAll(['id'=>$v->id]);
+    //     }
+    //   }
+    //   echo true;
+    // }
     //改(单个修改)
     public function actionBiologyUpdateone()
     {
@@ -177,6 +186,72 @@ class ApiController extends ApiControl {
     }
 
 
+    // 生物技能
+    public function actionApiSkill()
+    {
+      // $pageIndex=Yii::$app->request->post('pageIndex',1);
+      // $pageSize=Yii::$app->request->post('pageSize',20);
+      $sortField=Yii::$app->request->post('sortField');
+      $sortOrder=Yii::$app->request->post('sortOrder');
+      $key=Yii::$app->request->post('key');
+      $where="1=1 ";
+      if(!empty($key)){  $where.=" and name like '%$key%' or words like'%$key%'"; }
+      if($sortField){ // 排序
+        $where.="order by $sortField $sortOrder";
+      }
+      $data= BiologySkill::getSkillList($where);
+      echo json_encode($data);
+    }
+
+
+
+   //  生物境界弹窗
+   public function actionBiologyStateall()
+   {  
+      $data= BiologyState:: getValueList();
+      echo json_encode($data);
+   }
+    //  世界详情列表
+    public function actionWordslist()
+    {  
+        $data= Words:: getValueList();
+        echo json_encode($data);
+    }
+    //  世界详情弹窗
+    public function actionWordsall()
+    {  
+        $pageIndex=Yii::$app->request->post('pageIndex',1);
+        $pageSize=Yii::$app->request->post('pageSize',20);
+        $sortField=Yii::$app->request->post('sortField');
+        $sortOrder=Yii::$app->request->post('sortOrder');
+        $key=Yii::$app->request->post('key');
+        $where="1=1 ";
+        if(!empty($key)){  $where.=" and name like '%$key%' or typeName like'%$key%'"; }
+        if($sortField){ // 排序
+          $where.="order by $sortField $sortOrder";
+        }else{$where.="";}
+        $data= Words:: getValueListtype($pageIndex,$pageSize,$where);
+        echo json_encode($data);
+    }
+      //  种族详情弹窗
+    public function actionBiologyall()
+    {  
+        $data= BiologyBiology:: getValueList(); 
+        echo json_encode($data);
+    }
+     //  性格详情弹窗
+     public function actionBiologyCharacterall()
+     {  
+        $data= BiologyCharacter:: getValueList(); 
+        echo json_encode($data);
+     }
+
+    // 生物管理---生物生成属性
+    public function actionBiologyExtend()
+    {
+      $data= BiologyNature:: getValueList(); 
+      echo json_encode($data);
+    }
 
     // 经验修改与升级
     public function actionExperience(){
@@ -200,5 +275,6 @@ class ApiController extends ApiControl {
       echo $res;
       // var_dump($res);die;
     }
+
 
 }

@@ -25,6 +25,15 @@
                         <input id="key" class="mini-textbox" emptyText="请输入生物名称" style="width:150px;" onenter="onKeyEnter"/>   
                         <a class="mini-button" onclick="search()">查询</a>
                     </td>
+                    <td>
+                        <select name="type" id="using">
+                            <option value="">全部</option>
+                            <option value="1">普通</option>
+                            <option value="2">商店</option>
+                            <option value="3">NPC</option>
+                            <option value="4">不可用</option>
+                        </select>
+                    </td>
                 </tr>
             </table>           
         </div>
@@ -44,11 +53,11 @@
             </div>
             <!--ComboBox：本地数据-->         
             <div type="comboboxcolumn" autoShowPopup="true"  field="biology" width="100"  allowSort="true"  align="center" headerAlign="center">种族
-                <input name="biology" property="editor" class="mini-combobox" style="width:100%;" url="/admin/biology/biologyall" />                
+                <input name="biology" property="editor" class="mini-combobox" style="width:100%;" url="/admin/api/biologyall" />                
             </div>
             <!-- data="States"   定义属性 也可以用url  -->
             <div type="comboboxcolumn" autoShowPopup="true"  field="state" width="100"  allowSort="true"  align="center" headerAlign="center">生物境界
-                <input name="state" property="editor" class="mini-combobox" style="width:100%;" url="/admin/biology/biology-stateall" />   
+                <input name="state" property="editor" class="mini-combobox" style="width:100%;" url="/admin/api/biology-stateall" />   
             </div>
 
             <div field="power" width="100"  allowSort="true" >力量
@@ -73,7 +82,7 @@
                 <input name="type" property="editor" class="mini-combobox" style="width:100%;"  data="Type" />                
             </div> -->
             <div type="comboboxcolumn" autoShowPopup="true"  field="wordId" width="100"  allowSort="true"  align="center" headerAlign="center">生物世界
-                <input name="wordId" property="editor" class="mini-combobox" style="width:100%;" url="/admin/biology/wordslist" />   
+                <input name="wordId" property="editor" class="mini-combobox" style="width:100%;" url="/admin/api/wordslist" />   
             </div>
 
             <!-- <div field="birthday" width="100"  allowSort="true" dateFormat="yyyy-MM-dd">出生日期
@@ -110,11 +119,14 @@
         
 
         //////////////////////////////////////////////////////
-
+        // 查询
+        $("#using").change(function(){
+            search();
+        });
         function search() {
             var key = mini.get("key").getValue();
-
-            grid.load({ key: key });
+            var type = $("#using").val();
+            grid.load({ key: key,type: type  });
         }
 
         function onKeyEnter(e) {
@@ -139,7 +151,7 @@
             if (rows.length > 0) {
                 if (confirm("删除不可恢复，是否继续本次操作？")) {
                     $.ajax({
-                    url: "/admin/api/biology-delete",
+                    url: "/admin/biology/biology-delete",
                     data: { data: json },
                     type: "post",
                     success: function (text) {
@@ -156,7 +168,7 @@
             var json = mini.encode(data);
             grid.loading("保存中，请稍后......");
             $.ajax({
-                url: "/admin/api/biology-add",
+                url: "/admin/biology/biology-add",
                 data: { data: json },
                 type: "post",
                 success: function (text) {
@@ -187,7 +199,7 @@
             // console.log(row);
             if (row) {
                 mini.open({
-                    url: "/admin/biology/employee-window",
+                    url: "/admin/api/employee-window",
                     title: "生物详情", width: 800, height: 780,
                     onload: function () {
                         var iframe = this.getIFrameEl();
@@ -249,7 +261,7 @@
         // var buttonEdit = this;
         var win = new UserSelectWindow();
         win.set({
-            url: "/admin/biology/api-skill",                    
+            url: "/admin/api/api-skill",                    
             title: "生物技能",
             width: 600,
             height: 500,
