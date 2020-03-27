@@ -136,11 +136,23 @@ class BiologyCreateController extends ApiControl {
     {
       $biology = UserWords :: BiologyRand()[0]; //默认管理员-数量1 --返回数组
       $biology = UserWords ::BiologyExtendRand($biology);
-      var_dump($biologyid);die;
+      var_dump($biology);die;
       // echo json_encode($biology);
+
+      // $biology =  User :: BiologyTrainRand($biology);
+      // var_dump($biology);die;
+
     }
 
+   // 刷新属性
+    // admin/biology-create/biology-brush
+    public function actionBiologyBrush()
+    {
+      // $data = BiologyCreate::find()->where("id=$id")->asarray()->One();
+      // $biology =  User :: BiologyTrainRand($biology);
+      // var_dump($biology);die;
 
+    }
 
 
 
