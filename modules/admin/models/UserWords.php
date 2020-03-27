@@ -20,9 +20,8 @@ class UserWords extends ActiveRecord
         ->select("a.name,a.*")
         ->from("x2_biology AS a")
         ->leftJoin("x2_words AS b","a.wordId = b.id")
-        // ->where(  ['in', 'wordId', $wordId ])
-        // ->where(['or' , ['wordId' =>'1'] ,['wordId' => $wordId]] )    // 先满足后面的条件
-        ->where(['a.id' =>'1'] ) 
+        ->where(['or' , ['wordId' =>'1'] ,['wordId' => $wordId]] )    // 先满足后面的条件
+        // ->where(['a.id' =>'18'] ) 
         // ->andWhere()
         ->limit($num)
         ->orderBy("rand()")
@@ -49,18 +48,13 @@ class UserWords extends ActiveRecord
         $biology = User :: BiologyPower($biology,$extend); // 随机 基础属性 力敏智
         $biology['skill'] = $skill;
         $biology['score'] =  $newnum*10 + $biology['power']+  $biology['agile']+ $biology['intelligence'] ;  //属性最大值为80/10 ,评分满值为340
-        $biology['scoreGrade'] = Biology :: getValueList($score);// 根据评分修改品质
+        $biology['scoreGrade'] = Biology :: getValueList($biology['score']);// 根据评分修改品质
         $biology['userid'] = $userid;
   
 
         // 固定 属性刷新
-        $biology['skill'] = $skill;
-        
-        var_dump($biology);die;
-        // // 训练
-        // $biology =  User :: BiologyTrainRand($biology);
-        // var_dump($biology);die;
-   
+        // $biology['skill'] = $skill;
+        return $biology;
     }
     
 

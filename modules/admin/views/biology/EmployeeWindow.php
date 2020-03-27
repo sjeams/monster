@@ -492,11 +492,11 @@
         var  special = parseInt(shengMing+moFa+gongJi+huJia+faGong+fakang+jianShang+zhenShang+shanbi+suDu);
         var  score = parseInt(wuXing*2+skillleng*10+parseInt(o.power)+parseInt(o.agile)+parseInt(o.intelligence));  //属性最大值为100/10 ,评分满值为350
         if(score>1){   var scoreGrade = 'D';  }
-        if(score>80){   var scoreGrade = 'C';  }
-        if(score>100){   var scoreGrade = 'B';  }
-        if(score>120){   var scoreGrade = 'A';  }
-        if(score>140){   var scoreGrade = 'S';  }
-        if(score>160){   var scoreGrade = 'SS';  }
+        if(score>70){   var scoreGrade = 'C';  }
+        if(score>90){   var scoreGrade = 'B';  }
+        if(score>110){   var scoreGrade = 'A';  }
+        if(score>130){   var scoreGrade = 'S';  }
+        if(score>150){   var scoreGrade = 'SS';  }
         if(score>180){   var scoreGrade = 'SSS';  }
         if(score>210){   var scoreGrade = '传说';  }
         if(score>240){   var scoreGrade = '神话';  }
