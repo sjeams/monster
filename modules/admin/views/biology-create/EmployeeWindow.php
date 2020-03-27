@@ -84,19 +84,34 @@
             </tr> 
 
             <tr>
-                <td >力量</td>
+                <td >力量max</td>
                 <td >    
                     <input name="power"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
-                <td >敏捷</td>
+                <td >敏捷max</td>
                 <td >    
                     <input name="agile"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
-                <td >智力</td>
+                <td >智力max</td>
                 <td >    
                     <input name="intelligence"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
             </tr>  
+            <tr>
+                <td >力量min</td>
+                <td >    
+                    <input name="minPower"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
+                </td>
+                <td >敏捷min</td>
+                <td >    
+                    <input name="minAgile"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
+                </td>
+                <td >智力min</td>
+                <td >    
+                    <input name="minIntelligence"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
+                </td>
+            </tr>  
+            
             <tr>
                 <td >自由属性</td>
                 <td >    
@@ -278,7 +293,7 @@
     var Sex = [{ id: 1, text: '男' }, { id: 2, text: '女'},{ id: 3, text: '未知'}];  
     var form = new mini.Form("form1");
 
-    var extend =['reiki','lucky','state','power','agile','intelligence','maxNature','qianNeng','character','grade','jinJie','wuXing','skill']
+    var extend =['reiki','lucky','state','power','agile','intelligence','character','grade','jinJie','wuXing','skill']
     for(var i=0;i<extend.length;i++){   
             mini.getbyName(extend[i]).on("valuechanged", function () {
             // mini.getbyName("shengMing").setValue(123); 
@@ -491,16 +506,16 @@
         // var  danDu = 10;
 
         var  special = parseInt(shengMing+moFa+gongJi+huJia+faGong+fakang+jianShang+zhenShang+shanbi+suDu);
-        var  score = parseInt(wuXing*2+skillleng*10+parseInt(o.power)+parseInt(o.agile)+parseInt(o.intelligence));  //属性最大值为100/10 ,评分满值为350
+        var  score = parseInt(skillleng*10+parseInt(o.power)+parseInt(o.agile)+parseInt(o.intelligence));  //属性最大值为100/10 ,评分满值为350
         if(score>1){   var scoreGrade = 'D';  }
         if(score>80){   var scoreGrade = 'C';  }
-        if(score>120){   var scoreGrade = 'B';  }
-        if(score>150){   var scoreGrade = 'A';  }
-        if(score>160){   var scoreGrade = 'S';  }
-        if(score>180){   var scoreGrade = 'SS';  }
-        if(score>210){   var scoreGrade = 'SSS';  }
-        if(score>240){   var scoreGrade = '传说';  }
-        if(score>280){   var scoreGrade = '神话';  }
+        if(score>100){   var scoreGrade = 'B';  }
+        if(score>120){   var scoreGrade = 'A';  }
+        if(score>140){   var scoreGrade = 'S';  }
+        if(score>160){   var scoreGrade = 'SS';  }
+        if(score>180){   var scoreGrade = 'SSS';  }
+        if(score>210){   var scoreGrade = '传说';  }
+        if(score>240){   var scoreGrade = '神话';  }
 
         var  jingBi =  score*2+grade+state*2;
         var  jingYan = score+grade+state*3;
@@ -569,8 +584,8 @@
 
                     buttonEdit.setValue(data.id);
                     buttonEdit.setText(data.id);
-                
-                    var newRow = {skill: data.text};
+                    extenCount();//选中技能触发属性改变
+                    // var newRow = {skill: data.text};
                     // e.source.value=data.id;
                     win.focus();
                 }

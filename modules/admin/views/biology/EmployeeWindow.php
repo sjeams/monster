@@ -84,33 +84,33 @@
             </tr> 
 
             <tr>
-                <td >力量</td>
+                <td >力量max</td>
                 <td >    
                     <input name="power"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
-                <td >敏捷</td>
+                <td >敏捷max</td>
                 <td >    
                     <input name="agile"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
-                <td >智力</td>
+                <td >智力max</td>
                 <td >    
                     <input name="intelligence"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
             </tr>  
             <tr>
-                <td >自由属性</td>
+                <td >力量min</td>
                 <td >    
-                    <input name="maxNature" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
+                    <input name="minPower"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
-                <td >潜能</td>
+                <td >敏捷min</td>
                 <td >    
-                    <input name="qianNeng" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
+                    <input name="minAgile"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
-                <td >触发</td>
+                <td >智力min</td>
                 <td >    
-                    <input name="chuFa" class="mini-textbox"  />
+                    <input name="minIntelligence"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
-            </tr> 
+            </tr>  
 
             <tr>
                 <td >等级</td>
@@ -130,15 +130,15 @@
             <tr>
                 <td style="width:80px;">境界</td>
                 <td style="width:150px;">    
-                    <input  name="state" class="mini-combobox"  emptyText="请选择境界" url="/admin/biology/biology-stateall" />    
+                    <input  name="state" class="mini-combobox"  emptyText="请选择境界" url="/admin/api/biology-stateall" />    
                 </td>
                 <td style="width:80px;">种族</td>
                 <td style="width:150px;">    
-                    <input name="biology" class="mini-combobox"  emptyText="请选择种族" url="/admin/biology/biologyall" /> 
+                    <input name="biology" class="mini-combobox"  emptyText="请选择种族" url="/admin/api/biologyall" /> 
                 </td>
                 <td >性格</td>
                 <td >    
-                    <input name="character" class="mini-combobox" url="/admin/biology/biology-characterall" /> 
+                    <input name="character" class="mini-combobox" url="/admin/api/biology-characterall" /> 
                 </td>
             </tr>   
 
@@ -154,7 +154,7 @@
                 </td>
                 <td >生物世界</td>
                 <td >    
-                    <input name="wordId" class="mini-combobox" onbuttonclick="onButtonEditWords"  url="/admin/biology/wordslist" /> 
+                    <input name="wordId" class="mini-combobox" onbuttonclick="onButtonEditWords"  url="/admin/api/wordslist" /> 
                 </td>
                 <td >技能</td>
                 <td >    
@@ -278,14 +278,13 @@
     var Sex = [{ id: 1, text: '男' }, { id: 2, text: '女'},{ id: 3, text: '未知'}];  
     var form = new mini.Form("form1");
 
-    var extend =['reiki','lucky','state','power','agile','intelligence','maxNature','qianNeng','character','grade','jinJie','wuXing','skill']
+    var extend =['reiki','lucky','state','power','agile','intelligence','character','grade','jinJie','wuXing','skill']
     for(var i=0;i<extend.length;i++){   
             mini.getbyName(extend[i]).on("valuechanged", function () {
             // mini.getbyName("shengMing").setValue(123); 
             extenCount();
         });
     } 
-
 
     // 修改弹窗--请求修改
     function SaveData() {
@@ -294,7 +293,7 @@
         if (form.isValid() == false) return;
         var json = mini.encode([o]);
         $.ajax({
-            url: "/admin/biology/biology-update",
+            url: "/admin/api/biology-update",
             type: 'post',
             data: { data: json },
             cache: false,
@@ -314,7 +313,7 @@
             //跨页面传递的数据对象，克隆后才可以安全使用
             data = mini.clone(data);
             $.ajax({
-                url: "/admin/biology/biology-updateone?id="+data.id,
+                url: "/admin/api/biology-updateone?id="+data.id,
                 cache: false,
                 success: function (text) {
                     var o = mini.decode(text);
@@ -494,13 +493,13 @@
         var  score = parseInt(wuXing*2+skillleng*10+parseInt(o.power)+parseInt(o.agile)+parseInt(o.intelligence));  //属性最大值为100/10 ,评分满值为350
         if(score>1){   var scoreGrade = 'D';  }
         if(score>80){   var scoreGrade = 'C';  }
-        if(score>120){   var scoreGrade = 'B';  }
-        if(score>150){   var scoreGrade = 'A';  }
-        if(score>160){   var scoreGrade = 'S';  }
-        if(score>180){   var scoreGrade = 'SS';  }
-        if(score>210){   var scoreGrade = 'SSS';  }
-        if(score>240){   var scoreGrade = '传说';  }
-        if(score>280){   var scoreGrade = '神话';  }
+        if(score>100){   var scoreGrade = 'B';  }
+        if(score>120){   var scoreGrade = 'A';  }
+        if(score>140){   var scoreGrade = 'S';  }
+        if(score>160){   var scoreGrade = 'SS';  }
+        if(score>180){   var scoreGrade = 'SSS';  }
+        if(score>210){   var scoreGrade = '传说';  }
+        if(score>240){   var scoreGrade = '神话';  }
 
         var  jingBi =  score*2+grade+state*2;
         var  jingYan = score+grade+state*3;
@@ -536,7 +535,7 @@
         // var buttonEdit = this;
         var win = new UserSelectWindow();
         win.set({
-            url: "/admin/biology/api-skill",                    
+            url: "/admin/api/api-skill",                    
             title: "生物技能",
             width: 600,
             height: 500,
@@ -564,14 +563,15 @@
                     var data = {};
                     data.id = ids.join(",");
                     data.text = texts.join(",");
-                    // console.log(data.id);
+                    console.log(data.id);
                     // console.log(data.text);
 
                     buttonEdit.setValue(data.id);
                     buttonEdit.setText(data.id);
-                
-                    var newRow = {skill: data.text};
-                    // e.source.value=data.id;
+
+                    extenCount();//选中技能触发属性改变
+
+                    // var newRow = {skill: data.text};
                     win.focus();
                 }
             }
@@ -591,7 +591,7 @@
         var win = new UserSelectWindow();
         
         win.set({
-            url: "/admin/biology/wordsall",                    
+            url: "/admin/api/wordsall",                    
             title: "世界选择",
             width: 600,
             height: 500,

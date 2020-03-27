@@ -199,7 +199,7 @@
             // console.log(row);
             if (row) {
                 mini.open({
-                    url: "/admin/api/employee-window",
+                    url: "/admin/biology/employee-window",
                     title: "生物详情", width: 800, height: 780,
                     onload: function () {
                         var iframe = this.getIFrameEl();

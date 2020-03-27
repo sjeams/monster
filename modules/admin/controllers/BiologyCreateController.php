@@ -130,29 +130,14 @@ class BiologyCreateController extends ApiControl {
     }
 
 
-    // 弹窗修改(单个修改)
+    // 随机生物--征服世界id --默认为1
     // admin/biology-create/biology-rand
     public function actionBiologyRand()
     {
-      // $id = Yii::$app->request->get('id');  
-      // $biologyid = Biology::find()->asarray()->orderBy('rand()')->One();
-      $userid =1;
-      $wordId= UserWords::find()->select('wordId')->where("userid =$userid and complete = 1")->asarray()->All();
-      // $wordId=  implode(',',array_column($wordId, 'wordId'));
-     
-      $biologyid = (new \yii\db\Query())
-      ->select("a.wordId,a.name")
-      ->from("x2_biology AS a")
-      ->leftJoin("x2_words AS b","a.wordId = b.id")
-      // ->where(  ['in', 'wordId', $wordId ])
-      ->where(['or' , ['wordId' =>'1,2,3'] ,['wordId' => $wordId]] )
-      // ->andWhere()
-      // ->limit(1)
-      ->orderBy("rand()")
-      ->One();
-
+      $biology = UserWords :: BiologyRand()[0]; //默认管理员-数量1 --返回数组
+      $biology = UserWords ::BiologyExtendRand($biology);
       var_dump($biologyid);die;
-      // echo json_encode($data);
+      // echo json_encode($biology);
     }
 
 
