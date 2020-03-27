@@ -38,11 +38,23 @@ class Biology extends ActiveRecord
     /**
      * 查询境界列表
      */
-     public static function getValueList(){
-            
-        // $data = BiologyBiology::find()->select('id,name as text')->asarray()->All();
-        return $data;
+     public static function getValueList($score){
+        if($score>1){   $scoreGrade  = 'D';  }
+        if($score>80){   $scoreGrade= 'C';  }
+        if($score>100){   $scoreGrade= 'B';  }
+        if($score>120){   $scoreGrade= 'A';  }
+        if($score>140){   $scoreGrade= 'S';  }
+        if($score>160){   $scoreGrade= 'SS';  }
+        if($score>180){   $scoreGrade= 'SSS';  }
+        if($score>210){   $scoreGrade= '传说';  }
+        if($score>240){   $scoreGrade= '神话';  }
+        return $scoreGrade;
       }
+
+
+      
+
+  
 
 
 }
