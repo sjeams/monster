@@ -1,9 +1,9 @@
 <?php
 namespace app\libs;
-use app\modules\cn\models\SchoolTest;
-use app\modules\cn\models\User;
 use yii;
 use yii\data\Pagination;
+use app\modules\admin\models\Words;
+use app\modules\admin\models\User;
 class Method
 {
     /**
@@ -600,5 +600,128 @@ class Method
          }
          return $data;
      }
+
+
+
+
+
+
+
+
+
+
+
+    //  新 monster 接口
+
+    // 最大最小总数随机 --最大值超过120
+    public static function totalRand($wordId=1){
+        $word = Words::find()->select("type,difficult")->where("id=$wordId")->One();
+        $maxadd = 45 + intval( (intval($word->type)-1)*5)+intval($word->difficult); //最大区间值为25 -- 最大值80
+        $minadd = 5+intval( (intval($word->type)-1)*5)+intval($word->difficult); //最大区间值为30 -- 最大值30
+        $maxtotal = $maxadd + $minadd*3;  //最大值 为 155 空技能评分ss , 5技能 180 sss
+        $mintotal = $minadd*3;
+        // vip10+职业10+图鉴40(暂定400生物)
+        $change = User::BiologyChange();
+        // var_dump($change);die;
+        $maxtotal = rand($maxtotal,$maxtotal+intval($change));  //最大总值 区间+60   180---240
+        $mintotal = rand($mintotal,$mintotal+intval($change));  //最小总值 区间+60   75 ---135
+        $maxtotal = Method ::  randomDivInt(10,3,$maxtotal,1);//随机数组
+        $mintotal = Method :: randomDivInt(1,3,$mintotal,2,$maxtotal);//随机数组
+        // var_dump(array_sum($maxtotal));
+        // var_dump(array_sum($mintotal));
+        ksort($maxtotal);
+        ksort($mintotal);
+
+        return array('max'=> $maxtotal,'min'=>$mintotal);
+    }
+
+
+    //随机整型利用“不同”就有顺序的原理，
+   public static function randomDivInt($min,$div,$total,$type,$maxtotal=array()){
+        $remain=$total;  // 总数
+        $max_sum=($div-1)*$div/2;
+        $p=$div;  //最小值为1 min
+        $a=array();
+        for($i=0; $i<$div-1; $i++){
+            $max=($remain-$max_sum)/($div-$i);
+            $e=rand($min,$max);    
+            $min=$e+1; $max_sum-=--$p;
+            $remain-=$e;
+            $a[$e]=true;
+        }
+        $a=array_keys($a);
+        $a[]=$remain;
+        // 随机$a 数据返回处理
+        if($type==1){
+           Method :: retain_key_shuffle($a); //保留键值打算数组
+           $a= array_values($a);  //重新排序--定义索引
+           arsort($a); //由大到小排序
+        }else{
+            arsort($a); //由大到小排序
+            $a= array_values($a);  //重新排序--定义索引
+            $num=0;
+            foreach($maxtotal as $key=>$val ){
+                $num++;
+                $mintotal[$key] =$a[$num-1];    
+            }
+            $a = $mintotal;
+        }
+        // shuffle($a); //随机排序--打乱     
+        return $a;
+    }
+
+    // 打乱数组--保留key
+    public static function retain_key_shuffle(array &$arr){
+        if (!empty($arr)) {
+          $key = array_keys($arr);
+          shuffle($key);
+          foreach ($key as $value) {
+            $arr2[$value] = $arr[$value];
+          }
+          $arr = $arr2;
+        }
+      }
+
+
+    //  总属性最大值为210   --暂时没用
+    //划分随机数  total总值  arrayMax最大值数组 arrayMin 最小值数组 wordtype世界难度+每个难度属性区间上升5,difficult加难度的属性1
+    // public static function divideRand($total = 70,$arrayMax = array(10,20,30),$wordId=1){
+    //     // var_dump($totalrand);die;
+    //     // var_dump($maxadd);die;
+    //     $div = count($arrayMax); //分成的份数
+    //     $average = round($total / $div);
+    //     $sum = 0;
+    //     $result = array_fill( 1, $div, 0 );
+        
+    //     for( $i = 1; $i < $div; $i++ ){
+    //         //根据已产生的随机数情况，调整新随机数范围，以保证各份间差值在指定范围内
+    //         if( $sum > 0 ){
+    //         $max = 0;
+    //         $min = 0 - round( $arrayMax[$i] / 2 );
+    //         }elseif( $sum < 0 ){
+    //         $min = 0;
+    //         $max = round( $arrayMax[$i] / 2 );
+    //         }else{
+    //         $max = round( $arrayMax[$i] / 2 );
+    //         $min = 0 - round( $arrayMax[$i] / 2 );
+    //         }
+            
+    //         //产生各份的份额
+    //         $random = rand( $min, $max );
+    //         $sum += $random;
+    //         $result[$i] = $average + $random;
+    //     }
+        
+    //     //最后一份的份额由前面的结果决定，以保证各份的总和为指定值
+    //     $result[$div] = $average - $sum;
+    //     var_dump($result);
+    //     //结果呈现
+    //     // echo '划分情况：';
+    //     // foreach( $result as $temp ){
+    //     // echo $temp, '';
+    //     // }
+    //     echo '总和：', array_sum( $result );
+    //     exit;
+    // }
 
 }

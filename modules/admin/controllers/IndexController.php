@@ -8,6 +8,7 @@ namespace app\modules\admin\controllers;
 
 use yii;
 use app\libs\ApiControl;
+use app\libs\Method;
 class IndexController extends ApiControl {
 
     public $enableCsrfValidation = false;

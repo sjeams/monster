@@ -9,7 +9,7 @@ namespace app\modules\admin\controllers;
 
 use yii;
 use app\libs\ApiControl;
-
+use app\libs\Method;
 use app\modules\admin\models\AdminInit;
 use app\modules\admin\models\Biology;
 use app\modules\admin\models\BiologySkill;
@@ -19,7 +19,7 @@ use app\modules\admin\models\BiologyBiology;
 use app\modules\admin\models\BiologyCharacter;
 use app\modules\admin\models\BiologyNature;
 use app\modules\admin\models\BiologyCreate;
-
+use app\modules\admin\models\User;
 
 class ApiController extends ApiControl {
 
@@ -276,5 +276,50 @@ class ApiController extends ApiControl {
       // var_dump($res);die;
     }
 
+    // 随机生物 -- 白值属性
+    // admin/api/biology-rand
+    public function actionBiologyRand(){
+      $userid  = Yii::$app->session->get('userid');
+      if(empty($userid)){ $userid =1 ;}
+      $wordId = Yii::$app->request->post('wordId');
+      $totalrand = Method ::totalRand();
+      $biology['userid']= $userid; 
+      $biology['name']= '未知生物';  //名称
+      $biology['biology']= 1;  //种族
+      $biology['state']= 1;  //境界
+      $biology['sex']= 1;  //性别
+      $biology['yiXing']= 0;
+      $biology['grade']= 1;
+      $biology['wordId']= $wordId;
+      $biology['reiki']= rand(5,30);
+      $biology['lucky']= rand(5,30);  // 幸运每个境界 概率-2   12个境界 最低为1
+      $biology['wuXing']= rand(5,20);  //悟性
+      $biology['power']= $totalrand['max'][0];
+      $biology['agile']= $totalrand['max'][1];
+      $biology['intelligence']= $totalrand['max'][2];
+      $biology['minPower']= $totalrand['min'][0];
+      $biology['minAgile']= $totalrand['min'][1];
+      $biology['minIntelligence']= $totalrand['min'][2];
+      //查询所属 世界的技能
+      $rand =rand(0,5);
+      if($rand==0){
+        $skill = '';
+      }else{
+        $skill =BiologySkill::find()->select("id")->asArray()->where("wordId = $wordId")->orderBy('RAND()')->offset(0)->limit($rand-1)->all();
+        $skill = implode(',',array_column($skill, 'id'));
+      }
+      $newnum= !empty($skill) ? count(explode(',',$skill)) : 0; // 技能个数
+      $biology['skill'] = $skill;
+      $biology['score'] =  $newnum*10 + $biology['power']+  $biology['agile']+ $biology['intelligence'] ;  //属性最大值为80/10 ,评分满值为340
+      // $biology['state'] = rand(1,3);  //境界 --暂不开放 --后期为用户境界-1
+      // 固定 属性刷新
+      $biology = User::biolobyChange($biology);
+      Yii::$app->db->createCommand()->insert('x2_biology',$biology)->execute();
+      $createid=Yii::$app->db->getLastInsertID(); // 获取创造id
+      // var_dump($createid);die;
+      $biology = Biology :: find()->where("id =$createid")->asarray()->One();
+      // var_dump( $biology);die;
+      echo json_encode($biology);
+    }
 
 }
