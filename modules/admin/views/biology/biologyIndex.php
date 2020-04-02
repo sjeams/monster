@@ -69,6 +69,15 @@
             <div field="intelligence" width="100"  allowSort="true" >智力
                 <input name="intelligence" property="editor" class="mini-spinner"  minValue="1" maxValue="200" value="25" style="width:100%;"/>
             </div>
+            <div field="minPower" width="100"  allowSort="true" >min力量
+                <input name="power" property="editor" class="mini-spinner"  minValue="1" maxValue="200" value="25" style="width:100%;"/>
+            </div>
+            <div field="minAgile" width="100"  allowSort="true" >min敏捷
+                <input name="agile" property="editor" class="mini-spinner"  minValue="1" maxValue="200" value="25" style="width:100%;"/>
+            </div>
+            <div field="minIntelligence" width="100"  allowSort="true" >min智力
+                <input name="intelligence" property="editor" class="mini-spinner"  minValue="1" maxValue="200" value="25" style="width:100%;"/>
+            </div>
             <div field="wuXing" width="100"  allowSort="true" >悟性
                 <input name="wuXing" property="editor" class="mini-spinner"  minValue="1" maxValue="200" value="25" style="width:100%;"/>
             </div>
@@ -138,11 +147,21 @@
             var num = Math.floor(Math.random()*two+one);
             return num;
         }
-        function addRow() {  
-            //智力敏+悟性+技能 决定评分上限 210+40+50
-            var newRow = { name: "未知生物",biology: 1,state: 1,power: roundNum(1,70),agile:roundNum(1,70),intelligence: roundNum(1,70),wuXing: 1,skill: "",wordId:"",descript: "",sex: 3,yiXing: 0};
-            grid.addRow(newRow, 0);
-            grid.beginEditCell(newRow, "name");
+        function addRow() { 
+            //随机生成并添加生物
+            $.ajax({
+            url: "/admin/api/biology-rand",
+            data: { wordId: 1 },
+            type: "post",
+            success: function (data) {
+                // 刷新
+                grid.load();
+                // var newRow = { name: "未知生物",biology: 1,state: 1,power: roundNum(1,70),agile:roundNum(1,70),intelligence: roundNum(1,70),wuXing:roundNum(5,30),skill: "",wordId: 1 ,descript: "",sex: 1,yiXing: 0};
+                // grid.addRow(newRow, 0);
+                // grid.beginEditCell(newRow, "name");
+                }  
+            });
+
         }
         function removeRow() {
             var rows = grid.getSelecteds();

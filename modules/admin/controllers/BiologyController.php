@@ -16,7 +16,7 @@ use app\modules\admin\models\BiologyBiology;
 use app\modules\admin\models\BiologyCharacter;
 use app\modules\admin\models\BiologyNature;
 use app\modules\admin\models\BiologyCreate;
-
+use app\libs\Method;
 
 
 
@@ -72,7 +72,7 @@ class BiologyController extends ApiControl {
       if(!empty($key)){  $where.=" and name like '%$key%' "; }
       if($sortField){ // 排序
         $where.="order by $sortField $sortOrder";
-      }else{$where.="";}
+      }else{$where.="order by id desc";}
       $data= Biology::getBiologyList($pageIndex,$pageSize,$where);
       echo json_encode($data);
     }

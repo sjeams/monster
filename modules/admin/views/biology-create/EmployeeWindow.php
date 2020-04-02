@@ -497,8 +497,10 @@
         var  faGong = parseInt((power*0.1+agile*0.1+intelligence*0.3+reiki*0.15)*1.2);
         var  fakang = parseInt(power*0.1+agile*0.1+intelligence*0.3+reiki*0.15);
 
-        var  jianShang = parseInt(reiki*0.3+reiki*lucky*(1+wuXing/10)*0.1);
-        var  zhenShang = parseInt(reiki*lucky*0.15+reiki*0.5);
+        // var  jianShang = parseInt(reiki*0.3+reiki*lucky*(1+wuXing/10)*0.1);
+        // var  zhenShang = parseInt(reiki*lucky*0.15+reiki*0.5);
+        var  jianShang = 0;
+        var  zhenShang = 0;
         var  shanbi = parseInt((lucky*0.25+(lucky*10+reiki+grade*10)*0.0075));  // 最大值为1000
         var  suDu = parseInt(100+agile*0.25+reiki*0.3); //速度
         // var  baoji = 10;

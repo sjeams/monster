@@ -27,7 +27,7 @@
                     </td>
                     <td>
                         <select name="type" id="using">
-                            <option value="">全部</option>
+                            <option value="0">全部</option>
                             <option value="1">普通</option>
                             <option value="2">商店</option>
                             <option value="3">NPC</option>
@@ -52,6 +52,7 @@
             <div  field="name" headerAlign="center" allowSort="true" width="150" >生物名称
                 <input name="name" property="editor" class="mini-textbox" style="width:100%;" minWidth="150" />
             </div>
+
             <!--ComboBox：本地数据-->         
             <div type="comboboxcolumn" autoShowPopup="true"  field="biology" width="100"  allowSort="true"  align="center" headerAlign="center">种族
                 <input name="biology" property="editor" class="mini-combobox" style="width:100%;" url="/admin/api/biologyall" />                
@@ -79,9 +80,7 @@
                 <input property="editor" name="skill"  class="mini-buttonedit" style="width:100%;" minWidth="150" onbuttonclick="onButtonEdit"/>
             </div>
             
-            <!-- <div type="comboboxcolumn" autoShowPopup="true"  field="type" width="100"  allowSort="true"  align="center" headerAlign="center">生物类型
-                <input name="type" property="editor" class="mini-combobox" style="width:100%;"  data="Type" />                
-            </div> -->
+
             <div type="comboboxcolumn" autoShowPopup="true"  field="wordId" width="100"  allowSort="true"  align="center" headerAlign="center">生物世界
                 <input name="wordId" property="editor" class="mini-combobox" style="width:100%;" url="/admin/api/wordslist" />   
             </div>
@@ -92,10 +91,13 @@
             <div field="descript" width="150" headerAlign="center" allowSort="true">描述
                 <input name="descript" property="editor" class="mini-textarea mini-textbox" style="width:200px;" minWidth="200" minHeight="50"/>
             </div>
-            <!--ComboBox：本地数据-->         
-            <div type="comboboxcolumn" autoShowPopup="true" name="biologyid" field="biologyid" width="100"  allowSort="true"  align="center" headerAlign="center">生物模板
-                <input property="editor" class="mini-combobox" style="width:100%;" url="/admin/api/wordslist" />                
+            <div type="comboboxcolumn" autoShowPopup="true"  field="type" width="100"  allowSort="true"  align="center" headerAlign="center">生物类型
+                <input name="type" property="editor" class="mini-combobox" style="width:100%;"  data="Types" />                
             </div>
+            <!--ComboBox：本地数据-->         
+            <!-- <div type="comboboxcolumn" autoShowPopup="true" name="biologyid" field="biologyid" width="100"  allowSort="true"  align="center" headerAlign="center">生物模板
+                <input property="editor" class="mini-combobox" style="width:100%;" url="/admin/api/wordslist" />                
+            </div> -->
             <!--ComboBox：远程数据-->
             <!-- <div type="comboboxcolumn" field="country" width="100"  headerAlign="center" >国家
                 <input property="editor" class="mini-combobox" style="width:100%;" url="/miniui/demo/data/countrys.txt" />                
@@ -111,7 +113,7 @@
     <script type="text/javascript">
         // var Biologys = [{ id: 1, text: '人' }, { id: 2, text: '鬼'},{ id: 3, text: '妖'},{ id: 4, text: '神'},{ id: 5, text: '魔'},{ id: 6, text: '异'}];
         // var States = [{ id: 1, text: '先天' }, { id: 2, text: '筑基'},{ id: 3, text: '金丹'},{ id: 4, text: '元婴'},{ id: 5, text: '渡劫'},{ id: 6, text: '地仙'},{ id: 7, text: '天仙'},{ id: 8, text: '金仙'}];
-        // var Type = [{ id: 1, text: '普通' }, { id: 2, text: '特殊'}, { id: 3, text: 'NPC'}, { id: 4, text: '不可用'}
+        var Types = [{ id: 1, text: '普通' }, { id: 2, text: '特殊'}, { id: 3, text: 'NPC'}, { id: 4, text: '不可用'}]
         // var Genders = [{ id: 1, text: '男' }, { id: 2, text: '女'}, { id: 3, text: '未知'}];
 
         mini.parse();
@@ -141,16 +143,16 @@
             return num;
         }
         function addRow() {  
+            var type = $("#using").val();
+            if(type==0){ type=1;}
             $.ajax({
-            url: "/admin/biology-create/biology-round",
-            data: { data: json },
+            url: "/admin/biology-create/biology-rand",
+            data: { type: type },
             type: "post",
             success: function (text) {
-                //智力敏+悟性+技能 决定评分上限 210+40+50
-                var newRow = { name: "未知生物",biology: 1,state: 1,power: roundNum(1,70),agile:roundNum(1,70),intelligence: roundNum(1,70),wuXing: 1,skill: "",wordId:"",descript: "",biologyid: 0,yiXing: 0};
-                grid.addRow(newRow, 0);
-                grid.beginEditCell(newRow, "name");
-                }  
+                grid.reload();// 添加后刷新页面
+            
+                }
             });
         }
         function removeRow() {

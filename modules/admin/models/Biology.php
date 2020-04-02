@@ -35,26 +35,8 @@ class Biology extends ActiveRecord
 
 
 
-    /**
-     * 查询境界列表
-     */
-     public static function getValueList($score){
-        if($score>1){   $scoreGrade  = 'D';  }
-        if($score>70){   $scoreGrade= 'C';  }
-        if($score>90){   $scoreGrade= 'B';  }
-        if($score>110){   $scoreGrade= 'A';  }
-        if($score>130){   $scoreGrade= 'S';  }
-        if($score>150){   $scoreGrade= 'SS';  }
-        if($score>180){   $scoreGrade= 'SSS';  }
-        if($score>210){   $scoreGrade= '传说';  }
-        if($score>240){   $scoreGrade= '神话';  }
-        return $scoreGrade;
-      }
 
 
-      
-
-  
-
+    
 
 }

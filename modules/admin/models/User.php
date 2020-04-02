@@ -27,10 +27,10 @@ class User extends ActiveRecord
             $change+= 10;
         }
         if($user->vip!=0){   //vip+加成*10评分
-            $change+= 2 *intval($user->vip);
+            $change+= intval($user->vip);
         }
         if($user->biologyknow!=0){   //图鉴+加成*1评分
-            $change+= 0.2 * intval($user->biologyknow); 
+            $change+= 0.1 * intval($user->biologyknow); 
         }
         return $change;
     }
@@ -107,6 +107,9 @@ class User extends ActiveRecord
             $biology['power']  = $biology['power'] + rand(1,10); 
             $biology['agile']  = $biology['agile']+rand(1,10); 
             $biology['intelligence'] = $biology['intelligence'] +rand(1,10); 
+            // 异形随机技能
+            $skill =BiologySkill::find()->select("id")->asArray()->orderBy('RAND()')->One();
+            $biology['skill'] = !empty($biology['skill'])  ? $biology['skill'].','.$skill['id'] : $skill['id'] ;
          }else{
             $biology['yiXing']=0;
          }
@@ -135,24 +138,57 @@ class User extends ActiveRecord
 
 
 
-    // 根据智力敏修改 固定属性
+    // 根据白值（智力敏） 固定属性
     public static function biolobyChange($biology){
+        $power =  intval($biology['power']);
+        $agile =  intval($biology['agile']);
+        $intelligence =  intval($biology['intelligence']);
+        $lucky = intval($biology['lucky']);
 
+        $wuXing =  intval($biology['wuXing']);
+        $grade =  intval($biology['grade']);
+        $score =  intval($biology['score']);
+        $reiki =  intval(  intval($biology['reiki'])*$grade + (($grade-1)*($power+$agile+$intelligence)/$grade )*0.2);
+      
+        $biology['shengMing'] = 100 + $grade*100+$power*10+$agile*2+$intelligence*2; 
+        $biology['moFa'] = intval(50+$grade*2+($power/$grade)*0.05+($agile/$grade)*0.05+($intelligence/$grade)*0.2); 
         
+        $biology['gongJi'] =$grade*10 + intval(($power*0.1+$agile*0.5+$intelligence*0.1+$reiki*2)*1.2); 
+        $biology['huJia'] = $grade+intval(($power*0.1+$agile*0.3+$intelligence*0.1+$reiki*2)*0.5); 
 
+        $biology['faGong'] = $grade*10 + intval(($power*0.1+$agile*0.1+$intelligence*0.5+$reiki*2)*1.2); 
+        $biology['fakang'] = $grade+intval(($power*0.1+$agile*0.1+$intelligence*0.3+$reiki*2)*0.5); 
+        $biology['reiki'] =  $reiki;
+
+        $biology['jianShang'] = 0;
+        $biology['zhenShang'] = 0;
+        $biology['shanbi'] = intval(($reiki/$grade+$lucky/2)*0.2);
+        $biology['suDu'] = intval(100+$agile*0.3+$reiki*0.3);
+
+        $skillscore= !empty($biology['skill']) ? count(explode(',',$biology['skill']))*50 : 0; // 技能个数战力
+
+        $biology['special'] =$biology['shengMing']+$biology['moFa']+$biology['gongJi']+$biology['huJia']+$biology['faGong']+$biology['fakang']+$biology['reiki']+$biology['jianShang']+$biology['zhenShang']+$biology['shanbi']+$biology['suDu']+$skillscore; //战力
+        $biology['scoreGrade'] = User :: getValueList($score);// 根据评分修改品质
+        $biology['jingBi'] = $score*2+$grade+$biology['state']*2; 
+        $biology['jingYan'] = $score+$grade+$biology['state']*3; 
+        return $biology;
     }
 
-
-
-
-
-
-
-
-
-
-
-
+    /**
+     * 评分等级列表
+     */
+     public static function getValueList($score){
+        if($score>1){   $scoreGrade  = 'D';  }
+        if($score>70){   $scoreGrade= 'C';  }
+        if($score>90){   $scoreGrade= 'B';  }
+        if($score>110){   $scoreGrade= 'A';  }
+        if($score>130){   $scoreGrade= 'S';  }
+        if($score>150){   $scoreGrade= 'SS';  }
+        if($score>180){   $scoreGrade= 'SSS';  }
+        if($score>210){   $scoreGrade= '传说';  }
+        if($score>240){   $scoreGrade= '神话';  }
+        return $scoreGrade;
+      }
 
 
 

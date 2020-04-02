@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\models;
 use app\modules\admin\models\User;
+use app\libs\Method;
 use yii\db\ActiveRecord;
 
 class UserWords extends ActiveRecord
@@ -12,7 +13,7 @@ class UserWords extends ActiveRecord
 
 
     // 根据征服世界随机生物id
-    public static function BiologyRand($num=1,$userid=1){  //默认管理员，数量为1
+    public static function BiologyRand($type=1,$num=1,$userid=1){  //默认管理员，数量为1
         $wordId= UserWords::find()->select('wordId')->where("userid =$userid and complete = 1")->asarray()->All();
         // $wordId=  implode(',',array_column($wordId, 'wordId'));
         //  var_dump($wordId);die;     
@@ -22,7 +23,7 @@ class UserWords extends ActiveRecord
         ->leftJoin("x2_words AS b","a.wordId = b.id")
         ->where(['or' , ['wordId' =>'1'] ,['wordId' => $wordId]] )    // 先满足后面的条件
         // ->where(['a.id' =>'18'] ) 
-        // ->andWhere()
+        ->andWhere(['a.type' =>$type])
         ->limit($num)
         ->orderBy("rand()")
         ->All();
@@ -43,17 +44,23 @@ class UserWords extends ActiveRecord
         } else{
             $extend = $score-$lodnum*10;
         }
+        // $res = Method::divideRand();         
 
+        // var_dump($totalrand);die;
         // 修改属性
         $biology = User :: BiologyPower($biology,$extend); // 随机 基础属性 力敏智
         $biology['skill'] = $skill;
         $biology['score'] =  $newnum*10 + $biology['power']+  $biology['agile']+ $biology['intelligence'] ;  //属性最大值为80/10 ,评分满值为340
-        $biology['scoreGrade'] = Biology :: getValueList($biology['score']);// 根据评分修改品质
         $biology['userid'] = $userid;
-  
+        $biology['wuXing'] = rand(1,intval($biology['wuXing']));
+        // $biology['state'] = rand(1,3);  //境界 --暂不开放 --后期为用户境界-1
 
+        $biology['biologyid']= $biology['id']; // 设置生物所属id
+        unset($biology['id']);//删除id
+        
         // 固定 属性刷新
-        // $biology['skill'] = $skill;
+        $biology = User::biolobyChange($biology);
+        // var_dump($biology);die;
         return $biology;
     }
     
