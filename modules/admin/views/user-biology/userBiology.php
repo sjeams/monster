@@ -13,7 +13,7 @@
             <table style="width:100%;">
                 <tr>
                     <td style="width:100%;">
-                        <a class="mini-button" iconCls="icon-add" onclick="addRow()" plain="true" tooltip="增加...">增加</a>
+                        <!-- <a class="mini-button" iconCls="icon-add" onclick="addRow()" plain="true" tooltip="增加...">增加</a> -->
                         <a class="mini-button" iconCls="icon-add" onclick="editRow()" plain="true" tooltip="增加...">编辑</a>
                         <a class="mini-button" iconCls="icon-remove" onclick="removeRow()" plain="true">删除</a>
                         <span class="separator"></span>
@@ -38,9 +38,9 @@
             </table>           
         </div>
     </div>
-
+    
     <div id="datagrid1" class="mini-datagrid" style="width:98%;height:94%"
-        url="/admin/biology-create/api-index" idField="id" 
+        url="/admin/user-biology/api-index" idField="id" 
         allowResize="true" pageSize="20" sizeList="[10,20,30,50,100]"
         allowCellEdit="true" allowCellSelect="true" multiSelect="true" 
         editNextOnEnterKey="true"
@@ -146,7 +146,7 @@
             var type = $("#using").val();
             if(type==0){ type=1;}
             $.ajax({
-            url: "/admin/biology-create/biology-rand",
+            url: "/admin/user-biology/biology-rand",
             data: { type: type },
             type: "post",
             success: function (text) {
@@ -162,7 +162,7 @@
             if (rows.length > 0) {
                 if (confirm("删除不可恢复，是否继续本次操作？")) {
                     $.ajax({
-                    url: "/admin/biology-create/biology-delete",
+                    url: "/admin/user-biology/biology-delete",
                     data: { data: json },
                     type: "post",
                     success: function (text) {
@@ -179,7 +179,7 @@
             var json = mini.encode(data);
             grid.loading("保存中，请稍后......");
             $.ajax({
-                url: "/admin/biology-create/biology-add",
+                url: "/admin/user-biology/biology-add",
                 data: { data: json },
                 type: "post",
                 success: function (text) {
@@ -210,7 +210,7 @@
             // console.log(row);
             if (row) {
                 mini.open({
-                    url: "/admin/biology-create/employee-window",
+                    url: "/admin/user-biology/employee-window",
                     title: "生物详情", width: 800, height: 780,
                     onload: function () {
                         var iframe = this.getIFrameEl();

@@ -1,5 +1,5 @@
 <?php
-// 境界
+// 种族
 namespace app\modules\admin\models;
 use yii\db\ActiveRecord;
 
@@ -10,7 +10,7 @@ class BiologyBiology extends ActiveRecord
     }
 
     /**
-     * 查询境界列表
+     * 查询种族列表
      */
     public static function getValueList(){
       $data = BiologyBiology::find()->select('id,name as text')->asarray()->All();

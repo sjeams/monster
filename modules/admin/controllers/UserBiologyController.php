@@ -17,10 +17,11 @@ use app\modules\admin\models\BiologyCharacter;
 use app\modules\admin\models\BiologyNature;
 use app\modules\admin\models\BiologyCreate;
 use app\modules\admin\models\UserWords;
+use app\modules\admin\models\UserBiology;
 use app\libs\Method;
 
 
-class BiologyCreateController extends ApiControl {
+class UserBiologyController extends ApiControl {
 
     public $enableCsrfValidation = false;
 
@@ -29,7 +30,7 @@ class BiologyCreateController extends ApiControl {
     //生物创造页面
     public function actionIndex()
     {
-       return $this->render("biologyCreate");
+       return $this->render("userBiology");
       // return  $this->renderPartial("AdminMeanu");
     }
 
@@ -55,7 +56,7 @@ class BiologyCreateController extends ApiControl {
       if($sortField){ // 排序
         $where.="order by $sortField $sortOrder";
       }else{$where.="order by id desc";}
-      $data= BiologyCreate::getBiologyList($pageIndex,$pageSize,$where);
+      $data= UserBiology::getBiologyList($pageIndex,$pageSize,$where);
       echo json_encode($data);
     }
 
@@ -70,13 +71,14 @@ class BiologyCreateController extends ApiControl {
       // var_dump($data);die;
       foreach($data as $v){
         if($v->_state=='modified'){ //改
-          $model = BiologyCreate::find()->where("id=$v->id")->One();
+          $res = BiologyState:: updateState($v->createid,$v->state,$v->power,$v->agile,$v->intelligence);
+          $model = UserBiology::find()->where("id=$v->id")->One();
           $model->name=$v->name;
           $model->biology=$v->biology;
           $model->state=$v->state;
-          $model->power=$v->power;
-          $model->agile=$v->agile;
-          $model->intelligence=$v->intelligence;
+          $model->power=$res['power'];
+          $model->agile=$res['agile'];
+          $model->intelligence=$res['intelligence'];
           $model->wuXing=$v->wuXing;
           $model->skill=$v->skill;
           $model->wordId=$v->wordId;
@@ -85,14 +87,15 @@ class BiologyCreateController extends ApiControl {
           $model->yiXing=$v->yiXing;
           $model->type=$v->type;
           $model->save();
-          // $result = Biology::updateAll($v,['id'=>$v->id]);
+          UserBiology::unpdateAll($v->id);  // 更新基础属性
         }else if($v->_state=='added') { // 增
           unset($v->key);
           unset($v->_id);
           unset($v->_uid);
           unset($v->_state);
           Yii::$app->db->createCommand()->insert('x2_biology_create',$v)->execute();
-          // $model = new Biology();
+          $createid=Yii::$app->db->getLastInsertID(); // 获取创造id
+          UserBiology::unpdateAll($createid);  // 更新基础属性
         } 
       }
       echo true;
@@ -104,8 +107,11 @@ class BiologyCreateController extends ApiControl {
       foreach($data as $v){
         // var_dump($v);die;
         if(isset($v->id)){
+          $biology =  UserBiology::find()->where(['id'=>$v->id])->One();
           //删除主键
-          BiologyCreate::deleteAll(['id'=>$v->id]);
+          BiologyCreate::deleteAll(['id'=>$biology->createid]);
+          //删除主键
+          UserBiology::deleteAll(['createid'=>$biology->createid]);
         }
       }
       echo true;
@@ -114,7 +120,7 @@ class BiologyCreateController extends ApiControl {
     public function actionBiologyUpdateone()
     {
       $id = Yii::$app->request->get('id');  
-      $data = BiologyCreate::find()->where("id=$id")->asarray()->One();
+      $data = UserBiology::find()->where("id=$id")->asarray()->One();
       echo json_encode($data);
     }
 
@@ -125,7 +131,7 @@ class BiologyCreateController extends ApiControl {
       $data = Yii::$app->request->post('data');  
       $data = json_decode($data);
       foreach($data as $v){
-        $result = BiologyCreate::updateAll((array)$v,['id'=>$v->id]);
+        $result = UserBiology::updateAll((array)$v,['id'=>$v->id]);
       }
       echo true;
     }
@@ -135,6 +141,8 @@ class BiologyCreateController extends ApiControl {
     // admin/biology-create/biology-rand
     public function actionBiologyRand()
     {
+
+      BiologyState::randState(1);
       $type = Yii::$app->request->post('type',1); // 创造类型    1普通 2特殊 3NPC 4不可用
       // 用户 随机获取一个生物（默认管理员--权限为已通世界）
       $biology = UserWords :: BiologyRand($type)[0]; //默认管理员-数量1 --返回数组
@@ -152,15 +160,6 @@ class BiologyCreateController extends ApiControl {
       // var_dump($biology);die;
     }
 
-   // 刷新属性
-    // admin/biology-create/biology-brush
-    public function actionBiologyBrush()
-    {
-      // $data = BiologyCreate::find()->where("id=$id")->asarray()->One();
-      // $biology =  User :: BiologyTrainRand($biology);
-      // var_dump($biology);die;
-
-    }
 
 
 

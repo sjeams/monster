@@ -246,11 +246,11 @@
         });
 
         grid.on("beforeload", function (e) {
-            if (grid.getChanges().length > 0) {
-                if (confirm("有增删改的数据未保存，是否继续本次操作？")) {
-                    e.cancel = true;
-                }
-            }
+            // if (grid.getChanges().length > 0) {
+            //     if (confirm("有增删改的数据未保存，是否继续本次操作？")) {
+            //         e.cancel = true;
+            //     }
+            // }
         });
 
 

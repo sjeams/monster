@@ -1,7 +1,9 @@
 <?php
-
+//用户世界--图鉴
 namespace app\modules\admin\models;
 use app\modules\admin\models\User;
+use app\modules\admin\models\BiologyState;
+
 use app\libs\Method;
 use yii\db\ActiveRecord;
 
@@ -53,8 +55,11 @@ class UserWords extends ActiveRecord
         $biology['score'] =  $newnum*10 + $biology['power']+  $biology['agile']+ $biology['intelligence'] ;  //属性最大值为80/10 ,评分满值为340
         $biology['userid'] = $userid;
         $biology['wuXing'] = rand(1,intval($biology['wuXing']));
-        // $biology['state'] = rand(1,3);  //境界 --暂不开放 --后期为用户境界-1
 
+
+
+ 
+        // $biology['state'] = rand(1,3);  //境界 --暂不开放 --后期为用户境界-1  --- 跟世界 和当前境界相关
         $biology['biologyid']= $biology['id']; // 设置生物所属id
         unset($biology['id']);//删除id
         
@@ -64,6 +69,8 @@ class UserWords extends ActiveRecord
         return $biology;
     }
     
+
+
 
 
 

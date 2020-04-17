@@ -1,5 +1,5 @@
 <?php
-// 境界
+// 性格
 namespace app\modules\admin\models;
 use yii\db\ActiveRecord;
 
@@ -10,7 +10,7 @@ class BiologyCharacter extends ActiveRecord
     }
 
     /**
-     * 查询境界列表
+     * 查询性格列表
      */
     public static function getValueList(){
       $data = BiologyCharacter::find()->select('*,id as key,name as text')->asarray()->All();
