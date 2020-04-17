@@ -1,5 +1,5 @@
 <?php
-
+// 后台基本框架
 namespace app\modules\admin\models;
 
 use yii\db\ActiveRecord;

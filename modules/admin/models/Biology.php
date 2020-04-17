@@ -1,5 +1,5 @@
 <?php
-
+// 生物--模型
 namespace app\modules\admin\models;
 
 use yii\db\ActiveRecord;

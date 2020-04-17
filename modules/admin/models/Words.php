@@ -1,5 +1,5 @@
 <?php
-// 境界
+// 世界
 namespace app\modules\admin\models;
 use yii\db\ActiveRecord;
 

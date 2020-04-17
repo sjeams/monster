@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50711
 File Encoding         : 65001
 
-Date: 2020-04-02 18:44:55
+Date: 2020-04-17 18:50:27
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,42 +34,42 @@ CREATE TABLE `x2_admin_init` (
 -- ----------------------------
 -- Records of x2_admin_init
 -- ----------------------------
-INSERT INTO `x2_admin_init` VALUES ('1', '0', 'menuInfo', '后台管理', '', '', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('2', '1', 'currency', '生物系统', '测试s', '', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('3', '1', 'component', '组件管理', '', '', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('4', '1', 'other', '其它管理', '', '', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('5', '2', '', '生物模板', '', '/admin/biology/index', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('6', '2', '', '生物创造', '', '/admin/biology-create/index', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('40', '0', 'app', 'APP管理', '', '', '1585295147', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('41', '0', 'user', '用户管理', '', '', '1585295147', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('8', '2', '', '生物管理', '', '/layuimini/page/menu.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('9', '2', '', '世界管理', '', '/layuimini/page/setting.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('10', '2', '', '技能管理', '反倒是', '/layuimini/page/table.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('48', '1', '', '物品管理', '', '', '1585295147', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('49', '48', '', '武器管理', '', '', '1585295147', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('50', '2', '', '性格管理 ', '', '', '1585295147', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('14', '2', '', '登录模板', '', '', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('15', '14', '', '登录-1', '', '/layuimini/page/login-1.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('16', '14', '', '登录-2', null, '/layuimini/page/login-2.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('17', '2', '', '异常页面', null, '', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('18', '2', '', '404页面', '', '/layuimini/page/404.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('19', '2', '', '其它界面', null, '', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('20', '19', '', '按钮示例', null, '/layuimini/page/button.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('21', '19', '', '弹出层', null, '/layuimini/page/layer.html\"', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('22', '3', '', '组件管理', null, '', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('23', '22', '', '图标列表', null, '/layuimini/page/icon.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('24', '22', '', '图标选择', null, '/layuimini/page/icon-picker.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('25', '22', '', '颜色选择', null, '/layuimini/page/color-select.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('26', '22', '', '下拉选择', null, '/layuimini/page/table-select.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('27', '22', '', '文件上传', '', '/layuimini/page/upload.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('28', '22', '', '富文本编辑器', '', '/layuimini/page/editor.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('29', '4', '', '多级菜单', null, '', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('30', '29', '', '按钮1', null, '/layuimini/page/button.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('31', '29', '', '按钮2', null, '/layuimini/page/button.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('32', '29', '', '按钮3', null, '/layuimini/page/button.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('33', '29', '', '表单4', null, '/layuimini/page/form.html', '1585295147', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('45', '0', 'order', '商城', '', '', '1585295147', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('43', '41', 'cc', 'cc', '', 'cc', '1585295147', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('1', '0', 'menuInfo', '后台管理', '', '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('2', '1', 'currency', '生物系统', '测试s', '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('3', '1', 'component', '组件管理', '', '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('4', '1', 'other', '其它管理', '', '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('5', '2', '', '生物模板', '', '/admin/biology/index', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('6', '2', '', '生物创造', '', '/admin/biology-create/index', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('40', '0', 'app', 'APP管理', '', '', '1586831917', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('41', '0', 'user', '用户管理', '', '', '1586831917', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('8', '2', '', '生物管理', '', '/admin/user-biology/index', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('9', '2', '', '世界管理', '', '/layuimini/page/setting.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('10', '2', '', '技能管理', '反倒是', '/layuimini/page/table.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('48', '1', '', '物品管理', '', '', '1586831917', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('49', '48', '', '武器管理', '', '', '1586831917', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('50', '2', '', '性格管理 ', '', '', '1586831917', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('14', '2', '', '登录模板', '', '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('15', '14', '', '登录-1', '', '/layuimini/page/login-1.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('16', '14', '', '登录-2', null, '/layuimini/page/login-2.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('17', '2', '', '异常页面', null, '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('18', '2', '', '404页面', '', '/layuimini/page/404.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('19', '2', '', '其它界面', null, '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('20', '19', '', '按钮示例', null, '/layuimini/page/button.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('21', '19', '', '弹出层', null, '/layuimini/page/layer.html\"', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('22', '3', '', '组件管理', null, '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('23', '22', '', '图标列表', null, '/layuimini/page/icon.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('24', '22', '', '图标选择', null, '/layuimini/page/icon-picker.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('25', '22', '', '颜色选择', null, '/layuimini/page/color-select.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('26', '22', '', '下拉选择', null, '/layuimini/page/table-select.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('27', '22', '', '文件上传', '', '/layuimini/page/upload.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('28', '22', '', '富文本编辑器', '', '/layuimini/page/editor.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('29', '4', '', '多级菜单', null, '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('30', '29', '', '按钮1', null, '/layuimini/page/button.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('31', '29', '', '按钮2', null, '/layuimini/page/button.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('32', '29', '', '按钮3', null, '/layuimini/page/button.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('33', '29', '', '表单4', null, '/layuimini/page/form.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('45', '0', 'order', '商城', '', '', '1586831917', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('43', '41', 'cc', 'cc', '', 'cc', '1586831917', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
 
 -- ----------------------------
 -- Table structure for x2_biology
@@ -130,7 +130,7 @@ CREATE TABLE `x2_biology` (
   `minIntelligence` int(11) DEFAULT '10' COMMENT '最小力量',
   `userid` int(11) DEFAULT '1' COMMENT '模型创建所属人 1 管理员',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_biology
@@ -158,6 +158,7 @@ INSERT INTO `x2_biology` VALUES ('20', '韩慕侠', '1', '1', '1', '598', '60', 
 INSERT INTO `x2_biology` VALUES ('21', '王子平', '1', '1', '1', '564', '62', '96', '34', '103', '36', '115', '7', '0', '0', '1', '3', '1', '0', '27', '1194', '116', '8', '2,10,11', '0', '0', '1', '[1881——1973]一身正义，好打抱不平，人称千斤神力，为清末民初著名武术家。', '17', '0', '1', '1', null, '0', '1', '235', '120', '0', '0', '#fff', '0', 'A', '0', '1', '1', '0', '24', '23', '39', '11', '5', '25', '1');
 INSERT INTO `x2_biology` VALUES ('22', '吕紫剑', '1', '1', '1', '600', '61', '53', '16', '54', '16', '111', '4', '0', '0', '1', '3', '1', '0', '8', '1073', '118', '18', '6,5,11', '0', '0', '1', '[1993——2012]行侠仗义，人称长江大侠，为八卦掌一代宗师', '27', '0', '1', '1', null, '0', '1', '239', '122', '0', '0', '#fff', '0', 'A', '0', '1', '1', '0', '28', '29', '31', '9', '13', '22', '1');
 INSERT INTO `x2_biology` VALUES ('23', '李三', '1', '1', '1', '1059', '31', '26', '21', '29', '24', '110', '3', '0', '0', '1', '3', '1', '0', '5', '1322', '109', '6', '4,6,7,8,5', '0', '0', '1', '[1898——1953]劫富济贫，人称侠盗，燕子李三，为民初著名飞贼。', '10', '0', '1', '1', '', '0', '1', '221', '113', '9', '10', '#fff', '0', 'B', '0', '1', '1', '0', '35', '22', '30', '24', '11', '13', '1');
+INSERT INTO `x2_biology` VALUES ('24', '未知生物', '1', '1', '1', '610', '53', '65', '29', '60', '28', '109', '2', '0', '0', '1', '3', '1', '0', '10', '1166', '109', '16', '4,2,6,10', '0', '0', '4', null, '29', '0', '1', '1', null, '0', '1', '221', '113', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '34', '20', '15', '21', '15', '3', '1');
 
 -- ----------------------------
 -- Table structure for x2_biology_biology
@@ -262,21 +263,12 @@ CREATE TABLE `x2_biology_create` (
   `minIntelligence` int(11) DEFAULT '10' COMMENT '最小力量',
   `userid` int(11) DEFAULT '1' COMMENT '模型创建所属人 1 管理员',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_biology_create
 -- ----------------------------
-INSERT INTO `x2_biology_create` VALUES ('1', '苏黑虎', '1', '1', '1', '516', '58', '77', '27', '79', '27', '112', '6', '0', '0', '1', '3', '1', '3', '21', '23', '20', '23', '1073', '96', '1', '6,5,10', '0', '0', '1', '铁沙掌苏黑虎，少林黑虎门源出嵩山少林寺，距今约二百年前道光年间,有一少林僧人法号兆德，每隔数年便到广东化缘一次.因而遇上顺德北岗乡之苏黑虎，苏黑虎年幼已习武术，但目睹兆德和尚的少林绝技后，即决心跟随兆德和尚上嵩山少林学艺。', '20', '0', '1', '1', null, '0', '1', '195', '100', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '8', '3', '19', '1');
-INSERT INTO `x2_biology_create` VALUES ('2', '杜心武', '1', '1', '1', '450', '58', '47', '15', '54', '17', '106', '4', '0', '0', '1', '3', '1', '17', '11', '18', '10', '25', '762', '53', '1', null, '0', '0', '1', '[1869——1953]行侠仗义，人称侠骨，神腿，南北大侠，为自然门一代宗师。被誉为中华第一保镖。', '27', '0', '1', '1', null, '0', '1', '109', '57', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '8', '9', '25', '1');
-INSERT INTO `x2_biology_create` VALUES ('3', '苏灿', '1', '1', '1', '400', '59', '79', '29', '92', '32', '109', '7', '0', '0', '1', '3', '1', '9', '25', '12', '6', '34', '882', '62', '6', '11', '0', '0', '1', '醉拳苏灿，苏灿本过着富裕逍遥的日子，但是，在遭遇到斧头黑帮的纠缠、洋人买办史密斯的阴谋以及因自己的过错使父母惨死，恋人洪绮莲的离去等等挫折后，从此遁世江湖，沦为乞丐，与酒为伍，狂歌当哭，竟把酒意融入武学招式中，开创出别具一格的“醉拳”，为“广东十虎”中最出世化外之一虎。', '23', '0', '1', '1', null, '0', '1', '127', '66', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '3', '5', '11', '1');
-INSERT INTO `x2_biology_create` VALUES ('4', '王隐林', '1', '1', '1', '476', '57', '79', '28', '79', '28', '112', '6', '0', '0', '1', '3', '1', '1', '23', '21', '17', '16', '938', '64', '1', '6', '0', '0', '3', '侠家拳王隐林，广东南拳之大侠李胡子从四川云游到广东在肇庆鼎湖山庆云寺挂单，把侠家拳传给僧人王隐林（又名王飞龙），王隐林到广州后还俗，在黄沙兼善街开设武馆授徒。', '16', '0', '1', '1', null, '0', '1', '131', '68', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '12', '5', '6', '1');
-INSERT INTO `x2_biology_create` VALUES ('5', '刘百川', '1', '1', '1', '430', '62', '38', '12', '57', '16', '104', '4', '0', '0', '1', '3', '1', '18', '7', '12', '8', '47', '830', '87', '7', '4,11', '0', '0', '1', '[1870——1964]为人义气，正直任侠，人称北侠，江南第一腿。', '30', '0', '1', '1', null, '0', '1', '177', '91', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '9', '8', '13', '1');
-INSERT INTO `x2_biology_create` VALUES ('6', '韩慕侠', '1', '1', '1', '560', '59', '60', '20', '65', '21', '109', '5', '0', '0', '1', '3', '1', '20', '14', '27', '18', '27', '913', '72', '7', null, '0', '0', '1', '[1877——1947]好任侠，打抱不平，人称韩大侠，玉面虎，为形意八卦一代宗师。', '28', '0', '1', '1', null, '0', '1', '147', '76', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '5', '10', '18', '1');
-INSERT INTO `x2_biology_create` VALUES ('7', '谭济筠', '1', '1', '1', '364', '56', '90', '33', '93', '34', '112', '7', '0', '0', '1', '3', '1', '7', '29', '10', '13', '19', '818', '42', '6', null, '0', '0', '1', '鹤阳拳谭济筠，本名谭石窝,成名后将名字改为谭济筠. 性格率直冲动，後随咏春宗师梁赞学武，不单武艺有进，人亦变得成熟稳重，因缘际遇结识到革命党人，更不惜舍身匡扶，多番身陷险境亦义无反顾。', '17', '0', '1', '1', null, '0', '1', '87', '46', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '7', '5', '8', '1');
-INSERT INTO `x2_biology_create` VALUES ('8', '黄澄可', '1', '1', '1', '468', '56', '78', '28', '77', '27', '111', '6', '0', '0', '1', '3', '1', '2', '23', '21', '16', '13', '874', '50', '14', null, '0', '0', '1', '九龙拳黄澄可，生性善良，宅心仁厚，天资聪敏，乐於助人。本为乡村赤脚小子，万事不强求，後离开家园往省城，面对人生种种考验与经历之馀，先後得一代宗师陆阿采、黄麒英、铁挢三等人指点武学，经历大大小小生死切磋搏斗，融会贯通各家之大成，终自创出一套刚柔并重，变化无穷的“九龙拳”。国难当前，不惜联同众虎，洒热血，抛头颅，发扬武学之“侠义精神”，成为一代英雄。', '20', '0', '1', '1', null, '0', '1', '103', '54', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '18', '14', '12', '1');
-INSERT INTO `x2_biology_create` VALUES ('9', '郭云深', '1', '1', '1', '560', '57', '94', '34', '92', '33', '114', '6', '0', '0', '1', '3', '1', '12', '28', '29', '20', '15', '1068', '74', '4', '5', '0', '0', '1', '[1820——1901]刚直正义，好打抱不平，人称郭大侠，形意拳一代宗师。', '6', '0', '1', '1', null, '0', '1', '151', '78', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '11', '13', '10', '1');
-INSERT INTO `x2_biology_create` VALUES ('10', '陈铁志', '1', '1', '1', '520', '60', '94', '33', '93', '32', '116', '6', '0', '0', '1', '3', '1', '8', '25', '20', '31', '29', '1129', '110', '5', '2,6,4', '0', '0', '1', '鹰爪王陈铁志，陈铁志又名陈长泰, 一身武功刚猛雄劲,出手疾如闪电，指劲雄浑，坚如铁石，故人称“铁指陈”。', '17', '0', '1', '1', null, '1', '1', '223', '114', '0', '0', '#274e13', '0', 'B', '0', '1', '1', '0', '10', '20', '15', '1');
+INSERT INTO `x2_biology_create` VALUES ('48', '黄麒英', '1', '2', '1', '456', '53', '86', '57', '89', '58', '112', '0', '0', '0', '1', '3', '1', '4', '25', '19', '15', '18', '1086', '82', '7', '7,11,10', '0', '0', '1', '无影脚黄麒英，黄麒英功夫源自於金钩李胡子和洪熙官的传人陆阿采。', '7', '0', '1', '1', null, '0', '1', '167', '86', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '10', '14', '8', '1');
 
 -- ----------------------------
 -- Table structure for x2_biology_godhood
@@ -413,26 +405,33 @@ CREATE TABLE `x2_biology_state` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(25) DEFAULT NULL,
   `point` varchar(255) DEFAULT NULL,
-  `value` int(11) DEFAULT NULL,
+  `value` int(11) DEFAULT '0' COMMENT '总共14000属性 200级',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_biology_state
 -- ----------------------------
-INSERT INTO `x2_biology_state` VALUES ('1', '普通', null, null);
-INSERT INTO `x2_biology_state` VALUES ('2', '先天', null, null);
-INSERT INTO `x2_biology_state` VALUES ('3', '金丹', null, null);
-INSERT INTO `x2_biology_state` VALUES ('4', '筑基', null, null);
-INSERT INTO `x2_biology_state` VALUES ('5', '金丹', null, null);
-INSERT INTO `x2_biology_state` VALUES ('6', '元婴', null, null);
-INSERT INTO `x2_biology_state` VALUES ('7', '渡劫', null, null);
-INSERT INTO `x2_biology_state` VALUES ('8', '地仙', null, null);
-INSERT INTO `x2_biology_state` VALUES ('9', '天仙', null, null);
-INSERT INTO `x2_biology_state` VALUES ('10', '金仙', null, null);
-INSERT INTO `x2_biology_state` VALUES ('11', '大罗', null, null);
-INSERT INTO `x2_biology_state` VALUES ('12', '玄仙', null, null);
-INSERT INTO `x2_biology_state` VALUES ('13', '圣人', null, null);
+INSERT INTO `x2_biology_state` VALUES ('1', '凡人', null, '0');
+INSERT INTO `x2_biology_state` VALUES ('2', '武师', null, '20');
+INSERT INTO `x2_biology_state` VALUES ('3', '宗师', null, '40');
+INSERT INTO `x2_biology_state` VALUES ('4', '先天', null, '60');
+INSERT INTO `x2_biology_state` VALUES ('5', '金丹', null, '80');
+INSERT INTO `x2_biology_state` VALUES ('6', '元婴', null, '100');
+INSERT INTO `x2_biology_state` VALUES ('7', '化神', null, '120');
+INSERT INTO `x2_biology_state` VALUES ('8', '渡劫', null, '140');
+INSERT INTO `x2_biology_state` VALUES ('9', '大乘', null, '160');
+INSERT INTO `x2_biology_state` VALUES ('10', '地仙', null, '180');
+INSERT INTO `x2_biology_state` VALUES ('11', '天仙', null, '200');
+INSERT INTO `x2_biology_state` VALUES ('12', '金仙', null, '220');
+INSERT INTO `x2_biology_state` VALUES ('13', '玄仙', null, '240');
+INSERT INTO `x2_biology_state` VALUES ('14', '仙君', null, '260');
+INSERT INTO `x2_biology_state` VALUES ('15', '仙尊', null, '280');
+INSERT INTO `x2_biology_state` VALUES ('16', '仙帝', null, '300');
+INSERT INTO `x2_biology_state` VALUES ('17', '准圣', null, '320');
+INSERT INTO `x2_biology_state` VALUES ('18', '圣人', null, '340');
+INSERT INTO `x2_biology_state` VALUES ('19', '天道', null, '360');
+INSERT INTO `x2_biology_state` VALUES ('20', '混元', null, '380');
 
 -- ----------------------------
 -- Table structure for x2_user
@@ -443,7 +442,7 @@ CREATE TABLE `x2_user` (
   `occupation` int(2) DEFAULT '1' COMMENT '职业 1炼器2 寻道 3炼魂 4炼丹 5炼体',
   `vip` int(2) DEFAULT '0' COMMENT 'vip等级',
   `grade` int(11) DEFAULT '1' COMMENT '等级',
-  `state` int(11) DEFAULT '1' COMMENT '境界',
+  `state` int(11) DEFAULT '1' COMMENT '境界 1-20',
   `biologyknow` int(11) DEFAULT '0' COMMENT '生物图鉴数',
   PRIMARY KEY (`userid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -451,7 +450,7 @@ CREATE TABLE `x2_user` (
 -- ----------------------------
 -- Records of x2_user
 -- ----------------------------
-INSERT INTO `x2_user` VALUES ('1', '3', '10', '1', '1', '100');
+INSERT INTO `x2_user` VALUES ('1', '3', '10', '1', '3', '100');
 
 -- ----------------------------
 -- Table structure for x2_user_biology
@@ -512,51 +511,14 @@ CREATE TABLE `x2_user_biology` (
   `minIntelligence` int(11) DEFAULT '10' COMMENT '最小力量',
   `userid` int(11) DEFAULT '1' COMMENT '模型创建所属人 1 管理员',
   `createid` int(11) DEFAULT '0' COMMENT '生物创造id',
+  `percent` float(11,0) DEFAULT '0' COMMENT '经验条(单独增加）',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_user_biology
 -- ----------------------------
-INSERT INTO `x2_user_biology` VALUES ('1', '黄飞鸿', '1', '1', '1', '442', '55', '18', '4', '22', '5', '101', '0', '0', '0', '1', '3', '1', '15', '1', '21', '4', '12', '648', '37', '1', null, '0', '1', '1', '[1847——1925]为人正义，济世为怀，救死扶伤，人称一代大侠，为岭南一代宗师。', '1', '10', '1', '1', null, '0', '3', '77', '41', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', null, null, null, '1', '1');
-INSERT INTO `x2_user_biology` VALUES ('2', '李存义', '1', '1', '1', '578', '58', '25', '6', '30', '7', '103', '0', '0', '0', '1', '3', '1', '14', '1', '31', '12', '22', '808', '65', '1', null, '0', '1', '1', '[1847——1921]为人刚直正义，人称单刀李，单刀侠，为形意拳一代宗师。', '1', '10', '1', '1', null, '0', '3', '133', '69', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '20', '10', '16', '1', '2');
-INSERT INTO `x2_user_biology` VALUES ('3', '黄澄可', '1', '2', '1', '530', '55', '263', '104', '258', '103', '134', '20', '0', '0', '1', '3', '1', '2', '100', '29', '15', '5', '1617', '59', '15', '1', '0', '1', '1', '九龙拳黄澄可，生性善良，宅心仁厚，天资聪敏，乐於助人。本为乡村赤脚小子，万事不强求，後离开家园往省城，面对人生种种考验与经历之馀，先後得一代宗师陆阿采、黄麒英、铁挢三等人指点武学，经历大大小小生死切磋搏斗，融会贯通各家之大成，终自创出一套刚柔并重，变化无穷的“九龙拳”。国难当前，不惜联同众虎，洒热血，抛头颅，发扬武学之“侠义精神”，成为一代英雄。', '1', '0', '1', '1', '', '0', '1', '123', '66', '0', '0', '#ff0', '0', 'D', '0', '1', '1', '0', '26', '12', '2', '1', '3');
-INSERT INTO `x2_user_biology` VALUES ('4', '黄麒英', '1', '1', '1', '602', '56', '26', '6', '25', '6', '104', '0', '0', '0', '1', '3', '1', '4', '1', '35', '14', '12', '876', '71', '1', '1', '0', '1', '1', '无影脚黄麒英，黄麒英功夫源自於金钩李胡子和洪熙官的传人陆阿采。', '1', '0', '1', '1', '', '0', '3', '145', '75', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '10', '10', '10', '1', '4');
-INSERT INTO `x2_user_biology` VALUES ('5', '王正谊', '1', '1', '1', '366', '58', '25', '6', '31', '7', '104', '0', '0', '0', '1', '3', '1', '13', '1', '8', '15', '28', '598', '51', '1', null, '0', '1', '1', '[1844——1900]德义高尚，行侠仗义，人称京师大侠，大刀王五，晚清著名武林高手。', '1', '0', '1', '1', null, '0', '3', '105', '55', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '2', '10', '28', '1', '5');
-INSERT INTO `x2_user_biology` VALUES ('6', '梁坤', '1', '1', '1', '498', '58', '30', '7', '31', '7', '106', '0', '0', '0', '1', '3', '1', '10', '1', '21', '21', '23', '738', '65', '1', null, '0', '1', '1', '铁桥三梁坤，正名梁坤，有洪拳大师之称，广东十虎之首。', '1', '0', '1', '1', null, '0', '3', '133', '69', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '10', '10', '10', '1', '6');
-INSERT INTO `x2_user_biology` VALUES ('7', '梁坤', '1', '1', '1', '660', '59', '36', '9', '33', '8', '108', '0', '0', '0', '1', '3', '1', '10', '1', '36', '28', '22', '914', '86', '1', null, '0', '1', '1', '铁桥三梁坤，正名梁坤，有洪拳大师之称，广东十虎之首。', '1', '0', '1', '1', null, '0', '3', '175', '90', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '10', '10', '10', '1', '7');
-INSERT INTO `x2_user_biology` VALUES ('8', '杜心武', '1', '1', '1', '588', '66', '32', '8', '54', '13', '105', '0', '0', '0', '1', '3', '1', '17', '1', '23', '16', '63', '967', '122', '1', '5,3', '0', '1', '1', '[1869——1953]行侠仗义，人称侠骨，神腿，南北大侠，为自然门一代宗师。被誉为中华第一保镖。', '1', '0', '1', '1', '', '1', '3', '247', '126', '0', '0', '#9fc5e8', '0', 'A', '0', '1', '1', '0', '6', '8', '48', '1', '8');
-INSERT INTO `x2_user_biology` VALUES ('9', '未知生物', '1', '1', '1', '614', '57', '86', '28', '69', '25', '118', '4', '0', '0', '1', '3', '1', '44', '19', '31', '43', '9', '1070', '93', '11', '8', '0', '0', '4', null, '8', '0', '1', '1', null, '0', '1', '189', '97', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '15', '19', '2', '1', '9');
-INSERT INTO `x2_user_biology` VALUES ('10', '谭济筠', '1', '1', '1', '616', '58', '32', '8', '31', '7', '107', '1', '0', '0', '1', '3', '1', '7', '1', '33', '23', '20', '961', '96', '5', '3,4', '0', '1', '1', '鹤阳拳谭济筠，本名谭石窝,成名后将名字改为谭济筠. 性格率直冲动，後随咏春宗师梁赞学武，不单武艺有进，人亦变得成熟稳重，因缘际遇结识到革命党人，更不惜舍身匡扶，多番身陷险境亦义无反顾。', '12', '0', '1', '1', '', '0', '3', '195', '100', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '10', '10', '10', '1', '10');
-INSERT INTO `x2_user_biology` VALUES ('11', '郭云深', '1', '1', '1', '810', '57', '38', '9', '27', '7', '109', '0', '0', '0', '1', '3', '1', '12', '1', '53', '31', '9', '1058', '93', '1', null, '0', '1', '1', '[1820——1901]刚直正义，好打抱不平，人称郭大侠，形意拳一代宗师。', '1', '0', '1', '1', null, '0', '3', '189', '97', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '30', '12', '4', '1', '11');
-INSERT INTO `x2_user_biology` VALUES ('12', '郭云深', '1', '1', '1', '656', '58', '34', '8', '30', '7', '107', '0', '0', '0', '1', '3', '1', '12', '1', '37', '25', '18', '901', '80', '1', null, '0', '1', '1', '[1820——1901]刚直正义，好打抱不平，人称郭大侠，形意拳一代宗师。', '1', '0', '1', '1', null, '0', '3', '163', '84', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '30', '12', '4', '1', '12');
-INSERT INTO `x2_user_biology` VALUES ('13', '陈铁志', '1', '1', '1', '508', '59', '48', '11', '33', '8', '116', '0', '0', '0', '1', '3', '1', '8', '1', '16', '53', '21', '784', '90', '1', null, '0', '1', '1', '鹰爪王陈铁志，陈铁志又名陈长泰, 一身武功刚猛雄劲,出手疾如闪电，指劲雄浑，坚如铁石，故人称“铁指陈”。', '1', '0', '1', '1', '/files/attach/images/20200311/1583918704313142.png', '0', '3', '183', '94', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '10', '10', '10', '1', '13');
-INSERT INTO `x2_user_biology` VALUES ('14', '黄麒英', '1', '1', '1', '630', '65', '31', '8', '50', '12', '105', '0', '0', '0', '1', '3', '1', '4', '1', '29', '16', '54', '952', '109', '2', '1', '0', '1', '1', '无影脚黄麒英，黄麒英功夫源自於金钩李胡子和洪熙官的传人陆阿采。', '1', '0', '1', '1', '', '0', '3', '221', '113', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '10', '10', '10', '1', '14');
-INSERT INTO `x2_user_biology` VALUES ('15', '吕紫剑', '1', '1', '1', '794', '58', '28', '7', '28', '7', '104', '0', '0', '0', '1', '3', '1', '22', '1', '54', '13', '14', '1077', '91', '2', '1', '0', '0', '4', '[1993——2012]行侠仗义，人称长江大侠，为八卦掌一代宗师', '1', '0', '1', '1', null, '0', '1', '185', '95', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '20', '12', '4', '1', '15');
-INSERT INTO `x2_user_biology` VALUES ('16', '李三', '1', '1', '1', '446', '56', '35', '8', '24', '5', '110', '0', '0', '0', '1', '3', '1', '23', '1', '16', '33', '10', '685', '59', '2', null, '0', '0', '4', '[1898——1953]劫富济贫，人称侠盗，燕子李三，为民初著名飞贼。', '1', '0', '1', '1', null, '0', '1', '121', '63', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '10', '32', '6', '1', '16');
-INSERT INTO `x2_user_biology` VALUES ('17', '李三', '1', '1', '1', '552', '57', '45', '10', '25', '6', '115', '0', '0', '0', '1', '3', '1', '23', '1', '24', '49', '7', '811', '80', '2', null, '0', '0', '4', '[1898——1953]劫富济贫，人称侠盗，燕子李三，为民初著名飞贼。', '1', '0', '1', '1', null, '0', '1', '163', '84', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '10', '32', '6', '1', '17');
-INSERT INTO `x2_user_biology` VALUES ('18', '王隐林', '1', '1', '1', '626', '64', '32', '8', '48', '11', '105', '0', '0', '0', '1', '3', '1', '1', '1', '29', '17', '51', '1045', '127', '2', '4,3,5', '0', '1', '1', '侠家拳王隐林，广东南拳之大侠李胡子从四川云游到广东在肇庆鼎湖山庆云寺挂单，把侠家拳传给僧人王隐林（又名王飞龙），王隐林到广州后还俗，在黄沙兼善街开设武馆授徒。', '1', '0', '1', '1', '', '0', '1', '257', '131', '0', '0', '', '0', 'A', '0', '1', '1', '0', '10', '6', '3', '1', '18');
-INSERT INTO `x2_user_biology` VALUES ('19', '王隐林', '1', '1', '1', '590', '64', '27', '7', '47', '11', '103', '0', '0', '0', '1', '3', '1', '1', '1', '27', '9', '51', '850', '87', '6', null, '0', '1', '1', '侠家拳王隐林，广东南拳之大侠李胡子从四川云游到广东在肇庆鼎湖山庆云寺挂单，把侠家拳传给僧人王隐林（又名王飞龙），王隐林到广州后还俗，在黄沙兼善街开设武馆授徒。', '1', '0', '1', '1', '', '0', '1', '177', '91', '0', '0', '', '0', 'C', '0', '1', '1', '0', '10', '6', '3', '1', '19');
-INSERT INTO `x2_user_biology` VALUES ('20', '霍元甲', '1', '1', '1', '458', '63', '39', '9', '44', '10', '110', '0', '0', '0', '1', '3', '1', '16', '1', '10', '34', '45', '734', '89', '1', null, '0', '1', '1', '[1868——1910]执仗正义，人称霍大力士，黄面虎，津门大侠。为迷踪拳一代宗师。', '1', '0', '1', '1', null, '0', '3', '181', '93', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '10', '10', '12', '1', '20');
-INSERT INTO `x2_user_biology` VALUES ('21', '黄麒英', '1', '1', '1', '408', '59', '27', '6', '34', '8', '105', '0', '0', '0', '1', '3', '1', '4', '1', '11', '17', '32', '698', '70', '7', '1', '0', '1', '1', '无影脚黄麒英，黄麒英功夫源自於金钩李胡子和洪熙官的传人陆阿采。', '1', '0', '1', '1', '', '0', '3', '143', '74', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '10', '10', '10', '1', '21');
-INSERT INTO `x2_user_biology` VALUES ('22', '韩慕侠', '1', '1', '1', '704', '58', '37', '9', '31', '8', '109', '0', '0', '0', '1', '3', '1', '20', '1', '41', '30', '17', '957', '88', '1', null, '0', '1', '4', '[1877——1947]好任侠，打抱不平，人称韩大侠，玉面虎，为形意八卦一代宗师。', '1', '0', '2', '1', '', '0', '3', '179', '92', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '22', '10', '12', '1', '22');
-INSERT INTO `x2_user_biology` VALUES ('23', '陈铁志', '1', '1', '1', '516', '57', '40', '9', '27', '7', '112', '0', '0', '0', '1', '3', '1', '8', '1', '21', '40', '13', '769', '74', '1', null, '0', '1', '1', '鹰爪王陈铁志，陈铁志又名陈长泰, 一身武功刚猛雄劲,出手疾如闪电，指劲雄浑，坚如铁石，故人称“铁指陈”。', '1', '0', '1', '1', '/files/attach/images/20200311/1583918704313142.png', '0', '3', '151', '78', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '10', '10', '10', '1', '23');
-INSERT INTO `x2_user_biology` VALUES ('24', '李尧臣', '1', '1', '1', '672', '62', '26', '7', '43', '10', '102', '0', '0', '0', '1', '3', '1', '19', '1', '37', '8', '43', '923', '88', '1', null, '0', '1', '1', '[1876——1973]以侠义、智慧、勇武、传奇著称，人称李大侠，神镖李，无极刀王，29军大刀队总教头，被誉为最后的镖王。', '1', '0', '1', '1', null, '0', '3', '179', '92', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '22', '2', '34', '1', '24');
-INSERT INTO `x2_user_biology` VALUES ('25', '董海川', '1', '1', '1', '556', '62', '40', '10', '41', '10', '111', '0', '0', '0', '1', '3', '1', '11', '1', '21', '36', '37', '831', '94', '1', null, '0', '1', '1', '[1797——1882]少任侠，为人仗义，嫉恶如仇，好打抱不平，人称紫面大侠，八卦掌创始', '1', '0', '1', '1', null, '0', '3', '191', '98', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '10', '10', '12', '1', '25');
-INSERT INTO `x2_user_biology` VALUES ('26', '董海川', '1', '1', '1', '352', '55', '23', '5', '22', '5', '104', '0', '0', '0', '1', '3', '1', '11', '1', '10', '14', '12', '567', '36', '1', null, '0', '1', '1', '[1797——1882]少任侠，为人仗义，嫉恶如仇，好打抱不平，人称紫面大侠，八卦掌创始', '1', '0', '1', '1', null, '0', '3', '75', '40', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '10', '10', '12', '1', '26');
-INSERT INTO `x2_user_biology` VALUES ('27', '黄飞鸿', '1', '1', '1', '522', '57', '35', '8', '28', '7', '109', '0', '0', '0', '1', '3', '1', '15', '1', '23', '30', '16', '767', '69', '1', null, '0', '1', '1', '[1847——1925]为人正义，济世为怀，救死扶伤，人称一代大侠，为岭南一代宗师。', '1', '0', '1', '1', null, '1', '3', '141', '73', '0', '0', '#351c75', '0', 'D', '0', '1', '1', '0', '10', '10', '6', '1', '27');
-INSERT INTO `x2_user_biology` VALUES ('28', '苏灿', '1', '1', '1', '798', '60', '29', '7', '35', '9', '104', '0', '0', '0', '1', '3', '1', '9', '1', '52', '13', '26', '1043', '91', '1', null, '0', '1', '1', '醉拳苏灿，苏灿本过着富裕逍遥的日子，但是，在遭遇到斧头黑帮的纠缠、洋人买办史密斯的阴谋以及因自己的过错使父母惨死，恋人洪绮莲的离去等等挫折后，从此遁世江湖，沦为乞丐，与酒为伍，狂歌当哭，竟把酒意融入武学招式中，开创出别具一格的“醉拳”，为“广东十虎”中最出世化外之一虎。', '1', '0', '1', '1', null, '0', '3', '185', '95', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '12', '10', '10', '1', '28');
-INSERT INTO `x2_user_biology` VALUES ('29', '李三', '1', '1', '1', '684', '59', '52', '12', '32', '8', '117', '0', '0', '0', '1', '3', '1', '23', '1', '34', '56', '16', '965', '106', '1', null, '0', '0', '4', '[1898——1953]劫富济贫，人称侠盗，燕子李三，为民初著名飞贼。', '1', '0', '1', '1', null, '1', '1', '215', '110', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '10', '32', '6', '1', '29');
-INSERT INTO `x2_user_biology` VALUES ('30', '苏黑虎', '1', '1', '1', '516', '58', '77', '27', '79', '27', '112', '6', '0', '0', '1', '3', '1', '3', '21', '23', '20', '23', '1073', '96', '1', '6,5,10', '0', '0', '1', '铁沙掌苏黑虎，少林黑虎门源出嵩山少林寺，距今约二百年前道光年间,有一少林僧人法号兆德，每隔数年便到广东化缘一次.因而遇上顺德北岗乡之苏黑虎，苏黑虎年幼已习武术，但目睹兆德和尚的少林绝技后，即决心跟随兆德和尚上嵩山少林学艺。', '20', '0', '1', '1', null, '0', '1', '195', '100', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '8', '3', '19', '1', '1');
-INSERT INTO `x2_user_biology` VALUES ('31', '杜心武', '1', '1', '1', '450', '58', '47', '15', '54', '17', '106', '4', '0', '0', '1', '3', '1', '17', '11', '18', '10', '25', '762', '53', '1', null, '0', '0', '1', '[1869——1953]行侠仗义，人称侠骨，神腿，南北大侠，为自然门一代宗师。被誉为中华第一保镖。', '27', '0', '1', '1', null, '0', '1', '109', '57', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '8', '9', '25', '1', '2');
-INSERT INTO `x2_user_biology` VALUES ('32', '苏灿', '1', '1', '1', '400', '59', '79', '29', '92', '32', '109', '7', '0', '0', '1', '3', '1', '9', '25', '12', '6', '34', '882', '62', '6', '11', '0', '0', '1', '醉拳苏灿，苏灿本过着富裕逍遥的日子，但是，在遭遇到斧头黑帮的纠缠、洋人买办史密斯的阴谋以及因自己的过错使父母惨死，恋人洪绮莲的离去等等挫折后，从此遁世江湖，沦为乞丐，与酒为伍，狂歌当哭，竟把酒意融入武学招式中，开创出别具一格的“醉拳”，为“广东十虎”中最出世化外之一虎。', '23', '0', '1', '1', null, '0', '1', '127', '66', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '3', '5', '11', '1', '3');
-INSERT INTO `x2_user_biology` VALUES ('33', '王隐林', '1', '1', '1', '476', '57', '79', '28', '79', '28', '112', '6', '0', '0', '1', '3', '1', '1', '23', '21', '17', '16', '938', '64', '1', '6', '0', '0', '4', '侠家拳王隐林，广东南拳之大侠李胡子从四川云游到广东在肇庆鼎湖山庆云寺挂单，把侠家拳传给僧人王隐林（又名王飞龙），王隐林到广州后还俗，在黄沙兼善街开设武馆授徒。', '16', '0', '1', '1', null, '0', '1', '131', '68', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '12', '5', '6', '1', '4');
-INSERT INTO `x2_user_biology` VALUES ('34', '刘百川', '1', '1', '1', '430', '62', '38', '12', '57', '16', '104', '4', '0', '0', '1', '3', '1', '18', '7', '12', '8', '47', '830', '87', '7', '4,11', '0', '0', '1', '[1870——1964]为人义气，正直任侠，人称北侠，江南第一腿。', '30', '0', '1', '1', null, '0', '1', '177', '91', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '9', '8', '13', '1', '5');
-INSERT INTO `x2_user_biology` VALUES ('35', '韩慕侠', '1', '1', '1', '560', '59', '60', '20', '65', '21', '109', '5', '0', '0', '1', '3', '1', '20', '14', '27', '18', '27', '913', '72', '7', null, '0', '0', '1', '[1877——1947]好任侠，打抱不平，人称韩大侠，玉面虎，为形意八卦一代宗师。', '28', '0', '1', '1', null, '0', '1', '147', '76', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '5', '10', '18', '1', '6');
-INSERT INTO `x2_user_biology` VALUES ('36', '谭济筠', '1', '1', '1', '364', '56', '90', '33', '93', '34', '112', '7', '0', '0', '1', '3', '1', '7', '29', '10', '13', '19', '818', '42', '6', null, '0', '0', '1', '鹤阳拳谭济筠，本名谭石窝,成名后将名字改为谭济筠. 性格率直冲动，後随咏春宗师梁赞学武，不单武艺有进，人亦变得成熟稳重，因缘际遇结识到革命党人，更不惜舍身匡扶，多番身陷险境亦义无反顾。', '17', '0', '1', '1', null, '0', '1', '87', '46', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '7', '5', '8', '1', '7');
-INSERT INTO `x2_user_biology` VALUES ('37', '黄澄可', '1', '1', '1', '468', '56', '78', '28', '77', '27', '111', '6', '0', '0', '1', '3', '1', '2', '23', '21', '16', '13', '874', '50', '14', null, '0', '0', '1', '九龙拳黄澄可，生性善良，宅心仁厚，天资聪敏，乐於助人。本为乡村赤脚小子，万事不强求，後离开家园往省城，面对人生种种考验与经历之馀，先後得一代宗师陆阿采、黄麒英、铁挢三等人指点武学，经历大大小小生死切磋搏斗，融会贯通各家之大成，终自创出一套刚柔并重，变化无穷的“九龙拳”。国难当前，不惜联同众虎，洒热血，抛头颅，发扬武学之“侠义精神”，成为一代英雄。', '20', '0', '1', '1', null, '0', '1', '103', '54', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '18', '14', '12', '1', '8');
-INSERT INTO `x2_user_biology` VALUES ('38', '郭云深', '1', '1', '1', '560', '57', '94', '34', '92', '33', '114', '6', '0', '0', '1', '3', '1', '12', '28', '29', '20', '15', '1068', '74', '4', '5', '0', '0', '1', '[1820——1901]刚直正义，好打抱不平，人称郭大侠，形意拳一代宗师。', '6', '0', '1', '1', null, '0', '1', '151', '78', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '11', '13', '10', '1', '9');
-INSERT INTO `x2_user_biology` VALUES ('39', '陈铁志', '1', '1', '1', '520', '60', '94', '33', '93', '32', '116', '6', '0', '0', '1', '3', '1', '8', '25', '20', '31', '29', '1129', '110', '5', '2,6,4', '0', '0', '1', '鹰爪王陈铁志，陈铁志又名陈长泰, 一身武功刚猛雄劲,出手疾如闪电，指劲雄浑，坚如铁石，故人称“铁指陈”。', '17', '0', '1', '1', null, '1', '1', '223', '114', '0', '0', '#274e13', '0', 'B', '0', '1', '1', '0', '10', '20', '15', '1', '10');
+INSERT INTO `x2_user_biology` VALUES ('33', '黄麒英', '1', '1', '1', '456', '53', '86', '57', '89', '58', '112', '0', '0', '0', '1', '3', '1', '4', '25', '19', '15', '18', '1086', '82', '7', '7,11,10', '0', '0', '1', '无影脚黄麒英，黄麒英功夫源自於金钩李胡子和洪熙官的传人陆阿采。', '7', '0', '1', '1', null, '0', '1', '167', '86', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '10', '14', '8', '1', '48', '0');
 
 -- ----------------------------
 -- Table structure for x2_user_biology_attribute
@@ -681,11 +643,11 @@ CREATE TABLE `x2_words` (
 -- ----------------------------
 -- Records of x2_words
 -- ----------------------------
-INSERT INTO `x2_words` VALUES ('1', '沧海百年', '1', null, null, '1', '低武世界', '该片讲述了台湾雾峰林家四代为代表的人，在台湾艰辛的拓荒、保家、抗争的历史故事。清代末年，朝政腐败，中国惨被列强瓜分，内忧外患，民不聊生。', null);
+INSERT INTO `x2_words` VALUES ('1', '武林', '1', null, null, '1', '低武世界', '历史近代人物。', null);
 INSERT INTO `x2_words` VALUES ('2', '大汉天下', '1', null, null, '1', '低武世界', null, null);
 INSERT INTO `x2_words` VALUES ('3', '隋唐英雄传', '1', null, null, '2', '低武世界', null, null);
-INSERT INTO `x2_words` VALUES ('4', '水浒', '1', null, null, '2', '低武世界', null, null);
-INSERT INTO `x2_words` VALUES ('5', '蝶舞天涯', '1', null, null, '3', '低武世界', '《吕布与貂蝉》（全名《三国群英会之吕布与貂蝉》，原定名《三国传说》。', null);
+INSERT INTO `x2_words` VALUES ('4', '群魔乱舞', '1', null, null, '2', '低武世界', '来源于小说，水浒传为世界背景，以天师教道统为主，人物实力较高。', null);
+INSERT INTO `x2_words` VALUES ('5', '蝶舞天涯', '1', null, null, '3', '低武世界', '来源于电视剧，吕布与貂蝉为主线人物，原定名《三国传说》。', null);
 INSERT INTO `x2_words` VALUES ('6', '寻情记', '1', null, null, '4', '低武世界', '《三官经》：《太上三元赐福赦罪解厄消灾延生保命妙经》也作《三官经》或《三官感应妙经》。三官，指天、地、水三官大帝。转诵此经至满千遍，大作踊跃；悔过愆尤，断恶修善,即能除无妄之灾，解有仇之愆；赐千祥之福，脱九厄之难，离三途之苦。', '《三官经》');
 INSERT INTO `x2_words` VALUES ('7', '鹿鼎记', '1', null, null, '5', '低武世界', null, null);
 INSERT INTO `x2_words` VALUES ('8', '倚天屠龙记', '2', null, null, '1', '古武世界', null, '《九阳真经》《九阴真经》');

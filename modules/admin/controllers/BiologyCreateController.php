@@ -17,6 +17,8 @@ use app\modules\admin\models\BiologyCharacter;
 use app\modules\admin\models\BiologyNature;
 use app\modules\admin\models\BiologyCreate;
 use app\modules\admin\models\UserWords;
+use app\modules\admin\models\UserBiology;
+use app\modules\admin\models\User;
 use app\libs\Method;
 
 
@@ -67,9 +69,18 @@ class BiologyCreateController extends ApiControl {
     {
       $data = Yii::$app->request->post('data');  
       $data = json_decode($data);
-      // var_dump($data);die;
       foreach($data as $v){
         if($v->_state=='modified'){ //改
+          
+          //修改用户生物境界
+          $usermodel = UserBiology::find()->where("createid=$v->id")->One();
+          $res = BiologyState:: updateState($usermodel->createid,$v->state,$usermodel->power,$usermodel->agile,$usermodel->intelligence);
+          $usermodel->state=$v->state;
+          $usermodel->power=$res['power'];
+          $usermodel->agile=$res['agile'];
+          $usermodel->intelligence=$res['intelligence'];
+          $usermodel->save();
+
           $model = BiologyCreate::find()->where("id=$v->id")->One();
           $model->name=$v->name;
           $model->biology=$v->biology;
@@ -104,8 +115,12 @@ class BiologyCreateController extends ApiControl {
       foreach($data as $v){
         // var_dump($v);die;
         if(isset($v->id)){
+          $biology =  BiologyCreate::find()->where(['id'=>$v->id])->One();
           //删除主键
-          BiologyCreate::deleteAll(['id'=>$v->id]);
+          BiologyCreate::deleteAll(['id'=>$biology->id]);
+          //删除主键
+          UserBiology::deleteAll(['createid'=>$biology->id]);
+
         }
       }
       echo true;
@@ -135,15 +150,47 @@ class BiologyCreateController extends ApiControl {
     // admin/biology-create/biology-rand
     public function actionBiologyRand()
     {
+      $userid =Yii::$app->request->post('userid',1);
       $type = Yii::$app->request->post('type',1); // 创造类型    1普通 2特殊 3NPC 4不可用
       // 用户 随机获取一个生物（默认管理员--权限为已通世界）
       $biology = UserWords :: BiologyRand($type)[0]; //默认管理员-数量1 --返回数组
       if(!empty($biology)){
         //随机生物属性处理
         $biology = UserWords ::BiologyExtendRand($biology);
+        $scoreGrade = User :: getValueList($biology['score']);// 根据评分修改品质
+        $biology['scoreGrade']  =$scoreGrade;
         Yii::$app->db->createCommand()->insert('x2_biology_create',$biology)->execute();//创造生物
         $biology['createid']=Yii::$app->db->getLastInsertID(); // 获取创造id
+
+        //  修改境界--属性
+        // $biologystate = BiologyState::randState($userid); // 取出随机的境界
+        $biologystate=1;  //创造生物默认境界为1 凡人 不做任何属性计算
+
+        $res = BiologyState:: updateState($biology['createid'],$biologystate,$biology['power'],$biology['agile'],$biology['intelligence']);
+        $biology['power']= $res['power'];
+        $biology['agile']= $res['agile'];
+        $biology['intelligence']= $res['intelligence'];
+        $biology['state']= $biologystate;
+        $biology['scoreGrade']  =$scoreGrade;
+        // 固定 属性刷新
+        $biology = User::biolobyChange($biology);
         Yii::$app->db->createCommand()->insert('x2_user_biology',$biology)->execute(); //添加到用户
+
+
+
+        // $biology['power']= $res['power'];
+        // $biology['agile']= $res['agile'];
+        // $biology['intelligencestate']= $res['intelligence'];
+        // // // 固定 属性刷新
+        // $biology = User::biolobyChange($biology);
+        // $biology['scoreGrade']  =$scoreGrade;
+        
+                //  $result = UserBiology::updateAll($res,['id'=>$userbiologyid]);
+        // var_dump($biology);die;
+  
+
+
+
       }
 
       // var_dump($biology);die;

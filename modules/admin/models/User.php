@@ -1,5 +1,5 @@
 <?php
-
+// 用户表
 namespace app\modules\admin\models;
 use app\modules\admin\models\Biology;
 use app\modules\admin\models\UserHandbook;
@@ -148,29 +148,31 @@ class User extends ActiveRecord
         $wuXing =  intval($biology['wuXing']);
         $grade =  intval($biology['grade']);
         $score =  intval($biology['score']);
-        $reiki =  intval(  intval($biology['reiki'])*$grade + (($grade-1)*($power+$agile+$intelligence)/$grade )*0.2);
-      
-        $biology['shengMing'] = 100 + $grade*100+$power*10+$agile*2+$intelligence*2; 
-        $biology['moFa'] = intval(50+$grade*2+($power/$grade)*0.05+($agile/$grade)*0.05+($intelligence/$grade)*0.2); 
-        
-        $biology['gongJi'] =$grade*10 + intval(($power*0.1+$agile*0.5+$intelligence*0.1+$reiki*2)*1.2); 
-        $biology['huJia'] = $grade+intval(($power*0.1+$agile*0.3+$intelligence*0.1+$reiki*2)*0.5); 
 
-        $biology['faGong'] = $grade*10 + intval(($power*0.1+$agile*0.1+$intelligence*0.5+$reiki*2)*1.2); 
-        $biology['fakang'] = $grade+intval(($power*0.1+$agile*0.1+$intelligence*0.3+$reiki*2)*0.5); 
+        // $reiki =  intval(  intval($biology['reiki'])*$grade + (($grade-1)*($power+$agile+$intelligence)/$grade )*0.2);
+        $reiki = intval($biology['reiki']);
+
+        $biology['shengMing'] = 100 + $grade*100+$power*10+$agile*2+$intelligence*2; 
+        $biology['moFa'] = intval(50+$grade+$power*0.02+$agile*0.02+$intelligence*0.1); 
+        
+        $biology['gongJi'] =$grade*10 + intval(($power*0.2+$agile+$intelligence*0.2)*1.2)+$reiki*2; 
+        $biology['huJia'] = $grade+intval(($power*0.2+$agile+$intelligence*0.2)*0.3)+$reiki*2; 
+
+        $biology['faGong'] = $grade*10 + intval(($power*0.2+$agile*0.2+$intelligence)*1.2)+$reiki*2; 
+        $biology['fakang'] = $grade+intval(($power*0.2+$agile*0.2+$intelligence)*0.3)+$reiki*2; 
         $biology['reiki'] =  $reiki;
 
         $biology['jianShang'] = 0;
         $biology['zhenShang'] = 0;
-        $biology['shanbi'] = intval(($reiki/$grade+$lucky/2)*0.2);
+        $biology['shanbi'] = intval($lucky*0.1);
         $biology['suDu'] = intval(100+$agile*0.3+$reiki*0.3);
 
         $skillscore= !empty($biology['skill']) ? count(explode(',',$biology['skill']))*50 : 0; // 技能个数战力
 
         $biology['special'] =$biology['shengMing']+$biology['moFa']+$biology['gongJi']+$biology['huJia']+$biology['faGong']+$biology['fakang']+$biology['reiki']+$biology['jianShang']+$biology['zhenShang']+$biology['shanbi']+$biology['suDu']+$skillscore; //战力
-        $biology['scoreGrade'] = User :: getValueList($score);// 根据评分修改品质
-        $biology['jingBi'] = $score*2+$grade+$biology['state']*2; 
-        $biology['jingYan'] = $score+$grade+$biology['state']*3; 
+        // $biology['scoreGrade'] = User :: getValueList($score);// 根据评分修改品质--不定义品质
+        $biology['jingBi'] = $score*2+$grade*2+$biology['state']*10; 
+        $biology['jingYan'] = $score+$grade*2+$biology['state']*5; 
         return $biology;
     }
 

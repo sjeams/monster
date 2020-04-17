@@ -1,5 +1,5 @@
 <?php
-
+// 技能
 namespace app\modules\admin\models;
 
 use yii\db\ActiveRecord;

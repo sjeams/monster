@@ -1,5 +1,5 @@
 <?php
-// 境界
+// 创造生物--原始属性
 namespace app\modules\admin\models;
 use yii\db\ActiveRecord;
 

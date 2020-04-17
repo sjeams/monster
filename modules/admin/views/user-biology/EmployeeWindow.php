@@ -17,6 +17,8 @@
 </style>
 <form id="form1" method="post">
     <input name="id" class="mini-hidden" />
+    <input name="createid" class="mini-hidden" />
+    <!-- <input name="score" class="mini-hidden" /> -->
     <div style="padding-left:11px;padding-bottom:5px;">
         <table>
             <tr>
@@ -98,7 +100,19 @@
                 </td>
             </tr>  
             <tr>
-                <td >力量min</td>
+                <td >经验条</td>
+                <td colspan="3">   
+                <div id="percent" class="mini-progressbar"  name="percent" style="width: 100%;" value="0"></div>
+                    <!-- <a href="#" class="btn btn-info" onclick="upImage();">   
+                        <img src="" id ="infor-picture" alt="形象" style="width:100%;height:160px">
+                        <input name="picture" class="picture mini-textbox" style="display:none"  placeholder="图片地址">
+                    </a> -->
+                </td>
+                <td >经验值</td>
+                <td>    
+                    <input name="experience"  class="mini-spinner" value="0" minValue="0" maxValue="3015000" />
+                </td>
+                <!-- <td >力量min</td>
                 <td >    
                     <input name="minPower"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
@@ -109,13 +123,29 @@
                 <td >智力min</td>
                 <td >    
                     <input name="minIntelligence"  class="mini-spinner" value="1" minValue="1" maxValue="100000" />
-                </td>
+                </td> -->
             </tr>  
+            
+            <tr>
+                <td >自由属性</td>
+                <td >    
+                    <input name="maxNature" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
+                </td>
+                <td >潜能</td>
+                <td >    
+                    <input name="qianNeng" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
+                </td>
+                <td >触发</td>
+                <td >    
+                    <input name="chuFa" class="mini-textbox"  />
+                </td>
+            </tr> 
 
             <tr>
                 <td >等级</td>
                 <td >    
-                    <input name="grade" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
+                    <!-- <input name="grade" class="mini-spinner" value="1" minValue="1" maxValue="100000" /> -->
+                    <input name="grade" class="mini-textbox readonly" readonly  />
                 </td>
                 <td >元神</td>
                 <td >    
@@ -278,22 +308,32 @@
     var Sex = [{ id: 1, text: '男' }, { id: 2, text: '女'},{ id: 3, text: '未知'}];  
     var form = new mini.Form("form1");
 
+
     var extend =['reiki','lucky','state','power','agile','intelligence','character','grade','jinJie','wuXing','skill']
     for(var i=0;i<extend.length;i++){   
             mini.getbyName(extend[i]).on("valuechanged", function () {
             // mini.getbyName("shengMing").setValue(123); 
-            extenCount();
+            // 修改境界
+            updateState();
+            extenCount(); // 初始化属性
+            // updateeExperience(); //初始化经验条
         });
     } 
-
+    //经验条变化
+    mini.getbyName('experience').on("valuechanged", function () {
+        updateExperience(); //初始化经验条
+    });
+ 
     // 修改弹窗--请求修改
     function SaveData() {
         var o = form.getData();            
         form.validate();
         if (form.isValid() == false) return;
+      
         var json = mini.encode([o]);
+        // alert( json);
         $.ajax({
-            url: "/admin/api/biology-update",
+            url: "/admin/user-biology/biology-update",
             type: 'post',
             data: { data: json },
             cache: false,
@@ -313,7 +353,7 @@
             //跨页面传递的数据对象，克隆后才可以安全使用
             data = mini.clone(data);
             $.ajax({
-                url: "/admin/api/biology-updateone?id="+data.id,
+                url: "/admin/user-biology/biology-updateone?id="+data.id,
                 cache: false,
                 success: function (text) {
                     var o = mini.decode(text);
@@ -335,6 +375,7 @@
             if (confirm("数据被修改了，是否先保存？")) {
                 SaveData();
             }else{
+                updateStatefalse(); // 取消境界修改
                 return true;
             }
         }
@@ -345,12 +386,14 @@
         SaveData();
     }
     function onCancel(e) {
+        updateStatefalse(); // 取消境界修改
         CloseWindow("cancel");
+
     }
     ////////////////////////////////// 初始化数据
     function onDeptChanged(e) {  
-
-            extenCount(); //初始化属性
+            //修改经验条
+            updateExperience();
             // 初始化图片--形象
             var picture = mini.getbyName("picture");
             picture = picture.getValue();
@@ -376,6 +419,8 @@
                     ["#600", "#783f04", "#7f6000", "#274e13", "#0c343d", "#073763", "#20124d", "#4c1130"]
                 ]
             });
+     
+            extenCount(); //初始化属性
     }
 
     // 颜色选择器
@@ -387,6 +432,93 @@
 
     })
 
+    //取消境界修改
+    function updateStatefalse() {
+        var createid = mini.getbyName("createid").getValue();
+        $.ajax({
+                url: "/admin/api/state-false",
+                data:{
+                    createid:createid,
+                    },
+                type: 'post',
+                success: function (text) {
+                    extenCount();
+                }
+            });
+
+    }
+
+    //修改境界
+    function updateState() {
+        var createid = mini.getbyName("createid").getValue();
+        var state = mini.getbyName("state").getValue();
+        var power = mini.getbyName("power").getValue();
+        var agile = mini.getbyName("agile").getValue();
+        var intelligence = mini.getbyName("intelligence").getValue();
+        $.ajax({
+            url: "/admin/api/state-change",
+            data:{
+                createid:createid,
+                state:state,
+                power:power,
+                agile:agile,
+                intelligence:intelligence,
+                },
+            type: 'post',
+            success: function (text) {
+                var statenum = mini.decode(text);
+                mini.getbyName("power").setValue(statenum.power);
+                mini.getbyName("agile").setValue(statenum.agile);
+                mini.getbyName("intelligence").setValue(statenum.intelligence);
+                extenCount();
+            }
+        });
+
+    }
+
+    //修改经验条
+    function updateExperience() {
+        var createid = mini.getbyName("createid").getValue();
+        var power = mini.getbyName("power").getValue();
+        var agile = mini.getbyName("agile").getValue();
+        var intelligence = mini.getbyName("intelligence").getValue();
+        var maxNature = mini.getbyName("maxNature").getValue();
+        var wuXing = mini.getbyName("wuXing").getValue();
+        var reiki = mini.getbyName("reiki").getValue();
+         
+        var experience = mini.getbyName("experience").getValue();
+        var grade = mini.getbyName("grade").getValue();
+        $.ajax({
+            url: "/admin/api/experience",
+            data:{
+                createid:createid,
+                power:power,
+                agile:agile,
+                intelligence:intelligence,
+                maxNature:maxNature,
+                wuXing:wuXing,
+                reiki:reiki,
+                experience:experience,
+                grade:grade
+                },
+            type: 'post',
+            success: function (text) {
+                var exp = mini.decode(text);
+                mini.getbyName("power").setValue(exp.power);
+                mini.getbyName("agile").setValue(exp.agile);
+                mini.getbyName("intelligence").setValue(exp.intelligence);
+                mini.getbyName("maxNature").setValue(exp.maxNature);
+                mini.getbyName("reiki").setValue(exp.reiki);
+                
+
+                mini.getbyName("grade").setValue(exp.newGrade);
+                mini.getbyName("experience").setValue(experience);
+                mini.get("percent").setValue(exp.percent);
+                extenCount();
+            }
+        });
+
+    }
 </script>
 <script>
     //实例化编辑器
@@ -440,90 +572,63 @@
 
 
 <script>
-
     // var extend =['lucky','state','power','agile','intelligence','maxNature','qianNeng','character','grade','jinJie','wuXing','skill']
     // 生物属性计算
     function extenCount(){
+
         // 获取表单数据
         var o = form.getData(); 
-        // 处理境界
-        var inter = 0;  //境界增加属性值
         var state= parseInt(o.state);
-        if(state>1){   var inter = inter+200;  }
-        if(state>2){   var inter = inter+300;  }
-        if(state>3){   var inter = inter+500;  }
-        if(state>4){   var inter = inter+800;  }
-        if(state>5){   var inter = inter+1000;  }
-        if(state>6){   var inter = inter+1500;  }
-        if(state>7){   var inter = inter+2000;  }
-        if(state>8){   var inter = inter+2500;  }
-        if(state>9){   var inter = inter+3000;  }
-        if(state>10){   var inter = inter+4000;  }
-        if(state>11){   var inter = inter+6000;  }
-        if(state>12){   var inter = inter+10000;  }
-
-
         var skill =o.skill; //技能
-        var skillleng =  skill.split(',').length;
-        // console.log(skillleng);
-        // console.log(skillleng.length);
         var reiki =parseInt(o.reiki); //悟性
         var wuXing =parseInt(o.wuXing); //悟性
         var grade =parseInt(o.grade); //等级
         var lucky =parseInt(o.lucky); //幸运
 
-        var power =parseInt(o.power)*(1+wuXing/10)*grade+inter;  //力
-        var agile =parseInt(o.agile)*(1+wuXing/10)*grade+inter;  //敏
-        var intelligence =parseInt(o.intelligence)*(1+wuXing/10)*grade+inter; //智
+        var power =parseInt(o.power);  //力
+        var agile =parseInt(o.agile);  //敏
+        var state =parseInt(o.state);  //敏
+        var intelligence =parseInt(o.intelligence); //智
 
-        var  shengMing = parseInt(100+grade*100+power*10+agile*3+intelligence*3+reiki*10); //等级+力量 
-        var  moFa =parseInt(20+grade*1+intelligence*0.2+reiki*0.15); // 等级+智力
-        var  gongJi = parseInt((power*0.1+agile*0.3+intelligence*0.1+reiki*0.15)*1.2);
-        var  huJia = parseInt(power*0.1+agile*0.3+intelligence*0.1+reiki*0.15);
-        var  faGong = parseInt((power*0.1+agile*0.1+intelligence*0.3+reiki*0.15)*1.2);
-        var  fakang = parseInt(power*0.1+agile*0.1+intelligence*0.3+reiki*0.15);
-
-        var  jianShang = parseInt(reiki*0.3+reiki*lucky*(1+wuXing/10)*0.1);
-        var  zhenShang = parseInt(reiki*lucky*0.15+reiki*0.5);
-        var  shanbi = parseInt((lucky*0.25+(lucky*10+reiki+grade*10)*0.0075));  // 最大值为1000
-        var  suDu = parseInt(100+agile*0.25+reiki*0.3); //速度
-        // var  baoji = 10;
-        // var  baojilv = 10;
-        // var  danDu = 10;
-
-        var  special = parseInt(shengMing+moFa+gongJi+huJia+faGong+fakang+jianShang+zhenShang+shanbi+suDu);
-        var  score = parseInt(wuXing*2+skillleng*10+parseInt(o.power)+parseInt(o.agile)+parseInt(o.intelligence));  //属性最大值为100/10 ,评分满值为350
-        if(score>1){   var scoreGrade = 'D';  }
-        if(score>70){   var scoreGrade = 'C';  }
-        if(score>90){   var scoreGrade = 'B';  }
-        if(score>110){   var scoreGrade = 'A';  }
-        if(score>130){   var scoreGrade = 'S';  }
-        if(score>150){   var scoreGrade = 'SS';  }
-        if(score>180){   var scoreGrade = 'SSS';  }
-        if(score>210){   var scoreGrade = '传说';  }
-        if(score>240){   var scoreGrade = '神话';  }
-
-        var  jingBi =  score*2+grade+state*2;
-        var  jingYan = score+grade+state*3;
-        
-        mini.getbyName("shengMing").setValue(shengMing); 
-        mini.getbyName("moFa").setValue(moFa); 
-        mini.getbyName("gongJi").setValue(gongJi); 
-        mini.getbyName("huJia").setValue(huJia); 
-        mini.getbyName("faGong").setValue(faGong); 
-        mini.getbyName("fakang").setValue(fakang); 
-        mini.getbyName("faGong").setValue(faGong); 
-        mini.getbyName("fakang").setValue(fakang); 
-        mini.getbyName("jianShang").setValue(jianShang); 
-        mini.getbyName("zhenShang").setValue(zhenShang); 
-        mini.getbyName("shanbi").setValue(shanbi); 
-        mini.getbyName("suDu").setValue(suDu); 
-        mini.getbyName("special").setValue(special); 
-        mini.getbyName("score").setValue(score); 
-        mini.getbyName("scoreGrade").setValue(scoreGrade); 
-        mini.getbyName("jingBi").setValue(jingBi); 
-        mini.getbyName("jingYan").setValue(jingYan); 
-
+        var score =parseInt(o.score); //智
+        $.ajax({
+            url: "/admin/api/brush-biology",
+            data:{
+                score:score,
+                skill:skill,
+                state:state,
+                reiki:reiki,
+                wuXing:wuXing,
+                grade:grade,
+                grade:grade,
+                lucky:lucky,
+                power:power,
+                agile:agile,
+                intelligence:intelligence,
+                },
+            type: 'post',
+            success: function (text) {
+                var biology = mini.decode(text);
+                // console.log(biology);
+                mini.getbyName("shengMing").setValue(biology.shengMing); 
+                mini.getbyName("moFa").setValue(biology.moFa); 
+                mini.getbyName("gongJi").setValue(biology.gongJi); 
+                mini.getbyName("huJia").setValue(biology.huJia); 
+                mini.getbyName("faGong").setValue(biology.faGong); 
+                mini.getbyName("fakang").setValue(biology.fakang); 
+                mini.getbyName("faGong").setValue(biology.faGong); 
+                mini.getbyName("fakang").setValue(biology.fakang); 
+                mini.getbyName("jianShang").setValue(biology.jianShang); 
+                mini.getbyName("zhenShang").setValue(biology.zhenShang); 
+                mini.getbyName("shanbi").setValue(biology.shanbi); 
+                mini.getbyName("suDu").setValue(biology.suDu); 
+                mini.getbyName("special").setValue(biology.special); 
+                // mini.getbyName("score").setValue(biology.score); 
+                // mini.getbyName("scoreGrade").setValue(biology.scoreGrade); 
+                mini.getbyName("jingBi").setValue(biology.jingBi); 
+                mini.getbyName("jingYan").setValue(biology.jingYan); 
+            }
+        });
     }
 </script>
 
@@ -565,15 +670,14 @@
                     var data = {};
                     data.id = ids.join(",");
                     data.text = texts.join(",");
-                    console.log(data.id);
+                    // console.log(data.id);
                     // console.log(data.text);
 
                     buttonEdit.setValue(data.id);
                     buttonEdit.setText(data.id);
-
                     extenCount();//选中技能触发属性改变
-
                     // var newRow = {skill: data.text};
+                    // e.source.value=data.id;
                     win.focus();
                 }
             }

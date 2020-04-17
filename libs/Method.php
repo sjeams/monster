@@ -683,6 +683,38 @@ class Method
       }
 
 
+
+
+
+  //物品等级
+  public static function getRandGrade($proArr) { 
+    // $proArr=array('传说'=>1,'SSS'=>10,'SS'=>50,'S'=>100,'A'=>200,'B'=>500,'C'=>1000);//定义物品等级
+    $result = ''; 
+    //概率数组的总概率精度 
+    $proSum = array_sum($proArr); 
+    //概率数组循环 
+    foreach ($proArr as $key => $proCur) { 
+        $randNum = mt_rand(1, $proSum);             //抽取随机数
+        // var_dump($randNum);
+        if ($randNum <= $proCur) { 
+            $result = $key;                         //得出结果
+            break; 
+        } else { 
+            $proSum -= $proCur;                     
+        } 
+    } 
+    unset ($proArr); 
+    return $result; 
+  }
+
+
+
+
+
+
+
+
+
     //  总属性最大值为210   --暂时没用
     //划分随机数  total总值  arrayMax最大值数组 arrayMin 最小值数组 wordtype世界难度+每个难度属性区间上升5,difficult加难度的属性1
     // public static function divideRand($total = 70,$arrayMax = array(10,20,30),$wordId=1){

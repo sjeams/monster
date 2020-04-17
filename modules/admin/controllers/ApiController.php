@@ -20,6 +20,8 @@ use app\modules\admin\models\BiologyCharacter;
 use app\modules\admin\models\BiologyNature;
 use app\modules\admin\models\BiologyCreate;
 use app\modules\admin\models\User;
+use app\modules\admin\models\UserBiology;
+
 
 class ApiController extends ApiControl {
 
@@ -253,28 +255,121 @@ class ApiController extends ApiControl {
       echo json_encode($data);
     }
 
-    // 经验修改与升级
+    
+
+    // 取消操作 境界
+    public function actionStateFalse(){
+      $createid = intval(Yii::$app->request->post('createid'));
+      $create = BiologyCreate::find()->where(['id'=>$createid])->one(); //获取name等于test的模型
+      $usercreate = UserBiology::find()->where(['createid'=>$createid])->one(); //获取name等于test的模型
+      $create->state =$usercreate->state;
+      $create->save();   //保存
+
+    }
+
+  // 境界提升--获得属性点 --修改基础属性
+    public function actionStateChange(){
+      $createid = intval(Yii::$app->request->post('createid'));
+      $state = intval(Yii::$app->request->post('state'));
+      $power = intval(Yii::$app->request->post('power'));
+      $agile = intval(Yii::$app->request->post('agile'));
+      $intelligence = intval(Yii::$app->request->post('intelligence'));
+      //修改创造的生物境界
+      $res = BiologyState:: updateState($createid,$state,$power,$agile,$intelligence);
+
+      // //修改创造的生物境界
+      // $create = BiologyCreate::find()->where(['id'=>$createid])->one(); //获取name等于test的模型
+      // $createstate =$create->state; //获取境界
+      // $create->state = $state; 
+      // $create->save();   //保存
+      // // var_dump($createstate);
+      // // var_dump($state);die;
+      // $newsum = BiologyState::getStateValue($state);   //新境界属性--累加
+      // $oldsum = BiologyState::getStateValue($createstate); //当前境界属性
+      // $statenum = $newsum-$oldsum;  // 当前相差属性，可能为负数
+      // // var_dump($statenum);die;
+      // $res['power'] = $statenum +$power;
+      // $res['agile'] = $statenum +$agile;
+      // $res['intelligence'] = $statenum +$intelligence;
+  
+
+      // var_dump($res);die;
+      echo json_encode($res);
+    }
+
+
+
+
+
+
+
+
+
+    // 经验修改与升级--获得属性点 --修改基础属性
     public function actionExperience(){
-      $exp = Yii::$app->request->post('exp');
-      $grade=1;
-      $exp=160;
+      $createid = Yii::$app->request->post('createid');
+      $power = Yii::$app->request->post('power');
+      $agile = Yii::$app->request->post('agile');
+      $intelligence = Yii::$app->request->post('intelligence');
+
+      $exp = Yii::$app->request->post('experience');
+      $grade = Yii::$app->request->post('grade');
+      $maxNature = Yii::$app->request->post('maxNature');
+      $wuXing = Yii::$app->request->post('wuXing');
+      $reiki = Yii::$app->request->post('reiki');
+      // $grade=1;
+      // $exp=160;
       // ，每级叠加经验150
+      // var_dump($exp);die;
       $sum=0;
-      for($i=1;$i<=130;$i++) {
-          $sum+= $i*150;
+      for($i=1;$i<=200;$i++) {  // 最多200级
+          $sum+= $i*150; 
           if($sum>=$exp){
-            $res['newGrade'] =$i;
-            $res['newExp'] = $i*150;
-            $res['nowExp']= $sum-$exp;
+            $res['newGrade'] =$i;   // 当前等级
+            $res['newExp'] = $i*150; // 当前晋级总共需要经验
+            $res['nowExp']= $sum-$exp; // 晋级需要经验
+            $res['lessExp']=$res['newExp']- $res['nowExp']; //晋级当前经验
+            $res['percent']= round($res['lessExp']/$res['newExp']*100,2); //经验百分比
+            $res['maxNature'] = ($i - $grade)*$wuXing+$maxNature; // 获得自由属性点
+ 
+            if($res['lessExp']==$res['newExp']&&$i<200){  // 刚好满级
+              $i=$i+1; //等级+1
+              $res['newGrade'] =$i;   // 当前等级
+              $res['newExp'] = $i*150; // 当前晋级总共需要经验
+              $res['nowExp'] = $i*150; //晋级当前经验
+              $res['lessExp']=$res['newExp']- $res['nowExp']; //晋级当前经验
+              $res['percent'] =0;   //经验百分比
+              $res['maxNature'] = ($i - $grade)*$wuXing+$maxNature; // 获得自由属性点
+            }
+            // 白值属性计算
+            $create = BiologyCreate::find()->where("id=$createid")->One();
+            // var_dump($create);die;
+            $res['power'] = ($i - $grade)*$create->power +$power;
+            $res['agile'] =($i - $grade)*$create->agile +$agile;
+            $res['intelligence'] =($i - $grade)*$create->intelligence +$intelligence;
+            $res['reiki'] =  intval( ($create->reiki*($i - $grade) + ($i - $grade)*( $create->power + $create->agile + $create->intelligence))*0.1)+$reiki;//灵气
             break;
           }
       }
-      echo "等级 : ".$res['newGrade'];
-      echo "<br>";
-      echo "exp : ".$res['nowExp']."/".$res['newExp'];
-      echo $res;
+
+      // echo "等级 : ".$res['newGrade'];
+      // echo "<br>";
+      // echo "exp : ".$res['nowExp']."/".$res['newExp'];
+      // echo $res;
       // var_dump($res);die;
+      echo json_encode($res);
+
     }
+
+    // 属性刷新--固定
+    // admin/api/biology-change
+    public function actionBiolobyChange(){
+      $biology = Yii::$app->request->post('biology');
+      $biology = User::biolobyChange($biology);
+      echo json_encode($biology);
+    }
+
+
 
     // 随机生物 -- 白值属性
     // admin/api/biology-rand
@@ -321,5 +416,21 @@ class ApiController extends ApiControl {
       // var_dump( $biology);die;
       echo json_encode($biology);
     }
+
+
+    // 刷新生物固定属性
+    public function actionBrushBiology(){
+
+      $biology = Yii::$app->request->post();
+
+      $skill  = $biology['skill'];
+      $newnum = !empty($skill) ? count(explode(',',$skill)) : 0; // 技能个数
+      // 基本评分 参考 生成生物 不随属性改变
+      // $biology['score'] =  $newnum*10 + $biology['power']+  $biology['agile']+ $biology['intelligence'] ;  //属性最大值为80/10 ,评分满值为340
+      $biology = User::biolobyChange($biology);
+      // $biology['scoreGrade'] = User :: getValueList($score);// 根据评分修改品质--不定义品质
+      echo json_encode($biology);
+    }
+ 
 
 }
