@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50711
 File Encoding         : 65001
 
-Date: 2020-04-17 18:50:27
+Date: 2020-04-20 18:44:06
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -29,47 +29,48 @@ CREATE TABLE `x2_admin_init` (
   `createTime` varchar(255) DEFAULT NULL,
   `update` varchar(255) NOT NULL DEFAULT ' <input type="button" value="编辑节点" onclick="onEditNode()"/>' COMMENT '修改',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_admin_init
 -- ----------------------------
-INSERT INTO `x2_admin_init` VALUES ('1', '0', 'menuInfo', '后台管理', '', '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('2', '1', 'currency', '生物系统', '测试s', '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('3', '1', 'component', '组件管理', '', '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('4', '1', 'other', '其它管理', '', '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('5', '2', '', '生物模板', '', '/admin/biology/index', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('6', '2', '', '生物创造', '', '/admin/biology-create/index', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('40', '0', 'app', 'APP管理', '', '', '1586831917', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('41', '0', 'user', '用户管理', '', '', '1586831917', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('8', '2', '', '生物管理', '', '/admin/user-biology/index', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('9', '2', '', '世界管理', '', '/layuimini/page/setting.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('10', '2', '', '技能管理', '反倒是', '/layuimini/page/table.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('48', '1', '', '物品管理', '', '', '1586831917', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('49', '48', '', '武器管理', '', '', '1586831917', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('50', '2', '', '性格管理 ', '', '', '1586831917', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('14', '2', '', '登录模板', '', '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('15', '14', '', '登录-1', '', '/layuimini/page/login-1.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('16', '14', '', '登录-2', null, '/layuimini/page/login-2.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('17', '2', '', '异常页面', null, '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('18', '2', '', '404页面', '', '/layuimini/page/404.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('19', '2', '', '其它界面', null, '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('20', '19', '', '按钮示例', null, '/layuimini/page/button.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('21', '19', '', '弹出层', null, '/layuimini/page/layer.html\"', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('22', '3', '', '组件管理', null, '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('23', '22', '', '图标列表', null, '/layuimini/page/icon.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('24', '22', '', '图标选择', null, '/layuimini/page/icon-picker.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('25', '22', '', '颜色选择', null, '/layuimini/page/color-select.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('26', '22', '', '下拉选择', null, '/layuimini/page/table-select.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('27', '22', '', '文件上传', '', '/layuimini/page/upload.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('28', '22', '', '富文本编辑器', '', '/layuimini/page/editor.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('29', '4', '', '多级菜单', null, '', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('30', '29', '', '按钮1', null, '/layuimini/page/button.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('31', '29', '', '按钮2', null, '/layuimini/page/button.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('32', '29', '', '按钮3', null, '/layuimini/page/button.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('33', '29', '', '表单4', null, '/layuimini/page/form.html', '1586831917', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('45', '0', 'order', '商城', '', '', '1586831917', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('43', '41', 'cc', 'cc', '', 'cc', '1586831917', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('1', '0', 'menuInfo', '后台管理', '', '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('2', '1', 'currency', '生物系统', '测试s', '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('3', '1', 'component', '组件管理', '', '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('4', '1', 'other', '其它管理', '', '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('5', '2', '', '生物模板', '', '/admin/biology/index', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('6', '2', '', '生物创造', '', '/admin/biology-create/index', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('40', '0', 'app', 'APP管理', '', '', '1587370742', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('41', '0', 'user', '用户管理', '', '', '1587370742', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('8', '2', '', '生物管理', '', '/admin/user-biology/index', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('9', '2', '', '世界管理', '', '/layuimini/page/setting.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('10', '2', '', '技能管理', '反倒是', '/layuimini/page/table.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('48', '1', '', '物品管理', '', '', '1587370742', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('49', '48', '', '武器管理', '', '/admin/user-biology/index', '1587370742', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('50', '2', '', '性格管理 ', '', '', '1587370742', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('51', '48', 'danyao', '丹药管理', '', '/admin/user-biology/index', '1587370742', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('14', '2', '', '登录模板', '', '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('15', '14', '', '登录-1', '', '/layuimini/page/login-1.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('16', '14', '', '登录-2', null, '/layuimini/page/login-2.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('17', '2', '', '异常页面', null, '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('18', '2', '', '404页面', '', '/layuimini/page/404.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('19', '2', '', '其它界面', null, '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('20', '19', '', '按钮示例', null, '/layuimini/page/button.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('21', '19', '', '弹出层', null, '/layuimini/page/layer.html\"', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('22', '3', '', '组件管理', null, '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('23', '22', '', '图标列表', null, '/layuimini/page/icon.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('24', '22', '', '图标选择', null, '/layuimini/page/icon-picker.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('25', '22', '', '颜色选择', null, '/layuimini/page/color-select.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('26', '22', '', '下拉选择', null, '/layuimini/page/table-select.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('27', '22', '', '文件上传', '', '/layuimini/page/upload.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('28', '22', '', '富文本编辑器', '', '/layuimini/page/editor.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('29', '4', '', '多级菜单', null, '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('30', '29', '', '按钮1', null, '/layuimini/page/button.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('31', '29', '', '按钮2', null, '/layuimini/page/button.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('32', '29', '', '按钮3', null, '/layuimini/page/button.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('33', '29', '', '表单4', null, '/layuimini/page/form.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('45', '0', 'order', '商城', '', '', '1587370742', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('43', '41', 'cc', 'cc', '', 'cc', '1587370742', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
 
 -- ----------------------------
 -- Table structure for x2_biology
@@ -209,7 +210,7 @@ INSERT INTO `x2_biology_character` VALUES ('2', '稳重', '生命+10%', '10');
 -- ----------------------------
 DROP TABLE IF EXISTS `x2_biology_create`;
 CREATE TABLE `x2_biology_create` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '生物创造表',
   `name` varchar(25) DEFAULT NULL COMMENT '生物名称',
   `biology` tinyint(3) DEFAULT '1' COMMENT '种族(人鬼妖神魔异) 0未知',
   `state` int(3) DEFAULT '1' COMMENT '生物境界',
@@ -262,20 +263,21 @@ CREATE TABLE `x2_biology_create` (
   `minAgile` int(11) DEFAULT '10',
   `minIntelligence` int(11) DEFAULT '10' COMMENT '最小力量',
   `userid` int(11) DEFAULT '1' COMMENT '模型创建所属人 1 管理员',
+  `xiXue` int(11) DEFAULT '0' COMMENT '吸血',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_biology_create
 -- ----------------------------
-INSERT INTO `x2_biology_create` VALUES ('48', '黄麒英', '1', '2', '1', '456', '53', '86', '57', '89', '58', '112', '0', '0', '0', '1', '3', '1', '4', '25', '19', '15', '18', '1086', '82', '7', '7,11,10', '0', '0', '1', '无影脚黄麒英，黄麒英功夫源自於金钩李胡子和洪熙官的传人陆阿采。', '7', '0', '1', '1', null, '0', '1', '167', '86', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '10', '14', '8', '1');
+INSERT INTO `x2_biology_create` VALUES ('48', '黄麒英', '1', '2', '1', '456', '53', '86', '57', '89', '58', '112', '0', '0', '0', '1', '3', '1', '4', '25', '19', '15', '18', '1086', '82', '7', '7,11,10', '0', '0', '1', '无影脚黄麒英，黄麒英功夫源自於金钩李胡子和洪熙官的传人陆阿采。', '7', '0', '1', '1', null, '0', '1', '167', '86', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '10', '14', '8', '1', '0');
 
 -- ----------------------------
 -- Table structure for x2_biology_godhood
 -- ----------------------------
 DROP TABLE IF EXISTS `x2_biology_godhood`;
 CREATE TABLE `x2_biology_godhood` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL COMMENT '缘分（神格）',
   `godName` varchar(25) DEFAULT NULL COMMENT '神格',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -290,7 +292,7 @@ INSERT INTO `x2_biology_godhood` VALUES ('1', '盘古');
 -- ----------------------------
 DROP TABLE IF EXISTS `x2_biology_jiban`;
 CREATE TABLE `x2_biology_jiban` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '羁绊',
   `name` varchar(25) DEFAULT NULL,
   `point` varchar(255) DEFAULT NULL,
   `value` int(11) DEFAULT NULL COMMENT '羁绊值',
@@ -323,44 +325,48 @@ INSERT INTO `x2_biology_jiban` VALUES ('13', '', null, null, null, null, null, n
 -- ----------------------------
 DROP TABLE IF EXISTS `x2_biology_nature`;
 CREATE TABLE `x2_biology_nature` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '叠加属性表（绑定武器等加成属性）',
   `name` varchar(25) DEFAULT NULL,
   `point` varchar(255) DEFAULT NULL,
   `value` varchar(255) DEFAULT NULL,
   `describe` varchar(255) DEFAULT NULL COMMENT '描述',
+  `wuqiValue` int(11) DEFAULT '0' COMMENT '武器叠加最大属性',
+  `danyaoValue` int(11) DEFAULT '0' COMMENT '武器叠加最大属性   值*百分比*等级/境界 1级约0.05 进一取整',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_biology_nature
 -- ----------------------------
-INSERT INTO `x2_biology_nature` VALUES ('1', '幸运', null, 'lucky', '');
-INSERT INTO `x2_biology_nature` VALUES ('2', '境界', null, 'state', '');
-INSERT INTO `x2_biology_nature` VALUES ('3', '力量', null, 'power', '');
-INSERT INTO `x2_biology_nature` VALUES ('4', '敏捷', null, 'agile', '');
-INSERT INTO `x2_biology_nature` VALUES ('5', '智力', null, 'intelligence', '');
-INSERT INTO `x2_biology_nature` VALUES ('6', '等级', null, 'grade', '');
-INSERT INTO `x2_biology_nature` VALUES ('7', '灵气', null, 'reiki', null);
-INSERT INTO `x2_biology_nature` VALUES ('8', '悟性', null, 'wuXing', null);
-INSERT INTO `x2_biology_nature` VALUES ('9', '技能', null, 'skill', null);
-INSERT INTO `x2_biology_nature` VALUES ('10', '触发', null, 'chuFa', null);
-INSERT INTO `x2_biology_nature` VALUES ('11', '生命', null, 'shengMing', null);
-INSERT INTO `x2_biology_nature` VALUES ('12', '魔法', null, 'moFa', null);
-INSERT INTO `x2_biology_nature` VALUES ('13', '攻击', null, 'gongJi', null);
-INSERT INTO `x2_biology_nature` VALUES ('14', '护甲', null, 'huJia', null);
-INSERT INTO `x2_biology_nature` VALUES ('15', '特攻', null, 'faGong', null);
-INSERT INTO `x2_biology_nature` VALUES ('16', '法抗', null, 'fakang', null);
-INSERT INTO `x2_biology_nature` VALUES ('17', '减伤', null, 'jianShang', null);
-INSERT INTO `x2_biology_nature` VALUES ('18', '真伤', null, 'zhenShang', null);
-INSERT INTO `x2_biology_nature` VALUES ('19', '闪避', null, 'shanbi', null);
-INSERT INTO `x2_biology_nature` VALUES ('20', '速度', null, 'suDu', null);
-INSERT INTO `x2_biology_nature` VALUES ('21', '暴击', null, 'baoji', null);
-INSERT INTO `x2_biology_nature` VALUES ('22', '暴率', null, 'baojilv', null);
-INSERT INTO `x2_biology_nature` VALUES ('23', '丹毒', null, 'danDu', null);
-INSERT INTO `x2_biology_nature` VALUES ('24', '属性', null, 'extend', '全属性增加+1000');
-INSERT INTO `x2_biology_nature` VALUES ('25', '召唤', null, 'zhaoHuan', '特殊召唤单位');
-INSERT INTO `x2_biology_nature` VALUES ('26', '治疗', null, 'zhiLiao', '特殊治疗');
-INSERT INTO `x2_biology_nature` VALUES ('27', '增长', null, 'zengZhang', '回合增加属性+100');
+INSERT INTO `x2_biology_nature` VALUES ('1', '幸运', null, 'lucky', '', '20', '2');
+INSERT INTO `x2_biology_nature` VALUES ('2', '境界', null, 'state', '', '2', '2');
+INSERT INTO `x2_biology_nature` VALUES ('3', '力量', null, 'power', '', '100', '10');
+INSERT INTO `x2_biology_nature` VALUES ('4', '敏捷', null, 'agile', '', '100', '10');
+INSERT INTO `x2_biology_nature` VALUES ('5', '智力', null, 'intelligence', '', '100', '10');
+INSERT INTO `x2_biology_nature` VALUES ('6', '等级', null, 'grade', '', '10', '2');
+INSERT INTO `x2_biology_nature` VALUES ('7', '灵气', null, 'reiki', null, '600', '20');
+INSERT INTO `x2_biology_nature` VALUES ('8', '悟性', null, 'wuXing', null, '0', '0');
+INSERT INTO `x2_biology_nature` VALUES ('9', '技能', null, 'skill', null, '0', '0');
+INSERT INTO `x2_biology_nature` VALUES ('10', '触发', null, 'chuFa', null, '20', '0');
+INSERT INTO `x2_biology_nature` VALUES ('11', '生命', null, 'shengMing', null, '100000', '2000');
+INSERT INTO `x2_biology_nature` VALUES ('12', '魔法', null, 'moFa', null, '400', '10');
+INSERT INTO `x2_biology_nature` VALUES ('13', '攻击', null, 'gongJi', null, '20000', '200');
+INSERT INTO `x2_biology_nature` VALUES ('14', '护甲', null, 'huJia', null, '10000', '100');
+INSERT INTO `x2_biology_nature` VALUES ('15', '特攻', null, 'faGong', null, '20000', '200');
+INSERT INTO `x2_biology_nature` VALUES ('16', '法抗', null, 'fakang', null, '10000', '100');
+INSERT INTO `x2_biology_nature` VALUES ('17', '减伤', null, 'jianShang', null, '2000', '0');
+INSERT INTO `x2_biology_nature` VALUES ('18', '真伤', null, 'zhenShang', null, '2000', '0');
+INSERT INTO `x2_biology_nature` VALUES ('19', '闪避', null, 'shanbi', null, '20', '0');
+INSERT INTO `x2_biology_nature` VALUES ('20', '速度', null, 'suDu', null, '2000', '10');
+INSERT INTO `x2_biology_nature` VALUES ('21', '暴击', null, 'baoji', null, '100', '10');
+INSERT INTO `x2_biology_nature` VALUES ('22', '暴率', null, 'baojilv', null, '30', '0');
+INSERT INTO `x2_biology_nature` VALUES ('23', '丹毒', null, 'danDu', null, '0', '0');
+INSERT INTO `x2_biology_nature` VALUES ('24', '属性', null, 'extend', '全属性增加+1000', '10000', '10');
+INSERT INTO `x2_biology_nature` VALUES ('25', '召唤', null, 'zhaoHuan', '特殊召唤单位', '0', '0');
+INSERT INTO `x2_biology_nature` VALUES ('26', '治疗', null, 'zhiLiao', '特殊治疗', '0', '0');
+INSERT INTO `x2_biology_nature` VALUES ('27', '增长', null, 'zengZhang', '回合增加属性+100', '0', '0');
+INSERT INTO `x2_biology_nature` VALUES ('28', '吸血', null, 'xiXue', '攻击回血', '30', '0');
+INSERT INTO `x2_biology_nature` VALUES ('29', '经验', null, 'experience', null, '0', '3000');
 
 -- ----------------------------
 -- Table structure for x2_biology_skill
@@ -434,6 +440,116 @@ INSERT INTO `x2_biology_state` VALUES ('19', '天道', null, '360');
 INSERT INTO `x2_biology_state` VALUES ('20', '混元', null, '380');
 
 -- ----------------------------
+-- Table structure for x2_goods_danyao
+-- ----------------------------
+DROP TABLE IF EXISTS `x2_goods_danyao`;
+CREATE TABLE `x2_goods_danyao` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '丹药表 嗑药最多100',
+  `type` int(11) DEFAULT NULL COMMENT '参考属性加成表1幸运2境界',
+  `name` varchar(255) DEFAULT NULL,
+  `point` varchar(255) DEFAULT NULL,
+  `value` int(11) DEFAULT '0' COMMENT '基础白值属性',
+  `percent` int(11) DEFAULT '10' COMMENT '百分比10-100 人(白 绿 蓝 紫 金 红 橙) 鬼仙神（彩）',
+  `describe` varchar(255) DEFAULT NULL COMMENT '描述',
+  `dandu` int(11) DEFAULT '10' COMMENT '丹毒数 =等级    每个品质=丹毒*百分比',
+  `tilian` int(11) DEFAULT '0' COMMENT '提炼',
+  `jinBi` int(11) DEFAULT '100' COMMENT '金币',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of x2_goods_danyao
+-- ----------------------------
+INSERT INTO `x2_goods_danyao` VALUES ('1', '1', '天运丹', null, '10', '10', '截命运之力炼制而成，服之可增加幸运值。', '50', '100', null);
+INSERT INTO `x2_goods_danyao` VALUES ('2', '1', '蜕凡丹', '', '100', '10', '一种可以增强体质的丹药。', '10', '100', null);
+INSERT INTO `x2_goods_danyao` VALUES ('3', '11', '生生丹', null, '1000', '10', '传说可以增加寿命100年的丹药。', '10', '100', null);
+INSERT INTO `x2_goods_danyao` VALUES ('4', '11', '人生果', null, '10000', '10', '三千一开花，三千年一结果，服之可增寿5000年', '100', '100', null);
+
+-- ----------------------------
+-- Table structure for x2_goods_nature
+-- ----------------------------
+DROP TABLE IF EXISTS `x2_goods_nature`;
+CREATE TABLE `x2_goods_nature` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '物品属性表',
+  `goodsid` int(11) DEFAULT NULL COMMENT '物品id',
+  `name` varchar(255) DEFAULT NULL COMMENT '物品名称',
+  `natureName` varchar(255) DEFAULT NULL COMMENT '属性名称',
+  `value` int(11) DEFAULT '0' COMMENT '用户属性在百分比区间',
+  `natureid` int(11) DEFAULT NULL COMMENT '属性id',
+  `type` int(11) DEFAULT '1' COMMENT '物品类型  1武器 2丹药 3缘分',
+  `userid` int(11) DEFAULT '0' COMMENT '用户id',
+  `percent` int(11) DEFAULT '10' COMMENT '百分比区间最大值为物品表品质区间 1-10',
+  `status` int(3) DEFAULT '0' COMMENT '属性 状态是否激活0未使用 1使用',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of x2_goods_nature
+-- ----------------------------
+INSERT INTO `x2_goods_nature` VALUES ('1', '1', '戮仙剑', '攻击', '10000', '13', '1', '0', '10', '0');
+INSERT INTO `x2_goods_nature` VALUES ('2', '1', '戮仙剑', '护甲', '10000', '14', '1', '0', '10', '0');
+INSERT INTO `x2_goods_nature` VALUES ('3', '1', '天运丹', '幸运', '10', '1', '2', '0', '10', '0');
+
+-- ----------------------------
+-- Table structure for x2_goods_use
+-- ----------------------------
+DROP TABLE IF EXISTS `x2_goods_use`;
+CREATE TABLE `x2_goods_use` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '消耗物品',
+  `name` varchar(11) DEFAULT NULL COMMENT '物品类型',
+  `describe` varchar(255) DEFAULT NULL COMMENT '描述',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of x2_goods_use
+-- ----------------------------
+INSERT INTO `x2_goods_use` VALUES ('1', '武器', '武器类型');
+INSERT INTO `x2_goods_use` VALUES ('2', '丹药', '丹药类型');
+INSERT INTO `x2_goods_use` VALUES ('3', '缘分', '缘分类型');
+INSERT INTO `x2_goods_use` VALUES ('4', '普通材料', '普通的使用材料，可以卖钱。');
+INSERT INTO `x2_goods_use` VALUES ('5', '灵石材料', '普通的使用材料，可以卖灵石。');
+INSERT INTO `x2_goods_use` VALUES ('6', '神仙令', '召唤生物');
+INSERT INTO `x2_goods_use` VALUES ('7', '木箱', '开出1-4境界物品。');
+INSERT INTO `x2_goods_use` VALUES ('11', '玉盒', '开出1-20境界物品。');
+INSERT INTO `x2_goods_use` VALUES ('8', '铁箱', '开出1-8境界物品。');
+INSERT INTO `x2_goods_use` VALUES ('9', '银箱', '开出1-12境界物品。');
+INSERT INTO `x2_goods_use` VALUES ('10', '金箱', '开出1-16境界物品。');
+INSERT INTO `x2_goods_use` VALUES ('12', '灵药', '草木之精华，可用于炼丹强化。');
+INSERT INTO `x2_goods_use` VALUES ('13', '铁精', '锻冶之精华，可用于炼器强化。');
+
+-- ----------------------------
+-- Table structure for x2_goods_wuqi
+-- ----------------------------
+DROP TABLE IF EXISTS `x2_goods_wuqi`;
+CREATE TABLE `x2_goods_wuqi` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '武器表',
+  `type` int(11) DEFAULT NULL COMMENT '参考属性加成表1幸运2境界',
+  `name` varchar(255) DEFAULT NULL,
+  `point` varchar(255) DEFAULT NULL,
+  `value` int(11) DEFAULT '0' COMMENT '基础白值属性',
+  `percent` int(11) DEFAULT '10' COMMENT '百分比10-100 人(白 绿 蓝 紫 金 红 橙) 鬼仙神（彩）',
+  `describe` varchar(255) DEFAULT NULL,
+  `num` int(11) DEFAULT '0' COMMENT '属性条数 最多9条',
+  `belong` int(11) DEFAULT '0' COMMENT '有id标识 说明 可以合成',
+  `tilian` int(11) DEFAULT '0' COMMENT '提炼--铁之精华  根据品质提炼',
+  `jinBi` int(11) DEFAULT '100' COMMENT '金币 基础价格*境界*num（属性条）',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of x2_goods_wuqi
+-- ----------------------------
+INSERT INTO `x2_goods_wuqi` VALUES ('1', '1', '戮仙剑', null, '10000', '70', '截命运之力炼制而成，服之可增加幸运值', '5', '6', '100', '100');
+INSERT INTO `x2_goods_wuqi` VALUES ('2', '1', '诛仙剑', null, '10000', '70', null, '5', '6', '100', '100');
+INSERT INTO `x2_goods_wuqi` VALUES ('3', '1', '陷仙剑', null, '10000', '70', null, '5', '6', '100', '100');
+INSERT INTO `x2_goods_wuqi` VALUES ('4', '1', '绝仙剑', null, '10000', '70', null, '5', '6', '100', '100');
+INSERT INTO `x2_goods_wuqi` VALUES ('5', '1', '诛仙阵图', '', '10000', '70', '', '5', '6', '100', '100');
+INSERT INTO `x2_goods_wuqi` VALUES ('6', '1', '诛仙剑阵', '', '30000', '80', '', '9', '0', '500', '100');
+INSERT INTO `x2_goods_wuqi` VALUES ('7', '1', '小刀', null, '100', '10', '一把普通的小刀，没什么大用处。', '0', '0', '1', '100');
+INSERT INTO `x2_goods_wuqi` VALUES ('8', '1', '承影', '', '2000', '20', '上古十大名剑之一。', '1', '0', '20', '20');
+
+-- ----------------------------
 -- Table structure for x2_user
 -- ----------------------------
 DROP TABLE IF EXISTS `x2_user`;
@@ -457,7 +573,7 @@ INSERT INTO `x2_user` VALUES ('1', '3', '10', '1', '3', '100');
 -- ----------------------------
 DROP TABLE IF EXISTS `x2_user_biology`;
 CREATE TABLE `x2_user_biology` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户生物强化表',
   `name` varchar(25) DEFAULT NULL COMMENT '生物名称',
   `biology` tinyint(3) DEFAULT '1' COMMENT '种族(人鬼妖神魔异) 0未知',
   `state` int(3) DEFAULT '1' COMMENT '生物境界',
@@ -512,20 +628,21 @@ CREATE TABLE `x2_user_biology` (
   `userid` int(11) DEFAULT '1' COMMENT '模型创建所属人 1 管理员',
   `createid` int(11) DEFAULT '0' COMMENT '生物创造id',
   `percent` float(11,0) DEFAULT '0' COMMENT '经验条(单独增加）',
+  `xiXue` int(11) DEFAULT '0' COMMENT '吸血',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_user_biology
 -- ----------------------------
-INSERT INTO `x2_user_biology` VALUES ('33', '黄麒英', '1', '1', '1', '456', '53', '86', '57', '89', '58', '112', '0', '0', '0', '1', '3', '1', '4', '25', '19', '15', '18', '1086', '82', '7', '7,11,10', '0', '0', '1', '无影脚黄麒英，黄麒英功夫源自於金钩李胡子和洪熙官的传人陆阿采。', '7', '0', '1', '1', null, '0', '1', '167', '86', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '10', '14', '8', '1', '48', '0');
+INSERT INTO `x2_user_biology` VALUES ('33', '黄麒英', '1', '1', '1', '456', '53', '86', '57', '89', '58', '112', '0', '0', '0', '1', '3', '1', '4', '25', '19', '15', '18', '1086', '82', '7', '7,11,10', '0', '0', '1', '无影脚黄麒英，黄麒英功夫源自於金钩李胡子和洪熙官的传人陆阿采。', '7', '0', '1', '1', null, '0', '1', '167', '86', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '10', '14', '8', '1', '48', '0', '0');
 
 -- ----------------------------
 -- Table structure for x2_user_biology_attribute
 -- ----------------------------
 DROP TABLE IF EXISTS `x2_user_biology_attribute`;
 CREATE TABLE `x2_user_biology_attribute` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '战斗属性表',
   `name` varchar(25) DEFAULT NULL COMMENT '生物名称',
   `biology` tinyint(3) DEFAULT '1' COMMENT '生物属性(神魔人鬼妖五行混沌) 0未知',
   `grade` int(11) DEFAULT '1' COMMENT '等级',
@@ -588,11 +705,36 @@ CREATE TABLE `x2_user_biology_skill` (
 INSERT INTO `x2_user_biology_skill` VALUES ('1', '1', '1', '1');
 
 -- ----------------------------
+-- Table structure for x2_user_goods_nature
+-- ----------------------------
+DROP TABLE IF EXISTS `x2_user_goods_nature`;
+CREATE TABLE `x2_user_goods_nature` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '物品属性表 附加属性',
+  `goodsid` int(11) DEFAULT NULL COMMENT '物品id',
+  `name` varchar(255) DEFAULT NULL,
+  `natureName` varchar(255) DEFAULT NULL,
+  `value` int(11) DEFAULT '0' COMMENT '用户属性在百分比区间',
+  `natureid` int(11) DEFAULT NULL COMMENT '属性id',
+  `type` int(11) DEFAULT '1' COMMENT '物品类型  1 白值  2附加属性',
+  `userid` int(11) DEFAULT '0' COMMENT '用户id',
+  `percent` int(11) DEFAULT '1' COMMENT '百分比区间最大值为物品表品质区间 1-10',
+  `status` int(3) DEFAULT '0' COMMENT '属性 状态是否激活0未使用 1使用',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of x2_user_goods_nature
+-- ----------------------------
+INSERT INTO `x2_user_goods_nature` VALUES ('1', '1', '戮仙剑', '攻击', '10000', '13', '1', '1', '1', '0');
+INSERT INTO `x2_user_goods_nature` VALUES ('2', '1', '戮仙剑', '护甲', '10000', '14', '1', '1', '1', '0');
+INSERT INTO `x2_user_goods_nature` VALUES ('3', '1', '天运丹', '幸运', '10', '1', '2', '1', '1', '0');
+
+-- ----------------------------
 -- Table structure for x2_user_handbook
 -- ----------------------------
 DROP TABLE IF EXISTS `x2_user_handbook`;
 CREATE TABLE `x2_user_handbook` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '图鉴表',
   `biologyid` int(11) DEFAULT NULL COMMENT '图鉴id',
   `userid` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -602,6 +744,19 @@ CREATE TABLE `x2_user_handbook` (
 -- Records of x2_user_handbook
 -- ----------------------------
 INSERT INTO `x2_user_handbook` VALUES ('1', '1', '1');
+
+-- ----------------------------
+-- Table structure for x2_user_packet
+-- ----------------------------
+DROP TABLE IF EXISTS `x2_user_packet`;
+CREATE TABLE `x2_user_packet` (
+  `id` int(11) DEFAULT NULL COMMENT '用户背包',
+  `type` int(11) DEFAULT '1' COMMENT '1武器 2丹药 3技能 4消耗品 5材料'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of x2_user_packet
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for x2_user_words
@@ -628,7 +783,7 @@ INSERT INTO `x2_user_words` VALUES ('3', '100', '3', '1', '1');
 -- ----------------------------
 DROP TABLE IF EXISTS `x2_words`;
 CREATE TABLE `x2_words` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '世界表',
   `name` varchar(255) DEFAULT NULL COMMENT '名称',
   `type` int(11) DEFAULT '1' COMMENT '世界等级',
   `music` varchar(255) DEFAULT NULL COMMENT '背景音乐',
