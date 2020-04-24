@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50711
 File Encoding         : 65001
 
-Date: 2020-04-20 18:44:06
+Date: 2020-04-24 19:17:37
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -173,7 +173,7 @@ CREATE TABLE `x2_biology_biology` (
   `describe` varchar(255) DEFAULT NULL COMMENT '天赋描述',
   `characteristic` varchar(255) DEFAULT NULL COMMENT '特点',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_biology_biology
@@ -181,11 +181,11 @@ CREATE TABLE `x2_biology_biology` (
 INSERT INTO `x2_biology_biology` VALUES ('1', '人', '最适合修行的形态，领悟极高，每级次战斗有概率突破或者提升境界。', '10', '幸运+10', '幸运，体质，属性较高，适合新人。');
 INSERT INTO `x2_biology_biology` VALUES ('2', '妖', '狡猾而狡诈，大部分技能是辅助控制buff技能，非常适合于后排。', '6', '触发+6%', '控制，概率，buff加成，适合资深玩家。');
 INSERT INTO `x2_biology_biology` VALUES ('3', '鬼', '拥有无尽的魂力，最纯粹的力量，强大的魂力使他们不易死亡。', '100', '法力值+100', '套路，脆弱，搭配较高，适合资深玩家。');
-INSERT INTO `x2_biology_biology` VALUES ('4', '神', '拥有极高的法术伤害，是大多数高输出的克星。', '8', '特攻+8%', '法术，控制，输出较高，适合普通玩家。');
+INSERT INTO `x2_biology_biology` VALUES ('4', '仙', '拥有极高的法术伤害，是大多数高输出的克星。', '8', '特攻+8%', '法术，控制，输出较高，适合普通玩家。');
 INSERT INTO `x2_biology_biology` VALUES ('5', '魔', '偏重物理防守，输出一般，属于肉盾类型，适合用于前排。', '12', '生命+12%', '血厚，坚硬，生存力强，适合新人。');
-INSERT INTO `x2_biology_biology` VALUES ('6', '兽', '血腥狂暴，拥有极高的爆发。偏物理类型，适合前排或者输出。', '5', '暴击+5%', '物理，暴力，爆发较高，适合新人。');
-INSERT INTO `x2_biology_biology` VALUES ('7', '灵', '天地万物皆有灵，有较高的灵气成长值。有回血，反伤，减伤等技能。', '20', '灵气+20%', '辅助，肉盾，全能选手，适合普通玩家。');
-INSERT INTO `x2_biology_biology` VALUES ('8', '异', '超脱三界，不在五行的未知生物。拥有极高的抗性，免疫的物理和法术伤害。', '6', '抗性+6%', '双抗，减伤，防御较高，适合普通玩家。');
+INSERT INTO `x2_biology_biology` VALUES ('6', '灵', '天地万物皆有灵，有较高的灵气成长值。有回血，反伤，减伤等技能。', '5', '暴击+5%', '物理，暴力，爆发较高，适合新人。');
+INSERT INTO `x2_biology_biology` VALUES ('7', '异', '超脱三界，不在五行的未知生物。拥有极高的抗性，免疫的物理和法术伤害。', '6', '抗性+6%', '双抗，减伤，防御较高，适合普通玩家。');
+INSERT INTO `x2_biology_biology` VALUES ('8', '兽', '血腥狂暴，拥有极高的爆发。偏物理类型，适合前排或者输出。', '20', '灵气+20%', '辅助，肉盾，全能选手，适合普通玩家。');
 
 -- ----------------------------
 -- Table structure for x2_biology_character
@@ -385,7 +385,7 @@ CREATE TABLE `x2_biology_skill` (
   `words` varchar(50) DEFAULT NULL COMMENT '世界名称',
   `wordId` int(11) DEFAULT NULL COMMENT '世界id',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=53 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_biology_skill
@@ -402,6 +402,45 @@ INSERT INTO `x2_biology_skill` VALUES ('9', '1', '金钟罩', '2', '0', '0', '3'
 INSERT INTO `x2_biology_skill` VALUES ('10', '1', '降龙十八掌', '1', '0', '0', '10', null, '增加10%的物理伤害', '天龙八部', '1');
 INSERT INTO `x2_biology_skill` VALUES ('11', '1', '碧海潮生', '1', '0', '0', '10', null, '增加10%的法术伤害', '神雕侠侣', '1');
 INSERT INTO `x2_biology_skill` VALUES ('12', '1', '乾坤大挪移', '5', '3', '0', '3', null, '倚天屠龙记中明教教主功法，闪避3%，减伤属性*3%', '倚天屠龙记', '5');
+INSERT INTO `x2_biology_skill` VALUES ('14', '1', null, null, '0', '0', '100', null, null, null, null);
+INSERT INTO `x2_biology_skill` VALUES ('15', '1', null, null, '0', '0', '100', null, null, null, null);
+INSERT INTO `x2_biology_skill` VALUES ('16', '1', null, null, '0', '0', '100', null, null, null, null);
+INSERT INTO `x2_biology_skill` VALUES ('17', '1', null, null, '0', '0', '100', null, null, null, null);
+INSERT INTO `x2_biology_skill` VALUES ('18', '1', null, null, '0', '0', '100', null, null, null, null);
+INSERT INTO `x2_biology_skill` VALUES ('19', '1', null, null, '0', '0', '100', null, null, null, null);
+INSERT INTO `x2_biology_skill` VALUES ('20', '1', null, null, '0', '0', '100', null, null, null, null);
+INSERT INTO `x2_biology_skill` VALUES ('21', '1', null, null, '0', '0', '100', null, null, null, null);
+INSERT INTO `x2_biology_skill` VALUES ('22', '1', null, null, '0', '0', '100', null, null, null, null);
+INSERT INTO `x2_biology_skill` VALUES ('23', '1', null, null, '0', '0', '100', null, null, null, null);
+INSERT INTO `x2_biology_skill` VALUES ('24', '1', null, null, '0', '0', '100', null, null, null, null);
+INSERT INTO `x2_biology_skill` VALUES ('25', '1', '哼', null, '0', '0', '100', null, '渡厄真人传郑伦之术。鼻窍中二气，吸人魂魄。响如钟声，窍中两道白光喷将出来，收人魂魄。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('26', '1', '哈', null, '0', '0', '100', null, '青龙关陈奇之术。养成腹内一道黄气，喷出口来，凡是精血成胎的，必定有三魂七魄，见此黄气，则魂魄自散。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('27', '1', '八九玄功', null, '0', '0', '100', null, '七十二变。玉鼎真人传杨戬。袁洪也会七十二变。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('28', '1', '五行遁术', null, '0', '0', '100', null, '阐教擅长土遁。截教擅长水遁。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('29', '1', '三昧真火', null, '0', '0', '100', null, '常见高阶道术。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('30', '1', '呼风唤雨', null, '0', '0', '100', null, '常见低阶道术。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('31', '1', '定身术', null, '0', '0', '100', null, '常见中阶道术。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('32', '1', '飞头术', null, '0', '0', '100', null, '申公豹擅长。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('33', '1', '腾云术', null, '0', '0', '100', null, '速度+1000，常见法术。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('34', '1', '八卦演算', null, '0', '0', '100', null, '卜术。伏羲先天八卦。文王囚里城，创后天八卦。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('35', '1', '风林之术', null, '0', '0', '100', null, '口吐黑烟喷，就化为一网边，现一粒红珠；有碗口大小，中者即伤。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('36', '1', '纵地金光法', null, '0', '0', '100', null, '元始天尊传下。可日行数千里。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('37', '1', '五雷诀', null, '0', '0', '100', null, '似乎只对低级精怪起作用', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('38', '1', '三头六臂', null, '0', '0', '100', null, '九龙岛吕岳之术。心手摇动叁百六十骨节，霎时现出叁头六臂，一只手执形天印，一只手擎住瘟疫钟，一只手持定形瘟，一只手执住指瘟剑。罗宣亦会。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('39', '1', '脑后神手', null, '0', '0', '100', null, '一气仙马元之术', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('40', '1', '黑云犬', null, '0', '0', '100', null, '实名不详。顶上现一块黑云，云中现出一只犬来。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('41', '1', '丈六金身', null, '0', '0', '100', null, '现十八臂，二十四面，持璎珞，丝绦，降魔杵，金铃，金弓伞盖，宝锉，银戟，银旗等宝物。准提道人以之伏孔宣。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('42', '1', '替身法', null, '0', '0', '100', null, '佳梦关胡雷擅长', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('43', '1', '火龙兵', null, '0', '0', '100', null, '背后帖红纸葫芦，脚下画风火符印。火灵圣母之术。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('44', '1', '邱引之术', null, '0', '0', '100', null, '顶上长一道白光，光中分开，面现出碗大一颗红珠，在空中滴溜溜只是转。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('45', '1', '一气化三清', null, '0', '0', '100', null, '老子一气化三清：上清（九云冠，大红白鹤绛绡衣，宝剑）、玉清（如意冠，淡黄八卦衣，天马，灵芝如意）、太清（九霄冠，八宝万寿紫霞衣，龙须扇，三宝玉如意，地师）', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('46', '1', '六魂幡', null, '0', '0', '100', null, '通天教主之术。草人，有六尾，上书人名。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('47', '1', '劈面雷', null, '0', '0', '100', null, '界牌关王豹之术。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('48', '1', '神烟术', null, '0', '0', '100', null, '穿云关马忠之术。口吐黑烟，遮掩四方。效用不明。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('49', '1', '痘疹', null, '0', '0', '100', null, '潼关余德之术。有青黄赤白黑五个手帕，可化五方云。五个小斗，内装毒痘。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('50', '1', '催魂捉魄', null, '0', '0', '100', null, '（实名不详）。姚宾之术。落魂阵内，一土台；设一香案，台上扎一草人，草人身上写姜尚的名字；草人头上点叁盏灯，足下点七盏灯，上叁盏名为催魂灯，下点七盏名为捉魂灯，姚天君披发仗剑，步罡念咒，於台前发符用印，於空中一日拜叁次。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('51', '1', '钉头七箭书', null, '0', '0', '100', null, '陆压邪术。设法坛，扎草人书名，头脚各一盏灯，踏罡步斗，每日三拜，于二十一日，以桑枝弓、桃枝箭射草人双目心口。人遂绝命。', null, null);
+INSERT INTO `x2_biology_skill` VALUES ('52', '1', '指地成钢', null, '0', '0', '100', null, '惧留孙。专破地行术', null, null);
 
 -- ----------------------------
 -- Table structure for x2_biology_state
@@ -491,6 +530,69 @@ INSERT INTO `x2_goods_nature` VALUES ('2', '1', '戮仙剑', '护甲', '10000', 
 INSERT INTO `x2_goods_nature` VALUES ('3', '1', '天运丹', '幸运', '10', '1', '2', '0', '10', '0');
 
 -- ----------------------------
+-- Table structure for x2_goods_store
+-- ----------------------------
+DROP TABLE IF EXISTS `x2_goods_store`;
+CREATE TABLE `x2_goods_store` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '消耗物品 单位为1',
+  `name` varchar(11) DEFAULT NULL COMMENT '物品类型',
+  `describe` varchar(255) DEFAULT NULL COMMENT '描述',
+  `value` int(11) DEFAULT NULL COMMENT '难度数值越大获得几率越小',
+  `price` int(11) DEFAULT '0' COMMENT '估价',
+  `type` int(11) DEFAULT '1' COMMENT '购买类型 1金币商店 2 灵石商店 3其它',
+  `sellout` int(11) DEFAULT '0' COMMENT '卖出价格',
+  `gooduse` int(11) DEFAULT NULL COMMENT '物品类型id',
+  `usetype` int(11) DEFAULT '1' COMMENT '使用类型1材料 2使用 3合成',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of x2_goods_store
+-- ----------------------------
+INSERT INTO `x2_goods_store` VALUES ('1', '木箱', '开出1-6境界武器、技能或者丹药。', '1000', '50', '2', '5000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('2', '铁箱', '开出2-8境界武器、技能或者丹药。', '500', '80', '2', '8000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('3', '银箱', '开出6-12境界武器、技能或者丹药。', '100', '200', '2', '20000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('4', '金箱', '开出8-16境界武器、技能或者丹药。', '50', '800', '2', '80000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('5', '玉盒', '开出12-18境界武器、技能或者丹药。', '20', '2400', '2', '240000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('6', '仙盒', '开出16-20境界武器、技能或者丹药。', '2', '5000', '2', '500000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('7', '人仙令', '召唤令，人族生物', '500', '10000', '1', '5000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('11', '魔仙令', '召唤令，魔族生物', '500', '16000', '1', '8000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('8', '妖仙令', '召唤令，妖族生物', '500', '16000', '1', '8000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('9', '鬼仙令', '召唤令，鬼族生物', '500', '16000', '1', '8000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('10', '仙神令', '召唤令，仙族生物', '500', '16000', '1', '8000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('12', '兽仙令', '召唤令，兽族生物', '500', '16000', '1', '8000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('13', '灵仙令', '召唤令，灵族生物', '500', '24000', '1', '12000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('14', '异仙令', '召唤令，异族生物', '500', '30000', '1', '15000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('15', '万仙令', '随机召唤令，人妖鬼神魔兽灵异。', '200', '20000', '1', '10000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('16', '神魔令', '特殊召唤随机世界生物', '10', '998', '1', '99800', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('17', '精魄', '生物精魄，消耗100精魄可随机合成万仙令，生物分解可获得相应评分的精魄。1000金币=1精魄', '1000', '1000', '1', '100', '9', '3');
+INSERT INTO `x2_goods_store` VALUES ('18', '灵药', '草木精华，可用于炼丹强化。丹药分解可获得相应评分的灵药。3000金币=1灵药', '1000', '3000', '1', '300', '9', '3');
+INSERT INTO `x2_goods_store` VALUES ('19', '铁精', '锻冶之精华，可用于炼器强化。武器分解可获得相应评分的铁精。2000金币=1铁精', '1000', '2000', '1', '200', '9', '3');
+INSERT INTO `x2_goods_store` VALUES ('20', '元神', '随机生物元神，附带生物技能。', '100', '126', '2', '12600', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('21', '朱果', '刷新生物属性，凤凰血而生，服用后有脱胎换骨的功效。', '1000', '10', '2', '1000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('22', '星辰石', '武器洗炼', '1000', '10', '2', '1000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('23', '生生不熄', '体力值+20', '1000', '10000', '1', '1000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('24', '秘境', '对应世界，生物难度。9个标记，可能物品，可能战斗，可能空，可组队，全部死亡退出场景。', '100', '488', '2', '48800', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('25', '本源之力', '本源之力，用于主角突破自身境界。', '100', '30000', '1', '15000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('26', '三生石', '生物缘分刷新', '200', '20000', '1', '10000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('27', '技能书', '获得随机技能书一本', '200', '98', '2', '9800', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('28', '忘情水', '修改角色名称。', '1000', '288', '2', '28800', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('29', '掠夺卡', '强制掠夺，胜利可以获得对方10%金币', '100', '100', '2', '10000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('30', '符宝', '使用可获随机获得符宝', '300', '126', '2', '3600', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('31', '彩虹泪', '可改变异形颜色', '100', '168', '1', '16800', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('32', '神石', '20神石可合成神魔令，特殊召唤随机世界生物', '100', '50', '2', '5000', '9', '3');
+INSERT INTO `x2_goods_store` VALUES ('33', '鸿蒙紫气', '服用鸿蒙紫气，方挑战圣境。', '1', '9999', '2', '999900', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('34', '盘古石', '服用后，可学习任意种族技能一次。', '5', '4820', '2', '482000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('35', '孟婆汤', '生物转生，重塑肉身，不保留境界。', '1000', '30000', '1', '3000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('36', '潜能', '随机学习生物天生技能', '60', '360', '2', '36000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('37', '技能绑定石', '绑定技能。', '100', '200000', '1', '20000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('38', '阵法石', '使用后获得随机阵法', '50', '780000', '1', '78000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('39', '道果', '生物使用后，三围增加50', '300', '666', '2', '66600', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('40', '仙魔石', '可以使人性情大变，刷新生物性格', '500', '20', '2', '2000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('41', '藏宝图', '九宫格，每次挖掘消耗藏宝图+1', '1000', '80000', '1', '8000', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('42', '契约仙果', '使用后无法融合，无法交易，成长+1，异形+2', '80', '999999', '1', '999999', '9', '2');
+
+-- ----------------------------
 -- Table structure for x2_goods_use
 -- ----------------------------
 DROP TABLE IF EXISTS `x2_goods_use`;
@@ -498,25 +600,27 @@ CREATE TABLE `x2_goods_use` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '消耗物品',
   `name` varchar(11) DEFAULT NULL COMMENT '物品类型',
   `describe` varchar(255) DEFAULT NULL COMMENT '描述',
+  `value` int(11) DEFAULT NULL COMMENT '难度数值越大获得几率越小',
+  `type` int(11) DEFAULT '1' COMMENT '购买类型 1武器 2 丹药 3其它 4技能 5生物',
+  `fenjie` varchar(25) DEFAULT '普通' COMMENT '分解类型',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_goods_use
 -- ----------------------------
-INSERT INTO `x2_goods_use` VALUES ('1', '武器', '武器类型');
-INSERT INTO `x2_goods_use` VALUES ('2', '丹药', '丹药类型');
-INSERT INTO `x2_goods_use` VALUES ('3', '缘分', '缘分类型');
-INSERT INTO `x2_goods_use` VALUES ('4', '普通材料', '普通的使用材料，可以卖钱。');
-INSERT INTO `x2_goods_use` VALUES ('5', '灵石材料', '普通的使用材料，可以卖灵石。');
-INSERT INTO `x2_goods_use` VALUES ('6', '神仙令', '召唤生物');
-INSERT INTO `x2_goods_use` VALUES ('7', '木箱', '开出1-4境界物品。');
-INSERT INTO `x2_goods_use` VALUES ('11', '玉盒', '开出1-20境界物品。');
-INSERT INTO `x2_goods_use` VALUES ('8', '铁箱', '开出1-8境界物品。');
-INSERT INTO `x2_goods_use` VALUES ('9', '银箱', '开出1-12境界物品。');
-INSERT INTO `x2_goods_use` VALUES ('10', '金箱', '开出1-16境界物品。');
-INSERT INTO `x2_goods_use` VALUES ('12', '灵药', '草木之精华，可用于炼丹强化。');
-INSERT INTO `x2_goods_use` VALUES ('13', '铁精', '锻冶之精华，可用于炼器强化。');
+INSERT INTO `x2_goods_use` VALUES ('9', '消耗物品', '使用的消耗物品。', '600', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('10', '阵法', '使用后获得阵法。', '50', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('11', '技能书', '使用后生物获得的技能。', '600', '4', '普通');
+INSERT INTO `x2_goods_use` VALUES ('8', '秘境', '对应世界，生物难度。9个标记，可能物品，可能战斗，可能空，全部死亡退出场景。', '100', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('7', '元神', '生物元神，附带生物技能。', '500', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('6', '符宝', '一次性消耗物品，战斗中可以佩戴2张符咒使用。', '800', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('2', '丹药', '丹药类型，对生物使用获得特殊效果。', '1000', '2', '灵药');
+INSERT INTO `x2_goods_use` VALUES ('3', '缘分', '缘分类型。', '500', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('4', '普通材料', '普通的使用材料，可以卖钱。', '8000', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('5', '灵石材料', '普通的使用材料，可以卖灵石。', '100', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('1', '武器', '武器类型。', '5000', '1', '铁精');
+INSERT INTO `x2_goods_use` VALUES ('12', '生物', '获得生物。', '100', '5', '精魄');
 
 -- ----------------------------
 -- Table structure for x2_goods_wuqi
@@ -548,6 +652,51 @@ INSERT INTO `x2_goods_wuqi` VALUES ('5', '1', '诛仙阵图', '', '10000', '70',
 INSERT INTO `x2_goods_wuqi` VALUES ('6', '1', '诛仙剑阵', '', '30000', '80', '', '9', '0', '500', '100');
 INSERT INTO `x2_goods_wuqi` VALUES ('7', '1', '小刀', null, '100', '10', '一把普通的小刀，没什么大用处。', '0', '0', '1', '100');
 INSERT INTO `x2_goods_wuqi` VALUES ('8', '1', '承影', '', '2000', '20', '上古十大名剑之一。', '1', '0', '20', '20');
+
+-- ----------------------------
+-- Table structure for x2_goods_zhenfa
+-- ----------------------------
+DROP TABLE IF EXISTS `x2_goods_zhenfa`;
+CREATE TABLE `x2_goods_zhenfa` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `point` varchar(255) DEFAULT NULL,
+  `describe` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of x2_goods_zhenfa
+-- ----------------------------
+INSERT INTO `x2_goods_zhenfa` VALUES ('1', '万仙阵', null, '通天门下弟子，由通天教主和他座下四大弟子主持。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('2', '诛仙阵', '', '以诛仙四仙剑布阵，有诛仙阵图，和四仙剑，通天教主传多宝道人。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('3', '四象阵', null, '金光仙（金毛吼');
+INSERT INTO `x2_goods_zhenfa` VALUES ('4', '三才阵', null, '天地人三才组成。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('5', '太极阵', '', '乌云仙（长须黑面，皂服丝绦，混元锤，金须鳌鱼），青首仙（青毛狮子）');
+INSERT INTO `x2_goods_zhenfa` VALUES ('6', '八卦阵', null, '太极生两仪，两仪生四相，四相生八卦，八卦而变六十四爻，从此周而复始变化无穷。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('7', '十二都天门阵', null, '十二祖巫组成。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('8', '北斗七星阵', null, '道教一元、两仪、三才、四相、五行、六合、七星、八卦、九宫的流变规律');
+INSERT INTO `x2_goods_zhenfa` VALUES ('9', '周天星斗大阵', null, '巫妖大战时，\r\n三百六十五位大妖所布置。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('10', '九曲黄河阵', null, '云霄。内按叁才，包藏天地之妙，中有惑仙丹闭仙诀，能失仙之神，消仙之魄，陷仙之形，损仙之气，丧神仙之原本，捐神仙之肢体。神仙入此成凡人，凡人入此即绝命。九曲曲中无直，曲尽造化之奇，抉尽神仙之基，任他叁教圣人，遭此亦难逃脱。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('11', '混元河洛大阵', null, '阵眼为河图，洛书。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('12', '罗汉阵', null, '佛门阵法。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('13', '十绝阵', null, '由十天君主持的十个小阵组成。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('14', '秦天君天绝阵', null, '演先天之数，得先天清气；内藏混沌之机，中有三首幡，按天地人三才，共合为一气。若人入此阵内，有雷鸣之处，化作灰尘；仙道若逢此处，肢体震为粉碎，故曰“天绝阵”。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('15', '赵天君地烈阵', null, '烈成分浊厚，上雷下火太无情；就是五行乾健体，难逃骨化与形倾。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('16', '董天君风吼阵', null, '按地水火风之数，内有风火，此风火乃先天之气，叁昧真火，百万兵刃，从中而出。若神仙进此阵，风火交作，万刃齐攒，四肢立成齑粉；怕他有倒海移山之异术，难免身体化成脓血。（八角鹿，太阿双剑）');
+INSERT INTO `x2_goods_zhenfa` VALUES ('17', '袁天君寒冰阵', null, '名为寒水，实为刀山；内藏玄妙，中有风雷，上有冰山如狼牙，下有冰块如刀剑。若神仙入此阵，风雷动处，上下一磕，四肢立成齑粉，纵有异术，离免此难。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('18', '金光圣母金光阵', null, '夺日月之精，藏天地之气，中有二十一面宝镜，用二十一根杆，每一面应在杆顶上，一镜上有一套。若人仙入阵，将此套拽起，雷声震动镜子，只一二转，金光射出，照住其身，立刻化为浓血，纵会飞腾，难越此阵。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('19', '孙天君化血阵', null, '用先天灵气，中有风雷，内藏数斗黑沙。但神仙入阵，雷响处风卷黑沙，些须着处，立化血水，纵是神仙难逃利害。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('20', '白天君烈阵', null, '妙用无穷，非同凡品：内藏叁火，有叁昧火，空中火，石中火，叁火并为一气；中有叁首红，若神仙进此阵内，叁展动，叁火齐飞，须火成为灰烬，纵有避火真言，难躲叁昧真火。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('21', '姚天君落魂阵', null, '闭生门，开死户，中藏天地厉气，结聚而成；内有白纸一首，上画符印，若神仙入阵内，白旌展动，魂魄消散，倾刻而灭，不论神仙，随入随灭。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('23', '王天君红水阵', null, '夺壬癸之精，藏太乙之妙，变幻莫测；中有一八卦台，上有一二个葫芦，任随人仙入阵，将葫芦往下一掷，倾出红水，汪洋无际。若是水溅出一点，黏在身上，顷刻化为血水，纵是神仙，无术可逃。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('22', '张天君红沙阵', null, '内按天地人叁寸，中分叁气，内藏红砂叁斗，看似红砂，着身利刃，上不知天，下不知地，中不知人；若人仙冲入此阵，风雷运处，飞砂伤人，立刻骸鼻俱成齑粉，纵有神仙佛祖遭此，再不能逃。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('24', '两仪阵', null, '灵牙仙（白象）');
+INSERT INTO `x2_goods_zhenfa` VALUES ('25', '瘟癀阵', null, '九龙岛吕岳、陈庚。二十一把瘟癀伞，按九宫八卦排列，中有土台。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('26', '血河大阵', null, '冥河老祖以十万八千辆血河车所布置。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('27', '两仪微尘大阵', null, '老子以混元一气太清神符布置。');
+INSERT INTO `x2_goods_zhenfa` VALUES ('28', '先天五方大阵', null, '由素色云界旗，青莲宝色旗，玄元控水旗，离地焰光旗，玉虚杏黄旗布置');
+INSERT INTO `x2_goods_zhenfa` VALUES ('29', '大须弥正反九宫仙阵', null, '由九把九宫剑布置而成，在蜀山里仅次于两仪微尘大阵');
 
 -- ----------------------------
 -- Table structure for x2_user
