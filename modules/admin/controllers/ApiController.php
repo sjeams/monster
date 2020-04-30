@@ -256,6 +256,7 @@ class ApiController extends ApiControl {
     }
 
     
+    
 
     // 取消操作 境界
     public function actionStateFalse(){
@@ -432,5 +433,17 @@ class ApiController extends ApiControl {
       echo json_encode($biology);
     }
  
+
+
+
+
+    //  物品的所有类型
+    public function actionGoodsUse()
+    {  
+        // 查询 type = 1武器 2 丹药 3道具  4生物
+        $data= GoodsUse:: getValueList(3); 
+        echo json_encode($data);
+    }
+
 
 }

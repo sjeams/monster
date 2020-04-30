@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50711
 File Encoding         : 65001
 
-Date: 2020-04-24 19:17:37
+Date: 2020-04-30 18:46:49
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,43 +34,43 @@ CREATE TABLE `x2_admin_init` (
 -- ----------------------------
 -- Records of x2_admin_init
 -- ----------------------------
-INSERT INTO `x2_admin_init` VALUES ('1', '0', 'menuInfo', '后台管理', '', '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('2', '1', 'currency', '生物系统', '测试s', '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('3', '1', 'component', '组件管理', '', '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('4', '1', 'other', '其它管理', '', '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('5', '2', '', '生物模板', '', '/admin/biology/index', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('6', '2', '', '生物创造', '', '/admin/biology-create/index', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('40', '0', 'app', 'APP管理', '', '', '1587370742', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('41', '0', 'user', '用户管理', '', '', '1587370742', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('8', '2', '', '生物管理', '', '/admin/user-biology/index', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('9', '2', '', '世界管理', '', '/layuimini/page/setting.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('10', '2', '', '技能管理', '反倒是', '/layuimini/page/table.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('48', '1', '', '物品管理', '', '', '1587370742', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('49', '48', '', '武器管理', '', '/admin/user-biology/index', '1587370742', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('50', '2', '', '性格管理 ', '', '', '1587370742', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('51', '48', 'danyao', '丹药管理', '', '/admin/user-biology/index', '1587370742', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('14', '2', '', '登录模板', '', '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('15', '14', '', '登录-1', '', '/layuimini/page/login-1.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('16', '14', '', '登录-2', null, '/layuimini/page/login-2.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('17', '2', '', '异常页面', null, '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('18', '2', '', '404页面', '', '/layuimini/page/404.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('19', '2', '', '其它界面', null, '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('20', '19', '', '按钮示例', null, '/layuimini/page/button.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('21', '19', '', '弹出层', null, '/layuimini/page/layer.html\"', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('22', '3', '', '组件管理', null, '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('23', '22', '', '图标列表', null, '/layuimini/page/icon.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('24', '22', '', '图标选择', null, '/layuimini/page/icon-picker.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('25', '22', '', '颜色选择', null, '/layuimini/page/color-select.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('26', '22', '', '下拉选择', null, '/layuimini/page/table-select.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('27', '22', '', '文件上传', '', '/layuimini/page/upload.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('28', '22', '', '富文本编辑器', '', '/layuimini/page/editor.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('29', '4', '', '多级菜单', null, '', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('30', '29', '', '按钮1', null, '/layuimini/page/button.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('31', '29', '', '按钮2', null, '/layuimini/page/button.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('32', '29', '', '按钮3', null, '/layuimini/page/button.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('33', '29', '', '表单4', null, '/layuimini/page/form.html', '1587370742', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('45', '0', 'order', '商城', '', '', '1587370742', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('43', '41', 'cc', 'cc', '', 'cc', '1587370742', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('1', '0', 'menuInfo', '后台管理', '', '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('2', '1', 'currency', '生物系统', '测试s', '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('3', '1', 'component', '组件管理', '', '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('4', '1', 'other', '其它管理', '', '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('5', '2', '', '生物模板', '', '/admin/biology/index', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('6', '2', '', '生物创造', '', '/admin/biology-create/index', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('40', '0', 'app', 'APP管理', '', '', '1587980518', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('41', '0', 'user', '用户管理', '', '', '1587980518', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('8', '2', '', '生物管理', '', '/admin/user-biology/index', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('9', '2', '', '世界管理', '', '/layuimini/page/setting.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('10', '2', '', '技能管理', '反倒是', '/layuimini/page/table.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('48', '1', '', '物品管理', '', '', '1587980518', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('49', '48', '', '物品分类', '', '/admin/goods/index', '1587980518', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('50', '2', '', '性格管理 ', '', '', '1587980518', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('51', '48', 'danyao', '物品类型', '', '/admin/goods-store/index', '1587980518', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('14', '2', '', '登录模板', '', '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('15', '14', '', '登录-1', '', '/layuimini/page/login-1.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('16', '14', '', '登录-2', null, '/layuimini/page/login-2.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('17', '2', '', '异常页面', null, '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('18', '2', '', '404页面', '', '/layuimini/page/404.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('19', '2', '', '其它界面', null, '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('20', '19', '', '按钮示例', null, '/layuimini/page/button.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('21', '19', '', '弹出层', null, '/layuimini/page/layer.html\"', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('22', '3', '', '组件管理', null, '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('23', '22', '', '图标列表', null, '/layuimini/page/icon.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('24', '22', '', '图标选择', null, '/layuimini/page/icon-picker.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('25', '22', '', '颜色选择', null, '/layuimini/page/color-select.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('26', '22', '', '下拉选择', null, '/layuimini/page/table-select.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('27', '22', '', '文件上传', '', '/layuimini/page/upload.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('28', '22', '', '富文本编辑器', '', '/layuimini/page/editor.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('29', '4', '', '多级菜单', null, '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('30', '29', '', '按钮1', null, '/layuimini/page/button.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('31', '29', '', '按钮2', null, '/layuimini/page/button.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('32', '29', '', '按钮3', null, '/layuimini/page/button.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('33', '29', '', '表单4', null, '/layuimini/page/form.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('45', '0', 'order', '商城', '', '', '1587980518', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('43', '41', 'cc', 'cc', '', 'cc', '1587980518', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
 
 -- ----------------------------
 -- Table structure for x2_biology
@@ -130,36 +130,39 @@ CREATE TABLE `x2_biology` (
   `minAgile` int(11) DEFAULT '10',
   `minIntelligence` int(11) DEFAULT '10' COMMENT '最小力量',
   `userid` int(11) DEFAULT '1' COMMENT '模型创建所属人 1 管理员',
+  `shenFen` int(3) DEFAULT '1' COMMENT '身份 1普通  2精英   3头目  4气运之子    5天地主角',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_biology
 -- ----------------------------
-INSERT INTO `x2_biology` VALUES ('1', '王隐林', '1', '1', '1', '608', '60', '87', '30', '88', '31', '114', '6', '0', '0', '1', '3', '1', '0', '23', '1097', '94', '8', '6', '0', '0', '4', '侠家拳王隐林，广东南拳之大侠李胡子从四川云游到广东在肇庆鼎湖山庆云寺挂单，把侠家拳传给僧人王隐林（又名王飞龙），王隐林到广州后还俗，在黄沙兼善街开设武馆授徒。', '16', '0', '1', '1', null, '0', '1', '191', '98', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '30', '26', '28', '12', '5', '6', '1');
-INSERT INTO `x2_biology` VALUES ('2', '黄澄可', '1', '1', '1', '546', '58', '84', '29', '83', '29', '113', '6', '0', '0', '1', '3', '1', '0', '23', '971', '69', '17', '', '0', '0', '1', '九龙拳黄澄可，生性善良，宅心仁厚，天资聪敏，乐於助人。本为乡村赤脚小子，万事不强求，後离开家园往省城，面对人生种种考验与经历之馀，先後得一代宗师陆阿采、黄麒英、铁挢三等人指点武学，经历大大小小生死切磋搏斗，融会贯通各家之大成，终自创出一套刚柔并重，变化无穷的“九龙拳”。国难当前，不惜联同众虎，洒热血，抛头颅，发扬武学之“侠义精神”，成为一代英雄。', '20', '0', '1', '1', null, '0', '1', '141', '73', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '26', '22', '21', '18', '14', '12', '1');
-INSERT INTO `x2_biology` VALUES ('3', '苏黑虎', '1', '1', '1', '634', '62', '83', '29', '89', '30', '113', '6', '0', '0', '1', '3', '1', '0', '21', '1217', '123', '11', '6,5,10', '0', '0', '1', '铁沙掌苏黑虎，少林黑虎门源出嵩山少林寺，距今约二百年前道光年间,有一少林僧人法号兆德，每隔数年便到广东化缘一次.因而遇上顺德北岗乡之苏黑虎，苏黑虎年幼已习武术，但目睹兆德和尚的少林绝技后，即决心跟随兆德和尚上嵩山少林学艺。', '20', '0', '1', '1', null, '0', '1', '249', '127', '0', '0', '#fff', '0', 'A', '0', '1', '1', '0', '31', '24', '38', '8', '3', '19', '1');
-INSERT INTO `x2_biology` VALUES ('4', '黄麒英', '1', '1', '1', '536', '59', '90', '32', '89', '31', '115', '5', '0', '0', '1', '3', '1', '0', '25', '1182', '112', '15', '7,11,4,10', '0', '0', '1', '无影脚黄麒英，黄麒英功夫源自於金钩李胡子和洪熙官的传人陆阿采。', '7', '0', '1', '1', null, '0', '1', '227', '116', '0', '0', '#fff', '0', 'A', '0', '1', '1', '0', '24', '25', '33', '10', '14', '8', '1');
-INSERT INTO `x2_biology` VALUES ('5', '周泰', '1', '1', '1', '686', '59', '108', '38', '103', '37', '118', '7', '0', '0', '1', '3', '1', '0', '30', '1186', '91', '13', '', '0', '0', '1', '软棉掌周泰，周泰是广东湛江人,侠骨丹心，唯心高气傲，自尊心过强。醉心武学，为“十虎”中的“武痴”。', '10', '0', '1', '1', null, '0', '1', '185', '95', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '38', '32', '21', '14', '10', '2', '1');
-INSERT INTO `x2_biology` VALUES ('6', '黎仁超', '1', '1', '1', '430', '60', '65', '21', '69', '22', '111', '5', '0', '0', '1', '3', '1', '0', '15', '848', '77', '13', '7', '0', '0', '1', '七星拳黎仁超，为人聪明能干，头脑灵活多变，每每洞悉先机，城府甚深。为“十虎”中之智将。', '21', '0', '1', '1', null, '0', '1', '157', '81', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '12', '23', '32', '4', '9', '17', '1');
-INSERT INTO `x2_biology` VALUES ('7', '谭济筠', '1', '1', '1', '596', '61', '101', '36', '106', '37', '115', '7', '0', '0', '1', '3', '1', '0', '29', '1288', '126', '15', '8,4,2,5', '0', '0', '1', '鹤阳拳谭济筠，本名谭石窝,成名后将名字改为谭济筠. 性格率直冲动，後随咏春宗师梁赞学武，不单武艺有进，人亦变得成熟稳重，因缘际遇结识到革命党人，更不惜舍身匡扶，多番身陷险境亦义无反顾。', '17', '0', '1', '1', null, '0', '1', '255', '130', '0', '0', '#fff', '0', 'A', '0', '1', '1', '0', '28', '24', '34', '7', '5', '8', '1');
-INSERT INTO `x2_biology` VALUES ('8', '陈铁志', '1', '1', '1', '488', '58', '88', '31', '87', '31', '114', '6', '0', '0', '1', '3', '1', '0', '25', '1128', '104', '13', '2,6,4,10', '0', '0', '1', '鹰爪王陈铁志，陈铁志又名陈长泰, 一身武功刚猛雄劲,出手疾如闪电，指劲雄浑，坚如铁石，故人称“铁指陈”。', '17', '0', '1', '1', null, '0', '1', '211', '108', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '20', '23', '21', '10', '20', '15', '1');
-INSERT INTO `x2_biology` VALUES ('9', '苏灿', '1', '1', '1', '540', '62', '91', '32', '100', '34', '114', '7', '0', '0', '1', '3', '1', '0', '25', '1055', '96', '7', '11', '0', '0', '1', '醉拳苏灿，苏灿本过着富裕逍遥的日子，但是，在遭遇到斧头黑帮的纠缠、洋人买办史密斯的阴谋以及因自己的过错使父母惨死，恋人洪绮莲的离去等等挫折后，从此遁世江湖，沦为乞丐，与酒为伍，狂歌当哭，竟把酒意融入武学招式中，开创出别具一格的“醉拳”，为“广东十虎”中最出世化外之一虎。', '23', '0', '1', '1', null, '0', '1', '195', '100', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '21', '23', '42', '3', '5', '11', '1');
-INSERT INTO `x2_biology` VALUES ('10', '梁坤', '1', '1', '1', '448', '57', '59', '18', '50', '16', '114', '4', '0', '0', '1', '3', '1', '0', '10', '876', '88', '6', '8,6', '0', '0', '1', '铁桥三梁坤，正名梁坤，有洪拳大师之称，广东十虎之首。', '27', '0', '1', '1', null, '0', '1', '179', '92', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '14', '37', '17', '2', '19', '3', '1');
-INSERT INTO `x2_biology` VALUES ('11', '董海川', '1', '1', '1', '534', '59', '86', '31', '94', '33', '111', '5', '0', '0', '1', '3', '1', '0', '26', '1079', '87', '9', '5,11', '0', '0', '1', '[1797——1882]少任侠，为人仗义，嫉恶如仇，好打抱不平，人称紫面大侠，八卦掌创始', '7', '0', '1', '1', null, '0', '1', '177', '91', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '25', '13', '29', '13', '3', '16', '1');
-INSERT INTO `x2_biology` VALUES ('12', '郭云深', '1', '1', '1', '634', '60', '103', '36', '99', '35', '118', '6', '0', '0', '1', '3', '1', '0', '28', '1269', '119', '9', '5,7,6', '0', '0', '1', '[1820——1901]刚直正义，好打抱不平，人称郭大侠，形意拳一代宗师。', '6', '0', '1', '1', null, '0', '1', '241', '123', '0', '0', '#fff', '0', 'A', '0', '1', '1', '0', '32', '33', '24', '11', '13', '10', '1');
-INSERT INTO `x2_biology` VALUES ('13', '王正谊', '1', '1', '1', '502', '58', '52', '16', '53', '16', '109', '4', '0', '0', '1', '3', '1', '0', '10', '820', '67', '8', '', '0', '0', '1', '[1844——1900]德义高尚，行侠仗义，人称京师大侠，大刀王五，晚清著名武林高手。', '28', '0', '1', '1', null, '0', '1', '137', '71', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '21', '22', '24', '6', '12', '17', '1');
-INSERT INTO `x2_biology` VALUES ('14', '李存义', '1', '1', '1', '544', '57', '50', '14', '42', '13', '111', '2', '0', '0', '1', '3', '1', '0', '7', '940', '92', '12', '2,11', '0', '0', '1', '[1847——1921]为人刚直正义，人称单刀李，单刀侠，为形意拳一代宗师。', '13', '0', '1', '1', null, '0', '1', '187', '96', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '25', '32', '15', '4', '17', '3', '1');
-INSERT INTO `x2_biology` VALUES ('15', '黄飞鸿', '1', '1', '1', '594', '56', '57', '18', '51', '17', '110', '3', '0', '0', '1', '3', '1', '0', '12', '1068', '95', '8', '11,4,7', '0', '0', '1', '[1847——1925]为人正义，济世为怀，救死扶伤，人称一代大侠，为岭南一代宗师。', '15', '0', '1', '1', null, '0', '1', '193', '99', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '33', '22', '10', '21', '8', '7', '1');
-INSERT INTO `x2_biology` VALUES ('16', '霍元甲', '1', '1', '1', '614', '62', '43', '13', '53', '15', '107', '3', '0', '0', '1', '3', '1', '0', '6', '1016', '107', '18', '7,4', '0', '0', '1', '[1868——1910]执仗正义，人称霍大力士，黄面虎，津门大侠。为迷踪拳一代宗师。', '27', '0', '1', '1', null, '0', '1', '217', '111', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '30', '18', '39', '6', '5', '19', '1');
-INSERT INTO `x2_biology` VALUES ('17', '杜心武', '1', '1', '1', '480', '59', '54', '17', '58', '18', '109', '4', '0', '0', '1', '3', '1', '0', '11', '810', '68', '13', '', '0', '0', '1', '[1869——1953]行侠仗义，人称侠骨，神腿，南北大侠，为自然门一代宗师。被誉为中华第一保镖。', '27', '0', '1', '1', null, '0', '1', '139', '72', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '18', '20', '32', '8', '9', '25', '1');
-INSERT INTO `x2_biology` VALUES ('18', '刘百川', '1', '1', '1', '502', '63', '43', '13', '58', '16', '106', '4', '0', '0', '1', '3', '1', '0', '7', '912', '99', '16', '4,11', '0', '0', '1', '[1870——1964]为人义气，正直任侠，人称北侠，江南第一腿。', '30', '0', '1', '1', null, '0', '1', '201', '103', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '18', '14', '47', '9', '8', '13', '1');
-INSERT INTO `x2_biology` VALUES ('19', '李尧臣', '1', '1', '1', '636', '58', '70', '22', '59', '20', '114', '4', '0', '0', '1', '3', '1', '0', '14', '1047', '92', '12', '2', '0', '0', '1', '[1876——1973]以侠义、智慧、勇武、传奇著称，人称李大侠，神镖李，无极刀王，29军大刀队总教头，被誉为最后的镖王。', '16', '0', '1', '1', null, '0', '1', '187', '96', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '34', '35', '13', '8', '16', '7', '1');
-INSERT INTO `x2_biology` VALUES ('20', '韩慕侠', '1', '1', '1', '598', '60', '67', '22', '68', '22', '112', '5', '0', '0', '1', '3', '1', '0', '14', '968', '87', '9', '', '0', '0', '1', '[1877——1947]好任侠，打抱不平，人称韩大侠，玉面虎，为形意八卦一代宗师。', '28', '0', '1', '1', null, '0', '1', '177', '91', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '28', '29', '30', '5', '10', '18', '1');
-INSERT INTO `x2_biology` VALUES ('21', '王子平', '1', '1', '1', '564', '62', '96', '34', '103', '36', '115', '7', '0', '0', '1', '3', '1', '0', '27', '1194', '116', '8', '2,10,11', '0', '0', '1', '[1881——1973]一身正义，好打抱不平，人称千斤神力，为清末民初著名武术家。', '17', '0', '1', '1', null, '0', '1', '235', '120', '0', '0', '#fff', '0', 'A', '0', '1', '1', '0', '24', '23', '39', '11', '5', '25', '1');
-INSERT INTO `x2_biology` VALUES ('22', '吕紫剑', '1', '1', '1', '600', '61', '53', '16', '54', '16', '111', '4', '0', '0', '1', '3', '1', '0', '8', '1073', '118', '18', '6,5,11', '0', '0', '1', '[1993——2012]行侠仗义，人称长江大侠，为八卦掌一代宗师', '27', '0', '1', '1', null, '0', '1', '239', '122', '0', '0', '#fff', '0', 'A', '0', '1', '1', '0', '28', '29', '31', '9', '13', '22', '1');
-INSERT INTO `x2_biology` VALUES ('23', '李三', '1', '1', '1', '1059', '31', '26', '21', '29', '24', '110', '3', '0', '0', '1', '3', '1', '0', '5', '1322', '109', '6', '4,6,7,8,5', '0', '0', '1', '[1898——1953]劫富济贫，人称侠盗，燕子李三，为民初著名飞贼。', '10', '0', '1', '1', '', '0', '1', '221', '113', '9', '10', '#fff', '0', 'B', '0', '1', '1', '0', '35', '22', '30', '24', '11', '13', '1');
-INSERT INTO `x2_biology` VALUES ('24', '未知生物', '1', '1', '1', '610', '53', '65', '29', '60', '28', '109', '2', '0', '0', '1', '3', '1', '0', '10', '1166', '109', '16', '4,2,6,10', '0', '0', '4', null, '29', '0', '1', '1', null, '0', '1', '221', '113', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '34', '20', '15', '21', '15', '3', '1');
+INSERT INTO `x2_biology` VALUES ('1', '王隐林', '1', '1', '1', '608', '60', '87', '30', '88', '31', '114', '6', '0', '0', '1', '3', '1', '0', '23', '1097', '94', '8', '6', '0', '0', '4', '侠家拳王隐林，广东南拳之大侠李胡子从四川云游到广东在肇庆鼎湖山庆云寺挂单，把侠家拳传给僧人王隐林（又名王飞龙），王隐林到广州后还俗，在黄沙兼善街开设武馆授徒。', '16', '0', '1', '1', null, '0', '1', '191', '98', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '30', '26', '28', '12', '5', '6', '1', '1');
+INSERT INTO `x2_biology` VALUES ('2', '黄澄可', '1', '1', '1', '546', '58', '84', '29', '83', '29', '113', '6', '0', '0', '1', '3', '1', '0', '23', '971', '69', '17', '', '0', '0', '1', '九龙拳黄澄可，生性善良，宅心仁厚，天资聪敏，乐於助人。本为乡村赤脚小子，万事不强求，後离开家园往省城，面对人生种种考验与经历之馀，先後得一代宗师陆阿采、黄麒英、铁挢三等人指点武学，经历大大小小生死切磋搏斗，融会贯通各家之大成，终自创出一套刚柔并重，变化无穷的“九龙拳”。国难当前，不惜联同众虎，洒热血，抛头颅，发扬武学之“侠义精神”，成为一代英雄。', '20', '0', '1', '1', null, '0', '1', '141', '73', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '26', '22', '21', '18', '14', '12', '1', '1');
+INSERT INTO `x2_biology` VALUES ('3', '苏黑虎', '1', '1', '1', '634', '62', '83', '29', '89', '30', '113', '6', '0', '0', '1', '3', '1', '0', '21', '1217', '123', '11', '6,5,10', '0', '0', '1', '铁沙掌苏黑虎，少林黑虎门源出嵩山少林寺，距今约二百年前道光年间,有一少林僧人法号兆德，每隔数年便到广东化缘一次.因而遇上顺德北岗乡之苏黑虎，苏黑虎年幼已习武术，但目睹兆德和尚的少林绝技后，即决心跟随兆德和尚上嵩山少林学艺。', '20', '0', '1', '1', null, '0', '1', '249', '127', '0', '0', '#fff', '0', 'A', '0', '1', '1', '0', '31', '24', '38', '8', '3', '19', '1', '1');
+INSERT INTO `x2_biology` VALUES ('4', '黄麒英', '1', '1', '1', '536', '59', '90', '32', '89', '31', '115', '5', '0', '0', '1', '3', '1', '0', '25', '1182', '112', '15', '7,11,4,10', '0', '0', '1', '无影脚黄麒英，黄麒英功夫源自於金钩李胡子和洪熙官的传人陆阿采。', '7', '0', '1', '1', null, '0', '1', '227', '116', '0', '0', '#fff', '0', 'A', '0', '1', '1', '0', '24', '25', '33', '10', '14', '8', '1', '1');
+INSERT INTO `x2_biology` VALUES ('5', '周泰', '1', '1', '1', '686', '59', '108', '38', '103', '37', '118', '7', '0', '0', '1', '3', '1', '0', '30', '1186', '91', '13', '', '0', '0', '1', '软棉掌周泰，周泰是广东湛江人,侠骨丹心，唯心高气傲，自尊心过强。醉心武学，为“十虎”中的“武痴”。', '10', '0', '1', '1', null, '0', '1', '185', '95', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '38', '32', '21', '14', '10', '2', '1', '1');
+INSERT INTO `x2_biology` VALUES ('6', '黎仁超', '1', '1', '1', '430', '60', '65', '21', '69', '22', '111', '5', '0', '0', '1', '3', '1', '0', '15', '848', '77', '13', '7', '0', '0', '1', '七星拳黎仁超，为人聪明能干，头脑灵活多变，每每洞悉先机，城府甚深。为“十虎”中之智将。', '21', '0', '1', '1', null, '0', '1', '157', '81', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '12', '23', '32', '4', '9', '17', '1', '1');
+INSERT INTO `x2_biology` VALUES ('7', '谭济筠', '1', '1', '1', '596', '61', '101', '36', '106', '37', '115', '7', '0', '0', '1', '3', '1', '0', '29', '1288', '126', '15', '8,4,2,5', '0', '0', '1', '鹤阳拳谭济筠，本名谭石窝,成名后将名字改为谭济筠. 性格率直冲动，後随咏春宗师梁赞学武，不单武艺有进，人亦变得成熟稳重，因缘际遇结识到革命党人，更不惜舍身匡扶，多番身陷险境亦义无反顾。', '17', '0', '1', '1', null, '0', '1', '255', '130', '0', '0', '#fff', '0', 'A', '0', '1', '1', '0', '28', '24', '34', '7', '5', '8', '1', '1');
+INSERT INTO `x2_biology` VALUES ('8', '陈铁志', '1', '1', '1', '488', '58', '88', '31', '87', '31', '114', '6', '0', '0', '1', '3', '1', '0', '25', '1128', '104', '13', '2,6,4,10', '0', '0', '1', '鹰爪王陈铁志，陈铁志又名陈长泰, 一身武功刚猛雄劲,出手疾如闪电，指劲雄浑，坚如铁石，故人称“铁指陈”。', '17', '0', '1', '1', null, '0', '1', '211', '108', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '20', '23', '21', '10', '20', '15', '1', '1');
+INSERT INTO `x2_biology` VALUES ('9', '苏灿', '1', '1', '1', '540', '62', '91', '32', '100', '34', '114', '7', '0', '0', '1', '3', '1', '0', '25', '1055', '96', '7', '11', '0', '0', '1', '醉拳苏灿，苏灿本过着富裕逍遥的日子，但是，在遭遇到斧头黑帮的纠缠、洋人买办史密斯的阴谋以及因自己的过错使父母惨死，恋人洪绮莲的离去等等挫折后，从此遁世江湖，沦为乞丐，与酒为伍，狂歌当哭，竟把酒意融入武学招式中，开创出别具一格的“醉拳”，为“广东十虎”中最出世化外之一虎。', '23', '0', '1', '1', null, '0', '1', '195', '100', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '21', '23', '42', '3', '5', '11', '1', '1');
+INSERT INTO `x2_biology` VALUES ('10', '梁坤', '1', '1', '1', '448', '57', '59', '18', '50', '16', '114', '4', '0', '0', '1', '3', '1', '0', '10', '876', '88', '6', '8,6', '0', '0', '1', '铁桥三梁坤，正名梁坤，有洪拳大师之称，广东十虎之首。', '27', '0', '1', '1', null, '0', '1', '179', '92', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '14', '37', '17', '2', '19', '3', '1', '1');
+INSERT INTO `x2_biology` VALUES ('11', '董海川', '1', '1', '1', '534', '59', '86', '31', '94', '33', '111', '5', '0', '0', '1', '3', '1', '0', '26', '1079', '87', '9', '5,11', '0', '0', '1', '[1797——1882]少任侠，为人仗义，嫉恶如仇，好打抱不平，人称紫面大侠，八卦掌创始', '7', '0', '1', '1', null, '0', '1', '177', '91', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '25', '13', '29', '13', '3', '16', '1', '1');
+INSERT INTO `x2_biology` VALUES ('12', '郭云深', '1', '1', '1', '634', '60', '103', '36', '99', '35', '118', '6', '0', '0', '1', '3', '1', '0', '28', '1269', '119', '9', '5,7,6', '0', '0', '1', '[1820——1901]刚直正义，好打抱不平，人称郭大侠，形意拳一代宗师。', '6', '0', '1', '1', null, '0', '1', '241', '123', '0', '0', '#fff', '0', 'A', '0', '1', '1', '0', '32', '33', '24', '11', '13', '10', '1', '1');
+INSERT INTO `x2_biology` VALUES ('13', '王正谊', '1', '1', '1', '502', '58', '52', '16', '53', '16', '109', '4', '0', '0', '1', '3', '1', '0', '10', '820', '67', '8', '', '0', '0', '1', '[1844——1900]德义高尚，行侠仗义，人称京师大侠，大刀王五，晚清著名武林高手。', '28', '0', '1', '1', null, '0', '1', '137', '71', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '21', '22', '24', '6', '12', '17', '1', '1');
+INSERT INTO `x2_biology` VALUES ('14', '李存义', '1', '1', '1', '544', '57', '50', '14', '42', '13', '111', '2', '0', '0', '1', '3', '1', '0', '7', '940', '92', '12', '2,11', '0', '0', '1', '[1847——1921]为人刚直正义，人称单刀李，单刀侠，为形意拳一代宗师。', '13', '0', '1', '1', null, '0', '1', '187', '96', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '25', '32', '15', '4', '17', '3', '1', '1');
+INSERT INTO `x2_biology` VALUES ('15', '黄飞鸿', '1', '1', '1', '594', '56', '57', '18', '51', '17', '110', '3', '0', '0', '1', '3', '1', '0', '12', '1068', '95', '8', '11,4,7', '0', '0', '1', '[1847——1925]为人正义，济世为怀，救死扶伤，人称一代大侠，为岭南一代宗师。', '15', '0', '1', '1', null, '0', '1', '193', '99', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '33', '22', '10', '21', '8', '7', '1', '1');
+INSERT INTO `x2_biology` VALUES ('16', '霍元甲', '1', '1', '1', '614', '62', '43', '13', '53', '15', '107', '3', '0', '0', '1', '3', '1', '0', '6', '1016', '107', '18', '7,4', '0', '0', '1', '[1868——1910]执仗正义，人称霍大力士，黄面虎，津门大侠。为迷踪拳一代宗师。', '27', '0', '1', '1', null, '0', '1', '217', '111', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '30', '18', '39', '6', '5', '19', '1', '1');
+INSERT INTO `x2_biology` VALUES ('17', '杜心武', '1', '1', '1', '480', '59', '54', '17', '58', '18', '109', '4', '0', '0', '1', '3', '1', '0', '11', '810', '68', '13', '', '0', '0', '1', '[1869——1953]行侠仗义，人称侠骨，神腿，南北大侠，为自然门一代宗师。被誉为中华第一保镖。', '27', '0', '1', '1', null, '0', '1', '139', '72', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '18', '20', '32', '8', '9', '25', '1', '1');
+INSERT INTO `x2_biology` VALUES ('18', '刘百川', '1', '1', '1', '502', '63', '43', '13', '58', '16', '106', '4', '0', '0', '1', '3', '1', '0', '7', '912', '99', '16', '4,11', '0', '0', '1', '[1870——1964]为人义气，正直任侠，人称北侠，江南第一腿。', '30', '0', '1', '1', null, '0', '1', '201', '103', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '18', '14', '47', '9', '8', '13', '1', '1');
+INSERT INTO `x2_biology` VALUES ('19', '李尧臣', '1', '1', '1', '636', '58', '70', '22', '59', '20', '114', '4', '0', '0', '1', '3', '1', '0', '14', '1047', '92', '12', '2', '0', '0', '1', '[1876——1973]以侠义、智慧、勇武、传奇著称，人称李大侠，神镖李，无极刀王，29军大刀队总教头，被誉为最后的镖王。', '16', '0', '1', '1', null, '0', '1', '187', '96', '0', '0', '#fff', '0', 'B', '0', '1', '1', '0', '34', '35', '13', '8', '16', '7', '1', '1');
+INSERT INTO `x2_biology` VALUES ('20', '韩慕侠', '1', '1', '1', '598', '60', '67', '22', '68', '22', '112', '5', '0', '0', '1', '3', '1', '0', '14', '968', '87', '9', '', '0', '0', '1', '[1877——1947]好任侠，打抱不平，人称韩大侠，玉面虎，为形意八卦一代宗师。', '28', '0', '1', '1', null, '0', '1', '177', '91', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '28', '29', '30', '5', '10', '18', '1', '1');
+INSERT INTO `x2_biology` VALUES ('21', '王子平', '1', '1', '1', '564', '62', '96', '34', '103', '36', '115', '7', '0', '0', '1', '3', '1', '0', '27', '1194', '116', '8', '2,10,11', '0', '0', '1', '[1881——1973]一身正义，好打抱不平，人称千斤神力，为清末民初著名武术家。', '17', '0', '1', '1', null, '0', '1', '235', '120', '0', '0', '#fff', '0', 'A', '0', '1', '1', '0', '24', '23', '39', '11', '5', '25', '1', '1');
+INSERT INTO `x2_biology` VALUES ('22', '吕紫剑', '1', '1', '1', '600', '61', '53', '16', '54', '16', '111', '4', '0', '0', '1', '3', '1', '0', '8', '1073', '118', '18', '6,5,11', '0', '0', '1', '[1993——2012]行侠仗义，人称长江大侠，为八卦掌一代宗师', '27', '0', '1', '1', null, '0', '1', '239', '122', '0', '0', '#fff', '0', 'A', '0', '1', '1', '0', '28', '29', '31', '9', '13', '22', '1', '1');
+INSERT INTO `x2_biology` VALUES ('23', '李三', '1', '1', '1', '1059', '31', '26', '21', '29', '24', '110', '3', '0', '0', '1', '3', '1', '0', '5', '1322', '109', '6', '4,6,7,8,5', '0', '0', '1', '[1898——1953]劫富济贫，人称侠盗，燕子李三，为民初著名飞贼。', '10', '0', '1', '1', '', '0', '1', '221', '113', '9', '10', '#fff', '0', 'B', '0', '1', '1', '0', '35', '22', '30', '24', '11', '13', '1', '1');
+INSERT INTO `x2_biology` VALUES ('24', '未知生物', '1', '1', '1', '610', '53', '65', '29', '60', '28', '109', '2', '0', '0', '1', '3', '1', '0', '10', '1166', '109', '16', '4,2,6,10', '0', '0', '4', null, '29', '0', '1', '1', null, '0', '1', '221', '113', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '34', '20', '15', '21', '15', '3', '1', '1');
+INSERT INTO `x2_biology` VALUES ('25', '未知生物', '1', '1', '1', '572', '54', '76', '41', '80', '42', '110', '1', '0', '0', '1', '3', '1', '0', '16', '1092', '90', '12', '8,2', '0', '0', '4', null, '19', '0', '1', '1', null, '0', '1', '192', '97', '0', '0', '#fff', '0', 'D', '0', '1', '1', '0', '29', '18', '23', '11', '3', '6', '1', '1');
+INSERT INTO `x2_biology` VALUES ('26', '未知生物', '1', '1', '1', '1176', '34', '47', '39', '39', '32', '127', '7', '0', '0', '1', '3', '1', '0', '16', '1646', '127', '13', '4,7', '0', '0', '4', '', '22', '0', '1', '1', '/files/attach/images/20200426/1587882218673017.png', '0', '2', '257', '131', '85', '60', '#fff', '0', 'A', '0', '1', '1', '0', '16', '40', '25', '6', '14', '8', '1', '2');
 
 -- ----------------------------
 -- Table structure for x2_biology_biology
@@ -264,13 +267,14 @@ CREATE TABLE `x2_biology_create` (
   `minIntelligence` int(11) DEFAULT '10' COMMENT '最小力量',
   `userid` int(11) DEFAULT '1' COMMENT '模型创建所属人 1 管理员',
   `xiXue` int(11) DEFAULT '0' COMMENT '吸血',
+  `shenFen` int(3) DEFAULT '1' COMMENT '身份 1普通  2精英   3头目  4气运之子    5天地主角',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_biology_create
 -- ----------------------------
-INSERT INTO `x2_biology_create` VALUES ('48', '黄麒英', '1', '2', '1', '456', '53', '86', '57', '89', '58', '112', '0', '0', '0', '1', '3', '1', '4', '25', '19', '15', '18', '1086', '82', '7', '7,11,10', '0', '0', '1', '无影脚黄麒英，黄麒英功夫源自於金钩李胡子和洪熙官的传人陆阿采。', '7', '0', '1', '1', null, '0', '1', '167', '86', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '10', '14', '8', '1', '0');
+INSERT INTO `x2_biology_create` VALUES ('48', '黄麒英', '1', '2', '1', '456', '53', '86', '57', '89', '58', '112', '0', '0', '0', '1', '3', '1', '4', '25', '19', '15', '18', '1086', '82', '7', '7,11,10', '0', '0', '1', '无影脚黄麒英，黄麒英功夫源自於金钩李胡子和洪熙官的传人陆阿采。', '7', '0', '1', '1', null, '0', '1', '167', '86', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '10', '14', '8', '1', '0', '1');
 
 -- ----------------------------
 -- Table structure for x2_biology_godhood
@@ -377,7 +381,7 @@ CREATE TABLE `x2_biology_skill` (
   `type` int(11) DEFAULT '1' COMMENT '天地玄黄 宇宙洪荒 掉落只有4级，剩下靠缘分悟性',
   `name` varchar(255) DEFAULT NULL COMMENT '技能名称',
   `belong` int(11) DEFAULT NULL COMMENT '技能类型(主动，被击触发，攻击触发，初始化，附加效果）',
-  `value` int(11) DEFAULT '0' COMMENT '成长值',
+  `value` int(11) DEFAULT '0' COMMENT '成长值1234倍',
   `keeptime` int(11) DEFAULT '0' COMMENT '持续时长1回合(0为单次触发)',
   `probability` int(255) DEFAULT '100' COMMENT '触发概率',
   `image` varchar(255) DEFAULT NULL COMMENT '图片',
@@ -402,7 +406,7 @@ INSERT INTO `x2_biology_skill` VALUES ('9', '1', '金钟罩', '2', '0', '0', '3'
 INSERT INTO `x2_biology_skill` VALUES ('10', '1', '降龙十八掌', '1', '0', '0', '10', null, '增加10%的物理伤害', '天龙八部', '1');
 INSERT INTO `x2_biology_skill` VALUES ('11', '1', '碧海潮生', '1', '0', '0', '10', null, '增加10%的法术伤害', '神雕侠侣', '1');
 INSERT INTO `x2_biology_skill` VALUES ('12', '1', '乾坤大挪移', '5', '3', '0', '3', null, '倚天屠龙记中明教教主功法，闪避3%，减伤属性*3%', '倚天屠龙记', '5');
-INSERT INTO `x2_biology_skill` VALUES ('14', '1', null, null, '0', '0', '100', null, null, null, null);
+INSERT INTO `x2_biology_skill` VALUES ('14', '1', '自爆元神', '1', '1', '0', '100', null, '造成自身生命 *功法等级*1的伤害。', null, null);
 INSERT INTO `x2_biology_skill` VALUES ('15', '1', null, null, '0', '0', '100', null, null, null, null);
 INSERT INTO `x2_biology_skill` VALUES ('16', '1', null, null, '0', '0', '100', null, null, null, null);
 INSERT INTO `x2_biology_skill` VALUES ('17', '1', null, null, '0', '0', '100', null, null, null, null);
@@ -443,6 +447,189 @@ INSERT INTO `x2_biology_skill` VALUES ('51', '1', '钉头七箭书', null, '0', 
 INSERT INTO `x2_biology_skill` VALUES ('52', '1', '指地成钢', null, '0', '0', '100', null, '惧留孙。专破地行术', null, null);
 
 -- ----------------------------
+-- Table structure for x2_biology_skill_use
+-- ----------------------------
+DROP TABLE IF EXISTS `x2_biology_skill_use`;
+CREATE TABLE `x2_biology_skill_use` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(11) DEFAULT NULL COMMENT '物品类型',
+  `describe` varchar(255) DEFAULT NULL COMMENT '描述',
+  `value` int(11) DEFAULT NULL COMMENT '难度数值越大获得几率越小',
+  `type` varchar(25) DEFAULT '1' COMMENT '技能类型 1进场 2 行动前3攻击4被攻击5频死 6回合结束 7攻击追加',
+  `typeid` int(11) DEFAULT NULL,
+  `chufa` varchar(25) DEFAULT '被动' COMMENT '分解类型  被动 主动',
+  `chufaid` int(11) DEFAULT '1' COMMENT '1 主动 2 被动',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=164 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of x2_biology_skill_use
+-- ----------------------------
+INSERT INTO `x2_biology_skill_use` VALUES ('1', '属性叠加自身', '持续回合，增加自身', '1', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('2', '触发叠加自身', '持续回合，增加自身', '2', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('3', '生命叠加自身', '持续回合，增加自身', '3', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('4', '魔法叠加自身', '持续回合，增加自身', '4', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('5', '攻击叠加自身', '持续回合，增加自身', '5', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('6', '护甲叠加自身', '持续回合，增加自身', '6', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('7', '特攻叠加自身', '持续回合，增加自身', '7', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('8', '法抗叠加自身', '持续回合，增加自身', '8', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('9', '减伤叠加自身', '持续回合，增加自身', '9', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('10', '真伤叠加自身', '持续回合，增加自身', '10', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('11', '闪避叠加自身', '持续回合，增加自身', '11', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('12', '速度叠加自身', '持续回合，增加自身', '12', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('13', '暴击叠加自身', '持续回合，增加自身', '13', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('14', '属性叠加敌方', '持续回合，减少敌方', '14', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('15', '触发叠加敌方', '持续回合，减少敌方', '15', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('16', '生命叠加敌方', '持续回合，减少敌方', '16', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('17', '魔法叠加敌方', '持续回合，减少敌方', '17', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('18', '攻击叠加敌方', '持续回合，减少敌方', '18', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('19', '护甲叠加敌方', '持续回合，减少敌方', '19', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('20', '特攻叠加敌方', '持续回合，减少敌方', '20', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('21', '法抗叠加敌方', '持续回合，减少敌方', '21', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('22', '减伤叠加敌方', '持续回合，减少敌方', '22', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('23', '真伤叠加敌方', '持续回合，减少敌方', '23', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('24', '闪避叠加敌方', '持续回合，减少敌方', '24', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('25', '速度叠加敌方', '持续回合，减少敌方', '25', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('26', '暴击叠加敌方', '持续回合，减少敌方', '26', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('27', '特殊召唤', '特殊召唤单位，死亡不可复活,分身，坐骑，缘分', '27', '进场', '1', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('28', '属性叠加自身', '持续回合，增加自身', '1', '行动前', '2', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('29', '触发叠加自身', '持续回合，增加自身', '2', '行动前', '2', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('30', '生命叠加自身', '持续回合，增加自身', '3', '行动前', '2', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('31', '魔法叠加自身', '持续回合，增加自身', '4', '行动前', '2', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('32', '攻击叠加自身', '持续回合，增加自身', '5', '行动前', '2', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('33', '护甲叠加自身', '持续回合，增加自身', '6', '行动前', '2', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('34', '特攻叠加自身', '持续回合，增加自身', '7', '行动前', '2', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('35', '法抗叠加自身', '持续回合，增加自身', '8', '行动前', '2', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('36', '减伤叠加自身', '持续回合，增加自身', '9', '行动前', '2', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('37', '真伤叠加自身', '持续回合，增加自身', '10', '行动前', '2', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('38', '闪避叠加自身', '持续回合，增加自身', '11', '行动前', '2', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('39', '速度叠加自身', '持续回合，增加自身', '12', '行动前', '2', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('40', '暴击叠加自身', '持续回合，增加自身', '13', '行动前', '2', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('41', '清晰术', '移除效果', '28', '行动前', '2', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('42', '治疗生命', '恢复生命', '29', '行动前', '2', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('43', '治疗魔法', '恢复魔法', '30', '行动前', '2', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('44', '属性叠加自身', '持续回合，增加自身', '1', '攻击', '3', '主动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('45', '触发叠加自身', '持续回合，增加自身', '2', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('46', '生命叠加自身', '持续回合，增加自身', '3', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('47', '魔法叠加自身', '持续回合，增加自身', '4', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('48', '攻击叠加自身', '持续回合，增加自身', '5', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('49', '护甲叠加自身', '持续回合，增加自身', '6', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('50', '特攻叠加自身', '持续回合，增加自身', '7', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('51', '法抗叠加自身', '持续回合，增加自身', '8', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('52', '减伤叠加自身', '持续回合，增加自身', '9', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('53', '真伤叠加自身', '持续回合，增加自身', '10', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('54', '闪避叠加自身', '持续回合，增加自身', '11', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('55', '速度叠加自身', '持续回合，增加自身', '12', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('56', '暴击叠加自身', '持续回合，增加自身', '13', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('57', '属性叠加敌方', '持续回合，减少敌方', '14', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('58', '触发叠加敌方', '持续回合，减少敌方', '15', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('59', '生命叠加敌方', '持续回合，减少敌方', '16', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('60', '魔法叠加敌方', '持续回合，减少敌方', '17', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('61', '攻击叠加敌方', '持续回合，减少敌方', '18', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('62', '护甲叠加敌方', '持续回合，减少敌方', '19', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('63', '特攻叠加敌方', '持续回合，减少敌方', '20', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('64', '法抗叠加敌方', '持续回合，减少敌方', '21', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('65', '减伤叠加敌方', '持续回合，减少敌方', '22', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('66', '真伤叠加敌方', '持续回合，减少敌方', '23', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('67', '闪避叠加敌方', '持续回合，减少敌方', '24', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('68', '速度叠加敌方', '持续回合，减少敌方', '25', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('69', '暴击叠加敌方', '持续回合，减少敌方', '26', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('70', '清晰术', '移除效果', '28', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('71', '治疗生命', '治疗单位', '29', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('72', '治疗魔法', '治疗单位', '30', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('73', '控制', '持续回合，眩晕，禁锢，恐吓，冰冻，缠绕，跳过回合', '31', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('74', '复活友方', '复活友方', '32', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('75', '召唤单位', '召唤单位', '33', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('76', '中毒单位', '持续回合,持续伤害', '34', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('77', '法术伤害', '造成伤害', '35', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('78', '物理伤害', '造成伤害', '36', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('79', '真实伤害', '真实伤害，无视防御', '37', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('80', '无敌', '无视伤害， 金身自身不可行动', '40', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('81', '神圣', '无视闪避类，追魂，钉头七书等', '41', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('82', '复制', '复制，分身等', '42', '攻击', '3', '主动', '2');
+INSERT INTO `x2_biology_skill_use` VALUES ('83', '属性叠加自身', '持续回合，增加自身', '1', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('84', '触发叠加自身', '持续回合，增加自身', '2', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('85', '生命叠加自身', '持续回合，增加自身', '3', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('86', '魔法叠加自身', '持续回合，增加自身', '4', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('87', '攻击叠加自身', '持续回合，增加自身', '5', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('88', '护甲叠加自身', '持续回合，增加自身', '6', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('89', '特攻叠加自身', '持续回合，增加自身', '7', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('90', '法抗叠加自身', '持续回合，增加自身', '8', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('91', '减伤叠加自身', '持续回合，增加自身', '9', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('92', '真伤叠加自身', '持续回合，增加自身', '10', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('93', '闪避叠加自身', '持续回合，增加自身', '11', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('94', '速度叠加自身', '持续回合，增加自身', '12', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('95', '暴击叠加自身', '持续回合，增加自身', '13', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('96', '属性叠加敌方', '持续回合，减少敌方', '14', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('97', '触发叠加敌方', '持续回合，减少敌方', '15', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('98', '生命叠加敌方', '持续回合，减少敌方', '16', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('99', '魔法叠加敌方', '持续回合，减少敌方', '17', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('100', '攻击叠加敌方', '持续回合，减少敌方', '18', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('101', '护甲叠加敌方', '持续回合，减少敌方', '19', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('102', '特攻叠加敌方', '持续回合，减少敌方', '20', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('103', '法抗叠加敌方', '持续回合，减少敌方', '21', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('104', '减伤叠加敌方', '持续回合，减少敌方', '22', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('105', '真伤叠加敌方', '持续回合，减少敌方', '23', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('106', '闪避叠加敌方', '持续回合，减少敌方', '24', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('107', '速度叠加敌方', '持续回合，减少敌方', '25', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('108', '暴击叠加敌方', '持续回合，减少敌方', '26', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('109', '治疗生命', '恢复生命', '29', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('110', '治疗魔法', '恢复魔法', '30', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('111', '控制单位', '持续回合，眩晕，禁锢，恐吓，冰冻，缠绕，跳过回合', '31', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('112', '复制', '复制，分身', '32', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('113', '召唤单位', '召唤单位', '33', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('114', '中毒单位', '持续回合,持续伤害', '34', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('115', '法术伤害', '造成伤害', '35', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('116', '物理伤害', '造成伤害', '36', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('117', '无敌', '无视伤害。', '40', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('118', '真实伤害', '真实伤害，无视防御', '37', '被攻击', '4', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('119', '属性叠加自身', '持续回合，增加自身', '1', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('120', '触发叠加自身', '持续回合，增加自身', '2', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('121', '生命叠加自身', '持续回合，增加自身', '3', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('122', '魔法叠加自身', '持续回合，增加自身', '4', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('123', '攻击叠加自身', '持续回合，增加自身', '5', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('124', '护甲叠加自身', '持续回合，增加自身', '6', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('125', '特攻叠加自身', '持续回合，增加自身', '7', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('126', '法抗叠加自身', '持续回合，增加自身', '8', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('127', '减伤叠加自身', '持续回合，增加自身', '9', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('128', '真伤叠加自身', '持续回合，增加自身', '10', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('129', '闪避叠加自身', '持续回合，增加自身', '11', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('130', '速度叠加自身', '持续回合，增加自身', '12', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('131', '暴击叠加自身', '持续回合，增加自身', '13', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('132', '属性叠加敌方', '持续回合，减少敌方', '14', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('133', '触发叠加敌方', '持续回合，减少敌方', '15', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('134', '生命叠加敌方', '持续回合，减少敌方', '16', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('135', '魔法叠加敌方', '持续回合，减少敌方', '17', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('136', '攻击叠加敌方', '持续回合，减少敌方', '18', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('137', '护甲叠加敌方', '持续回合，减少敌方', '19', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('138', '特攻叠加敌方', '持续回合，减少敌方', '20', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('139', '法抗叠加敌方', '持续回合，减少敌方', '21', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('140', '减伤叠加敌方', '持续回合，减少敌方', '22', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('141', '暴击叠加敌方', '持续回合，减少敌方', '23', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('142', '攻击叠加敌方', '持续回合，减少敌方', '24', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('143', '护甲叠加敌方', '持续回合，减少敌方', '25', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('144', '特攻叠加敌方', '持续回合，减少敌方', '26', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('145', '治疗生命', '恢复生命', '29', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('146', '治疗魔法', '恢复魔法', '30', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('147', '控制单位', '持续回合，眩晕，禁锢，恐吓，冰冻，缠绕，跳过回合', '31', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('148', '复活友方', '复活友方', '32', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('149', '召唤单位', '召唤单位', '33', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('150', '中毒单位', '持续回合,持续伤害', '34', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('151', '法术伤害', '造成伤害', '35', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('152', '物理伤害', '造成伤害', '36', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('153', '真实伤害', '真实伤害，无视防御', '37', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('154', '永恒', '永恒不死，满血和1血', '38', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('155', '复活自身', '复活自身', '39', '频死', '5', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('156', '清晰术', '移除效果', '28', '回合结束', '6', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('157', '治疗生命', '恢复生命', '29', '回合结束', '6', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('158', '治疗魔法', '恢复魔法', '30', '回合结束', '6', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('159', '召唤单位', '召唤单位，造成伤害，击杀', '33', '攻击追加', '7', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('160', '中毒单位', '持续回合', '34', '攻击追加', '7', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('161', '法术伤害', '造成伤害', '35', '攻击追加', '7', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('162', '物理伤害', '造成伤害', '36', '攻击追加', '7', '被动', '1');
+INSERT INTO `x2_biology_skill_use` VALUES ('163', '真实伤害', '真实伤害，无视防御', '37', '攻击追加', '7', '被动', '1');
+
+-- ----------------------------
 -- Table structure for x2_biology_state
 -- ----------------------------
 DROP TABLE IF EXISTS `x2_biology_state`;
@@ -479,6 +666,68 @@ INSERT INTO `x2_biology_state` VALUES ('19', '天道', null, '360');
 INSERT INTO `x2_biology_state` VALUES ('20', '混元', null, '380');
 
 -- ----------------------------
+-- Table structure for x2_biology_use
+-- ----------------------------
+DROP TABLE IF EXISTS `x2_biology_use`;
+CREATE TABLE `x2_biology_use` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '消耗物品',
+  `name` varchar(11) DEFAULT NULL COMMENT '物品类型',
+  `describe` varchar(255) DEFAULT NULL COMMENT '描述',
+  `value` int(11) DEFAULT NULL COMMENT '难度数值越大获得几率越小',
+  `type` varchar(25) DEFAULT '1' COMMENT '技能类型 1进场 2 行动前3攻击4被攻击5频死 6回合结束 7攻击追加',
+  `typeid` int(11) DEFAULT NULL,
+  `chufa` varchar(25) DEFAULT '被动' COMMENT '分解类型  被动 主动',
+  `chufaid` int(11) DEFAULT '1' COMMENT '1 主动 2 被动',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of x2_biology_use
+-- ----------------------------
+INSERT INTO `x2_biology_use` VALUES ('1', '属性叠加自身', '持续回合，增加自身', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('2', '触发叠加自身', '持续回合，增加自身', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('3', '生命叠加自身', '持续回合，增加自身', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('4', '魔法叠加自身', '持续回合，增加自身', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('5', '攻击叠加自身', '持续回合，增加自身', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('6', '护甲叠加自身', '持续回合，增加自身', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('7', '特攻叠加自身', '持续回合，增加自身', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('8', '法抗叠加自身', '持续回合，增加自身', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('9', '减伤叠加自身', '持续回合，增加自身', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('10', '真伤叠加自身', '持续回合，增加自身', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('11', '闪避叠加自身', '持续回合，增加自身', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('12', '速度叠加自身', '持续回合，增加自身', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('13', '暴击叠加自身', '持续回合，增加自身', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('14', '属性叠加敌方', '持续回合，减少敌方', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('15', '触发叠加敌方', '持续回合，减少敌方', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('16', '生命叠加敌方', '持续回合，减少敌方', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('17', '魔法叠加敌方', '持续回合，减少敌方', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('18', '攻击叠加敌方', '持续回合，减少敌方', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('19', '护甲叠加敌方', '持续回合，减少敌方', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('20', '特攻叠加敌方', '持续回合，减少敌方', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('21', '法抗叠加敌方', '持续回合，减少敌方', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('22', '减伤叠加敌方', '持续回合，减少敌方', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('23', '真伤叠加敌方', '持续回合，减少敌方', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('24', '闪避叠加敌方', '持续回合，减少敌方', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('25', '速度叠加敌方', '持续回合，减少敌方', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('26', '暴击叠加敌方', '持续回合，减少敌方', null, '属性', '1', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('27', '特殊召唤', '特殊召唤单位，死亡不可复活,分身，坐骑，缘分', null, '单位', '3', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('28', '清晰术', '移除效果', null, '效果', '6', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('29', '治疗生命', '恢复生命', null, '效果', '6', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('30', '治疗魔法', '恢复魔法', null, '效果', '6', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('31', '控制单位', '持续回合，眩晕，禁锢，恐吓，冰冻，缠绕，跳过回合', null, '状态', '5', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('32', '复活友方', '复活友方', null, '复活', '2', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('33', '召唤单位', '召唤单位，造成伤害，击杀', null, '单位', '3', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('34', '中毒单位', '持续回合,持续伤害', null, '状态', '5', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('35', '法术伤害', '造成伤害', null, '伤害', '4', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('36', '物理伤害', '造成伤害', null, '伤害', '4', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('37', '真实伤害', '真实伤害，无视防御', null, '伤害', '4', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('38', '永恒', '永恒不死，满血和1血', null, '复活', '2', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('39', '复活自身', '复活自身', null, '复活', '2', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('40', '无敌', '免疫任何伤害', null, '效果', '6', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('41', '神圣', '无视闪避类', null, '效果', '6', '被动', '1');
+INSERT INTO `x2_biology_use` VALUES ('42', '复制', '复制，分身', null, '单位', '3', '被动', '1');
+
+-- ----------------------------
 -- Table structure for x2_goods_danyao
 -- ----------------------------
 DROP TABLE IF EXISTS `x2_goods_danyao`;
@@ -513,21 +762,22 @@ CREATE TABLE `x2_goods_nature` (
   `goodsid` int(11) DEFAULT NULL COMMENT '物品id',
   `name` varchar(255) DEFAULT NULL COMMENT '物品名称',
   `natureName` varchar(255) DEFAULT NULL COMMENT '属性名称',
-  `value` int(11) DEFAULT '0' COMMENT '用户属性在百分比区间',
   `natureid` int(11) DEFAULT NULL COMMENT '属性id',
-  `type` int(11) DEFAULT '1' COMMENT '物品类型  1武器 2丹药 3缘分',
+  `value` int(11) DEFAULT '0' COMMENT '用户属性在百分比区间',
+  `type` int(11) DEFAULT '1' COMMENT '物品类型  1主属性  2附加属性  3特殊属性',
   `userid` int(11) DEFAULT '0' COMMENT '用户id',
-  `percent` int(11) DEFAULT '10' COMMENT '百分比区间最大值为物品表品质区间 1-10',
+  `percent` int(11) DEFAULT '10' COMMENT '百分比区间最大值为物品表品质区间 1-10  残破 劣质 普通 良好 优质  极品 稀有 完美 传说 神话',
   `status` int(3) DEFAULT '0' COMMENT '属性 状态是否激活0未使用 1使用',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_goods_nature
 -- ----------------------------
-INSERT INTO `x2_goods_nature` VALUES ('1', '1', '戮仙剑', '攻击', '10000', '13', '1', '0', '10', '0');
-INSERT INTO `x2_goods_nature` VALUES ('2', '1', '戮仙剑', '护甲', '10000', '14', '1', '0', '10', '0');
-INSERT INTO `x2_goods_nature` VALUES ('3', '1', '天运丹', '幸运', '10', '1', '2', '0', '10', '0');
+INSERT INTO `x2_goods_nature` VALUES ('1', '1', '戮仙剑', '攻击', '13', '10000', '1', '0', '10', '0');
+INSERT INTO `x2_goods_nature` VALUES ('2', '1', '戮仙剑', '护甲', '14', '10000', '1', '0', '10', '0');
+INSERT INTO `x2_goods_nature` VALUES ('3', '1', '戮仙剑', '幸运', '1', '10', '2', '0', '10', '0');
+INSERT INTO `x2_goods_nature` VALUES ('4', '1', '天运丹', '幸运', '1', '10', '2', '0', '10', '0');
 
 -- ----------------------------
 -- Table structure for x2_goods_store
@@ -539,58 +789,89 @@ CREATE TABLE `x2_goods_store` (
   `describe` varchar(255) DEFAULT NULL COMMENT '描述',
   `value` int(11) DEFAULT NULL COMMENT '难度数值越大获得几率越小',
   `price` int(11) DEFAULT '0' COMMENT '估价',
-  `type` int(11) DEFAULT '1' COMMENT '购买类型 1金币商店 2 灵石商店 3其它',
+  `type` int(11) DEFAULT '1' COMMENT '购买类型 1金币 2 灵石 3特殊',
   `sellout` int(11) DEFAULT '0' COMMENT '卖出价格',
   `gooduse` int(11) DEFAULT NULL COMMENT '物品类型id',
   `usetype` int(11) DEFAULT '1' COMMENT '使用类型1材料 2使用 3合成',
+  `percent` varchar(255) DEFAULT '普通' COMMENT ' 残破 劣质 普通 良好 优质 稀有 极品 完美 传说 神话',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=73 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_goods_store
 -- ----------------------------
-INSERT INTO `x2_goods_store` VALUES ('1', '木箱', '开出1-6境界武器、技能或者丹药。', '1000', '50', '2', '5000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('2', '铁箱', '开出2-8境界武器、技能或者丹药。', '500', '80', '2', '8000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('3', '银箱', '开出6-12境界武器、技能或者丹药。', '100', '200', '2', '20000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('4', '金箱', '开出8-16境界武器、技能或者丹药。', '50', '800', '2', '80000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('5', '玉盒', '开出12-18境界武器、技能或者丹药。', '20', '2400', '2', '240000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('6', '仙盒', '开出16-20境界武器、技能或者丹药。', '2', '5000', '2', '500000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('7', '人仙令', '召唤令，人族生物', '500', '10000', '1', '5000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('11', '魔仙令', '召唤令，魔族生物', '500', '16000', '1', '8000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('8', '妖仙令', '召唤令，妖族生物', '500', '16000', '1', '8000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('9', '鬼仙令', '召唤令，鬼族生物', '500', '16000', '1', '8000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('10', '仙神令', '召唤令，仙族生物', '500', '16000', '1', '8000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('12', '兽仙令', '召唤令，兽族生物', '500', '16000', '1', '8000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('13', '灵仙令', '召唤令，灵族生物', '500', '24000', '1', '12000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('14', '异仙令', '召唤令，异族生物', '500', '30000', '1', '15000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('15', '万仙令', '随机召唤令，人妖鬼神魔兽灵异。', '200', '20000', '1', '10000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('16', '神魔令', '特殊召唤随机世界生物', '10', '998', '1', '99800', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('17', '精魄', '生物精魄，消耗100精魄可随机合成万仙令，生物分解可获得相应评分的精魄。1000金币=1精魄', '1000', '1000', '1', '100', '9', '3');
-INSERT INTO `x2_goods_store` VALUES ('18', '灵药', '草木精华，可用于炼丹强化。丹药分解可获得相应评分的灵药。3000金币=1灵药', '1000', '3000', '1', '300', '9', '3');
-INSERT INTO `x2_goods_store` VALUES ('19', '铁精', '锻冶之精华，可用于炼器强化。武器分解可获得相应评分的铁精。2000金币=1铁精', '1000', '2000', '1', '200', '9', '3');
-INSERT INTO `x2_goods_store` VALUES ('20', '元神', '随机生物元神，附带生物技能。', '100', '126', '2', '12600', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('21', '朱果', '刷新生物属性，凤凰血而生，服用后有脱胎换骨的功效。', '1000', '10', '2', '1000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('22', '星辰石', '武器洗炼', '1000', '10', '2', '1000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('23', '生生不熄', '体力值+20', '1000', '10000', '1', '1000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('24', '秘境', '对应世界，生物难度。9个标记，可能物品，可能战斗，可能空，可组队，全部死亡退出场景。', '100', '488', '2', '48800', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('25', '本源之力', '本源之力，用于主角突破自身境界。', '100', '30000', '1', '15000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('26', '三生石', '生物缘分刷新', '200', '20000', '1', '10000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('27', '技能书', '获得随机技能书一本', '200', '98', '2', '9800', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('28', '忘情水', '修改角色名称。', '1000', '288', '2', '28800', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('29', '掠夺卡', '强制掠夺，胜利可以获得对方10%金币', '100', '100', '2', '10000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('30', '符宝', '使用可获随机获得符宝', '300', '126', '2', '3600', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('31', '彩虹泪', '可改变异形颜色', '100', '168', '1', '16800', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('32', '神石', '20神石可合成神魔令，特殊召唤随机世界生物', '100', '50', '2', '5000', '9', '3');
-INSERT INTO `x2_goods_store` VALUES ('33', '鸿蒙紫气', '服用鸿蒙紫气，方挑战圣境。', '1', '9999', '2', '999900', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('34', '盘古石', '服用后，可学习任意种族技能一次。', '5', '4820', '2', '482000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('35', '孟婆汤', '生物转生，重塑肉身，不保留境界。', '1000', '30000', '1', '3000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('36', '潜能', '随机学习生物天生技能', '60', '360', '2', '36000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('37', '技能绑定石', '绑定技能。', '100', '200000', '1', '20000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('38', '阵法石', '使用后获得随机阵法', '50', '780000', '1', '78000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('39', '道果', '生物使用后，三围增加50', '300', '666', '2', '66600', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('40', '仙魔石', '可以使人性情大变，刷新生物性格', '500', '20', '2', '2000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('41', '藏宝图', '九宫格，每次挖掘消耗藏宝图+1', '1000', '80000', '1', '8000', '9', '2');
-INSERT INTO `x2_goods_store` VALUES ('42', '契约仙果', '使用后无法融合，无法交易，成长+1，异形+2', '80', '999999', '1', '999999', '9', '2');
+INSERT INTO `x2_goods_store` VALUES ('1', '木箱', '开出1-6境界武器、技能或者丹药。', '1000', '50', '2', '5000', '8', '2', '稀有');
+INSERT INTO `x2_goods_store` VALUES ('2', '铁箱', '开出2-8境界武器、技能或者丹药。', '500', '80', '2', '8000', '8', '2', '完美');
+INSERT INTO `x2_goods_store` VALUES ('3', '银箱', '开出6-12境界武器、技能或者丹药。', '100', '200', '2', '20000', '8', '2', '传说');
+INSERT INTO `x2_goods_store` VALUES ('4', '金箱', '开出8-16境界武器、技能或者丹药。', '50', '800', '2', '80000', '8', '2', '传说');
+INSERT INTO `x2_goods_store` VALUES ('5', '玉盒', '开出12-18境界武器、技能或者丹药。', '20', '2400', '2', '240000', '8', '2', '传说');
+INSERT INTO `x2_goods_store` VALUES ('6', '仙盒', '开出16-20境界武器、技能或者丹药。', '2', '5000', '2', '500000', '8', '2', '神话');
+INSERT INTO `x2_goods_store` VALUES ('7', '人仙令', '召唤令，人族生物', '500', '10000', '1', '5000', '11', '2', '完美');
+INSERT INTO `x2_goods_store` VALUES ('11', '魔仙令', '召唤令，魔族生物', '500', '16000', '1', '8000', '11', '2', '完美');
+INSERT INTO `x2_goods_store` VALUES ('8', '妖仙令', '召唤令，妖族生物', '500', '16000', '1', '8000', '11', '2', '完美');
+INSERT INTO `x2_goods_store` VALUES ('9', '鬼仙令', '召唤令，鬼族生物', '500', '16000', '1', '8000', '11', '2', '完美');
+INSERT INTO `x2_goods_store` VALUES ('10', '仙神令', '召唤令，仙族生物', '500', '16000', '1', '8000', '11', '2', '完美');
+INSERT INTO `x2_goods_store` VALUES ('12', '兽仙令', '召唤令，兽族生物', '500', '16000', '1', '8000', '11', '2', '完美');
+INSERT INTO `x2_goods_store` VALUES ('13', '灵仙令', '召唤令，灵族生物', '500', '24000', '1', '12000', '11', '2', '完美');
+INSERT INTO `x2_goods_store` VALUES ('14', '异仙令', '召唤令，异族生物', '500', '30000', '1', '15000', '11', '2', '完美');
+INSERT INTO `x2_goods_store` VALUES ('15', '万仙令', '随机召唤令，人妖鬼神魔兽灵异。', '200', '20000', '1', '10000', '11', '2', '完美');
+INSERT INTO `x2_goods_store` VALUES ('16', '神魔令', '特殊召唤随机世界生物', '10', '998', '1', '99800', '11', '2', '神话');
+INSERT INTO `x2_goods_store` VALUES ('17', '精魄', '生物精魄，消耗100精魄可随机合成万仙令，生物分解可获得相应评分的精魄。1000金币=1精魄', '2000', '0', '1', '100', '8', '3', '普通');
+INSERT INTO `x2_goods_store` VALUES ('18', '灵药', '草木精华，可用于炼丹强化。丹药分解可获得相应评分的灵药。3000金币=1灵药', '2000', '0', '1', '300', '8', '3', '普通');
+INSERT INTO `x2_goods_store` VALUES ('19', '铁精', '锻冶之精华，可用于炼器强化。武器分解可获得相应评分的铁精。2000金币=1铁精', '2000', '0', '1', '200', '8', '3', '普通');
+INSERT INTO `x2_goods_store` VALUES ('20', '元神', '随机生物元神，附带生物技能。', '100', '126', '2', '12600', '8', '2', '传说');
+INSERT INTO `x2_goods_store` VALUES ('21', '朱果', '刷新生物属性，凤凰血而生，服用后有脱胎换骨的功效。', '1000', '10', '2', '1000', '8', '2', '稀有');
+INSERT INTO `x2_goods_store` VALUES ('22', '星辰石', '武器洗炼', '1000', '10', '2', '1000', '8', '2', '稀有');
+INSERT INTO `x2_goods_store` VALUES ('23', '生生不熄', '体力值+20', '1000', '10000', '1', '1000', '8', '2', '稀有');
+INSERT INTO `x2_goods_store` VALUES ('24', '传送石', '随机秘境，对应世界，生物难度。9个标记，可能物品，可能战斗，可能空，可组队，全部死亡退出场景。', '100', '488', '2', '48800', '8', '2', '传说');
+INSERT INTO `x2_goods_store` VALUES ('25', '本源之力', '本源之力，用于主角突破自身境界。', '100', '30000', '1', '15000', '8', '2', '传说');
+INSERT INTO `x2_goods_store` VALUES ('26', '三生石', '生物缘分刷新', '200', '20000', '1', '10000', '8', '2', '完美');
+INSERT INTO `x2_goods_store` VALUES ('27', '功法玉简', '获得随机技能书一本', '200', '98', '2', '9800', '8', '2', '完美');
+INSERT INTO `x2_goods_store` VALUES ('28', '忘情水', '修改角色名称。', '200', '288', '2', '28800', '8', '2', '完美');
+INSERT INTO `x2_goods_store` VALUES ('29', '破界符', '强制掠夺，胜利可以获得对方10%金币。', '100', '100', '2', '10000', '8', '2', '传说');
+INSERT INTO `x2_goods_store` VALUES ('30', '符石', '使用可获随机获得符石。', '300', '126', '2', '3600', '8', '2', '完美');
+INSERT INTO `x2_goods_store` VALUES ('31', '彩虹泪', '可改变异形颜色', '100', '168', '1', '16800', '8', '2', '传说');
+INSERT INTO `x2_goods_store` VALUES ('32', '神石', '20神石可合成神魔令，特殊召唤随机世界生物', '100', '50', '2', '5000', '8', '3', '传说');
+INSERT INTO `x2_goods_store` VALUES ('33', '鸿蒙紫气', '服用鸿蒙紫气，方挑战圣境。', '1', '9999', '2', '999900', '8', '2', '神话');
+INSERT INTO `x2_goods_store` VALUES ('34', '盘古石', '服用后，可学习任意种族技能一次。', '5', '4820', '2', '482000', '8', '2', '神话');
+INSERT INTO `x2_goods_store` VALUES ('35', '孟婆汤', '生物转生，重塑肉身，不保留境界。', '1000', '30000', '1', '3000', '8', '2', '稀有');
+INSERT INTO `x2_goods_store` VALUES ('36', '潜能', '随机学习生物天生技能', '60', '360', '2', '36000', '8', '2', '传说');
+INSERT INTO `x2_goods_store` VALUES ('37', '技能绑定石', '绑定技能。', '100', '200000', '1', '20000', '8', '2', '传说');
+INSERT INTO `x2_goods_store` VALUES ('38', '阵法石', '使用后获得随机阵法', '50', '780000', '1', '78000', '8', '2', '传说');
+INSERT INTO `x2_goods_store` VALUES ('39', '道果', '生物使用后，三围增加50', '300', '666', '2', '66600', '8', '2', '完美');
+INSERT INTO `x2_goods_store` VALUES ('40', '仙魔石', '可以使人性情大变，刷新生物性格', '500', '20', '2', '2000', '8', '2', '完美');
+INSERT INTO `x2_goods_store` VALUES ('41', '藏宝图', '九宫格，每次挖掘消耗藏宝图+1', '1000', '4000', '1', '800', '8', '2', '稀有');
+INSERT INTO `x2_goods_store` VALUES ('42', '契约仙果', '使用后无法融合，无法交易，成长+1，异形+2', '80', '999999', '1', '999999', '8', '2', '传说');
+INSERT INTO `x2_goods_store` VALUES ('43', '仙炼石', '可以仙炼武器', '10', '0', '1', '0', null, '1', '神话');
+INSERT INTO `x2_goods_store` VALUES ('44', '妖炼石', '可以妖炼武器', '10', '0', '1', '0', null, '1', '神话');
+INSERT INTO `x2_goods_store` VALUES ('45', '神炼石', '可以神炼武器', '10', '0', '1', '0', null, '1', '神话');
+INSERT INTO `x2_goods_store` VALUES ('46', '何首乌', '普通药材', '2000', '0', '1', '600', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('51', '千年人参', '千年人参，有极大的药效。', '1000', '0', '1', '2000', null, '1', '稀有');
+INSERT INTO `x2_goods_store` VALUES ('47', '金币', '金币堆，可以卖钱。', '2000', '0', '1', '100', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('48', '灵石', '灵石堆，可以卖钱。', '2000', '0', '1', '500', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('49', '金矿', '发现金矿，可以卖钱。', '1000', '0', '1', '1000', null, '1', '稀有');
+INSERT INTO `x2_goods_store` VALUES ('50', '灵脉', '发现灵脉，可以卖钱。', '1000', '0', '1', '3000', null, '1', '稀有');
+INSERT INTO `x2_goods_store` VALUES ('52', '百年人参', '百年人参，药效较低。', '2000', '0', '1', '800', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('53', '雕像', '一个残破的雕像。', '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('54', '玉镯', '一块古玉。', '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('55', '地契', null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('56', '夜明珠', null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('57', '琉璃盏', null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('58', null, null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('59', null, null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('60', null, null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('61', null, null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('62', null, null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('63', null, null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('64', null, null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('65', null, null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('66', null, null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('67', null, null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('68', null, null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('69', null, null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('70', null, null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('71', null, null, '2000', '0', '1', '0', null, '1', '普通');
+INSERT INTO `x2_goods_store` VALUES ('72', null, null, '2000', '0', '1', '0', null, '1', '普通');
 
 -- ----------------------------
 -- Table structure for x2_goods_use
@@ -601,26 +882,28 @@ CREATE TABLE `x2_goods_use` (
   `name` varchar(11) DEFAULT NULL COMMENT '物品类型',
   `describe` varchar(255) DEFAULT NULL COMMENT '描述',
   `value` int(11) DEFAULT NULL COMMENT '难度数值越大获得几率越小',
-  `type` int(11) DEFAULT '1' COMMENT '购买类型 1武器 2 丹药 3其它 4技能 5生物',
+  `type` int(11) DEFAULT '1' COMMENT '购买类型 1武器 2 丹药 3道具  4生物',
   `fenjie` varchar(25) DEFAULT '普通' COMMENT '分解类型',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_goods_use
 -- ----------------------------
-INSERT INTO `x2_goods_use` VALUES ('9', '消耗物品', '使用的消耗物品。', '600', '3', '普通');
-INSERT INTO `x2_goods_use` VALUES ('10', '阵法', '使用后获得阵法。', '50', '3', '普通');
-INSERT INTO `x2_goods_use` VALUES ('11', '技能书', '使用后生物获得的技能。', '600', '4', '普通');
-INSERT INTO `x2_goods_use` VALUES ('8', '秘境', '对应世界，生物难度。9个标记，可能物品，可能战斗，可能空，全部死亡退出场景。', '100', '3', '普通');
-INSERT INTO `x2_goods_use` VALUES ('7', '元神', '生物元神，附带生物技能。', '500', '3', '普通');
-INSERT INTO `x2_goods_use` VALUES ('6', '符宝', '一次性消耗物品，战斗中可以佩戴2张符咒使用。', '800', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('9', '性格', '获得性格。', '100', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('10', '秘境', '对应世界，生物难度。9个标记，可能物品，可能战斗，可能空，全部死亡退出场景。', '60', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('11', '阵法', '使用后布置阵法。', '30', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('8', '消耗物品', '使用的消耗物品。', '600', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('7', '元神', '生物元神，附带生物技能，生物献祭5%概率获得元神。可以融合，最多保留2个技能', '100', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('6', '符石', '用于神器刻画符文。', '100', '3', '普通');
 INSERT INTO `x2_goods_use` VALUES ('2', '丹药', '丹药类型，对生物使用获得特殊效果。', '1000', '2', '灵药');
-INSERT INTO `x2_goods_use` VALUES ('3', '缘分', '缘分类型。', '500', '3', '普通');
-INSERT INTO `x2_goods_use` VALUES ('4', '普通材料', '普通的使用材料，可以卖钱。', '8000', '3', '普通');
-INSERT INTO `x2_goods_use` VALUES ('5', '灵石材料', '普通的使用材料，可以卖灵石。', '100', '3', '普通');
-INSERT INTO `x2_goods_use` VALUES ('1', '武器', '武器类型。', '5000', '1', '铁精');
-INSERT INTO `x2_goods_use` VALUES ('12', '生物', '获得生物。', '100', '5', '精魄');
+INSERT INTO `x2_goods_use` VALUES ('3', '缘分', '缘分类型。', '300', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('4', '普通材料', '普通的使用材料，可以卖钱。', '5000', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('5', '灵石材料', '普通的使用材料，可以卖灵石。', '20', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('12', '技能书', '使用后生物获得的技能。', '400', '4', '普通');
+INSERT INTO `x2_goods_use` VALUES ('1', '武器', '\n\n\n\n获得武器。 普通 良好 优质 稀有 极品 完美 传说 神话', '2000', '1', '铁精');
+INSERT INTO `x2_goods_use` VALUES ('13', '生物', '获得生物。', '200', '5', '精魄');
+INSERT INTO `x2_goods_use` VALUES ('14', '神物', '获得神物，放在背包内有特殊加成。', '10', '3', '普通');
 
 -- ----------------------------
 -- Table structure for x2_goods_wuqi
@@ -628,30 +911,34 @@ INSERT INTO `x2_goods_use` VALUES ('12', '生物', '获得生物。', '100', '5'
 DROP TABLE IF EXISTS `x2_goods_wuqi`;
 CREATE TABLE `x2_goods_wuqi` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '武器表',
-  `type` int(11) DEFAULT NULL COMMENT '参考属性加成表1幸运2境界',
   `name` varchar(255) DEFAULT NULL,
+  `type` int(255) DEFAULT '1' COMMENT 'type 1可用 2不可用',
   `point` varchar(255) DEFAULT NULL,
   `value` int(11) DEFAULT '0' COMMENT '基础白值属性',
-  `percent` int(11) DEFAULT '10' COMMENT '百分比10-100 人(白 绿 蓝 紫 金 红 橙) 鬼仙神（彩）',
+  `percent` int(11) DEFAULT '10' COMMENT '百分比10-100 人(白 绿 蓝 紫 金 红 橙) 鬼仙神（彩） 1-10 分5品不可洗练',
   `describe` varchar(255) DEFAULT NULL,
   `num` int(11) DEFAULT '0' COMMENT '属性条数 最多9条',
   `belong` int(11) DEFAULT '0' COMMENT '有id标识 说明 可以合成',
   `tilian` int(11) DEFAULT '0' COMMENT '提炼--铁之精华  根据品质提炼',
-  `jinBi` int(11) DEFAULT '100' COMMENT '金币 基础价格*境界*num（属性条）',
+  `grade` int(11) DEFAULT '1' COMMENT '境界  境界随着主角修为增加 1-20',
+  `wordId` int(11) DEFAULT '0' COMMENT '世界id  0不属于任何世界的特殊物品',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_goods_wuqi
 -- ----------------------------
-INSERT INTO `x2_goods_wuqi` VALUES ('1', '1', '戮仙剑', null, '10000', '70', '截命运之力炼制而成，服之可增加幸运值', '5', '6', '100', '100');
-INSERT INTO `x2_goods_wuqi` VALUES ('2', '1', '诛仙剑', null, '10000', '70', null, '5', '6', '100', '100');
-INSERT INTO `x2_goods_wuqi` VALUES ('3', '1', '陷仙剑', null, '10000', '70', null, '5', '6', '100', '100');
-INSERT INTO `x2_goods_wuqi` VALUES ('4', '1', '绝仙剑', null, '10000', '70', null, '5', '6', '100', '100');
-INSERT INTO `x2_goods_wuqi` VALUES ('5', '1', '诛仙阵图', '', '10000', '70', '', '5', '6', '100', '100');
-INSERT INTO `x2_goods_wuqi` VALUES ('6', '1', '诛仙剑阵', '', '30000', '80', '', '9', '0', '500', '100');
-INSERT INTO `x2_goods_wuqi` VALUES ('7', '1', '小刀', null, '100', '10', '一把普通的小刀，没什么大用处。', '0', '0', '1', '100');
-INSERT INTO `x2_goods_wuqi` VALUES ('8', '1', '承影', '', '2000', '20', '上古十大名剑之一。', '1', '0', '20', '20');
+INSERT INTO `x2_goods_wuqi` VALUES ('1', '戮仙剑', '2', null, '10', '70', '诛仙套装之一戮仙剑', '5', '5', '100', '1', '0');
+INSERT INTO `x2_goods_wuqi` VALUES ('2', '诛仙剑', '2', null, '10', '70', '诛仙套装之一诛仙剑', '5', '5', '100', '1', '0');
+INSERT INTO `x2_goods_wuqi` VALUES ('3', '陷仙剑', '2', null, '10', '70', '诛仙套装之一陷仙剑', '5', '5', '100', '1', '0');
+INSERT INTO `x2_goods_wuqi` VALUES ('4', '绝仙剑', '2', null, '10', '70', '诛仙套装之一绝仙剑', '5', '5', '100', '1', '0');
+INSERT INTO `x2_goods_wuqi` VALUES ('5', '诛仙剑阵', '2', '', '1', '80', '诛仙剑阵，由戮仙剑，诛仙剑，绝仙剑，陷仙剑组，诛仙阵图成。', '6', '5', '100', '1', '0');
+INSERT INTO `x2_goods_wuqi` VALUES ('6', '盘古斧', '2', '', '1', '80', '盘古开天神器，盘古牙齿所化。', '6', '0', '500', '1', '0');
+INSERT INTO `x2_goods_wuqi` VALUES ('7', '匕首', '1', null, '2000', '10', '一把普通的匕首，没什么大用处。', '0', '0', '1', '1', '1');
+INSERT INTO `x2_goods_wuqi` VALUES ('8', '承影', '1', '', '2000', '20', '上古十大名剑之一。', '1', '0', '20', '1', '1');
+INSERT INTO `x2_goods_wuqi` VALUES ('9', '铁剑', '1', '', '2000', '20', '普通铁剑，没什么大用处。', '1', '0', '40', '1', '1');
+INSERT INTO `x2_goods_wuqi` VALUES ('10', '钢刀', '1', '', '2000', '20', '普通铁剑，没什么大用处。', '1', '0', '60', '1', '1');
+INSERT INTO `x2_goods_wuqi` VALUES ('11', '玄铁重剑', '1', null, '2000', '10', '玄铁重剑，重达4万万斤，由千年玄铁打造而成。', '0', '0', '0', '1', '0');
 
 -- ----------------------------
 -- Table structure for x2_goods_zhenfa
@@ -778,13 +1065,14 @@ CREATE TABLE `x2_user_biology` (
   `createid` int(11) DEFAULT '0' COMMENT '生物创造id',
   `percent` float(11,0) DEFAULT '0' COMMENT '经验条(单独增加）',
   `xiXue` int(11) DEFAULT '0' COMMENT '吸血',
+  `shenFen` int(3) DEFAULT '1' COMMENT '身份 1普通  2精英   3头目  4主角   5命运',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_user_biology
 -- ----------------------------
-INSERT INTO `x2_user_biology` VALUES ('33', '黄麒英', '1', '1', '1', '456', '53', '86', '57', '89', '58', '112', '0', '0', '0', '1', '3', '1', '4', '25', '19', '15', '18', '1086', '82', '7', '7,11,10', '0', '0', '1', '无影脚黄麒英，黄麒英功夫源自於金钩李胡子和洪熙官的传人陆阿采。', '7', '0', '1', '1', null, '0', '1', '167', '86', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '10', '14', '8', '1', '48', '0', '0');
+INSERT INTO `x2_user_biology` VALUES ('33', '黄麒英', '1', '1', '1', '456', '53', '86', '57', '89', '58', '112', '0', '0', '0', '1', '3', '1', '4', '25', '19', '15', '18', '1086', '82', '7', '7,11,10', '0', '0', '1', '无影脚黄麒英，黄麒英功夫源自於金钩李胡子和洪熙官的传人陆阿采。', '7', '0', '1', '1', null, '0', '1', '167', '86', '0', '0', '#fff', '0', 'C', '0', '1', '1', '0', '10', '14', '8', '1', '48', '0', '0', '1');
 
 -- ----------------------------
 -- Table structure for x2_user_biology_attribute

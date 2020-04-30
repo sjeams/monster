@@ -132,9 +132,19 @@
                 <td >    
                     <input name="grade" class="mini-spinner" value="1" minValue="1" maxValue="100000" />
                 </td>
-                <td >元神</td>
+                <!-- <td >元神</td>
                 <td >    
                     <input name="yuanShen" class="mini-textbox" />
+                </td> -->
+                <td style="width:80px;">身份</td>
+                <td >                        
+                    <select name="shenFen" class="mini-combobox">
+                        <option value="1">普通</option>
+                        <option value="2">精英</option>
+                        <option value="3">头目</option>
+                        <option value="4">主角</option>
+                        <option value="5">命运</option>
+                    </select>
                 </td>
                 <td >缘分</td>
                 <td >    

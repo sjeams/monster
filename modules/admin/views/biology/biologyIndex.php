@@ -38,11 +38,13 @@
             </table>           
         </div>
     </div>
+
+    <!-- editNextOnEnterKey="true" -->
     <div id="datagrid1" class="mini-datagrid" style="width:98%;height:94%"
         url="/admin/biology/api-index" idField="id" 
         allowResize="true" pageSize="20" sizeList="[10,20,30,50,100]"
         allowCellEdit="true" allowCellSelect="true" multiSelect="true" 
-        editNextOnEnterKey="true"
+
         
     >
         <div property="columns">
