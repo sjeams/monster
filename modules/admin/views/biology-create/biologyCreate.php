@@ -43,7 +43,7 @@
         url="/admin/biology-create/api-index" idField="id" 
         allowResize="true" pageSize="20" sizeList="[10,20,30,50,100]"
         allowCellEdit="true" allowCellSelect="true" multiSelect="true" 
-        editNextOnEnterKey="true"
+
         
     >
         <div property="columns">
