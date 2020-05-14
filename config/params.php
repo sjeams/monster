@@ -171,41 +171,6 @@ return [
             'integral' => '1'
         ],
     ],
-    'brushImg' => [ //  刷题活动图片 1RC 2Q 3SC 4CR 5单词 6备考
-        // 1 => '/files/image/rc.png',
-        // 2 => '/files/image/q.png',
-        // 3 => '/files/image/sc.png',
-        // 4 => '/files/image/cr.png',
-        // 5 => '/files/image/dc.png',
-        // 6 => '/files/image/bk.png',
-        '文章' => '/cn/point/aritic.png',
-        '填空' => '/cn/point/fill.png',
-        '数学' => '/cn/point/math.png',
-        '阅读' => '/cn/point/read.png',
-        '单词' => '/cn/point/word.png',
-        // '备考' => '/files/image/bk.png',
-    ],
-
-    'chat_wx' => [
-        1 => [//GMAT
-            0 => '15884423550',
-            1 => '19180468035',
-            2 => '15719490091',
-            3 => '15884423550',
-            4 => '19180468035',
-            5 => '15884423550',
-            6 => '15719490091',
-        ],
-        6 => [//GRE
-            0 => 'legewangdavis',
-            1 => 'legewangdavis',
-            2 => 'LGGRE335',
-            3 => 'LGGRE335',
-            4 => 'LGGRE335',
-            5 => 'legewangdavis',
-            6 => 'legewangdavis'
-        ],
-    ],
 
 
 
@@ -392,4 +357,20 @@ return [
     ,'阅','彦','宇','雨','洋','忠','宗','曼','紫','逸','贤','蝶','菡','绿','蓝','儿','翠','烟','东华','上清','青','莲','天','展'],
 
     
+
+
+
+    'loading' => [  // 大首页配置
+        0 => [ // 10个境界
+            'url' => 'http://www.monster.com/app/loading/loading.jpg', 
+            'type' => 'jpg',  
+            'name' => '背景图',
+        ],
+        1 => [ // 10个境界
+            'url' => '/http://www.monster.com/app/loading/剑指苍茫.mp3', 
+            'type' => 'mp3',  
+            'name' => '背景音乐',
+        ],
+    ],
+
 ];
