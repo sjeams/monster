@@ -1,6 +1,6 @@
 RewriteEngine on
 # If a directory or a file exists, use it directly
-
+#
 #RewriteCond %{HTTPS} off
 #RewriteRule (.*) https://gre.viplgw.cn/$1 [R,L]
 RewriteCond %{REQUEST_FILENAME} !-f
