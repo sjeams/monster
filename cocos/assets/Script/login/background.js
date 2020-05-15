@@ -32,22 +32,24 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
-                // 下载资源包
+        // this.loadingBackground();
+    },
+
+    start () {
+
+    },
+
+    // update (dt) {},
+
+    loadingBackground: function(){
+                        // 下载资源包
             // 远程 url 带图片后缀名
             var remoteUrl = "http://127.0.0.1/ceshi.php?url=http://www.monster.com/app/loading/loading.jpg";
-            
             var self = this;
             // cc.loader.load(remoteUrl, function (err, texture) {
             cc.loader.load({ url: remoteUrl, type: 'jpg' }, function (err, texture) {  
-               // 改用 cc.url.raw，此时需要声明 resources 目录和文件后缀名
-            //    var realUrl = cc.url.raw("loading.jpg");
-            //    var texture = cc.textureCache.addImage(realUrl);
-            console.log( texture);    
-            self.node.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(texture)
-            // self.node.spriteFrame.setTexture(texture.url);
-            // self.node.spriteFrame.setContentSize(res.getContentSize());
-
-            //   直接释放某个贴图
+            
+                //   直接释放某个贴图
                 // cc.loader.release(texture);
                 // // 释放一个 prefab 以及所有它依赖的资源
                 // var deps = cc.loader.getDependsRecursively('url_photo');
@@ -63,15 +65,22 @@ cc.Class({
                 // cc.loader.release(deps);
 
                 // this.node.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(texture)
-                 // 改用 cc.url.raw，此时需要声明 resources 目录和文件后缀名
-                //  var realUrl = cc.url.raw("loading");
-                //  var texture = cc.textureCache.addImage(realUrl);
+                //  // 改用 cc.url.raw，此时需要声明 resources 目录和文件后缀名
+                // //  var realUrl = cc.url.raw("loading");
+                // //  var texture = cc.textureCache.addImage(realUrl);
+                // console.log( texture);    
+
+
+
+
+
+
+
+            self.node.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(texture)
+            // self.node.spriteFrame.setTexture(texture.url);
+            // self.node.spriteFrame.setContentSize(res.getContentSize());
+
+
             });
-    },
-
-    start () {
-
-    },
-
-    // update (dt) {},
+    }
 });

@@ -108,8 +108,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 960,
-      "height": 640
+      "width": 1334,
+      "height": 750
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -120,8 +120,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        480,
-        320,
+        667,
+        375,
         0,
         0,
         0,
@@ -184,7 +184,7 @@
       "array": [
         0,
         0,
-        209.57814025878906,
+        649.519052838329,
         0,
         0,
         0,
@@ -224,7 +224,7 @@
       "b": 0,
       "a": 255
     },
-    "_depth": -1,
+    "_depth": 0,
     "_zoomRatio": 1,
     "_targetTexture": null,
     "_fov": 60,
@@ -240,6 +240,7 @@
       "height": 1
     },
     "_renderStages": 1,
+    "_alignWithScreen": true,
     "_id": "9csCxkgpdFT5FKP1O5gZxX"
   },
   {
@@ -270,8 +271,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1920,
-      "height": 960
+      "width": 1334,
+      "height": 750
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -282,8 +283,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        6,
-        -5,
+        24,
+        0,
         0,
         0,
         0,
@@ -322,9 +323,11 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_spriteFrame": null,
+    "_spriteFrame": {
+      "__uuid__": "a43ca61a-e8ce-4f5a-b17c-b1247b5d4045"
+    },
     "_type": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -350,7 +353,7 @@
   {
     "__type__": "cc.Node",
     "_name": "progressBar",
-    "_objFlags": 512,
+    "_objFlags": 0,
     "_parent": {
       "__id__": 2
     },
@@ -434,14 +437,14 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 40,
+      "g": 56,
+      "b": 173,
       "a": 255
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 0,
+      "width": 464.9,
       "height": 31
     },
     "_anchorPoint": {
@@ -453,8 +456,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -271.172607421875,
-        16.600229263305664,
+        -210.9,
+        17.5,
         0,
         0,
         0,
@@ -555,7 +558,7 @@
       "__id__": 10
     },
     "_N$mode": 0,
-    "_N$progress": 0,
+    "_N$progress": 1,
     "_N$reverse": false,
     "_id": "322nYNZB1BVbpbwk/m/a5s"
   },
@@ -584,8 +587,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 97.87,
-      "height": 50.4
+      "width": 48.94,
+      "height": 25.2
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -596,8 +599,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        20.68600082397461,
-        -204.1510009765625,
+        20.7,
+        -207.2,
         0,
         0,
         0,
@@ -637,13 +640,15 @@
     "_useOriginalSize": false,
     "_string": "Label",
     "_N$string": "Label",
-    "_fontSize": 40,
-    "_lineHeight": 40,
+    "_fontSize": 20,
+    "_lineHeight": 20,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_batchAsBitmap": false,
+    "_styleFlags": 0,
+    "_underlineHeight": 0,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
@@ -661,8 +666,8 @@
     "_enabled": true,
     "_designResolution": {
       "__type__": "cc.Size",
-      "width": 960,
-      "height": 640
+      "width": 1334,
+      "height": 750
     },
     "_fitWidth": false,
     "_fitHeight": true,
@@ -728,6 +733,7 @@
     "_isAbsHorizontalCenter": true,
     "_isAbsVerticalCenter": true,
     "_originalWidth": 0,
-    "_originalHeight": 0
+    "_originalHeight": 0,
+    "_id": "c1Ga1APDVGbLvZmuf95XCZ"
   }
 ]

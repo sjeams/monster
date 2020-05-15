@@ -12,10 +12,10 @@
     "3D Physics/Builtin",
     "3D Particle"
   ],
-  "last-module-event-record-time": 0,
-  "design-resolution-width": 960,
-  "design-resolution-height": 640,
-  "fit-width": false,
+  "last-module-event-record-time": 1589529972340,
+  "design-resolution-width": 1334,
+  "design-resolution-height": 750,
+  "fit-width": true,
   "fit-height": true,
   "use-project-simulator-setting": false,
   "simulator-orientation": false,
@@ -35,6 +35,6 @@
       "enable": false
     }
   },
-  "start-scene": "current",
-  "migrate-history": []
+  "migrate-history": [],
+  "start-scene": "current"
 }
