@@ -1,156 +1,67 @@
-2020-05-14T01:26:25.463Z - normal: Load ~/.CocosCreator/settings.json
-2020-05-14T01:26:25.539Z - normal: Initializing Asset Database
-2020-05-14T01:26:25.541Z - normal: checking language setting...
-2020-05-14T01:26:25.541Z - normal: Language: zh
-2020-05-14T01:26:27.024Z - success: preview server running at http://localhost:7456
-2020-05-14T01:26:27.027Z - success: protocol editor-framework registered
-2020-05-14T01:26:27.027Z - success: protocol app registered
-2020-05-14T01:26:27.027Z - success: protocol theme registered
-2020-05-14T01:26:27.027Z - success: protocol packages registered
-2020-05-14T01:26:27.027Z - success: protocol uuid registerred
-2020-05-14T01:26:27.027Z - success: protocol db registerred
-2020-05-14T01:26:27.027Z - success: protocol thumbnail registerred
-2020-05-14T01:26:27.027Z - success: protocol unpack registerred
-2020-05-14T01:26:27.027Z - success: protocol disable-commonjs registerred
-2020-05-14T01:26:27.233Z - normal: connected!
-2020-05-14T01:26:27.234Z - normal: Check project D:\wamp\www\monster\cocos
-2020-05-14T01:26:27.235Z - normal: Initializing project D:\wamp\www\monster\cocos
-2020-05-14T01:26:27.845Z - normal: Initializing Cocos2d
-2020-05-14T01:26:29.544Z - normal: Initializing engine extends
-2020-05-14T01:26:29.666Z - success: adapters loaded
-2020-05-14T01:26:29.674Z - success: asset-db-debugger loaded
-2020-05-14T01:26:29.888Z - success: fb-audience-network loaded
-2020-05-14T01:26:29.950Z - success: fb-live-stream loaded
-2020-05-14T01:26:29.952Z - success: google-play-instant loaded
-2020-05-14T01:26:29.995Z - success: huawei-runtime loaded
-2020-05-14T01:26:30.618Z - success: cpk-publish loaded
-2020-05-14T01:26:30.619Z - success: jsb-adapter loaded
-2020-05-14T01:26:30.646Z - success: oppo-runtime loaded
-2020-05-14T01:26:30.657Z - success: package-manager loaded
-2020-05-14T01:26:31.366Z - success: runtime-dev-tools loaded
-2020-05-14T01:26:31.389Z - success: sdkbox loaded
-2020-05-14T01:26:31.393Z - success: ui-kit-preview-extra loaded
-2020-05-14T01:26:31.431Z - success: ui-kit-preview loaded
-2020-05-14T01:26:31.516Z - success: vivo-runtime loaded
-2020-05-14T01:26:31.518Z - success: alipay-minigame loaded
-2020-05-14T01:26:31.561Z - success: assets loaded
-2020-05-14T01:26:31.564Z - success: baidugame-opendata loaded
-2020-05-14T01:26:31.566Z - success: baidugame loaded
-2020-05-14T01:26:31.570Z - success: builder loaded
-2020-05-14T01:26:32.001Z - success: cocos-services loaded
-2020-05-14T01:26:32.031Z - success: console loaded
-2020-05-14T01:26:32.041Z - success: fb-instant-games loaded
-2020-05-14T01:26:32.044Z - success: game-window loaded
-2020-05-14T01:26:32.045Z - success: google-instant-games loaded
-2020-05-14T01:26:32.049Z - success: hierarchy loaded
-2020-05-14T01:26:32.054Z - success: inspector loaded
-2020-05-14T01:26:32.055Z - success: keystore loaded
-2020-05-14T01:26:32.059Z - success: node-library loaded
-2020-05-14T01:26:32.059Z - success: open-recent-items loaded
-2020-05-14T01:26:32.061Z - success: package-asset loaded
-2020-05-14T01:26:32.062Z - success: preferences loaded
-2020-05-14T01:26:32.065Z - success: project-exporter loaded
-2020-05-14T01:26:32.068Z - success: project-importer loaded
-2020-05-14T01:26:32.070Z - success: project-settings loaded
-2020-05-14T01:26:32.073Z - success: scene loaded
-2020-05-14T01:26:32.074Z - success: simulator-debugger loaded
-2020-05-14T01:26:32.075Z - success: sprite-editor loaded
-2020-05-14T01:26:32.077Z - success: store loaded
-2020-05-14T01:26:32.080Z - success: timeline loaded
-2020-05-14T01:26:32.082Z - success: wechatgame-opendata loaded
-2020-05-14T01:26:32.090Z - success: wechatgame loaded
-2020-05-14T01:26:32.093Z - success: xiaomi-runtime loaded
-2020-05-14T01:26:33.958Z - normal: Loading packages
-2020-05-14T01:26:33.963Z - normal: Watching packages
-2020-05-14T01:26:34.332Z - normal: Run Application
-2020-05-14T01:26:34.880Z - info: Cocos Services load base data!
-2020-05-14T01:31:31.734Z - failed: [db-task][sync-changes] Failed to import asset D:\wamp\www\monster\cocos\assets\Script\login\loading.js, message: Compile error: SyntaxError: D:/wamp/www/monster/cocos/assets/Script/login/loading.js: Unexpected token, expected , (139:6)
-  137 | // 　　　　{ 　
-  138 | // 　　　　　　_this.isPlay.spriteFrame = spriteFrame;
-> 139 | 　　　　 });
-      |       ^
-  140 |     
-  141 | 　　　
-  142 | 　　　　//加载网络图片
-    at Parser.pp$5.raise (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4454:13)
-    at Parser.pp.unexpected (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1761:8)
-    at Parser.pp.expect (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1749:33)
-    at Parser.pp$3.parseObj (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3978:12)
-    at Parser.pp$3.parseExprAtom (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3719:19)
-    at Parser.pp$3.parseExprSubscripts (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3494:19)
-    at Parser.pp$3.parseMaybeUnary (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3474:19)
-    at Parser.pp$3.parseExprOps (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3404:19)
-    at Parser.pp$3.parseMaybeConditional (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3381:19)
-    at Parser.pp$3.parseMaybeAssign (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3344:19)
-2020-05-14T04:14:58.090Z - error: [db-task][delete] Failed to delete asset ccafab24-83a8-46f5-97de-b20925eec06c, messages: Error: Asset D:\wamp\www\monster\cocos\assets\Textrue\url_photo.jpg\url_photo is not exists
-    at D:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:17369
-    at D:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:17714
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:181:20
-    at Object.async.forEachOf.async.eachOf (D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:233:13)
-    at Object.async.forEach.async.each (D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:209:22)
-    at u.l.delete (D:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:17299)
-    at D:\CocosCreator\resources\app.asar\asset-db\index.js:1:2109
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:987:13
-    at Immediate.process [as _onImmediate] (D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:953:21)
-    at processImmediate (internal/timers.js:443:21)
-    at u.o.error (D:\CocosCreator\resources\app.asar\asset-db\lib\utils.js:1:2095)
-    at D:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:17766
-    at D:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:17367
-    at D:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:17714
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:181:20
-    at Object.async.forEachOf.async.eachOf (D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:233:13)
-    at Object.async.forEach.async.each (D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:209:22)
-    at u.l.delete (D:\CocosCreator\resources\app.asar\asset-db\lib\tasks.js:1:17299)
-    at D:\CocosCreator\resources\app.asar\asset-db\index.js:1:2109
-2020-05-14T04:36:24.755Z - failed: load script [D:\wamp\www\monster\cocos\temp\quick-scripts\assets\Script\login\loading.js] failed : TypeError: Cannot set property 'spriteFrames' of undefined
-    at __define (D:\wamp\www\monster\cocos\temp\quick-scripts\assets\Script\login\loading.js:7:24)
-    at D:\wamp\www\monster\cocos\temp\quick-scripts\assets\Script\login\loading.js:179:13
-    at Object.<anonymous> (D:\wamp\www\monster\cocos\temp\quick-scripts\assets\Script\login\loading.js:186:11)
-    at Object.<anonymous> (D:\wamp\www\monster\cocos\temp\quick-scripts\assets\Script\login\loading.js:189:3)
-    at Module._compile (internal/modules/cjs/loader.js:839:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:851:10)
-    at Module.load (internal/modules/cjs/loader.js:701:32)
-    at tryModuleLoad (internal/modules/cjs/loader.js:633:12)
-    at Function.Module._load (internal/modules/cjs/loader.js:625:3)
-    at Module.require (internal/modules/cjs/loader.js:739:19)
-2020-05-14T05:54:42.672Z - failed: [db-task][sync-changes] Failed to import asset D:\wamp\www\monster\cocos\assets\Script\login\loading.js, message: Compile error: SyntaxError: D:/wamp/www/monster/cocos/assets/Script/login/loading.js: Unexpected token, expected , (48:16)
-  46 |             // {url:'http://127.0.0.1/ceshi.php?url=http://www.monster.com/app/loading/loading.jpg', type:'jpg'},
-  47 |               {url:'http://127.0.0.1/ceshi.php?url=http://www.monster.com/app/loading/loading.jpg', type:'jpg'},
-> 48 |             http://wx.qlogo.cn/mmopen/Po9mkm3Z42tolYpxUVpY6mvCmqalibOpcJ2jG3Qza5qgtibO1NLFNUF7icwCibxPicbGmkoiciaqKEIdvvveIBfEQqal8vkiavHIeqFT/0
-     |                 ^
-  49 |             // {url:'http://127.0.0.1/ceshi.php?url=http://127.0.0.1/123.jpg', type:'jpg'},
-  50 |             // {url:'http://127.0.0.1/ceshi.php?url=http://127.0.0.1/ccc.png', type:'png'},
-  51 |             {url:'http://127.0.0.1/ceshi.php?url=http://127.0.0.1/jq22honey.zip', type:'zip'},
-    at Parser.pp$5.raise (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4454:13)
-    at Parser.pp.unexpected (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1761:8)
-    at Parser.pp.expect (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1749:33)
-    at Parser.pp$3.parseExprList (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4296:12)
-    at Parser.pp$3.parseExprAtom (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3714:28)
-    at Parser.pp$3.parseExprSubscripts (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3494:19)
-    at Parser.pp$3.parseMaybeUnary (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3474:19)
-    at Parser.pp$3.parseExprOps (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3404:19)
-    at Parser.pp$3.parseMaybeConditional (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3381:19)
-    at Parser.pp$3.parseMaybeAssign (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3344:19)
-2020-05-14T06:11:23.454Z - failed: [db-task][sync-changes] Failed to import asset D:\wamp\www\monster\cocos\assets\Script\login\loading.js, message: Compile error: SyntaxError: D:/wamp/www/monster/cocos/assets/Script/login/loading.js: Unexpected character '。' (60:31)
-  58 |                 cc.loader.release(deps);
-  59 |                 this.background.spriteFrame.setTexture(texture);
-> 60 |                 this.background。spriteFrame.setContentSize(texture.getContentSize());
-     |                                ^
-  61 |             });
-  62 |             
-  63 |             // // 远程 url 不带图片后缀名，此时必须指定远程图片文件的类型
-    at Parser.pp$5.raise (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4454:13)
-    at Parser.getTokenFromCode (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1147:10)
-    at Parser.readToken (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:776:19)
-    at Parser.nextToken (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:766:19)
-    at Parser.next (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:691:10)
-    at Parser.pp$3.parseIdentifier (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4341:8)
-    at Parser.pp$3.parseSubscripts (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3517:30)
-    at Parser.pp$3.parseExprSubscripts (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3504:15)
-    at Parser.pp$3.parseMaybeUnary (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3474:19)
-    at Parser.pp$3.parseExprOps (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3404:19)
-2020-05-14T08:31:31.984Z - warn: The Asset used by component "cc.Sprite" in scene "login.fire" is missing. Detailed information:
-Node path: "Canvas/123"
-Asset url: "db://assets/Scene/login.fire"
-Missing uuid: "ccafab24-83a8-46f5-97de-b20925eec06c"
-
+2020-05-15T01:38:15.653Z - normal: Load ~/.CocosCreator/settings.json
+2020-05-15T01:38:15.722Z - normal: Initializing Asset Database
+2020-05-15T01:38:15.736Z - normal: checking language setting...
+2020-05-15T01:38:15.736Z - normal: Language: zh
+2020-05-15T01:38:17.271Z - success: preview server running at http://localhost:7456
+2020-05-15T01:38:17.274Z - success: protocol editor-framework registered
+2020-05-15T01:38:17.274Z - success: protocol app registered
+2020-05-15T01:38:17.274Z - success: protocol theme registered
+2020-05-15T01:38:17.274Z - success: protocol packages registered
+2020-05-15T01:38:17.274Z - success: protocol uuid registerred
+2020-05-15T01:38:17.274Z - success: protocol db registerred
+2020-05-15T01:38:17.274Z - success: protocol thumbnail registerred
+2020-05-15T01:38:17.274Z - success: protocol unpack registerred
+2020-05-15T01:38:17.274Z - success: protocol disable-commonjs registerred
+2020-05-15T01:38:17.468Z - normal: connected!
+2020-05-15T01:38:17.468Z - normal: Check project D:\wamp\www\monster\cocos
+2020-05-15T01:38:17.469Z - normal: Initializing project D:\wamp\www\monster\cocos
+2020-05-15T01:38:18.161Z - normal: Initializing Cocos2d
+2020-05-15T01:38:19.668Z - normal: Initializing engine extends
+2020-05-15T01:38:19.823Z - success: adapters loaded
+2020-05-15T01:38:19.831Z - success: asset-db-debugger loaded
+2020-05-15T01:38:20.212Z - success: fb-audience-network loaded
+2020-05-15T01:38:20.278Z - success: fb-live-stream loaded
+2020-05-15T01:38:20.281Z - success: google-play-instant loaded
+2020-05-15T01:38:20.385Z - success: huawei-runtime loaded
+2020-05-15T01:38:21.038Z - success: cpk-publish loaded
+2020-05-15T01:38:21.039Z - success: jsb-adapter loaded
+2020-05-15T01:38:21.087Z - success: oppo-runtime loaded
+2020-05-15T01:38:21.118Z - success: package-manager loaded
+2020-05-15T01:38:21.144Z - success: runtime-dev-tools loaded
+2020-05-15T01:38:21.155Z - success: sdkbox loaded
+2020-05-15T01:38:21.165Z - success: ui-kit-preview-extra loaded
+2020-05-15T01:38:21.179Z - success: ui-kit-preview loaded
+2020-05-15T01:38:21.219Z - success: vivo-runtime loaded
+2020-05-15T01:38:21.221Z - success: alipay-minigame loaded
+2020-05-15T01:38:21.269Z - success: assets loaded
+2020-05-15T01:38:21.275Z - success: baidugame-opendata loaded
+2020-05-15T01:38:21.278Z - success: baidugame loaded
+2020-05-15T01:38:21.282Z - success: builder loaded
+2020-05-15T01:38:21.939Z - success: cocos-services loaded
+2020-05-15T01:38:21.959Z - success: console loaded
+2020-05-15T01:38:21.969Z - success: fb-instant-games loaded
+2020-05-15T01:38:21.983Z - success: game-window loaded
+2020-05-15T01:38:21.985Z - success: google-instant-games loaded
+2020-05-15T01:38:21.988Z - success: hierarchy loaded
+2020-05-15T01:38:21.996Z - success: inspector loaded
+2020-05-15T01:38:21.997Z - success: keystore loaded
+2020-05-15T01:38:22.003Z - success: node-library loaded
+2020-05-15T01:38:22.004Z - success: open-recent-items loaded
+2020-05-15T01:38:22.005Z - success: package-asset loaded
+2020-05-15T01:38:22.006Z - success: preferences loaded
+2020-05-15T01:38:22.009Z - success: project-exporter loaded
+2020-05-15T01:38:22.012Z - success: project-importer loaded
+2020-05-15T01:38:22.014Z - success: project-settings loaded
+2020-05-15T01:38:22.018Z - success: scene loaded
+2020-05-15T01:38:22.020Z - success: simulator-debugger loaded
+2020-05-15T01:38:22.021Z - success: sprite-editor loaded
+2020-05-15T01:38:22.024Z - success: store loaded
+2020-05-15T01:38:22.027Z - success: timeline loaded
+2020-05-15T01:38:22.030Z - success: wechatgame-opendata loaded
+2020-05-15T01:38:22.039Z - success: wechatgame loaded
+2020-05-15T01:38:22.042Z - success: xiaomi-runtime loaded
+2020-05-15T01:38:22.964Z - normal: Loading packages
+2020-05-15T01:38:22.969Z - normal: Watching packages
+2020-05-15T01:38:23.473Z - normal: Run Application
+2020-05-15T01:38:24.278Z - info: Cocos Services load base data!
+2020-05-15T02:03:28.419Z - info: shutdown preview server
