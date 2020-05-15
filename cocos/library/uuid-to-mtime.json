@@ -435,12 +435,12 @@
     "relativePath": "model\\primitives.fbx"
   },
   "965131dd-c249-4d82-9895-ac1588ec29b0": {
-    "asset": 1589436781469,
+    "asset": 1589525202473,
     "meta": 1589256271081,
     "relativePath": "Textrue"
   },
   "29978e1b-82fa-4262-ab33-2c46e787facd": {
-    "asset": 1589266408085,
+    "asset": 1589526250306,
     "meta": 1589256286346,
     "relativePath": "Script"
   },
@@ -450,12 +450,12 @@
     "relativePath": "Scene"
   },
   "a305a3be-3158-4e78-948c-448ea1b5c17a": {
-    "asset": 1589438864630,
+    "asset": 1589526250306,
     "meta": 1589266400944,
     "relativePath": "Script\\login"
   },
   "2a742be0-8ee9-423b-b78e-f806b436d97a": {
-    "asset": 1589436916945,
+    "asset": 1589514153710,
     "meta": 1589435170497,
     "relativePath": "resources"
   },
@@ -507,7 +507,7 @@
   "fdb95ea7-c05e-4bf8-ab79-ef8100feac1c": {
     "asset": 1589436916945,
     "meta": 1589508212150,
-    "relativePath": "resources\\loading.jpg"
+    "relativePath": "Textrue\\loading.jpg"
   },
   "d2301862-39b4-485a-82c9-3127bbdbebc9": {
     "asset": 1589429722768,
@@ -515,29 +515,19 @@
     "relativePath": "resources\\url_photo.jpg"
   },
   "8ec67a9e-6d17-4e2d-a168-9480379a78e8": {
-    "asset": 1589508520624,
-    "meta": 1589508520625,
+    "asset": 1589531767280,
+    "meta": 1589531767286,
     "relativePath": "Scene\\loading.fire"
   },
   "c36e2d2a-abe2-4ce0-81f4-07ae095bbe93": {
-    "asset": 1589508520622,
-    "meta": 1589508520623,
+    "asset": 1589536569544,
+    "meta": 1589536569552,
     "relativePath": "Scene\\login.fire"
-  },
-  "e483a6af-1f42-4371-808f-155228cd65ed": {
-    "asset": 1589438947726,
-    "meta": 1589508212161,
-    "relativePath": "Script\\login\\background.js"
   },
   "8228ea91-c543-49e0-856a-ace573dd958d": {
     "asset": 1589263808969,
     "meta": 1589508212174,
     "relativePath": "Script\\login\\http.js"
-  },
-  "77e07582-78d0-49ac-9a87-8f04dfaa391f": {
-    "asset": 1589450492309,
-    "meta": 1589508212189,
-    "relativePath": "Script\\login\\loading.js"
   },
   "bfe2cf6e-0736-4b65-b40b-e26d5e8f8b44": {
     "asset": 1589264767744,
@@ -558,5 +548,45 @@
     "asset": 1589508520627,
     "meta": 1589508520627,
     "relativePath": "Scene\\progressScene.fire"
+  },
+  "284ccf63-1b4c-4bfd-a03d-a596de247c37": {
+    "asset": 1589525202458,
+    "meta": 1589525202512,
+    "relativePath": "Textrue\\仙侠魔幻手游《圣堂》全套资源-背景13(bg13)_爱给网_aigei_com(1).jpg"
+  },
+  "f7213c40-79c5-4958-b4b5-a36ea385ee1d": {
+    "asset": 1589525202458,
+    "meta": 1589525202514,
+    "relativePath": "Textrue\\仙侠魔幻手游《圣堂》全套资源-背景13(bg13)_爱给网_aigei_com.jpg"
+  },
+  "4a3e0a8c-d1b1-44a6-a238-2d8d732779c4": {
+    "asset": 1589525202458,
+    "meta": 1589525202540,
+    "relativePath": "Textrue\\仙侠魔幻手游《圣堂》全套资源-背景12(bg12)_爱给网_aigei_com(1).jpg"
+  },
+  "c1ef2949-c461-4e49-8f65-6e535fad3d75": {
+    "asset": 1589526262566,
+    "meta": 1589526238881,
+    "relativePath": "Script\\scence"
+  },
+  "b005bb37-3acc-445e-985c-338276edb616": {
+    "asset": 1589526278437,
+    "meta": 1589526294385,
+    "relativePath": "Script\\scence\\wap.js"
+  },
+  "e483a6af-1f42-4371-808f-155228cd65ed": {
+    "asset": 1589531688056,
+    "meta": 1589531690869,
+    "relativePath": "Script\\login\\background.js"
+  },
+  "2045bef5-9c71-43c3-b5ff-2a0c7eeb1332": {
+    "asset": 1589534175584,
+    "meta": 1589534457339,
+    "relativePath": "Script\\login\\Alert.js"
+  },
+  "77e07582-78d0-49ac-9a87-8f04dfaa391f": {
+    "asset": 1589536468118,
+    "meta": 1589536476898,
+    "relativePath": "Script\\login\\loading.js"
   }
 }
