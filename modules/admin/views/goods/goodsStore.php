@@ -62,7 +62,7 @@
                 <input name="describe" property="editor" class="mini-textarea mini-textbox" style="width:200px;" minWidth="200" minHeight="50"/>
             </div>
             <!--ComboBox：本地数据-->         
-            <div type="comboboxcolumn" autoShowPopup="true" name="type" field="type" width="100"  allowSort="true"  align="center" headerAlign="center">类型
+            <div type="comboboxcolumn" autoShowPopup="true" name="type" field="type" width="100"  allowSort="true"  align="center" headerAlign="center">状态
                 <input property="editor" class="mini-combobox" style="width:100%;" data="Genders" />                
             </div>
                       
