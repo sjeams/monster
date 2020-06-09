@@ -34,8 +34,8 @@ class GoodsStoreController extends ApiControl {
     {
 
       // 查询 type = 1武器 2 丹药 3道具  4生物
-      $gooduse= GoodsUse:: getValueList(3); 
-
+      $gooduse= GoodsUse:: getValueList(); 
+      // var_dump( $gooduse);die;
        return $this->render("goodsStore",['gooduse'=>$gooduse]);
       // return  $this->renderPartial("AdminMeanu");
     }
@@ -50,6 +50,7 @@ class GoodsStoreController extends ApiControl {
     // 生物列表
     public function actionApiIndex()
     {
+      // var_dump(Yii::$app->request->post());die;
       $pageIndex=Yii::$app->request->post('pageIndex',1);
       $pageSize=Yii::$app->request->post('pageSize',20);
       $sortField=Yii::$app->request->post('sortField');
@@ -91,7 +92,9 @@ class GoodsStoreController extends ApiControl {
             $model->describe=$v->describe;
             $model->value=$v->value;
             $model->type=$v->type;
-            $model->fenjie=$v->fenjie;
+            $model->sellout=$v->sellout;
+            $model->price=$v->price;
+            $model->selltype=$v->selltype;
             $model->save();
           }else if($v->_state=='added') { // 增
             unset($v->key);

@@ -59,25 +59,34 @@
             </div>
 
             <div field="value" width="100"  allowSort="true" >出现率
-                <input name="value" property="editor" class="mini-spinner"  minValue="1" maxValue="10000" value="10" style="width:100%;"/>
+                <input name="value" property="editor" class="mini-spinner"  minValue="0" maxValue="10000" value="10" style="width:100%;"/>
             </div>
 
             <div field="describe" width="150" headerAlign="center" allowSort="true">描述
                 <input name="describe" property="editor" class="mini-textarea mini-textbox" style="width:200px;" minWidth="200" minHeight="50"/>
             </div>
-            <!--ComboBox：本地数据-->         
-            <div type="comboboxcolumn" autoShowPopup="true" name="type" field="type" width="100"  allowSort="true"  align="center" headerAlign="center">类型
-                <input property="editor" class="mini-combobox" style="width:100%;" data="Genders" />                
+            <div field="sellout" width="100"  allowSort="true" >售卖
+                <input name="sellout" property="editor" class="mini-spinner"  minValue="0" maxValue="1000000" value="10" style="width:100%;"/>
             </div>
-                      
+            <div field="price" width="100"  allowSort="true" >购买
+                <input name="price" property="editor" class="mini-spinner"  minValue="0" maxValue="1000000" value="10" style="width:100%;"/>
+            </div>
+            <!--ComboBox：本地数据-->         
+            <div type="comboboxcolumn" autoShowPopup="true" name="selltype" field="selltype" width="100"  allowSort="true"  align="center" headerAlign="center">类型
+                <input property="editor" class="mini-combobox" style="width:100%;" data="Selltypes" />                
+            </div>
+            <div type="comboboxcolumn" autoShowPopup="true" name="type" field="type" width="100"  allowSort="true"  align="center" headerAlign="center">状态
+                <input property="editor" class="mini-combobox" style="width:100%;" data="Types" />                
+            </div>     
         </div>
     </div>
 
     </body>
 </html>
     <script type="text/javascript">
-        var Genders = [{ id: 1, text: '金币' }, { id: 2, text: '灵石'}, { id: 3, text: '特殊'}];
-
+        var Selltypes = [{ id: 0, text: '不可购买' },{ id: 1, text: '金币' }, { id: 2, text: '灵石'}];
+        var Types = [{ id: 1, text: '可用' }, { id: 2, text: '不可用'}];
+        
         mini.parse();
 
         var grid = mini.get("datagrid1");

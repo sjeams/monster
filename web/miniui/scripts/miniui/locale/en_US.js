@@ -170,7 +170,7 @@ if (mini.Pager) {
         prevText: "Prev",
         nextText: "Next",
         lastText: "Last",
-        pageInfoText: "Pre page {0} records , all {1} records."
+        pageInfoText: "每页 {0} 条记录 , 共 {1} 记录."
     });
 }
 
