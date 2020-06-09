@@ -1,23 +1,23 @@
-<?php $userId = Yii::$app->session->get('userId'); ?>
-<?php $userData = Yii::$app->session->get('userData') ?>
-<?php $level = Yii::$app->session->get('level') ?>
+<?php
+$uid = Yii::$app->session->get('uid');
+$userData = Yii::$app->session->get('userData');
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
+
     <!--阻止浏览器缓存-->
+    <title>雷哥网LGW-留学·GMAT·GRE·SAT·托福·雅思-雷哥培训，不只是课程，更是解决方案，慧申科技旗下教育品牌</title>
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
     <meta http-equiv="expires" content="0">
+    <meta http-equiv="Cache" content="no-cache">
+    <!--禁止百度转码-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
     <!-- Basic Page Needs
      ================================================== -->
-    <title><?php echo $this->context->title ?></title>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <!--    <meta name="keywords" content="--><?php //echo $this->context->keywords ?><!--，雷哥培训">-->
-    <meta name="keywords" content="<?php echo $this->context->keywords ?>，雷哥GRE">
-    <meta name="description" content="<?php echo $this->context->description ?>">
-    <meta name="title" content="">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
     ================================================== -->
     <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
@@ -26,619 +26,699 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <!-- 让360双核浏览器用webkit内核渲染页面
-    ================================================== -->
+      ================================================== -->
     <meta name="renderer" content="webkit">
-    <link rel="stylesheet" href="/cn/css/reset.css">
-    <!--    <link rel="stylesheet" href="/cn/css/course.css?v=1">-->
-    <link rel="stylesheet" href="/cn/css/common.css?v=1.0101010101.2">
-    <link rel="stylesheet" href="/cn/css/animate.min.css">
-    <link rel="stylesheet" href="/cn/css/swiper.css">
-
-    <script src="/cn/js/jquery-1.9.1.min.js"></script>
-    <script src="/cn/js/jquery.SuperSlide.2.1.1.js"></script>
-    <script type="text/javascript" src="/cn/js/ResizeSensor.min.js"></script>
-    <script type="text/javascript" src="/cn/js/theia-sticky-sidebar.min.js"></script>
-    <script type="text/javascript" src="/cn/js/common.js?v=1"></script>
-<!--    <script type="text/javascript" src="/cn/js/swiper.js"></script>-->
-
+    <meta name="keywords" content="雷哥网，GMAT考试，GMAT培训，GMAT网课、GRE考试，GRE培训，GRE网课，SAT培训、SAT课程、托福培训，托福考试，雅思考试，雅思培训，留学中介，美国留学，英国留学，留学文书，雷哥培训。">
+    <meta name="description" content="雷哥网，慧申科技旗下教育品牌，成立于2012年，提供大数据驱动下的国际教育O＋O服务。雷哥网GMAT、GRE、SAT、托福、雅思通过PC、WAP和APP等互联网平台和工具，搭建在线题库、模考库和知识库等，
+    分析研究用户的做题数据和学习轨迹，以人工智能为用户提供精准的留学英语备考服务。雷哥网留学通过院校库、案例库和录取条件库等建立选校模型，为客户的留学申请精准定位，提供个性化留学选校与申请服务，并以雷哥网学习中心提供留学与出国英语辅导线下服务，二者相辅相成。">
+    <link rel="stylesheet" href="https://file.viplgw.cn/ui/book/cn/css/public.css?v=1.0.2">
+    <link rel="stylesheet" href="https://file.viplgw.cn/ui/home/cn/css/animate.min.css">
+    <link rel="stylesheet" href="https://file.viplgw.cn/ui/home/cn/css/index-3.css?v=2.1.11">
     <script>
-        // var _hmt = _hmt || [];
-        // (function () {
-        //     var hm = document.createElement("script");
-        //     hm.src = "https://hm.baidu.com/hm.js?50f3347ce318df3cd25f2d8ffcf35273";
-        //     var s = document.getElementsByTagName("script")[0];
-        //     s.parentNode.insertBefore(hm, s);
-        // })();
+        //        百度监控访问数据
 
-        /*  var _hmt = _hmt || [];
-          (function() { var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?58446f09ab8c46a2ba431604d769c5ca";
-          var s = document.getElementsByTagName("script")[0];
-          s.parentNode.insertBefore(hm, s);
-          })();*/
     </script>
-    <script type="text/javascript" src="/jmeditor/JMEditor.js"></script>
+    <script type="text/javascript" src="https://file.viplgw.cn/ui/home/cn/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://file.viplgw.cn/ui/home/cn/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="https://file.viplgw.cn/ui/book/cn/js/index.js"></script>
 </head>
-<body>
-<?php
-$success_content = Yii::$app->session->get('success_content');
-$loginOut        = Yii::$app->session->get('loginOut');
-if ($success_content) {
-    echo $success_content;
-    Yii::$app->session->remove('success_content');
-}
-if ($loginOut) {
-    echo $loginOut;
-    Yii::$app->session->remove('loginOut');
-}
-?>
-<div class="greyNav clearfix">
-    <div class="inGrey clearfix">
-        <div class="leftNav">
-            <ul>
-                <li>
-                    <h1 title="雷哥GRE">
-                        <a href="https://www.viplgw.cn" target="_blank">
-                            <!-- <img src="https://gmat.viplgw.cn/app/web_core/styles/images/index_kevinIcon.png"
-                                 alt="雷哥_GRE"> -->
-                            雷哥网
-                        </a>
-                    </h1>
-                </li>
-                <li><a href="https://gmat.viplgw.cn/" target="_blank">GMAT</a></li>
-                <li><a href="/" class="on" target="_blank">GRE</a></li>
-                <li><a href="https://toefl.viplgw.cn/" target="_blank">托福</a></li>
-                <li><a href="https://ielts.viplgw.cn/" target="_blank">雅思</a></li>
-                <li><a href="https://sat.viplgw.cn/" target="_blank">SAT</a></li>
-                <li><a href="https://liuxue.viplgw.cn/" target="_blank">留学</a></li>
-                <li><a href="https://words.viplgw.cn/" target="_blank">单词</a></li>
-                <li><a href="https://liuxue.viplgw.cn/question-tag/0.html" target="_blank">留学问答</a></li>
-                <li><a href="https://open.viplgw.cn" target="_blank">公开课</a></li>
-                <li><a href="https://bbs.viplgw.cn" target="_blank">雷哥论坛</a></li>
-                <li><a href="https://lgwcet.viplgw.cn/" target="_blank">四六级</a></li>
-                <!-- <li><a href="https://class.viplgw.cn/studyGroup.html" target="_blank">雷哥备考</a></li> -->
-                <!--                <li><a href="https://class.viplgw.cn/" target="_blank">课程商城</a></li>-->
-                <li class="phone"><span>400-1816-180</span></li>
-                <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2095453331&site=qq&menu=yes">在线咨询</a></li>
-            </ul>
-        </div>
 
-        <div class="rightLogin">
-            <!--未登录显示-->
-            <?php
-            if (!$userId) {
-                ?>
-                <div class="loginBefore">
-                    <input type="button" value="登录" onclick="userLogin()">
-                    <input type="button" value="注册" onclick="userRegister()">
-                </div>
-                <?php
-            } else {
-                ?>
-                <!--登录之后显示-->
-                <div class="loginAfter">
-                    <div class="whiteDiv"><img
-                                src="<?php echo (isset($userData['image']) && $userData['image']) ? $userData['image'] : '/cn/images/details_defaultImg.png' ?>"
-                                alt="用户头像"></div>
-                    <div class="clearB"></div>
-                    <!--                    下拉-->
-                    <div class="xiala-con">
+<body>
+<script>
+    var regExp = new RegExp("http://", 'g');
+    $('body')[0].innerHTML = $('body')[0].innerHTML.replace(regExp, 'https://');
+</script>
+<!--顶部第一栏导航-->
+<div class="new-grey-nav">
+    <div class="auto-box">
+        <div class="n-g-left">雷哥网，不只是课程，更是解决方案！</div>
+        <div class="n-g-left" style="background: white;height: 20px;margin-top: 7px;padding:0 8px;line-height: 20px"> 国家高新技术认定企业</div>
+        <div class="n-g-right">
+            <ul>
+                <li class="jiameng"><a href="/cn/index/join-us"><img src="https://file.viplgw.cn/ui/home/cn/images/newIndex/top/top_add.png" alt="加盟图标" /> 加盟</a></li>
+                <li class="padding-pos">
+                    <a href="javascript:void(0);">手机站 <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/home-topSJ.png" alt="箭头" /></a>
+                    <div class="blog-drop common-show" style="width: 110px;left: -20px;padding: 10px 0 0 0;">
                         <ul>
-                            <li>
-                                <input type="hidden" id="userId" value="115"/>
-                                <div class="new-gre-user-img">
-                                    <img
-                                    src="<?php echo (isset($userData['image']) && $userData['image']) ? $userData['image'] : '/cn/images/details_defaultImg.png' ?>"
-                                    alt="用户头像">
-                                </div>
-                                <div class="new-gre-user-mes">
-                                    <p class="userName_n"><?php echo isset($userData['nickname']) ? $userData['nickname'] : $userData['nickname'] ?></p>
-                                    <p><?php echo $level ?></p>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="/user.html">个人中心</a>
-                            </li>
-                            <li>
-                                <a href="/user/order-0.html">已购课程</a>
-                            </li>
-                            <li>
-                                <a href="/user/se-0/so-0/l-0/st-0/t-0.html">做题记录</a>
-                            </li>
-                            <li>
-                                <a href="/mock_record.html">模考记录</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" onclick="loginOut()">安全退出</a>
+                            <li style="width: 100%;text-align: center;">
+                                <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/home-phoneZ.png" alt="二维码图片" style="width: 80px;height: 80px;" />
+                                <p>雷哥网手机站</p>
                             </li>
                         </ul>
                     </div>
-
-                </div>
+                </li>
+                <li class="padding-pos">
+                    <a href="javascript:void(0);">APP <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/home-topSJ.png" alt="箭头" /></a>
+                    <div class="pull_down common-show">
+                        <ul>
+                            <li>
+                                <a href="http://gmat.viplgw.cn/DownloadApp.html">
+                                    <div class="first_layer">
+                                        <img src="http://gmat.viplgw.cn/app/web_core/styles/images-3/gmatapp_logo.jpg" alt="app logo图标">
+                                        <span>雷哥网GMAT</span>
+                                    </div>
+                                </a>
+                                <div class="code_box">
+                                    <img src="http://gmat.viplgw.cn/app/web_core/styles/images-3/gmat.jpg" alt="app二维码图片">
+                                </div>
+                            </li>
+                            <li>
+                                <a href="https://gre.viplgw.cn/tool.html">
+                                    <div class="first_layer">
+                                        <img src="https://file.viplgw.cn/ui/smart/cn/images/gmatapp_logo.jpg" alt="app logo图标" />
+                                        <span>雷哥网GRE</span>
+                                    </div>
+                                    <div class="code_box">
+                                        <img src="http://gmat.viplgw.cn/app/web_core/styles/images-3/gre.jpg" alt="app二维码图片" />
+                                    </div>
+                                </a>
+                            </li>
+                            <!--    <li>
+                                <a href="http://gmat.viplgw.cn/DownloadApp.html">
+                                    <div class="first_layer">
+                                        <img src="http://gmat.viplgw.cn/app/web_core/styles/images-3/gmatapp_logo.jpg" alt="app logo图标">
+                                        <span>雷哥网GMAT安卓版</span>
+                                    </div>
+                                </a>
+                                <div class="code_box">
+                                    <img src="http://gmat.viplgw.cn/app/web_core/styles/images-3/leige-android.png" alt="app二维码图片">
+                                </div>
+                            </li>-->
+                            <li>
+                                <a href="http://toefl.viplgw.cn/toefl_app.html">
+                                    <div class="first_layer">
+                                        <img src="http://gmat.viplgw.cn/app/web_core/styles/images-3/toeflapp_logo.jpg" alt="app logo图标">
+                                        <span>雷哥托福</span>
+                                    </div>
+                                </a>
+                                <div class="code_box">
+                                    <img src="http://gmat.viplgw.cn/app/web_core/styles/images-3/toefl.png" alt="app二维码图片">
+                                </div>
+                            </li>
+                            <!--   <li>
+                               <a href="http://toefl.viplgw.cn/toefl_app.html">
+                                   <div class="first_layer">
+                                       <img src="http://gmat.viplgw.cn/app/web_core/styles/images-3/toeflapp_logo.jpg" alt="app logo图标">
+                                       <span>雷哥托福安卓版</span>
+                                   </div>
+                               </a>
+                               <div class="code_box">
+                                   <img src="http://toefl.viplgw.cn/cn/images/app-android.png" alt="app二维码图片">
+                               </div>
+                           </li>-->
+                            <li>
+                                <a href="https://sat.viplgw.cn">
+                                    <div class="first_layer">
+                                        <img src="https://file.viplgw.cn/ui/home/cn/images/SAT_logo.png" alt="app logo图标">
+                                        <span>雷哥SAT安卓版</span>
+                                    </div>
+                                </a>
+                                <div class="code_box">
+                                    <img src="https://file.viplgw.cn/ui/home/cn/images/SAT_QR.png" alt="app二维码图片">
+                                </div>
+                            </li>
+                            <li>
+                                <a href="http://liuxue.viplgw.cn/app.html">
+                                    <div class="first_layer">
+                                        <img src="http://file.viplgw.cn/ui/smart/cn/images/smart-appLogo.png" alt="app logo图标" />
+                                        <span>雷哥选校</span>
+                                    </div>
+                                </a>
+                                <div class="code_box">
+                                    <img src="http://gmat.viplgw.cn/app/web_core/styles/images-3/school.jpg" alt="app二维码图片" />
+                                </div>
+                            </li>
+                            <!--  <li>
+                              <a href="http://liuxue.viplgw.cn/app.html">
+                                  <div class="first_layer">
+                                      <img src="http://file.viplgw.cn/ui/smart/cn/images/smart-appLogo.png" alt="app logo图标"/>
+                                      <span>雷哥选校安卓版</span>
+                                  </div>
+                              </a>
+                              <div class="code_box">
+                                  <img src="http://liuxue.viplgw.cn/cn/images/anroid-smartapp.png" alt="app二维码图片"/>
+                              </div>
+                          </li>-->
+                            <li>
+                                <a href="http://words.viplgw.cn/" target="_blank">
+                                    <div class="first_layer">
+                                        <img src="http://gmat.viplgw.cn/app/web_core/styles/images/words-iosLogo.jpg" alt="app logo图标" />
+                                        <span>雷哥单词</span>
+                                    </div>
+                                </a>
+                                <div class="code_box">
+                                    <img src="http://gmat.viplgw.cn/app/web_core/styles/images-3/word.jpg" alt="app二维码图片" />
+                                </div>
+                            </li>
+                            <!-- <li>
+                             <a href="http://words.viplgw.cn/" target="_blank">
+                                 <div class="first_layer">
+                                     <img src="http://gmat.viplgw.cn/app/web_core/styles/images/words-iosLogo.jpg" alt="app logo图标"/>
+                                     <span>雷哥单词安卓版</span>
+                                 </div>
+                             </a>
+                             <div class="code_box">
+                                 <img src="http://gre.viplgw.cn/cn/images/word_android.png" alt="app二维码图片"/>
+                             </div>
+                         </li>-->
+                        </ul>
+                    </div>
+                </li>
+                <li class="padding-pos">
+                    <a href="javascript:void(0);">微博 <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/home-topSJ.png" alt="箭头" /></a>
+                    <div class="blog-drop common-show">
+                        <ul>
+                            <li>
+                                <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-codeBeimei.png" alt="二维码图片" />
+                                <p>小申菌要去北美</p>
+                            </li>
+                            <li>
+                                <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-codeGmat.png" alt="二维码图片" />
+                                <p>雷哥网GMAT在线</p>
+                            </li>
+                            <li>
+                                <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-codeGre.png" alt="二维码图片" />
+                                <p>雷哥网GRE在线</p>
+                            </li>
+                            <li>
+                                <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-codeToefl.jpg" alt="二维码图片" style="width: 56px;height: 56px;margin-top: 4px;" />
+                                <p>雷哥托福在线</p>
+                            </li>
+                            <li>
+                                <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-codeIelts.png" alt="二维码图片" />
+                                <p>雷哥雅思在线</p>
+                            </li>
+                            <li>
+                                <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-codeSat.jpg" alt="二维码图片" style="width: 56px;height: 56px;margin-top: 4px;" />
+                                <p>雷哥 SAT</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="padding-pos">
+                    <a href="javascript:void(0);">微信 <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/home-topSJ.png" alt="箭头" /></a>
+                    <div class="blog-drop common-show">
+                        <ul>
+                            <li style="width: auto;margin-left: 7px;">
+                                <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-smartWX.jpg" alt="二维码图片" />
+                                <p>雷哥留学网</p>
+                            </li>
+                            <li style="width: auto;margin-left: 7px;">
+                                <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-benkeWX.jpg" alt="二维码图片" />
+                                <p>雷哥本科留学</p>
+                            </li>
+                            <li style="width: auto;margin-left: 7px;">
+                                <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-gmatWX.jpg" alt="二维码图片" />
+                                <p>雷哥网GMAT
+                                    <!--<br/>与商科留学-->
+                                </p>
+                            </li>
+                            <li style="width: auto;margin-left: 7px;">
+                                <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-greWX.jpg" alt="二维码图片" />
+                                <p>雷哥网GRE</p>
+                            </li>
+                            <li style="width: auto;margin-left: 14px;">
+                                <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-toeflWX.jpg" alt="二维码图片" />
+                                <p>雷哥托福</p>
+                            </li>
+                            <li style="width: auto;margin-left: 10px;">
+                                <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-satWX.jpg" alt="二维码图片" />
+                                <p>雷哥SAT</p>
+                            </li>
+                            <li style="width: auto;margin-left: 7px;">
+                                <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-ieltsWX.jpg" alt="二维码图片" />
+                                <p>雷哥雅思</p>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="padding-pos webNav">
+                    <a href="javascript:void(0);">网站导航 <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/home-topSJ.png" alt="箭头" /></a>
+                    <div class="webNav-box">
+                        <ul>
+                            <li>
+                                <div class="wn-left">
+                                    <h4><a href="https://www.viplgw.cn/">雷哥网</a></h4>
+                                </div>
+                                <div class="wn-right">
+                                    <ul>
+                                        <li><a href="https://class.viplgw.cn/">雷哥课程</a></li>
+                                        <li><a href="https://open.viplgw.cn/">公开课</a></li>
+                                        <li><a href="https://bbs.viplgw.cn/" target="_blank">雷哥社区</a></li>
+                                        <li><a href="https://class.viplgw.cn/studyTool.html">APP工具</a></li>
+                                        <li><a href="https://class.viplgw.cn/studyGroup.html">学习小组</a></li>
+                                        <li><a href="https://class.viplgw.cn/vip.html">VIP会员</a></li>
+                                        <li><a href="https://fm.viplgw.cn/">电台FM</a></li>
+                                        <li><a href="https://schools.viplgw.cn/schools.html" target="_blank">院校库</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/cn/project.html" target="_blank">实习就业</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/cn/know.html" target="_blank">Mentor来了</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/" target="_blank">雷哥留学</a></li>
+                                        <li><a href="https://words.viplgw.cn/" target="_blank">单词</a></li>
+                                        <li><a href="https://lgwcet.viplgw.cn/" target="_blank">四六级</a></li>
+                                    </ul>
+                                </div>
+                                <div class="clearfixd"></div>
+                            </li>
+                            <li>
+                                <div class="wn-left">
+                                    <h4><a href="https://gmat.viplgw.cn/index.html" target="_blank">GMAT</a></h4>
+                                </div>
+                                <div class="wn-right">
+                                    <ul>
+                                        <li><a href="https://gmat.viplgw.cn/topic.html" target="_blank">刷题团</a></li>
+                                        <li><a href="https://gmat.viplgw.cn/newquestion.html" target="_blank">搜题工具</a></li>
+                                        <li><a href="https://gmat.viplgw.cn/practise/index.html" target="_blank">做题练习</a></li>
+                                        <li><a href="https://gmat.viplgw.cn/exam/index.html" target="_blank">在线模考</a></li>
+                                        <li><a href="https://gmat.viplgw.cn/test/index.html" target="_blank">智能测评</a></li>
+                                        <li><a href="https://gmat.viplgw.cn/learn/index.html" target="_blank">知识讲堂</a></li>
+                                        <li><a href="https://gmat.viplgw.cn/analyze" target="_blank">GMAT报告</a></li>
+                                        <li><a href="https://gmat.viplgw.cn/gmatbeginner.html" target="_blank">GMAT零基础</a></li>
+                                        <li><a href="https://gmat.viplgw.cn/gmat600.html" target="_blank">考过600以下</a></li>
+                                        <li><a href="https://gmat.viplgw.cn/gmat700.html" target="_blank">考过700以下</a></li>
+                                        <li><a href="https://gmat.viplgw.cn/gmatcourses/index.html" target="_blank">我要上700</a></li>
+                                        <li><a href="https://gmat.viplgw.cn/gmatcourses/index.html" target="_blank">备考故事</a></li>
+                                        <li><a href="https://gmat.viplgw.cn/gmatcourses/index.html" target="_blank">名师专栏</a></li>
+                                        <li><a href="https://gmat.viplgw.cn/beikao/index.html" target="_blank">GMAT资讯</a></li>
+                                        <li><a href="https://bbs.viplgw.cn/" target="_blank">论坛</a></li>
+                                        <li><a href="https://gmat.viplgw.cn/teachers/index.html" target="_blank">名师</a></li>
+                                        <li><a href="https://gmat.viplgw.cn/question_index.html" target="_blank">智能问答</a></li>
+                                    </ul>
+                                </div>
+                                <div class="clearfixd"></div>
+                            </li>
+                            <li>
+                                <div class="wn-left">
+                                    <h4><a href="https://gre.viplgw.cn/" target="_blank">GRE</a></h4>
+                                </div>
+                                <div class="wn-right">
+                                    <ul>
+                                        <li><a href="https://gre.viplgw.cn/words.html" target="_blank">再要你命3000</a></li>
+                                        <li><a href="https://gre.viplgw.cn/search.html" target="_blank">搜题</a>
+                                            <!--                                            <img src="https://file.viplgw.cn/ui/home/cn/images/kfz_icon.png" alt="图标" class="pos_i"/>-->
+                                        </li>
+                                        <li><a href="https://gre.viplgw.cn/practice.html" target="_blank">做题</a>
+                                            <!--                                            <img src="https://file.viplgw.cn/ui/home/cn/images/kfz_icon.png" alt="图标" class="pos_i"/>-->
+                                        </li>
+                                        <li><a href="https://gre.viplgw.cn/course.html" target="_blank">GRE课程</a></li>
+                                        <li><a href="https://gre.viplgw.cn/activity.html" target="_blank">GRE活动</a></li>
+                                        <li><a href="https://bbs.viplgw.cn/post/list/41.html#41" target="_blank">GRE机经真题</a></li>
+                                        <li><a href="https://gre.viplgw.cn/beikao.html" target="_blank">GRE备考</a></li>
+                                        <li><a href="https://gre.viplgw.cn/information.html" target="_blank">GRE资讯</a></li>
+                                    </ul>
+                                </div>
+                                <div class="clearfixd"></div>
+                            </li>
+                            <li>
+                                <div class="wn-left">
+                                    <h4><a href="https://toefl.viplgw.cn/" target="_blank">托福</a></h4>
+                                </div>
+                                <div class="wn-right">
+                                    <ul>
+                                        <li><a href="https://toefl.viplgw.cn/winterClass.html" target="_blank">寒假班</a></li>
+                                        <li><a href="https://toefl.viplgw.cn/closeClass.html" target="_blank">暑期封闭班</a></li>
+                                        <li><a href="https://toefl.viplgw.cn/toeflcourses/18524.html" target="_blank">名师视频课</a></li>
+                                        <li><a href="https://toefl.viplgw.cn/toeflcourses/18051.html" target="_blank">实时直播课</a></li>
+                                        <li><a href="https://toefl.viplgw.cn/toeflcourses/18528.html" target="_blank">100分直达课</a></li>
+                                        <li><a href="https://toefl.viplgw.cn/toeflcourses/18541.html" target="_blank">110分直达课</a></li>
+                                        <li><a href="https://toefl.viplgw.cn/evaluation.html" target="_blank">入学测评</a></li>
+                                        <li><a href="https://toefl.viplgw.cn/listen/practise.html" target="_blank">听力练习</a></li>
+                                        <li><a href="https://toefl.viplgw.cn/speaking.html" target="_blank">口语练习</a></li>
+                                        <li><a href="https://toefl.viplgw.cn/reading.html" target="_blank">阅读练习</a></li>
+                                        <li><a href="https://toefl.viplgw.cn/writing.html" target="_blank">写作练习</a></li>
+                                        <li><a href="https://toefl.viplgw.cn/tpoExam.html" target="_blank">TPO模考</a></li>
+                                        <li><a href="https://toefl.viplgw.cn/words.html" target="_blank">词汇</a></li>
+                                        <li><a href="https://bbs.viplgw.cn/post/list/2.html#2" target="_blank">托福圈</a></li>
+                                        <li><a href="https://toefl.viplgw.cn/case.html" target="_blank">高分故事</a></li>
+                                        <li><a href="https://toefl.viplgw.cn/toeflnews.html" target="_blank">托福资讯</a></li>
+                                        <li><a href="https://toefl.viplgw.cn/teacher.html" target="_blank">托福名师</a></li>
+                                    </ul>
+                                </div>
+                                <div class="clearfixd"></div>
+                            </li>
+                            <li>
+                                <div class="wn-left">
+                                    <h4><a href="https://ielts.viplgw.cn/" target="_blank">雅思</a></h4>
+                                </div>
+                                <div class="wn-right">
+                                    <ul>
+                                        <li><a href="https://ielts.viplgw.cn/cn/course.html#md-1" target="_blank">基础课程</a></li>
+                                        <li><a href="https://ielts.viplgw.cn/cn/course.html#md-2" target="_blank">强化课程</a></li>
+                                        <li><a href="https://ielts.viplgw.cn/cn/course.html#md-3" target="_blank">冲刺课程</a></li>
+                                        <li><a href="https://ielts.viplgw.cn/cn/course.html#md-4" target="_blank">一对一课程</a></li>
+                                        <li><a href="https://ielts.viplgw.cn/cn/know.html?class=336#md-1" target="_blank">入门常识</a></li>
+                                        <li><a href="https://ielts.viplgw.cn/cn/know.html?class=321#md-1" target="_blank">考试资讯</a></li>
+                                        <li><a href="https://ielts.viplgw.cn/cn/proforma.html?class=323#md-1" target="_blank">听力</a></li>
+                                        <li><a href="https://ielts.viplgw.cn/cn/proforma.html?class=324#md-1" target="_blank">口语</a></li>
+                                        <li><a href="https://ielts.viplgw.cn/cn/proforma.html?class=325#md-1" target="_blank">阅读</a></li>
+                                        <li><a href="https://ielts.viplgw.cn/cn/proforma.html?class=326#md-1" target="_blank">写作</a></li>
+                                        <li><a href="https://ielts.viplgw.cn/cn/experience.html" target="_blank">高分经验</a></li>
+                                        <li><a href="https://ielts.viplgw.cn/cn/teacher.html" target="_blank">雅思团队</a></li>
+                                        <li><a href="https://bbs.viplgw.cn/" target="_blank">雅思社区</a>
+                                            <!--                                            <img src="https://file.viplgw.cn/ui/home/cn/images/kfz_icon.png" alt="图标" class="pos_i" style="left: 48px;"/>-->
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="clearfixd"></div>
+                            </li>
+                            <li>
+                                <div class="wn-left">
+                                    <h4><a href="https://sat.viplgw.cn/" target="_blank">SAT</a></h4>
+                                </div>
+                                <div class="wn-right">
+                                    <ul>
+                                        <li><a href="https://sat.viplgw.cn/exercise.html?m=Reading" target="_blank">练习</a></li>
+                                        <li><a href="https://sat.viplgw.cn/evaulation.html" target="_blank">测评</a></li>
+                                        <li><a href="https://sat.viplgw.cn/mock.html" target="_blank">模考</a></li>
+                                        <li><a href="https://sat.viplgw.cn/re.html" target="_blank">报告</a></li>
+                                        <li><a href="https://sat.viplgw.cn/class.html" target="_blank">SAT课程</a></li>
+                                        <li><a href="https://sat.viplgw.cn/pubclass.html" target="_blank">公开课</a></li>
+                                        <li><a href="https://sat.viplgw.cn/info.html" target="_blank">SAT资讯</a></li>
+                                        <li><a href="https://sat.viplgw.cn/act.html" target="_blank">ACT</a></li>
+                                        <li><a href="https://sat.viplgw.cn/US_abroad.html" target="_blank">美国留学</a></li>
+                                        <li><a href="https://sat.viplgw.cn/teachers.html" target="_blank">名师团队</a></li>
+                                    </ul>
+                                </div>
+                                <div class="clearfixd"></div>
+                            </li>
+                            <li>
+                                <div class="wn-left">
+                                    <h4><a href="https://liuxue.viplgw.cn/" target="_blank">留学</a></h4>
+                                </div>
+                                <div class="wn-right">
+                                    <ul>
+                                        <li><a href="https://schools.viplgw.cn/schools.html" target="_blank">院校查询</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/major.html" target="_blank">专业解析</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/cn/ranking/296-308.html" target="_blank">大学排名</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/cn/case.html" target="_blank">案例库</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/background-test.html" target="_blank">背景测评</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/school-choice.html" target="_blank">选校测评</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/percentages-test.html" target="_blank">录取测评</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/cn/project.html" target="_blank">硕士实习</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/activity_scheduling.html" target="_blank">本科活动</a></li>
+                                        <li><a href="https://bbs.viplgw.cn/topic_square.html" target="_blank">话题广场</a></li>
+                                        <li><a href="https://bbs.viplgw.cn/post/list/14.html#14" target="_blank">留学社区</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/question-tag/0.html" target="_blank">留学问答</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/cn/know.html" target="_blank">Mentor课程</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/cn/admission-requirement" target="_blank">硕士动态</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/information.html" target="_blank">本科动态</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/sat_information.html" target="_blank">ACT/SAT考试</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/level_information.html" target="_blank">A-level考试</a></li>
+                                        <li><a href="https://liuxue.viplgw.cn/study-abroad.html" target="_blank">在线留学申请</a></li>
+                                    </ul>
+                                </div>
+                                <div class="clearfixd"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="padding-pos branch">
+                    <a href="javascript:void(0);">全国分支 <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/home-topSJ.png" alt="箭头" /></a>
+                    <div class="address-box">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);">雷哥网-北京中心</a>
+                                <div class="address-left">
+                                    <img src="https://file.viplgw.cn/ui/home/cn/images/biaozhu/biaozhu-city07.png" alt="图片" />
+                                    <a href="https://p.qiao.baidu.com/im/index?siteid=7905926&amp;ucid=18329536&amp;cp=&amp;cr=&amp;cw=" target="_blank" class="btn">免费咨询</a>
+                                    <div class="address-purple">
+                                        <p>
+                                            <b>咨询热线：</b>
+                                            010-82194388
+                                        </p>
+                                        <span class="m-b-address">地址：北京市朝阳区雅宝路7号 E园EPARK大厦508</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">雷哥网-上海中心</a>
+                                <div class="address-left">
+                                    <img src="https://file.viplgw.cn/ui/home/cn/images/biaozhu/biaozhu-city08.png" alt="图片" />
+                                    <a href="https://p.qiao.baidu.com/im/index?siteid=7905926&amp;ucid=18329536&amp;cp=&amp;cr=&amp;cw=" target="_blank" class="btn">免费咨询</a>
+                                    <div class="address-purple">
+                                        <p>
+                                            <b>咨询热线：</b>
+                                            021-52986736
+                                        </p>
+                                        <span class="m-b-address">地址：上海市徐汇区文定路218号 德必徐家汇WE艺术湾B座205</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">雷哥网-广州中心</a>
+                                <div class="address-left">
+                                    <img src="https://file.viplgw.cn/ui/home/cn/images/biaozhu/biaozhu-city05.png" alt="图片" />
+                                    <a href="https://p.qiao.baidu.com/im/index?siteid=7905926&amp;ucid=18329536&amp;cp=&amp;cr=&amp;cw=" target="_blank" class="btn">免费咨询</a>
+                                    <div class="address-purple">
+                                        <p>
+                                            <b>咨询热线：</b>
+                                            020-87589724
+                                        </p>
+                                        <span class="m-b-address">地址：广州市天河区冼村路11号保利威座北塔3502室</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">雷哥网-成都中心</a>
+                                <div class="address-left">
+                                    <img src="https://file.viplgw.cn/ui/home/cn/images/biaozhu/biaozhu-city01.png" alt="图片" />
+                                    <a href="https://p.qiao.baidu.com/im/index?siteid=7905926&amp;ucid=18329536&amp;cp=&amp;cr=&amp;cw=" target="_blank" class="btn">免费咨询</a>
+                                    <div class="address-purple" style="height: 100px;">
+                                        <p>
+                                            <b>咨询热线</b>：
+                                            028-64442708
+                                        </p>
+                                        <span class="m-b-address">地址：成都市锦江区东大街下东大街段258号西部国际金融中心（WIFC）2号楼20层（近太古里、东门大桥）</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">雷哥网-杭州中心</a>
+                                <div class="address-left">
+                                    <img src="https://file.viplgw.cn/ui/home/cn/images/biaozhu/biaozhu-city02.png" alt="图片" />
+                                    <a href="https://p.qiao.baidu.com/im/index?siteid=7905926&amp;ucid=18329536&amp;cp=&amp;cr=&amp;cw=" target="_blank" class="btn">免费咨询</a>
+                                    <div class="address-purple">
+                                        <p>
+                                            <b>咨询热线：</b>
+                                            0571-87214168
+                                        </p>
+                                        <span class="m-b-address">地址：杭州市江干区江锦路159号 平安金融中心B座8楼</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">雷哥网-武汉中心</a>
+                                <div class="address-left">
+                                    <img src="https://file.viplgw.cn/ui/home/cn/images/biaozhu/biaozhu-city03.png" alt="图片" />
+                                    <a href="https://p.qiao.baidu.com/im/index?siteid=7905926&amp;ucid=18329536&amp;cp=&amp;cr=&amp;cw=" target="_blank" class="btn">免费咨询</a>
+                                    <div class="address-purple">
+                                        <p>
+                                            <b>咨询热线：</b>
+                                            027-87132585
+                                        </p>
+                                        <span class="m-b-address">地址：武汉市珞瑜路光谷世界城1栋1单元 14层 11421</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">雷哥网-南京中心</a>
+                                <div class="address-left">
+                                    <img src="https://file.viplgw.cn/ui/home/cn/images/biaozhu/biaozhu-city04.png" alt="图片" />
+                                    <a href="https://p.qiao.baidu.com/im/index?siteid=7905926&amp;ucid=18329536&amp;cp=&amp;cr=&amp;cw=" target="_blank" class="btn">免费咨询</a>
+                                    <div class="address-purple">
+                                        <p>
+                                            <b>咨询热线：</b>
+                                            13253521360
+                                        </p>
+                                        <span class="m-b-address">地址：南京市秦淮区中山东路532号金蝶科技园H1幢308号B25室 （明故宫地铁站1号口向东200米）</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">雷哥网-深圳中心</a>
+                                <div class="address-left">
+                                    <img src="https://file.viplgw.cn/ui/home/cn/images/biaozhu/biaozhu-city06.png" alt="图片" />
+                                    <a href="https://p.qiao.baidu.com/im/index?siteid=7905926&amp;ucid=18329536&amp;cp=&amp;cr=&amp;cw=" target="_blank" class="btn">免费咨询</a>
+                                    <div class="address-purple">
+                                        <p>
+                                            <b>咨询热线：</b>
+                                            400-600-1123
+                                        </p>
+                                        <span class="m-b-address">地址：深圳市罗湖区书城路都市名园B栋5楼B区（只接受预约拜访）</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">雷哥网-西安中心</a>
+                                <div class="address-left">
+                                    <img src="https://file.viplgw.cn/ui/home/cn/images/biaozhu/biaozhu-city10.png" alt="图片" />
+                                    <a href="https://p.qiao.baidu.com/im/index?siteid=7905926&amp;ucid=18329536&amp;cp=&amp;cr=&amp;cw=" target="_blank" class="btn">免费咨询</a>
+                                    <div class="address-purple">
+                                        <p>
+                                            <b>咨询热线：</b>
+                                            18180691631
+                                        </p>
+                                        <span class="m-b-address">地址：西安市莲湖区北大街88号嘉会广场C座4层倍格官邸B021号</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
                 <?php
-            }
-            ?>
-            <!--登录之后显示 end-->
-        </div>
-        <!--        app下载-->
-        <div class="appDownload">
-            <span title="app下载" class="tit_t"><b>HOT</b>APP下载</span>
-            <div class="pull_down">
-                <ul>
-                    <li>
-                        <a href="https://gmat.viplgw.cn/DownloadApp.html">
-                            <div class="first_layer">
-                                <img src="https://gmat.viplgw.cn/app/web_core/styles/images-3/gmatapp_logo.jpg"
-                                     alt="app logo图标"/>
-                                <span>雷哥GMAT</span>
-                            </div>
-                        </a>
-                        <div class="code_box">
-                            <img src="/cn/images/gmat.jpg"
-                                 alt="app二维码图片"/>
-                        </div>
-                    </li>
-                  <!--  <li>
-                        <a href="https://gmat.viplgw.cn/DownloadApp.html">
-                            <div class="first_layer">
-                                <img src="https://gmat.viplgw.cn/app/web_core/styles/images-3/gmatapp_logo.jpg"
-                                     alt="app logo图标"/>
-                                <span>雷哥GMAT安卓版</span>
-                            </div>
-                        </a>
-                        <div class="code_box">
-                            <img src="https://gmat.viplgw.cn/app/web_core/styles/images-3/leige-android.png"
-                                 alt="app二维码图片"/>
-                        </div>
-                    </li>-->
-                    <li>
-                        <a href="https://gre.viplgw.cn/tool.html">
-                            <div class="first_layer">
-                                <img src="https://gmat.viplgw.cn/app/web_core/styles/images-3/gmatapp_logo.jpg"
-                                     alt="app logo图标"/>
-                                <span>雷哥GRE</span>
-                            </div>
-                        </a>
-                        <div class="code_box">
-                            <img src="/cn/images/gre.jpg"
-                                 alt="app二维码图片"/>
-                        </div>
-                    </li>
-                 <!--   <li>
-                        <a href="https://gre.viplgw.cn/tool.html">
-                            <div class="first_layer">
-                                <img src="https://gmat.viplgw.cn/app/web_core/styles/images-3/gmatapp_logo.jpg"
-                                     alt="app logo图标"/>
-                                <span>雷哥GRE苹果版</span>
-                            </div>
-                        </a>
-                        <div class="code_box">
-                            <img src="/cn/images/new_gre/ios_gre_app.png"
-                                 alt="app二维码图片"/>
-                        </div>
-                    </li>-->
-                    <li>
-                        <a href="https://toefl.viplgw.cn/toefl_app.html">
-                            <div class="first_layer">
-                                <img src="https://toefl.viplgw.cn/cn/images/toeflapp_logo.jpg" alt="app logo图标"/>
-                                <span>雷哥托福</span>
-                            </div>
-                        </a>
-                        <div class="code_box">
-                            <img src="/cn/images/toefl.png" alt="app二维码图片"/>
-                        </div>
-                    </li>
-                   <!-- <li>
-                        <a href="https://toefl.viplgw.cn/toefl_app.html">
-                            <div class="first_layer">
-                                <img src="https://toefl.viplgw.cn/cn/images/toeflapp_logo.jpg" alt="app logo图标"/>
-                                <span>雷哥托福安卓版</span>
-                            </div>
-                        </a>
-                        <div class="code_box">
-                            <img src="https://toefl.viplgw.cn/cn/images/app-android.png" alt="app二维码图片"/>
-                        </div>
-                    </li>-->
-                    <li>
-                        <a href="https://sat.viplgw.cn">
-                            <div class="first_layer">
-                                <img src="/cn/images/SAT_logo.png" alt="app logo图标"/>
-                                <span>雷哥SAT安卓版</span>
-                            </div>
-                        </a>
-                        <div class="code_box">
-                            <img src="/cn/images/SAT_QR.png" alt="app二维码图片"/>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="https://liuxue.viplgw.cn/app.html">
-                            <div class="first_layer">
-                                <img src="https://liuxue.viplgw.cn/cn/images/smart-appLogo.png" alt="app logo图标"/>
-                                <span>雷哥选校</span>
-                            </div>
-                        </a>
-                        <div class="code_box">
-                            <img src="/cn/images/school.jpg" alt="app二维码图片"/>
-                        </div>
-                    </li>
-                <!--    <li>
-                        <a href="https://liuxue.viplgw.cn/app.html">
-                            <div class="first_layer">
-                                <img src="https://liuxue.viplgw.cn/cn/images/smart-appLogo.png" alt="app logo图标"/>
-                                <span>雷哥选校安卓版</span>
-                            </div>
-                        </a>
-                        <div class="code_box">
-                            <img src="https://liuxue.viplgw.cn/cn/images/anroid-smartapp.png" alt="app二维码图片"/>
-                        </div>
-                    </li>-->
-                    <li>
-                        <a href="https://words.viplgw.cn/" target="_blank">
-                            <div class="first_layer">
-                                <img src="https://gmat.viplgw.cn/app/web_core/styles/images/words-iosLogo.jpg"
-                                     alt="app logo图标"/>
-                                <span>雷哥单词</span>
-                            </div>
-                        </a>
-                        <div class="code_box">
-                            <img src="/cn/images/word.jpg" alt="app二维码图片"/>
-                        </div>
-                    </li>
-                <!--    <li>
-                        <a href="https://words.viplgw.cn/" target="_blank">
-                            <div class="first_layer">
-                                <img src="https://gmat.viplgw.cn/app/web_core/styles/images/words-iosLogo.jpg"
-                                     alt="app logo图标"/>
-                                <span>雷哥单词安卓版</span>
-                            </div>
-                        </a>
-                        <div class="code_box">
-                            <img src="/cn/images/word_android.png" alt="app二维码图片"/>
-                        </div>
-                    </li>-->
-                </ul>
-            </div>
-        </div>
-        <!--        app下载 end-->
-        <div class="clearBr"></div>
-    </div>
-</div>
-
-<!--导航栏-->
-<?php if ($this->context->type != 1) {
-    ?>
-    <link rel="stylesheet" href="/cn/css/common_index.css?v=v=1.01010101.2">
-    <div class="nav-wrap">
-        <div class="nav_list tl clearfix">
-            <div class="nav2_fl fl">
-                <div class="relative logo_wrap inb">
-                    <a href="/">
-                        <img src="/cn/images/gre-logo.png" style="width: 150px;" alt="雷哥GRE培训官网"/>
-                    </a>
-                </div>
-                <ul class="inb tm nav_bar clearfix">
-                    <li class="<?php if ($this->context->type == 1) {
-                        echo 'on';
-                    } ?> bar-li"><a href="/">首页</a></li>
-                    <!--                    <li class="--><?php //if ($this->context->type == 9) {
-                    //                        echo 'on';
-                    //                    } ?><!-- bar-li">-->
-                    <!--                        <a href="/know.html">知识库-->
-                    <!--                            <img src="/cn/images/gre_index/gmat-hot.png" alt="hot"-->
-                    <!--                                 class="hotImg"/>-->
-
-                    <!--                            <img class="crow-1" src="https://gmat.viplgw.cn/app/web_core/styles/images-3/crow-1.png"-->
-                    <!--                                 alt="箭头">-->
-                    <!--                        </a>-->
-                    <!--                        <div class="nav2-wrap" style="width: 100px;">-->
-                    <!--                            <ul class="nav2-list">-->
-                    <!--                                <li><a href="/words.html">背单词</a></li>-->
-                    <!--                                <li><a href="/know.html">知识讲堂</a></li>-->
-                    <!--                            </ul>-->
-                    <!--                        </div>-->
-                    <!--                    </li>-->
-                    <li class="<?php if ($this->context->type == 7) {
-                        echo 'on';
-                    } ?> bar-li">
-                        <a href="/practice.html">
-                            做题模考
-                            <img src="/cn/images/gre_index/gmat-hot.png" alt="hot"
-                                 class="hotImg"/>
-                            <img class="crow-1" src="https://gmat.viplgw.cn/app/web_core/styles/images-3/crow-1.png"
-                                 alt="箭头">
-                        </a>
-                        <div class="nav2-wrap" style="width: 130px;">
-                            <ul class="nav2-list">
-                                <li><a href="/search.html">在线搜题</a></li>
-                                <li><a href="/practice.html">在线做题</a></li>
-                                <li class="relative">
-                                    <a href="/mockExam.html">在线模考</a>
-                                </li>
-                                <li class="relative">
-                                    <a href="/evaluation.html">智能测评</a>
-                                </li>
-                                <li class="relative"><a href="/words.html">背单词</a></li>
-                                <li class="relative"><a href="/know.html">知识讲堂</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="<?php if ($this->context->type == 8) {
-                        echo 'on';
-                    } ?> bar-li">
-                        <a href="/presentation.html">做题报告
-                            <img class="crow-1" src="https://gmat.viplgw.cn/app/web_core/styles/images-3/crow-1.png"
-                                 alt="箭头">
-                        </a>
-                        <div class="nav2-wrap" style="width: 90px;">
-                            <ul class="nav2-list">
-                                <li><a href="/presentation.html">全科报告</a></li>
-                                <li><a href="/report/dx-1.html">填空报告</a></li>
-                                <li><a href="/report/dx-2.html">阅读报告</a></li>
-                                <li><a href="/report/dx-3.html">数学报告</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="<?php if ($this->context->type == 3) {
-                        echo 'on';
-                    } ?> bar-li">
-                        <a href="/course.html">GRE课程
-                            <img class="crow-1" src="https://gmat.viplgw.cn/app/web_core/styles/images-3/crow-1.png"
-                                 alt="箭头">
-                        </a>
-                        <div class="nav2-wrap" style="width: 110px;">
-                            <ul class="nav2-list">
-                                <li><a href="/course.html">在线课程</a></li>
-                                <li><a href="/activity.html">刷题活动</a></li>
-                                <li><a href="/course/8295.html">寒暑假封闭班</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="<?php if ($this->context->type == 10) {
-                        echo 'on';
-                    } ?> bar-li">
-                        <a href="/teacher_article.html">名师专栏
-                            <img class="crow-1" src="https://gmat.viplgw.cn/app/web_core/styles/images-3/crow-1.png"
-                                 alt="箭头">
-                        </a>
-                        <div class="nav2-wrap" style="width: 110px;">
-                            <ul class="nav2-list">
-                                <li><a href="/teacher_article.html">经验技巧</a></li>
-                                <li><a href="/teacher_article.html">要点解读</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="<?php if ($this->context->type == 5) {
-                        echo 'on';
-                    } ?> bar-li">
-                        <a href="/beikao.html">备考心经
-                            <img class="crow-1" src="https://gmat.viplgw.cn/app/web_core/styles/images-3/crow-1.png"
-                            <img class="crow-1" src="https://liuxue.viplgw.cn/app/web_core/styles/images-3/crow-1.png"
-                                 alt="箭头">
-                        </a>
-                        <div class="nav2-wrap" style="width: 150px;">
-                            <ul class="nav2-list">
-                                <li><a href="/beikao/539.html">GRE填空TC&SE</a></li>
-                                <li><a href="/beikao/540.html">GRE逻辑阅读RC</a></li>
-                                <li><a href="/beikao/541.html">GRE数学Quant</a></li>
-                                <li><a href="/beikao/538.html">GRE词汇Vocab</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="bar-li">
-                        <a target="_blank" href="https://bbs.viplgw.cn/post/list/41.html#41">真题机经
-                            <img class="crow-1" src="https://gmat.viplgw.cn/app/web_core/styles/images-3/crow-1.png"
-                                 alt="箭头">
-                        </a>
-                        <div class="nav2-wrap" style="width: 110px;">
-                            <ul class="nav2-list">
-                                <li><a target="_blank" href="https://bbs.viplgw.cn/post/list/43.html">真题下载</a></li>
-                                <li><a target="_blank" href="https://bbs.viplgw.cn/post/list/43.html">机经下载</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="<?php if ($this->context->type == 6) {
-                        echo 'on';
-                    } ?> bar-li">
-                        <a href="/information.html">热点专题
-                            <img class="crow-1" src="https://gmat.viplgw.cn/app/web_core/styles/images-3/crow-1.png"
-                                 alt="箭头">
-                        </a>
-                        <div class="nav2-wrap" style="width: 100px;">
-                            <ul class="nav2-list">
-                                <li><a href="https://gre.viplgw.cn/information.html">热点资讯</a></li>
-                                <li><a href="/beikao/544.html">GRE百科</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="<?php if ($this->context->type == 11) {
-                        echo 'on';
-                    } ?> bar-li"><a href="/teacher.html">GRE名师</a></li>
-                    <li class=" bar-li"><a href="http://question.viplgw.cn/gre.html" target="_blank">智能问答</a></li>
-                </ul>
-            </div>
-            <div class="search-wrap fr">
-                <input type="search" name="keywords" id="keyword" onkeydown="searchs(event);" placeholder="搜索"
-                       class="navSearch searchInput search_int"
-                       value="<?php echo isset($_GET['words1']) ? $_GET['words1'] : ''; ?>">
-                <div class="search_btn inb tm"><img src="/cn/images/beikao/beikao-fangdajing.png" alt="搜索图标"
-                                                    onclick="searchGoods(this)"/></div>
-            </div>
-        </div>
-    </div>
-    <?php
-}
-?>
-<!--导航栏 END-->
-<?= $content ?>
-<!----------------------尾部----------------------------->
-<!--footer-->
-<div id="footer_nav">
-    <div>
-        <span>友情链接：<a href="http://www.ets.org/gre" target="_blank">The GRE Tests</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://gmatonline.taobao.com/category-1373428283.htm?spm=a1z10.1-c-s.w5002-12118475574.3.9a72287f172BiW&search=y&catName=%C0%D7%B8%E7GRE%BF%CE%B3%CC"
-               target="_blank">雷哥GRE淘宝店</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://gre.etest.net.cn/login.do" target="_blank">教育部考试中心GRE考试报名网</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.zhihu.com/org/lei-ge-gre-26/activities"
-                                       target="_blank">雷哥GRE知乎</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.thinkwithu.com" target="_blank">申友网</a>
-        </span>
-    </div>
-</div>
-<div class="gre-foot">
-    <div class="in-gre-f">
-        <div class="in-gre-left">
-            <ul>
-                <li>
-                    <h4>关于GRE</h4>
-                    <?php
-                    $data = \app\modules\cn\models\Content::getClass(['where' => 'c.pid=0', 'fields' => 'url,answer', 'category' => '557', 'page' => 1, 'pageSize' => 7]);
-                    foreach ($data as $v) {
-                        ?>
-                        <a href="<?php echo $v['url'] ?>"><?php echo $v['name'] ?></a>
-                        <?php
-                    }
+                if (!$uid) {
                     ?>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h4>关于课程</h4>
+                    <li><a href="javascript:void(0);" onclick="userLogin()">登录</a></li>
+                    <li><a href="javascript:void(0);" onclick="userRegister()">注册</a></li>
                     <?php
-                    $data = \app\modules\cn\models\Content::getClass(['where' => 'c.pid=0', 'fields' => 'url,answer', 'category' => '558', 'page' => 1, 'pageSize' => 7]);
-                    foreach ($data as $v) {
-                        ?>
-                        <a href="<?php echo $v['url'] ?>"><?php echo $v['name'] ?></a>
-                        <?php
-                    }
+                } else {
                     ?>
-                </li>
+                    <li><a href="javascript:void(0);">您好！<?php echo $userData['nickname'] ?></a></li>
+                    <?php
+                }
+                ?>
             </ul>
-            <ul>
-                <li>
-                    <h4>联系我们</h4>
-                    <a href="#">
-                        <img src="/cn/images/gre-weChat.png" alt="图标">
-                        <span class="fth_name">微信</span>
-                        <div class="fth_img"><img src="/cn/images/ftHover_img3.png" alt=""></div>
-                    </a>
-                    <a href="#">
-                        <img src="/cn/images/gre-weibo.png" alt="图标">
-                        <span class="fth_name">微博</span>
-                        <div class="fth_img"><img src="/cn/images/ftHover_img2.png" alt=""></div>
-                    </a>
-                    <a href="#">
-                        <img src="/cn/images/gre-email.png" alt="图标">
-                        <span class="fth_name">邮箱</span>
-                        <div class="fth_img"><img src="/cn/images/ftHover_img1.png" alt=""></div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="in-gre-right clearfix">
-            <div class="fl" style="width: 120px"><img src="/cn/images/ftHover_img3.png" alt=""></div>
-            <div class="fr" style="padding-top: 7px;">
-                <img style="width: 200px;" src="/cn/images/gre-footLogo.png" alt="GRE培训"/>
-                <p>高效提分，预见你想象的高分！</p>
-            </div>
-
         </div>
         <div class="clearfix"></div>
-        <div class="gre-font-small">
-            2018 gre.viplgw.cn All Rights Reserved
-            <a class="mz_sm" target="_blank" href="http://beian.miit.gov.cn/publish/query/indexFirst.action">京ICP备16000003号-3</a>
-            京公网安备11010802017681
-            <a class="mz_sm" target="_blank" href="/about.html">免责声明</a>
-            <div>雷哥GRE（gre.viplgw.cn），GRE培训|GRE考试|GRE在线课程|GRE网课|GRE机经真题_雷哥GRE培训官网
-                本网站提供的OG&150真题&真题内容，其版权均为ETS所有，Please reference the OG。
-                本网站中所提供的magoosh、Kaplan、princeton、NO、CQ、CHP、猴哥等题目内容来源互联网网友，仅供学习者交流免费使用。
-                本网站所提供的知识库内容，部分来源于雷哥GRE整理发布，版权归greonline.cn所有，仅供学习者交流免费使用。部分来源于互联网，版权归原作者所有，仅供学习者交流免费使用。
-                <div style="display: none;">
-                    <!--                    百度商桥代码-->
-                    <script type="text/javascript">
-                        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-                        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F85e83d82fc02c204e3d0bb79d46ffa46' type='text/javascript'%3E%3C/script%3E"))
-                    </script>
-                </div>
+    </div>
+</div>
+<div class="newNav-out">
+    <div class="newNav">
+        <div>
+            <div class="new-left" style="padding-bottom: 5px">
+                <a href="https://www.viplgw.cn"><img src="https://file.viplgw.cn/ui/audio/cn/images/home-logo.png" alt="logo"></a>
             </div>
+            <div class="new-right" style="margin-top:2px;margin-left: 50px;float: left">
+                <ul>
+                    <li> <div class="n-r-new"><a href="https://www.viplgw.cn">首页</a></div></li>
+                    <li> <div class="n-r-new"><a href="https://toefl.viplgw.cn/" target="_blank">托福</a></div></li>
+                    <li> <div class="n-r-new"><a href="https://gre.viplgw.cn/" target="_blank">GRE</a></div></li>
+                    <li> <div class="n-r-new"><a href="https://gmat.viplgw.cn/" target="_blank">GMAT</a></div></li>
+                    <li> <div class="n-r-new"><a href="https://ielts.viplgw.cn/" target="_blank">雅思</a></div></li>
+                    <li> <div class="n-r-new"><a href="https://sat.viplgw.cn/" target="_blank">SAT</a></div></li>
+                    <li> <div class="n-r-new"><a href="https://liuxue.viplgw.cn/" target="_blank">留学</a></div></li>
+                    <li> <div class="n-r-new"><a href="https://kaoyan.viplgw.cn/">考研</a></div></li>
+                    <li> <div class="n-r-new"><a href="https://lgwcet.viplgw.cn/" target="_blank">四六级</a></div></li>
+                    <li> <div class="n-r-new"><a href="https://words.viplgw.cn/" target="_blank">单词</a></div></li>
+                    <li> <div class="n-r-new"><a href="https://liuxue.viplgw.cn/question-tag/0.html" target="_blank">留学问答</a></div></li>
+                    <li> <div class="n-r-new"><a href="https://open.viplgw.cn" target="_blank">公开课</a></div></li>
+                    <li> <div class="n-r-new"><a href="https://bbs.viplgw.cn" target="_blank">论坛</a></div></li>
+                    <li> <div class="n-r-new"><a href="https://fm.viplgw.cn/" target="_blank">电台FM</a></div></li>
+                    <li> <div class="n-r-new"><a href="https://schools.viplgw.cn/schools.html">院校库</a></div></li>
+                    <li> <div class="n-r-new"><a href="https://liuxue.viplgw.cn/cn/project.html">实习就业</a></div></li>
+                    <li> <div class="n-r-new"><a href="">图书</a></div></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
         </div>
     </div>
 </div>
-<!----------------------尾部  end----------------------------->
-<script type="text/javascript">
-    $(function () {
-        $('.navSearch').focus(function () {
-            $(this).stop(true).animate({
-                width: 180
-            }, (200))
-        });
-        $('.navSearch').blur(function () {
-            $(this).stop(true).animate({
-                width: 70
-            }, (200))
-        })
-    });
 
-    function searchGoods() {
-        var content = $('#keyword').val();
-        if (content == '') {
-            alert('请输入关键词');
-            return false;
-        } else {
-            location.href = "/search/sectionId-0/source-0/level-0/select-0/type-0/page-1.html?words1=" + content;
-        }
-    }
 
-    function searchs(e) {
-        if (e.keyCode == 13) {
-            searchGoods();
-        }
-    }
+<?= $content ?>
+<!--尾部-->
 
-    /**
-     * 用户退出
-     */
-    function loginOut() {
-
-        $.ajax({
-            url: 'https://login.viplgw.cn/cn/ssl-api/web-login-out',
-            type: 'POST',
-            dataType: "json",
-            xhrFields: {
-                withCredentials: true
-            },
-            // crossDomain: true
-            success: function (data) {
-                // console.log('data', data);
-                window.location.reload();
-                //
-            },
-            error: function () {
-                window.location.reload();
-            }
-        });
-
-        /*   $.post('https://login.viplgw.cn/cn/ssl-api/web-login-out', {}, function (re) {
-               window.location.href = "/"
-           }, 'json')*/
-    }
-
-    /**
-     * 登录框
-     */
-    function userLogin() {
-        location.href = "https://login.viplgw.cn/cn/index?source=22&url=<?php echo Yii::$app->request->hostInfo . Yii::$app->request->getUrl()?>"
-    }
-
-    /**
-     * 注册框
-     */
-    function userRegister() {
-        location.href = "https://login.viplgw.cn/cn/index/register?source=22&url=<?php echo Yii::$app->request->hostInfo . Yii::$app->request->getUrl()?>"
-    }
-</script>
+<!--footer-->
+<footer>
+    <div class="w12 tm" style="padding: 30px 0">
+        <ul class="footer-list">
+            <li>
+                <a href="javascript:void(0);">课程类型</a>
+            </li>
+            <li><a href="https://gmat.viplgw.cn/" target="_blank">GMAT</a></li>
+            <li><a href="https://gre.viplgw.cn/" target="_blank">GRE</a></li>
+            <li><a href="https://toefl.viplgw.cn/" target="_blank">TOEFL</a></li>
+            <li><a href="https://ielts.viplgw.cn/" target="_blank">IELTS</a></li>
+            <li><a href="https://sat.viplgw.cn/" target="_blank">SAT</a></li>
+            <li><a href="https://liuxue.viplgw.cn/" target="_blank">留学</a></li>
+        </ul>
+        <ul class="footer-list">
+            <li>
+                <a href="javascript:void(0);">APP下载</a>
+            </li>
+            <li><a href="https://class.viplgw.cn/studyTool.html">雷哥网GMAT</a></li>
+            <li><a href="https://class.viplgw.cn/studyTool.html">雷哥网GRE</a></li>
+            <li><a href="https://class.viplgw.cn/studyTool.html">雷哥托福</a></li>
+            <li><a href="https://class.viplgw.cn/studyTool.html">雷哥选校</a></li>
+            <li><a href="https://words.viplgw.cn/">雷哥单词</a></li>
+        </ul>
+        <ul class="footer-list erm-3-wrap">
+            <li>
+                <a href="javascript:void(0);">关注我们</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">雷哥网GMAT</a>
+                <div class="erm-3"><img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-gmatWX.jpg" alt="二维码图标"></div>
+            </li>
+            <li>
+                <a href="javascript:void(0);">雷哥网GRE</a>
+                <div class="erm-3"><img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-greWX.jpg" alt="二维码图标"></div>
+            </li>
+            <li>
+                <a href="javascript:void(0);">雷哥托福</a>
+                <div class="erm-3"><img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-toeflWX.jpg" alt="二维码图标"></div>
+            </li>
+            <li>
+                <a href="javascript:void(0);">雷哥雅思</a>
+                <div class="erm-3"><img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-ieltsWX.jpg" alt="二维码图标"></div>
+            </li>
+            <li>
+                <a href="javascript:void(0);">雷哥SAT</a>
+                <div class="erm-3"><img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-satWX.jpg" alt="二维码图标"></div>
+            </li>
+            <li>
+                <a href="javascript:void(0);">雷哥留学</a>
+                <div class="erm-3"><img src="https://file.viplgw.cn/ui/home/cn/images/new-index/code/home-smartWX.jpg" alt="二维码图标"></div>
+            </li>
+        </ul>
+        <!-- 什么是雷豆 -->
+        <ul class="footer-list">
+            <li>
+                <a href="javascript:void(0);">什么是雷豆？</a>
+            </li>
+            <li><a href="/about/leidou-introduce.html">什么是雷豆</a></li>
+            <li><a href="/about/get-leidou.html">获取雷豆</a></li>
+            <li><a href="/about/use-leidou.html">使用雷豆</a></li>
+        </ul>
+        <!-- 关于我们 -->
+        <ul class="footer-list">
+            <li>
+                <a href="javascript:void(0);">关于我们</a>
+            </li>
+            <li><a href="/about/detail.html">雷哥网简介</a></li>
+            <li><a href="/about/join.html">加入我们</a></li>
+            <li><a href="/about/connect.html">联系我们</a></li>
+            <li><a href="https://gmat.viplgw.cn/aboutUs/16.html#free_shengm" target="_blank">免责声明</a></li>
+        </ul>
+        <div class="lgw-gzh">
+            <img src="https://file.viplgw.cn/ui/home/cn/images/new-index/home-fGZH.jpg" alt="公总号二维码" />
+            <p>雷哥网公众号</p>
+        </div>
+        <div class="leige-tag">
+            <div><img src="https://file.viplgw.cn/ui/home/cn/images/about/logo.png" alt="logo2" /></div>
+            <div class="ft-tag-bg">
+                <div class="ft-tag">
+                    <div>
+                        <span><em class="point"></em>优质教学</span>
+                        <span><em class="point"></em>海量题库</span>
+                    </div>
+                    <div>
+                        <span><em class="point"></em>全方位服务</span>
+                        <span><em class="point"></em>超值课程礼包</span>
+                    </div>
+                </div>
+            </div>
+            <p class="ft-de">雷哥网，互联网一站式出国留学智能<br />备考平台，国家高新技术认定企业</p>
+        </div>
+    </div>
+    <div class="copyRight tm">
+        ©2020 北京慧申教育科技有限公司&nbsp;&nbsp;viplgw.cn All Rights Reserved
+        <a href="http://beian.miit.gov.cn/publish/query/indexFirst.action"> 京ICP备15001182号-1 </a>
+        <a href="http://www.beian.gov.cn/portal/index.do">京公网安备11010802017681</a>
+    </div>
+</footer>
 <!-------------------咨询框------------------------>
 <div class="refer_small" style="display: block" onclick="showZiXun()">
-    <!--    <img src="/cn/images/newyear_refer/lx_pic_1.png">-->
+    <!--    <img src="https://file.viplgw.cn/ui/home/cn/images/newyear_refer/lx_pic_1.png">-->
 
 </div>
 <div class="referBox" style="display: none;">
@@ -656,11 +736,11 @@ if ($loginOut) {
                 <a href="javascript:void(0);">
                     <div class="comSize diffBG02"></div>
                     <p>微信</p>
-                    <div class="tanc_mask01 animated"><img src="/cn/images/lindy-wechat.jpg" alt="二维码图片"></div>
+                    <div class="tanc_mask01 animated"><img src="https://file.viplgw.cn/ui/home/cn/images/smartapply_ewm.png" alt="二维码图片"></div>
                 </a>
             </li>
             <li>
-                <a href="tencent://message/?uin=2095453331&amp;Site=www.cnclcy&amp;Menu=yes" target="_blank">
+                <a href="tencent://message/?uin=1746295647&amp;Site=www.cnclcy&amp;Menu=yes" target="_blank">
                     <div class="comSize diffBG03"></div>
                     <p>QQ</p>
                 </a>
@@ -673,29 +753,56 @@ if ($loginOut) {
                 </a>
             </li>
             <li>
-                <a href="tencent://message/?uin=2095453331&amp;Site=www.cnclcy&amp;Menu=yes" target="_blank">
+                <a href="tencent://message/?uin=1746295647&amp;Site=www.cnclcy&amp;Menu=yes" target="_blank">
                     <div class="comSize diffBG05"></div>
                     <p>吐槽入口</p>
                 </a>
             </li>
-
             <li>
                 <a href="javascript:void(0);" onclick="referTop();">
                     <div class="diffBG06 animated">
-                        <img src="/cn/images/refer_icon06.png" alt="回到顶部图标"/>
+                        <img src="https://file.viplgw.cn/ui/home/cn/images/refer_icon06.png" alt="回到顶部图标" />
                     </div>
                 </a>
             </li>
-            <!--<li style="padding-bottom: 10px">
-                <a href="javascript:void(0);" onclick="referTop();">
-                    <div class="diffBG06 animated">
-                        <img src="/cn/images/newyear_refer/tu-1/down.png" alt="回到顶部图标"/>
-                    </div>
-                </a>
-            </li>-->
+            <!--    <li style="padding-bottom: 10px">
+            <a href="javascript:void(0);" onclick="referTop();">
+                <div class="diffBG06 animated">
+                    <img src="https://file.viplgw.cn/ui/home/cn/images/newyear_refer/tu-1/down.png" alt="回到顶部图标"/>
+                </div>
+            </a>
+        </li>-->
         </ul>
     </div>
 </div>
+<!--底部领取资料框-->
+<!--<div class="receiveMaterial02">-->
+<!--    <img src="https://file.viplgw.cn/ui/home/cn/images/index-maskClose.png" alt="close" class="close" onclick="closeReceive()"/>-->
+<!--    <div class="in-receive">-->
+<!--        <img src="https://file.viplgw.cn/ui/home/cn/images/index-maskCon.png" alt="中间内容" class="con"/>-->
+<!--        <input type="text" class="mask-input fir" id="userName02"/>-->
+<!--        <input type="text" class="mask-input sec" id="weChat02"/>-->
+<!--        <div class="mask-free" onclick="submitUser('#userName02','#weChat02')"></div>-->
+<!--    </div>-->
+<!--</div>-->
 
 </body>
+
+<script type="text/javascript">
+    /**
+     * 登录框
+     */
+    function userLogin() {
+        location.href = "https://login.viplgw.cn/cn/index?source=25&url=<?php echo Yii::$app->request->hostInfo . Yii::$app->request->getUrl() ?>"
+    }
+    /**
+     * 注册框
+     */
+    function userRegister() {
+        location.href = "https://login.viplgw.cn/cn/index/phone-register?source=25&url=<?php echo Yii::$app->request->hostInfo . Yii::$app->request->getUrl() ?>"
+    }
+</script>
+
+
+
 </html>

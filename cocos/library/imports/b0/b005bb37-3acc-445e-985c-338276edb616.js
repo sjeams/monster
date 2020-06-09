@@ -37,23 +37,22 @@ cc.Class({
     cc.view.setResizeCallback(function () {
       _this.updateCanvasSize();
     });
-  },
-  // 自由切换横竖屏，动态设置设计分辨率和适配模式。
-  updateCanvasSize: function updateCanvasSize() {
-    var size = cc.view.getFrameSize();
-
-    if (size.width > size.height) {
-      this.canvas.fitWidth = false;
-      this.canvas.fitHeight = true;
-      this.canvas.designResolution = cc.size(1920, 1080);
-      this.showLandscape();
-    } else {
-      this.canvas.fitWidth = true;
-      this.canvas.fitHeight = false;
-      this.canvas.designResolution = cc.size(1080, 1920);
-      this.showPortait();
-    }
-  } // update (dt) {},
+  } // 自由切换横竖屏，动态设置设计分辨率和适配模式。
+  // updateCanvasSize() {
+  //     let size = cc.view.getFrameSize();
+  //     if (size.width > size.height) {
+  //         this.canvas.fitWidth = false;
+  //         this.canvas.fitHeight = true;
+  //         this.canvas.designResolution = cc.size(1920, 1080);
+  //         this.showLandscape();
+  //     } else {
+  //         this.canvas.fitWidth = true;
+  //         this.canvas.fitHeight = false;
+  //         this.canvas.designResolution = cc.size(1080, 1920);
+  //         this.showPortait();
+  //     }
+  // },
+  // update (dt) {},
 
 });
 

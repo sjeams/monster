@@ -17,114 +17,55 @@ var HttpHelper = cc.Class({
    * @param {string} url 
    * @param {function} callback 
    */
-  httpGet: function httpGet(url, callback) {
-    cc.myGame.gameUi.onShowLockScreen();
+  httpGets: function httpGets(url, callback) {
     var xhr = cc.loader.getXMLHttpRequest();
 
     xhr.onreadystatechange = function () {
-      // cc.log("Get: readyState:" + xhr.readyState + " status:" + xhr.status);
-      if (xhr.readyState === 4 && xhr.status == 200) {
+      if (xhr.readyState === 4 && xhr.status >= 200 && xhr.status < 300) {
         var respone = xhr.responseText;
-        var rsp = JSON.parse(respone);
-        cc.myGame.gameUi.onHideLockScreen();
-        callback(rsp);
-      } else if (xhr.readyState === 4 && xhr.status == 401) {
-        cc.myGame.gameUi.onHideLockScreen();
-        callback({
-          status: 401
-        });
-      } else {//callback(-1);
+        callback(respone);
       }
     };
 
-    xhr.withCredentials = true;
-    xhr.open('GET', url, true); // if (cc.sys.isNative) {
+    xhr.open("GET", url, true);
 
-    xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-    xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST');
-    xhr.setRequestHeader('Access-Control-Allow-Headers', 'x-requested-with,content-type,authorization');
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.setRequestHeader('Authorization', 'Bearer ' + cc.myGame.gameManager.getToken()); // xhr.setRequestHeader('Authorization', 'Bearer ' + "");
-    // }
-    // note: In Internet Explorer, the timeout property may be set only after calling the open()
+    if (cc.sys.isNative) {
+      xhr.setRequestHeader("Accept-Encoding", "gzip,deflate");
+    } // note: In Internet Explorer, the timeout property may be set only after calling the open()
     // method and before calling the send() method.
 
-    xhr.timeout = 8000; // 8 seconds for timeout
+
+    xhr.timeout = 5000; // 5 seconds for timeout
 
     xhr.send();
   },
-
-  /**
-   * post请求
-   * @param {string} url 
-   * @param {object} params 
-   * @param {function} callback 
-   */
   httpPost: function httpPost(url, params, callback) {
-    cc.myGame.gameUi.onShowLockScreen();
     var xhr = cc.loader.getXMLHttpRequest();
 
     xhr.onreadystatechange = function () {
-      // cc.log('xhr.readyState=' + xhr.readyState + '  xhr.status=' + xhr.status);
-      if (xhr.readyState === 4 && xhr.status == 200) {
+      // cc.log('xhr.readyState='+xhr.readyState+'  xhr.status='+xhr.status);
+      if (xhr.readyState === 4 && xhr.status >= 200 && xhr.status < 300) {
         var respone = xhr.responseText;
-        var rsp = JSON.parse(respone);
-        cc.myGame.gameUi.onHideLockScreen();
-        callback(rsp);
-      } else {
-        callback(-1);
-      }
+        callback(JSON.parse(respone)); // json 转数组
+      } else {//   callback(-1);
+        }
     };
 
-    xhr.open('POST', url, true); // if (cc.sys.isNative) {
+    xhr.open("POST", url, true);
 
-    xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-    xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST');
-    xhr.setRequestHeader('Access-Control-Allow-Headers', 'x-requested-with,content-type');
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.setRequestHeader('Authorization', 'Bearer ' + cc.myGame.gameManager.getToken()); // }
-    // note: In Internet Explorer, the timeout property may be set only after calling the open()
-    // method and before calling the send() method.
+    if (cc.sys.isNative) {
+      xhr.setRequestHeader("Accept-Encoding", "gzip,deflate");
+    } // xhr.setRequestHeader("Http-Edition", "1.0.0.0");  // 版本
+    // xhr.setRequestHeader("Ip", "192.168.1.1");
+    // xhr.setRequestHeader("Http-Token", "gzipdeflate");
 
-    xhr.timeout = 8000; // 8 seconds for timeout
 
-    xhr.send(JSON.stringify(params));
-  },
+    xhr.timeout = 5000; // 5 seconds for timeout
+    // xhr.setRequestHeader('Content-Type', 'application/json,multipart/form-data');
 
-  /**
-   * 登录专用
-   * @param {string} url 
-   * @param {object} params 
-   * @param {function} callback 
-   * @param {string} account 
-   * @param {string} password 
-   */
-  httpPostLogin: function httpPostLogin(url, params, callback, account, password) {
-    cc.myGame.gameUi.onShowLockScreen();
-    var xhr = cc.loader.getXMLHttpRequest();
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); // xhr.send(JSON.stringify(params));
 
-    xhr.onreadystatechange = function () {
-      // cc.log('xhr.readyState=' + xhr.readyState + '  xhr.status=' + xhr.status);
-      if (xhr.readyState === 4 && xhr.status == 200) {
-        var respone = xhr.responseText;
-        var rsp = JSON.parse(respone);
-        cc.myGame.gameUi.onHideLockScreen();
-        callback(rsp);
-      } else {
-        callback(-1);
-      }
-    };
-
-    xhr.open('POST', url, true);
-    xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-    xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET, POST');
-    xhr.setRequestHeader('Access-Control-Allow-Headers', 'x-requested-with,content-type');
-    xhr.setRequestHeader("Content-Type", "application/json");
-    var str = account + "@" + password;
-    xhr.setRequestHeader('Authorization', 'Basic' + ' ' + window.btoa(str));
-    xhr.timeout = 8000; // 8 seconds for timeout
-
-    xhr.send(JSON.stringify(params));
+    xhr.send('data=' + JSON.stringify(params)); //  xhr.send(params);
   }
 });
 window.HttpHelper = new HttpHelper();

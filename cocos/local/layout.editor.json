@@ -5,9 +5,9 @@
       "main": true,
       "url": "app://editor/index.html",
       "windowType": "dockable",
-      "x": 683,
-      "y": 161,
-      "width": 1239,
+      "x": 788,
+      "y": 261,
+      "width": 1034,
       "height": 654,
       "layout": {
         "children": [
@@ -18,23 +18,23 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 265.75,
+                "height": 266.96875,
                 "type": "panel",
-                "width": 207
+                "width": 204
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
-                "height": 264.75,
+                "height": 266.015625,
                 "type": "panel",
-                "width": 207
+                "width": 204
               }
             ],
-            "height": 533.5,
+            "height": 536,
             "type": "dock-v",
-            "width": 207
+            "width": 204
           },
           {
             "children": [
@@ -47,7 +47,7 @@
                     ],
                     "height": 286,
                     "type": "panel",
-                    "width": 246
+                    "width": 237
                   },
                   {
                     "active": 0,
@@ -61,7 +61,7 @@
                 ],
                 "height": 286,
                 "type": "dock-h",
-                "width": 513
+                "width": 504
               },
               {
                 "active": 2,
@@ -72,12 +72,12 @@
                 ],
                 "height": 266,
                 "type": "panel",
-                "width": 513
+                "width": 504
               }
             ],
             "height": 555,
             "type": "dock-v",
-            "width": 513
+            "width": 504
           },
           {
             "active": 0,
@@ -87,7 +87,7 @@
             ],
             "height": 556,
             "type": "panel",
-            "width": 309
+            "width": 304
           }
         ],
         "type": "dock-h"
@@ -107,8 +107,8 @@
   },
   "panels": {
     "project-settings": {
-      "x": 815,
-      "y": 256,
+      "x": 1063,
+      "y": 259,
       "width": 600,
       "height": 565
     },
@@ -131,7 +131,7 @@
       "height": 739
     },
     "preferences": {
-      "x": 672,
+      "x": 1111,
       "y": 240,
       "width": 600,
       "height": 565

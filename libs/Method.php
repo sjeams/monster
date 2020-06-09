@@ -347,50 +347,7 @@ class Method
         return $output;
     }
 
-    /**
-     * 验证用户
-     */
-    public static function confim_user($data){
-        $uid = $data['uid'];
-        $phone = $data['phone'];
-        $email = $data['email'];
-        $nickname = $data['nickname'];
-        $username = $data['username'];
-        $user = User::find()->where("uid=$uid")->one();
-        if($user){
-            $userId = $user['id'];
-            if($phone != $user['phone']){
-                User::updateAll(['phone' => $phone],"id=$userId");
-            }
-            if($email != $user['email']){
-                User::updateAll(['email' => $email],"id=$userId");
-            }
-            if($nickname != $user['nickname']){
-                User::updateAll(['nickname' => $nickname],"id=$userId");
-            }
-            if($username != $user['userName']){
-                User::updateAll(['userName' => $username],"id=$userId");
-            }
-        }else{
-            $model = new User();
-            $model->userName = $username;
-            $model->nickname = $nickname;
-            $model->email = $email;
-            $model->userPass = '';
-            $model->phone = $phone;
-            $model->createTime = time();
-            $model->uid = $uid;
-            $model->save();
-            $userId = $model->primaryKey;
-        }
-        $user = User::find()->where("id=$userId")->asArray()->one();
-        Yii::$app->session->set('userId',$userId);
-        Yii::$app->session->set("userData",$user);
-        Yii::$app->session->set("uid",$uid);
-        if (!empty($data['level'])){
-            Yii::$app->session->set("level",$data['level']);
-        }
-    }
+ 
 
     public static function score($res){
         $gpa = $res['gpa'];
@@ -602,6 +559,54 @@ class Method
      }
 
 
+
+
+
+
+    /**
+     * 验证用户
+     */
+     public static function confim_user($data){
+        $uid = $data['uid'];
+        $phone = $data['phone'];
+        $email = $data['email'];
+        $nickname = $data['nickname'];
+        $username = $data['username'];
+        $user = User::find()->where("uid=$uid")->one();
+        if($user){
+            $userId = $user['id'];
+            if($phone != $user['phone']){
+                User::updateAll(['phone' => $phone],"id=$userId");
+            }
+            if($email != $user['email']){
+                User::updateAll(['email' => $email],"id=$userId");
+            }
+            if($nickname != $user['nickname']){
+                User::updateAll(['nickname' => $nickname],"id=$userId");
+            }
+            if($username != $user['userName']){
+                User::updateAll(['userName' => $username],"id=$userId");
+            }
+        }else{
+            $model = new User();
+            $model->userName = $username;
+            $model->nickname = $nickname;
+            $model->email = $email;
+            $model->userPass = '';
+            $model->phone = $phone;
+            $model->createTime = time();
+            $model->uid = $uid;
+            $model->save();
+            $userId = $model->primaryKey;
+        }
+        $user = User::find()->where("id=$userId")->asArray()->one();
+        Yii::$app->session->set('userId',$userId);
+        Yii::$app->session->set("userData",$user);
+        Yii::$app->session->set("uid",$uid);
+        if (!empty($data['level'])){
+            Yii::$app->session->set("level",$data['level']);
+        }
+    }
 
 
 
