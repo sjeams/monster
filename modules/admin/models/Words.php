@@ -13,7 +13,7 @@ class Words extends ActiveRecord
      * 查询境界列表
      */
     public static function getValueList(){
-      $data = Words::find()->select('*,id as key,name as text')->asarray()->All();
+      $data = Words::find()->select('*,id as key,name as text')->orderBy('type asc,id asc')->asarray()->All();
       return $data;
     }
 

@@ -38,7 +38,7 @@ class GoodsUse extends ActiveRecord
      public static function getBiologyList($page=1,$pageSize=20,$where=""){
       
       $data['data'] = GoodsUse::find()->select("*,name as key")->where(" $where")->offset($page*$pageSize)->limit($pageSize)->asarray()->All();
-      $data ['total'] = GoodsUse::find()->select("id")->asarray()->count();
+      $data ['total'] = GoodsUse::find()->select("id")->where(" $where")->asarray()->count();
       // $data=  AdminInit::getChildren($adminIint);
       return $data;
   }

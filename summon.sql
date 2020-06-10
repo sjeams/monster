@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50711
 File Encoding         : 65001
 
-Date: 2020-06-09 17:06:15
+Date: 2020-06-10 18:11:02
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,43 +34,43 @@ CREATE TABLE `x2_admin_init` (
 -- ----------------------------
 -- Records of x2_admin_init
 -- ----------------------------
-INSERT INTO `x2_admin_init` VALUES ('1', '0', 'menuInfo', '后台管理', '', '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('2', '1', 'currency', '生物系统', '测试s', '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('3', '1', 'component', '组件管理', '', '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('4', '1', 'other', '其它管理', '', '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('5', '2', '', '生物模板', '', '/admin/biology/index', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('6', '2', '', '生物创造', '', '/admin/biology-create/index', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('40', '0', 'app', 'APP管理', '', '', '1587980518', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('41', '0', 'user', '用户管理', '', '', '1587980518', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('8', '2', '', '生物管理', '', '/admin/user-biology/index', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('9', '2', '', '世界管理', '', '/layuimini/page/setting.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('10', '2', '', '技能管理', '反倒是', '/layuimini/page/table.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('48', '1', '', '物品管理', '', '', '1587980518', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('49', '48', '', '物品分类', '', '/admin/goods/index', '1587980518', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('50', '2', '', '性格管理 ', '', '', '1587980518', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('51', '48', 'danyao', '物品类型', '', '/admin/goods-store/index', '1587980518', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('14', '2', '', '登录模板', '', '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('15', '14', '', '登录-1', '', '/layuimini/page/login-1.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('16', '14', '', '登录-2', null, '/layuimini/page/login-2.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('17', '2', '', '异常页面', null, '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('18', '2', '', '404页面', '', '/layuimini/page/404.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('19', '2', '', '其它界面', null, '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('20', '19', '', '按钮示例', null, '/layuimini/page/button.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('21', '19', '', '弹出层', null, '/layuimini/page/layer.html\"', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('22', '3', '', '组件管理', null, '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('23', '22', '', '图标列表', null, '/layuimini/page/icon.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('24', '22', '', '图标选择', null, '/layuimini/page/icon-picker.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('25', '22', '', '颜色选择', null, '/layuimini/page/color-select.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('26', '22', '', '下拉选择', null, '/layuimini/page/table-select.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('27', '22', '', '文件上传', '', '/layuimini/page/upload.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('28', '22', '', '富文本编辑器', '', '/layuimini/page/editor.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('29', '4', '', '多级菜单', null, '', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('30', '29', '', '按钮1', null, '/layuimini/page/button.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('31', '29', '', '按钮2', null, '/layuimini/page/button.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('32', '29', '', '按钮3', null, '/layuimini/page/button.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('33', '29', '', '表单4', null, '/layuimini/page/form.html', '1587980518', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
-INSERT INTO `x2_admin_init` VALUES ('45', '0', 'order', '商城', '', '', '1587980518', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
-INSERT INTO `x2_admin_init` VALUES ('43', '41', 'cc', 'cc', '', 'cc', '1587980518', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('1', '0', 'menuInfo', '后台管理', '', '', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('2', '1', 'currency', '生物系统', '测试s', '', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('3', '1', 'component', '组件管理', '', '', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('4', '1', 'other', '其它管理', '', '', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('5', '2', '', '生物模板', '', '/admin/biology/index', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('6', '2', '', '生物创造', '', '/admin/biology-create/index', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('40', '0', 'app', 'APP管理', '', '', '1591694465', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('41', '0', 'user', '用户管理', '', '', '1591694465', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('8', '2', '', '生物管理', '', '/admin/user-biology/index', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('9', '2', '', '世界管理', '', '/layuimini/page/setting.html', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('10', '2', '', '技能管理', '反倒是', '/layuimini/page/table.html', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('48', '1', '', '物品管理', '', '', '1591694465', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('49', '48', '', '物品分类', '', '/admin/goods/index', '1591694465', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('50', '2', '', '性格管理 ', '', '', '1591694465', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('51', '48', 'danyao', '物品详情', '', '/admin/goods-store/index', '1591694465', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('14', '2', '', '登录模板', '', '', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('15', '14', '', '登录-1', '', '/layuimini/page/login-1.html', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('16', '14', '', '登录-2', null, '/layuimini/page/login-2.html', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('17', '2', '', '异常页面', null, '', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('18', '2', '', '404页面', '', '/layuimini/page/404.html', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('19', '2', '', '其它界面', null, '', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('20', '19', '', '按钮示例', null, '/layuimini/page/button.html', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('21', '19', '', '弹出层', null, '/layuimini/page/layer.html\"', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('22', '3', '', '组件管理', null, '', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('23', '22', '', '图标列表', null, '/layuimini/page/icon.html', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('24', '22', '', '图标选择', null, '/layuimini/page/icon-picker.html', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('25', '22', '', '颜色选择', null, '/layuimini/page/color-select.html', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('26', '22', '', '下拉选择', null, '/layuimini/page/table-select.html', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('27', '22', '', '文件上传', '', '/layuimini/page/upload.html', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('28', '22', '', '富文本编辑器', '', '/layuimini/page/editor.html', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('29', '4', '', '多级菜单', null, '', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('30', '29', '', '按钮1', null, '/layuimini/page/button.html', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('31', '29', '', '按钮2', null, '/layuimini/page/button.html', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('32', '29', '', '按钮3', null, '/layuimini/page/button.html', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('33', '29', '', '表单4', null, '/layuimini/page/form.html', '1591694465', '            <input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/>\r\n    <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>\r\n');
+INSERT INTO `x2_admin_init` VALUES ('45', '0', 'order', '商城', '', '', '1591694465', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
+INSERT INTO `x2_admin_init` VALUES ('43', '41', 'cc', 'cc', '', 'cc', '1591694465', '<input type=\"button\" value=\"编辑节点\" onclick=\"onEditNode()\"/> <input type=\"button\" value=\"删除节点\" onclick=\"onRemoveNode()\"/>');
 
 -- ----------------------------
 -- Table structure for x2_biology
@@ -904,133 +904,136 @@ DROP TABLE IF EXISTS `x2_goods_store`;
 CREATE TABLE `x2_goods_store` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '武器表',
   `name` varchar(255) DEFAULT NULL,
-  `type` int(255) DEFAULT '1' COMMENT 'type 1可用 2不可用',
-  `point` varchar(255) DEFAULT NULL,
-  `value` int(11) DEFAULT '0' COMMENT '基础白值属性',
+  `type` int(255) DEFAULT '2' COMMENT 'type 1可用 2不可用',
+  `picture` varchar(255) DEFAULT NULL,
+  `value` int(11) DEFAULT '0' COMMENT '出现率',
   `percent` int(11) DEFAULT '10' COMMENT '百分比10-100 人(白 绿 蓝 紫 金 红 橙) 鬼仙神（彩） 1-10 分5品不可洗练',
-  `describe` varchar(255) DEFAULT NULL,
-  `num` int(11) DEFAULT '0' COMMENT '属性条数 最多9条',
+  `descript` varchar(255) DEFAULT NULL,
+  `num` int(11) DEFAULT '0' COMMENT '属性条数 最多10条',
   `belong` int(11) DEFAULT '0' COMMENT '有id标识 说明 可以合成',
   `tilian` int(11) DEFAULT '0' COMMENT '提炼--铁之精华 --药之精华  根据品质提炼',
   `grade` int(11) DEFAULT '1' COMMENT '物品等级默认为1  武器（1-20）   丹药丹毒（1-20）',
-  `wordId` int(11) DEFAULT '0' COMMENT '世界id  0不属于任何世界的特殊物品',
+  `wordId` int(11) DEFAULT '1' COMMENT '世界id  1不属于任何世界的特殊物品',
   `gooduse` int(11) DEFAULT '1' COMMENT '物品类型 参考goods_use表',
-  `usetype` int(11) DEFAULT NULL COMMENT '使用类型1材料 2使用 3合成',
-  `selltype` int(11) DEFAULT '0' COMMENT '购买类型  0不可购买 1金币 2 灵石',
+  `usetype` int(11) DEFAULT '1' COMMENT '使用类型1材料 2使用 3合成',
+  `selltype` int(11) DEFAULT '1' COMMENT '购买类型  1不可购买 2金币 3 灵石',
   `sellout` int(11) DEFAULT '0' COMMENT '卖出价格',
   `price` int(11) DEFAULT '0' COMMENT '价格',
   `percenttype` varchar(255) DEFAULT '残破' COMMENT ' 残破 劣质 普通 良好 优质 稀有 极品 完美 传说 神话',
   `userid` int(11) DEFAULT '0' COMMENT '拥有人 0=商店    其它=用户',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=105 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=114 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_goods_store
 -- ----------------------------
-INSERT INTO `x2_goods_store` VALUES ('1', '戮仙剑', '2', null, '10', '70', '诛仙套装之一戮仙剑', '5', '5', '100', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('2', '诛仙剑', '2', null, '10', '70', '诛仙套装之一诛仙剑', '5', '5', '100', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('3', '陷仙剑', '2', null, '10', '70', '诛仙套装之一陷仙剑', '5', '5', '100', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('4', '绝仙剑', '2', null, '10', '70', '诛仙套装之一绝仙剑', '5', '5', '100', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('5', '诛仙剑阵', '2', '', '1', '80', '诛仙剑阵，由戮仙剑，诛仙剑，绝仙剑，陷仙剑组，诛仙阵图成。', '6', '5', '100', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('6', '盘古斧', '2', '', '1', '80', '盘古开天神器，盘古牙齿所化。', '6', '0', '500', '1', '0', '1', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('1', '戮仙剑', '2', null, '10', '70', '诛仙套装之一戮仙剑', '5', '5', '100', '1', '1', '1', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('2', '诛仙剑', '2', null, '10', '70', '诛仙套装之一诛仙剑', '5', '5', '100', '1', '1', '1', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('3', '陷仙剑', '2', null, '10', '70', '诛仙套装之一陷仙剑', '5', '5', '100', '1', '1', '1', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('4', '绝仙剑', '2', null, '10', '70', '诛仙套装之一绝仙剑', '5', '5', '100', '1', '1', '1', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('5', '诛仙剑阵', '2', '', '0', '80', '诛仙剑阵，由戮仙剑，诛仙剑，绝仙剑，陷仙剑组，诛仙阵图成。', '6', '5', '100', '1', '1', '1', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('6', '盘古斧', '2', '', '1', '80', '盘古开天神器，盘古牙齿所化。', '6', '0', '500', '1', '1', '1', '2', '0', '0', null, null, '0');
 INSERT INTO `x2_goods_store` VALUES ('7', '匕首', '1', null, '2000', '10', '一把普通的匕首，没什么大用处。', '0', '0', '1', '1', '1', '1', '2', '0', '0', null, null, '0');
 INSERT INTO `x2_goods_store` VALUES ('8', '承影', '1', '', '2000', '20', '上古十大名剑之一。', '1', '0', '20', '1', '1', '1', '2', '0', '0', null, null, '0');
 INSERT INTO `x2_goods_store` VALUES ('9', '铁剑', '1', '', '2000', '20', '普通铁剑，没什么大用处。', '1', '0', '40', '1', '1', '1', '2', '0', '0', null, null, '0');
 INSERT INTO `x2_goods_store` VALUES ('10', '钢刀', '1', '', '2000', '20', '普通铁剑，没什么大用处。', '1', '0', '60', '1', '1', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('11', '玄铁重剑', '1', null, '2000', '10', '玄铁重剑，重达4万万斤，由千年玄铁打造而成。', '0', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('12', '天运丹', '1', null, '10', '10', '截命运之力炼制而成，服之可增加幸运值。', '1', '0', '100', '20', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('13', '蜕凡丹', '1', null, '100', '10', '一种可以增强体质的丹药。', '1', '0', '100', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('14', '生生丹', '1', null, '1000', '10', '传说可以增加寿命100年的丹药。', '1', '0', '100', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('15', '人生果', '1', null, '10000', '10', '三千一开花，三千年一结果，服之可增寿5000年', '1', '12', '100', '10', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('16', '千年蟠桃', '1', '', '10000', '10', '千年蟠桃，服之可增寿3000年', '1', '12', '100', '10', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('17', '黄泉仙酿', '1', '', '10000', '10', '服之可增寿2000年', '1', '12', '100', '10', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('19', '诛仙阵', '2', null, '1', '10', '以诛仙四仙剑布阵，有诛仙阵图，和四仙剑，通天教主传多宝道人。', '9', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('18', '万仙阵', '2', null, '10', '10', '通天门下弟子，由通天教主和他座下四大弟子主持。', '6', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('20', '四象阵', '2', null, '10', '10', '金光仙（金毛吼', '6', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('21', '三才阵', '2', null, '10', '10', '天地人三才组成。', '6', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('22', '太极阵', '2', null, '10', '10', '乌云仙（长须黑面，皂服丝绦，混元锤，金须鳌鱼），青首仙（青毛狮子）', '6', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('23', '八卦阵', '2', null, '10', '10', '太极生两仪，两仪生四相，四相生八卦，八卦而变六十四爻，从此周而复始变化无穷。', '6', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('24', '十二都天门阵', '2', null, '10', '10', '十二祖巫组成。', '6', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('25', '北斗七星阵', '2', null, '10', '10', '道教一元、两仪、三才、四相、五行、六合、七星、八卦、九宫的流变规律', '6', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('26', '周天星斗大阵', '2', null, '10', '10', '巫妖大战时，\r\n三百六十五位大妖所布置。', '6', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('27', '九曲黄河阵', '2', null, '10', '10', '云霄。内按叁才，包藏天地之妙，中有惑仙丹闭仙诀，能失仙之神，消仙之魄，陷仙之形，损仙之气，丧神仙之原本，捐神仙之肢体。神仙入此成凡人，凡人入此即绝命。九曲曲中无直，曲尽造化之奇，抉尽神仙之基，任他叁教圣人，遭此亦难逃脱。', '6', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('28', '混元河洛大阵', '2', null, '10', '10', '阵眼为河图，洛书。', '6', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('29', '罗汉阵', '2', null, '10', '10', '佛门阵法。', '6', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('30', '十绝阵', '2', null, '0', '10', '由十天君主持的十个小阵组成。', '9', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('31', '秦天君天绝阵', '2', null, '100', '10', '演先天之数，得先天清气；内藏混沌之机，中有三首幡，按天地人三才，共合为一气。若人入此阵内，有雷鸣之处，化作灰尘；仙道若逢此处，肢体震为粉碎，故曰“天绝阵”。', '5', '30', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('32', '赵天君地烈阵', '2', null, '100', '10', '烈成分浊厚，上雷下火太无情；就是五行乾健体，难逃骨化与形倾。', '5', '30', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('33', '董天君风吼阵', '2', null, '100', '10', '按地水火风之数，内有风火，此风火乃先天之气，叁昧真火，百万兵刃，从中而出。若神仙进此阵，风火交作，万刃齐攒，四肢立成齑粉；怕他有倒海移山之异术，难免身体化成脓血。（八角鹿，太阿双剑）', '5', '30', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('34', '袁天君寒冰阵', '2', null, '100', '10', '名为寒水，实为刀山；内藏玄妙，中有风雷，上有冰山如狼牙，下有冰块如刀剑。若神仙入此阵，风雷动处，上下一磕，四肢立成齑粉，纵有异术，离免此难。', '5', '30', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('35', '金光圣母金光阵', '2', null, '100', '10', '夺日月之精，藏天地之气，中有二十一面宝镜，用二十一根杆，每一面应在杆顶上，一镜上有一套。若人仙入阵，将此套拽起，雷声震动镜子，只一二转，金光射出，照住其身，立刻化为浓血，纵会飞腾，难越此阵。', '5', '30', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('36', '孙天君化血阵', '2', null, '100', '10', '用先天灵气，中有风雷，内藏数斗黑沙。但神仙入阵，雷响处风卷黑沙，些须着处，立化血水，纵是神仙难逃利害。', '5', '30', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('37', '白天君烈阵', '2', null, '100', '10', '妙用无穷，非同凡品：内藏叁火，有叁昧火，空中火，石中火，叁火并为一气；中有叁首红，若神仙进此阵内，叁展动，叁火齐飞，须火成为灰烬，纵有避火真言，难躲叁昧真火。', '5', '30', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('38', '姚天君落魂阵', '2', null, '100', '10', '闭生门，开死户，中藏天地厉气，结聚而成；内有白纸一首，上画符印，若神仙入阵内，白旌展动，魂魄消散，倾刻而灭，不论神仙，随入随灭。', '5', '30', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('39', '王天君红水阵', '2', null, '100', '10', '夺壬癸之精，藏太乙之妙，变幻莫测；中有一八卦台，上有一二个葫芦，任随人仙入阵，将葫芦往下一掷，倾出红水，汪洋无际。若是水溅出一点，黏在身上，顷刻化为血水，纵是神仙，无术可逃。', '5', '30', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('40', '张天君红沙阵', '2', null, '100', '10', '内按天地人叁寸，中分叁气，内藏红砂叁斗，看似红砂，着身利刃，上不知天，下不知地，中不知人；若人仙冲入此阵，风雷运处，飞砂伤人，立刻骸鼻俱成齑粉，纵有神仙佛祖遭此，再不能逃。', '5', '30', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('41', '两仪阵', '2', null, '100', '10', '灵牙仙（白象）', '5', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('42', '瘟癀阵', '2', null, '100', '10', '九龙岛吕岳、陈庚。二十一把瘟癀伞，按九宫八卦排列，中有土台。', '5', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('43', '血河大阵', '2', null, '100', '10', '冥河老祖以十万八千辆血河车所布置。', '5', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('44', '两仪微尘大阵', '2', null, '100', '10', '老子以混元一气太清神符布置。', '5', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('45', '先天五方大阵', '2', null, '100', '10', '由素色云界旗，青莲宝色旗，玄元控水旗，离地焰光旗，玉虚杏黄旗布置', '5', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('46', '大须弥正反九宫仙阵', '2', null, '100', '10', '由九把九宫剑布置而成，在蜀山里仅次于两仪微尘大阵', '5', '0', '0', '1', '0', '1', '2', '0', '0', null, null, '0');
-INSERT INTO `x2_goods_store` VALUES ('47', '破封石', '1', null, '10', '10', '可以破除封印，提升武器品阶。', '0', '0', '0', '1', '0', '1', '2', '1', '99800', '998', '神话', '0');
-INSERT INTO `x2_goods_store` VALUES ('48', '木箱', '1', null, '1000', '10', '开出1-6境界武器、技能或者丹药。', '0', '0', '0', '1', '0', '1', '2', '1', '5000', '50', '稀有', '0');
-INSERT INTO `x2_goods_store` VALUES ('49', '铁箱', '1', null, '500', '10', '开出2-8境界武器、技能或者丹药。', '0', '0', '0', '1', '0', '1', '2', '1', '8000', '80', '完美', '0');
-INSERT INTO `x2_goods_store` VALUES ('50', '银箱', '1', null, '100', '10', '开出6-12境界武器、技能或者丹药。', '0', '0', '0', '1', '0', '1', '2', '1', '20000', '200', '传说', '0');
-INSERT INTO `x2_goods_store` VALUES ('51', '金箱', '1', null, '50', '10', '开出8-16境界武器、技能或者丹药。', '0', '0', '0', '1', '0', '1', '2', '1', '80000', '800', '传说', '0');
-INSERT INTO `x2_goods_store` VALUES ('52', '玉盒', '1', null, '20', '10', '开出12-18境界武器、技能或者丹药。', '0', '0', '0', '1', '0', '1', '2', '1', '240000', '2400', '传说', '0');
-INSERT INTO `x2_goods_store` VALUES ('53', '仙盒', '1', null, '2', '10', '开出16-20境界武器、技能或者丹药。', '0', '0', '0', '1', '0', '1', '2', '1', '500000', '5000', '神话', '0');
-INSERT INTO `x2_goods_store` VALUES ('54', '人仙令', '1', null, '500', '10', '召唤令，人族生物', '0', '0', '0', '1', '0', '1', '2', '1', '5000', '10000', '完美', '0');
-INSERT INTO `x2_goods_store` VALUES ('55', '魔仙令', '1', null, '500', '10', '召唤令，魔族生物', '0', '0', '0', '1', '0', '1', '2', '1', '8000', '16000', '完美', '0');
-INSERT INTO `x2_goods_store` VALUES ('56', '妖仙令', '1', null, '500', '10', '召唤令，妖族生物', '0', '0', '0', '1', '0', '1', '2', '1', '8000', '16000', '完美', '0');
-INSERT INTO `x2_goods_store` VALUES ('57', '鬼仙令', '1', null, '500', '10', '召唤令，鬼族生物', '0', '0', '0', '1', '0', '1', '2', '1', '8000', '16000', '完美', '0');
-INSERT INTO `x2_goods_store` VALUES ('58', '仙神令', '1', null, '500', '10', '召唤令，仙族生物', '0', '0', '0', '1', '0', '1', '2', '1', '8000', '16000', '完美', '0');
-INSERT INTO `x2_goods_store` VALUES ('59', '兽仙令', '1', null, '500', '10', '召唤令，兽族生物', '0', '0', '0', '1', '0', '1', '2', '1', '8000', '16000', '完美', '0');
-INSERT INTO `x2_goods_store` VALUES ('60', '灵仙令', '1', null, '500', '10', '召唤令，灵族生物', '0', '0', '0', '1', '0', '1', '2', '1', '12000', '24000', '完美', '0');
-INSERT INTO `x2_goods_store` VALUES ('61', '异仙令', '1', null, '500', '10', '召唤令，异族生物', '0', '0', '0', '1', '0', '1', '2', '1', '15000', '30000', '完美', '0');
-INSERT INTO `x2_goods_store` VALUES ('62', '万仙令', '1', null, '200', '10', '随机召唤令，人妖鬼神魔兽灵异。', '0', '0', '0', '1', '0', '1', '2', '1', '10000', '20000', '完美', '0');
-INSERT INTO `x2_goods_store` VALUES ('63', '神魔令', '1', null, '10', '10', '特殊召唤随机世界生物', '0', '0', '0', '1', '0', '1', '2', '1', '99800', '998', '神话', '0');
-INSERT INTO `x2_goods_store` VALUES ('64', '精魄', '1', null, '2000', '10', '生物精魄，消耗100精魄可随机合成万仙令，生物分解可获得相应评分的精魄。1000金币=1精魄', '0', '0', '0', '1', '0', '1', '3', '1', '100', '0', '普通', '0');
-INSERT INTO `x2_goods_store` VALUES ('65', '灵药', '1', null, '2000', '10', '草木精华，可用于炼丹强化。丹药分解可获得相应评分的灵药。3000金币=1灵药', '0', '0', '0', '1', '0', '1', '3', '1', '300', '0', '普通', '0');
-INSERT INTO `x2_goods_store` VALUES ('66', '铁精', '1', null, '2000', '10', '锻冶之精华，可用于炼器强化。武器分解可获得相应评分的铁精。2000金币=1铁精', '0', '0', '0', '1', '0', '1', '3', '1', '200', '0', '普通', '0');
-INSERT INTO `x2_goods_store` VALUES ('67', '元神', '1', null, '100', '10', '随机生物元神，附带生物技能。', '0', '0', '0', '1', '0', '1', '2', '1', '12600', '126', '传说', '0');
-INSERT INTO `x2_goods_store` VALUES ('68', '朱果', '1', null, '1000', '10', '刷新生物属性，凤凰血而生，服用后有脱胎换骨的功效。', '0', '0', '0', '1', '0', '1', '2', '1', '1000', '10', '稀有', '0');
-INSERT INTO `x2_goods_store` VALUES ('69', '星辰石', '1', null, '1000', '10', '武器洗炼', '0', '0', '0', '1', '0', '1', '2', '1', '1000', '10', '稀有', '0');
-INSERT INTO `x2_goods_store` VALUES ('70', '生生不熄', '1', null, '1000', '10', '体力值+20', '0', '0', '0', '1', '0', '1', '2', '1', '1000', '10000', '稀有', '0');
-INSERT INTO `x2_goods_store` VALUES ('71', '传送石', '1', null, '100', '10', '随机秘境，对应世界，生物难度。9个标记，可能物品，可能战斗，可能空，可组队，全部死亡退出场景。', '0', '0', '0', '1', '0', '1', '2', '1', '48800', '488', '传说', '0');
-INSERT INTO `x2_goods_store` VALUES ('72', '本源之力', '1', null, '100', '10', '本源之力，用于主角突破自身境界。', '0', '0', '0', '1', '0', '1', '2', '1', '15000', '30000', '传说', '0');
-INSERT INTO `x2_goods_store` VALUES ('73', '三生石', '1', null, '200', '10', '生物缘分刷新', '0', '0', '0', '1', '0', '1', '2', '1', '10000', '20000', '完美', '0');
-INSERT INTO `x2_goods_store` VALUES ('74', '功法玉简', '1', null, '200', '10', '获得随机技能书一本', '0', '0', '0', '1', '0', '1', '2', '1', '9800', '98', '完美', '0');
-INSERT INTO `x2_goods_store` VALUES ('75', '忘情水', '1', null, '200', '10', '修改角色名称。', '0', '0', '0', '1', '0', '1', '2', '1', '28800', '288', '完美', '0');
-INSERT INTO `x2_goods_store` VALUES ('76', '破界符', '1', null, '100', '10', '强制掠夺，胜利可以获得对方10%金币。', '0', '0', '0', '1', '0', '1', '2', '1', '10000', '100', '传说', '0');
-INSERT INTO `x2_goods_store` VALUES ('77', '符石', '1', null, '300', '10', '使用可获随机获得符石。', '0', '0', '0', '1', '0', '1', '2', '1', '3600', '126', '完美', '0');
-INSERT INTO `x2_goods_store` VALUES ('78', '彩虹泪', '1', null, '100', '10', '可改变异形颜色', '0', '0', '0', '1', '0', '1', '2', '1', '16800', '168', '传说', '0');
-INSERT INTO `x2_goods_store` VALUES ('79', '神石', '1', null, '100', '10', '20神石可合成神魔令，特殊召唤随机世界生物', '0', '0', '0', '1', '0', '1', '3', '1', '5000', '50', '传说', '0');
-INSERT INTO `x2_goods_store` VALUES ('80', '鸿蒙紫气', '1', null, '1', '10', '服用鸿蒙紫气，方挑战圣境。', '0', '0', '0', '1', '0', '1', '2', '1', '999900', '9999', '神话', '0');
-INSERT INTO `x2_goods_store` VALUES ('81', '盘古石', '1', null, '5', '10', '服用后，可学习任意种族技能一次。', '0', '0', '0', '1', '0', '1', '2', '1', '482000', '4820', '神话', '0');
-INSERT INTO `x2_goods_store` VALUES ('82', '孟婆汤', '1', null, '1000', '10', '生物转生，重塑肉身，不保留境界。', '0', '0', '0', '1', '0', '1', '2', '1', '3000', '30000', '稀有', '0');
-INSERT INTO `x2_goods_store` VALUES ('83', '潜能', '1', null, '60', '10', '随机学习生物天生技能', '0', '0', '0', '1', '0', '1', '2', '1', '36000', '360', '传说', '0');
-INSERT INTO `x2_goods_store` VALUES ('84', '技能绑定石', '1', null, '100', '10', '绑定技能。', '0', '0', '0', '1', '0', '1', '2', '1', '20000', '200000', '传说', '0');
-INSERT INTO `x2_goods_store` VALUES ('85', '阵法石', '1', null, '50', '10', '使用后获得随机阵法', '0', '0', '0', '1', '0', '1', '2', '1', '78000', '780000', '传说', '0');
-INSERT INTO `x2_goods_store` VALUES ('86', '道果', '1', null, '300', '10', '生物使用后，三围增加50', '0', '0', '0', '1', '0', '1', '2', '1', '66600', '666', '完美', '0');
-INSERT INTO `x2_goods_store` VALUES ('87', '仙魔石', '1', null, '500', '10', '可以使人性情大变，刷新生物性格', '0', '0', '0', '1', '0', '1', '2', '1', '2000', '20', '完美', '0');
-INSERT INTO `x2_goods_store` VALUES ('88', '藏宝图', '1', null, '1000', '10', '九宫格，每次挖掘消耗藏宝图+1', '0', '0', '0', '1', '0', '1', '2', '1', '800', '4000', '稀有', '0');
-INSERT INTO `x2_goods_store` VALUES ('89', '契约仙果', '1', null, '80', '10', '使用后无法融合，无法交易，成长+1，异形+2', '0', '0', '0', '1', '0', '1', '2', '1', '999999', '999999', '传说', '0');
-INSERT INTO `x2_goods_store` VALUES ('90', '仙炼石', '1', null, '10', '10', '可以仙炼武器', '0', '0', '0', '1', '0', '1', '1', '1', '0', null, '神话', '0');
-INSERT INTO `x2_goods_store` VALUES ('91', '妖炼石', '1', null, '10', '10', '可以妖炼武器', '0', '0', '0', '1', '0', '1', '1', '1', '0', null, '神话', '0');
-INSERT INTO `x2_goods_store` VALUES ('92', '神炼石', '1', null, '10', '10', '可以神炼武器', '0', '0', '0', '1', '0', '1', '1', '1', '0', null, '神话', '0');
-INSERT INTO `x2_goods_store` VALUES ('93', '何首乌', '1', null, '2000', '10', '普通药材', '0', '0', '0', '1', '0', '1', '1', '1', '600', null, '普通', '0');
-INSERT INTO `x2_goods_store` VALUES ('94', '千年人参', '1', null, '1000', '10', '千年人参，有极大的药效。', '0', '0', '0', '1', '0', '1', '1', '1', '2000', null, '稀有', '0');
-INSERT INTO `x2_goods_store` VALUES ('95', '金币', '1', null, '2000', '10', '金币堆，可以卖钱。', '0', '0', '0', '1', '0', '1', '1', '1', '100', null, '普通', '0');
-INSERT INTO `x2_goods_store` VALUES ('96', '灵石', '1', null, '2000', '10', '灵石堆，可以卖钱。', '0', '0', '0', '1', '0', '1', '1', '1', '500', null, '普通', '0');
-INSERT INTO `x2_goods_store` VALUES ('97', '金矿', '1', null, '1000', '10', '发现金矿，可以卖钱。', '0', '0', '0', '1', '0', '1', '1', '1', '1000', null, '稀有', '0');
-INSERT INTO `x2_goods_store` VALUES ('98', '灵脉', '1', null, '1000', '10', '发现灵脉，可以卖钱。', '0', '0', '0', '1', '0', '1', '1', '1', '3000', null, '稀有', '0');
-INSERT INTO `x2_goods_store` VALUES ('99', '百年人参', '1', null, '2000', '10', '百年人参，药效较低。', '0', '0', '0', '1', '0', '1', '1', '1', '800', null, '普通', '0');
-INSERT INTO `x2_goods_store` VALUES ('100', '雕像', '1', null, '2000', '10', '一个残破的雕像。', '0', '0', '0', '1', '0', '1', '1', '1', '200', null, '普通', '0');
-INSERT INTO `x2_goods_store` VALUES ('101', '龙凤镯', '1', null, '2000', '10', '一块普通手镯。', '0', '0', '0', '1', '0', '1', '1', '1', '600', null, '普通', '0');
-INSERT INTO `x2_goods_store` VALUES ('102', '古玉', '1', null, '2000', '10', '一块古玉。', '0', '0', '0', '1', '0', '1', '1', '1', '500', null, '普通', '0');
-INSERT INTO `x2_goods_store` VALUES ('103', '夜明珠', '1', null, '2000', '10', '夜明珠', '0', '0', '0', '1', '0', '1', '1', '1', '400', null, '普通', '0');
-INSERT INTO `x2_goods_store` VALUES ('104', '琉璃盏', '1', null, '2000', '10', '琉璃盏', '0', '0', '0', '1', '0', '1', '1', '1', '1200', null, '普通', '0');
+INSERT INTO `x2_goods_store` VALUES ('11', '玄铁重剑', '1', null, '2000', '10', '玄铁重剑，重达4万万斤，由千年玄铁打造而成。', '0', '0', '0', '1', '1', '1', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('12', '天运丹', '1', null, '10', '10', '截命运之力炼制而成，服之可增加幸运值。', '1', '0', '100', '20', '1', '2', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('13', '蜕凡丹', '1', null, '100', '10', '一种可以增强体质的丹药。', '1', '0', '100', '1', '1', '2', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('14', '生生丹', '1', null, '1000', '10', '传说可以增加寿命100年的丹药。', '1', '0', '100', '1', '1', '2', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('15', '人生果', '1', null, '10000', '10', '三千一开花，三千年一结果，服之可增寿5000年', '1', '12', '100', '10', '1', '2', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('16', '千年蟠桃', '1', '', '10000', '10', '千年蟠桃，服之可增寿3000年', '1', '12', '100', '10', '1', '2', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('17', '黄泉仙酿', '1', '', '10000', '10', '服之可增寿2000年', '1', '12', '100', '10', '1', '2', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('19', '诛仙阵', '2', null, '0', '10', '以诛仙四仙剑布阵，有诛仙阵图，和四仙剑，通天教主传多宝道人。', '9', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('18', '万仙阵', '2', null, '10', '10', '通天门下弟子，由通天教主和他座下四大弟子主持。', '6', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('20', '四象阵', '2', null, '10', '10', '金光仙（金毛吼', '6', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('21', '三才阵', '2', null, '10', '10', '天地人三才组成。', '6', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('22', '太极阵', '2', null, '10', '10', '乌云仙（长须黑面，皂服丝绦，混元锤，金须鳌鱼），青首仙（青毛狮子）', '6', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('23', '八卦阵', '2', null, '10', '10', '太极生两仪，两仪生四相，四相生八卦，八卦而变六十四爻，从此周而复始变化无穷。', '6', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('24', '十二都天门阵', '2', null, '10', '10', '十二祖巫组成。', '6', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('25', '北斗七星阵', '2', null, '10', '10', '道教一元、两仪、三才、四相、五行、六合、七星、八卦、九宫的流变规律', '6', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('26', '周天星斗大阵', '2', null, '10', '10', '巫妖大战时，\r\n三百六十五位大妖所布置。', '6', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('27', '九曲黄河阵', '2', null, '10', '10', '云霄。内按叁才，包藏天地之妙，中有惑仙丹闭仙诀，能失仙之神，消仙之魄，陷仙之形，损仙之气，丧神仙之原本，捐神仙之肢体。神仙入此成凡人，凡人入此即绝命。九曲曲中无直，曲尽造化之奇，抉尽神仙之基，任他叁教圣人，遭此亦难逃脱。', '6', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('28', '混元河洛大阵', '2', null, '10', '10', '阵眼为河图，洛书。', '6', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('29', '罗汉阵', '2', null, '10', '10', '佛门阵法。', '6', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('30', '十绝阵', '2', null, '0', '10', '由十天君主持的十个小阵组成。', '9', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('31', '秦天君天绝阵', '2', null, '100', '10', '演先天之数，得先天清气；内藏混沌之机，中有三首幡，按天地人三才，共合为一气。若人入此阵内，有雷鸣之处，化作灰尘；仙道若逢此处，肢体震为粉碎，故曰“天绝阵”。', '5', '30', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('32', '赵天君地烈阵', '2', null, '100', '10', '烈成分浊厚，上雷下火太无情；就是五行乾健体，难逃骨化与形倾。', '5', '30', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('33', '董天君风吼阵', '2', null, '100', '10', '按地水火风之数，内有风火，此风火乃先天之气，叁昧真火，百万兵刃，从中而出。若神仙进此阵，风火交作，万刃齐攒，四肢立成齑粉；怕他有倒海移山之异术，难免身体化成脓血。（八角鹿，太阿双剑）', '5', '30', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('34', '袁天君寒冰阵', '2', null, '100', '10', '名为寒水，实为刀山；内藏玄妙，中有风雷，上有冰山如狼牙，下有冰块如刀剑。若神仙入此阵，风雷动处，上下一磕，四肢立成齑粉，纵有异术，离免此难。', '5', '30', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('35', '金光圣母金光阵', '2', null, '100', '10', '夺日月之精，藏天地之气，中有二十一面宝镜，用二十一根杆，每一面应在杆顶上，一镜上有一套。若人仙入阵，将此套拽起，雷声震动镜子，只一二转，金光射出，照住其身，立刻化为浓血，纵会飞腾，难越此阵。', '5', '30', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('36', '孙天君化血阵', '2', null, '100', '10', '用先天灵气，中有风雷，内藏数斗黑沙。但神仙入阵，雷响处风卷黑沙，些须着处，立化血水，纵是神仙难逃利害。', '5', '30', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('37', '白天君烈阵', '2', null, '100', '10', '妙用无穷，非同凡品：内藏叁火，有叁昧火，空中火，石中火，叁火并为一气；中有叁首红，若神仙进此阵内，叁展动，叁火齐飞，须火成为灰烬，纵有避火真言，难躲叁昧真火。', '5', '30', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('38', '姚天君落魂阵', '2', null, '100', '10', '闭生门，开死户，中藏天地厉气，结聚而成；内有白纸一首，上画符印，若神仙入阵内，白旌展动，魂魄消散，倾刻而灭，不论神仙，随入随灭。', '5', '30', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('39', '王天君红水阵', '2', null, '100', '10', '夺壬癸之精，藏太乙之妙，变幻莫测；中有一八卦台，上有一二个葫芦，任随人仙入阵，将葫芦往下一掷，倾出红水，汪洋无际。若是水溅出一点，黏在身上，顷刻化为血水，纵是神仙，无术可逃。', '5', '30', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('40', '张天君红沙阵', '2', null, '100', '10', '内按天地人叁寸，中分叁气，内藏红砂叁斗，看似红砂，着身利刃，上不知天，下不知地，中不知人；若人仙冲入此阵，风雷运处，飞砂伤人，立刻骸鼻俱成齑粉，纵有神仙佛祖遭此，再不能逃。', '5', '30', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('41', '两仪阵', '2', null, '100', '10', '灵牙仙（白象）', '5', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('42', '瘟癀阵', '2', null, '100', '10', '九龙岛吕岳、陈庚。二十一把瘟癀伞，按九宫八卦排列，中有土台。', '5', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('43', '血河大阵', '2', null, '100', '10', '冥河老祖以十万八千辆血河车所布置。', '5', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('44', '两仪微尘大阵', '2', null, '100', '10', '老子以混元一气太清神符布置。', '5', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('45', '先天五方大阵', '2', null, '100', '10', '由素色云界旗，青莲宝色旗，玄元控水旗，离地焰光旗，玉虚杏黄旗布置', '5', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('46', '大须弥正反九宫仙阵', '2', null, '100', '10', '由九把九宫剑布置而成，在蜀山里仅次于两仪微尘大阵', '5', '0', '0', '1', '1', '11', '2', '0', '0', null, null, '0');
+INSERT INTO `x2_goods_store` VALUES ('47', '破封石', '1', null, '10', '10', '可以破除封印，提升武器品阶。', '0', '0', '0', '1', '1', '8', '2', '1', '99800', '998', '神话', '0');
+INSERT INTO `x2_goods_store` VALUES ('48', '木箱', '1', null, '1000', '10', '开出1-6境界武器、技能或者丹药。', '0', '0', '0', '1', '1', '8', '2', '1', '5000', '50', '稀有', '0');
+INSERT INTO `x2_goods_store` VALUES ('49', '铁箱', '1', null, '500', '10', '开出2-8境界武器、技能或者丹药。', '0', '0', '0', '1', '1', '8', '2', '1', '8000', '80', '完美', '0');
+INSERT INTO `x2_goods_store` VALUES ('50', '银箱', '1', null, '100', '10', '开出6-12境界武器、技能或者丹药。', '0', '0', '0', '1', '1', '8', '2', '1', '20000', '200', '传说', '0');
+INSERT INTO `x2_goods_store` VALUES ('51', '金箱', '1', null, '50', '10', '开出8-16境界武器、技能或者丹药。', '0', '0', '0', '1', '1', '8', '2', '1', '80000', '800', '传说', '0');
+INSERT INTO `x2_goods_store` VALUES ('52', '玉盒', '1', null, '20', '10', '开出12-18境界武器、技能或者丹药。', '0', '0', '0', '1', '1', '8', '2', '1', '240000', '2400', '传说', '0');
+INSERT INTO `x2_goods_store` VALUES ('53', '仙盒', '1', null, '2', '10', '开出16-20境界武器、技能或者丹药。', '0', '0', '0', '1', '1', '8', '2', '1', '500000', '5000', '神话', '0');
+INSERT INTO `x2_goods_store` VALUES ('54', '人仙令', '1', null, '500', '10', '召唤令，人族生物', '0', '0', '0', '1', '1', '8', '2', '1', '5000', '10000', '完美', '0');
+INSERT INTO `x2_goods_store` VALUES ('55', '魔仙令', '1', null, '500', '10', '召唤令，魔族生物', '0', '0', '0', '1', '1', '8', '2', '1', '8000', '16000', '完美', '0');
+INSERT INTO `x2_goods_store` VALUES ('56', '妖仙令', '1', null, '500', '10', '召唤令，妖族生物', '0', '0', '0', '1', '1', '8', '2', '1', '8000', '16000', '完美', '0');
+INSERT INTO `x2_goods_store` VALUES ('57', '鬼仙令', '1', null, '500', '10', '召唤令，鬼族生物', '0', '0', '0', '1', '1', '8', '2', '1', '8000', '16000', '完美', '0');
+INSERT INTO `x2_goods_store` VALUES ('58', '仙神令', '1', null, '500', '10', '召唤令，仙族生物', '0', '0', '0', '1', '1', '8', '2', '1', '8000', '16000', '完美', '0');
+INSERT INTO `x2_goods_store` VALUES ('59', '兽仙令', '1', null, '500', '10', '召唤令，兽族生物', '0', '0', '0', '1', '1', '8', '2', '1', '8000', '16000', '完美', '0');
+INSERT INTO `x2_goods_store` VALUES ('60', '灵仙令', '1', null, '500', '10', '召唤令，灵族生物', '0', '0', '0', '1', '1', '8', '2', '1', '12000', '24000', '完美', '0');
+INSERT INTO `x2_goods_store` VALUES ('61', '异仙令', '1', null, '500', '10', '召唤令，异族生物', '0', '0', '0', '1', '1', '8', '2', '1', '15000', '30000', '完美', '0');
+INSERT INTO `x2_goods_store` VALUES ('62', '万仙令', '1', null, '200', '10', '随机召唤令，人妖鬼神魔兽灵异。', '0', '0', '0', '1', '1', '8', '2', '1', '10000', '20000', '完美', '0');
+INSERT INTO `x2_goods_store` VALUES ('63', '神魔令', '1', null, '10', '10', '特殊召唤随机世界生物', '0', '0', '0', '1', '1', '8', '2', '1', '99800', '998', '神话', '0');
+INSERT INTO `x2_goods_store` VALUES ('64', '精魄', '1', null, '2000', '10', '生物精魄，消耗100精魄可随机合成万仙令，生物分解可获得相应评分的精魄。1000金币=1精魄', '0', '0', '0', '1', '1', '8', '3', '1', '100', '0', '普通', '0');
+INSERT INTO `x2_goods_store` VALUES ('65', '灵药', '1', null, '2000', '10', '草木精华，可用于炼丹强化。丹药分解可获得相应评分的灵药。3000金币=1灵药', '0', '0', '0', '1', '1', '8', '3', '1', '300', '0', '普通', '0');
+INSERT INTO `x2_goods_store` VALUES ('66', '铁精', '1', null, '2000', '10', '锻冶之精华，可用于炼器强化。武器分解可获得相应评分的铁精。2000金币=1铁精', '0', '0', '0', '1', '1', '8', '3', '1', '200', '0', '普通', '0');
+INSERT INTO `x2_goods_store` VALUES ('67', '元神', '1', null, '100', '10', '随机生物元神，附带生物技能。', '0', '0', '0', '1', '1', '8', '2', '1', '12600', '126', '传说', '0');
+INSERT INTO `x2_goods_store` VALUES ('68', '朱果', '1', null, '1000', '10', '刷新生物属性，凤凰血而生，服用后有脱胎换骨的功效。', '0', '0', '0', '1', '1', '8', '2', '1', '1000', '10', '稀有', '0');
+INSERT INTO `x2_goods_store` VALUES ('69', '星辰石', '1', null, '1000', '10', '武器洗炼', '0', '0', '0', '1', '1', '8', '2', '1', '1000', '10', '稀有', '0');
+INSERT INTO `x2_goods_store` VALUES ('70', '生生不熄', '1', null, '1000', '10', '体力值+20', '0', '0', '0', '1', '1', '8', '2', '1', '1000', '10000', '稀有', '0');
+INSERT INTO `x2_goods_store` VALUES ('71', '传送石', '1', null, '100', '10', '随机秘境，对应世界，生物难度。9个标记，可能物品，可能战斗，可能空，可组队，全部死亡退出场景。', '0', '0', '0', '1', '1', '8', '2', '1', '48800', '488', '传说', '0');
+INSERT INTO `x2_goods_store` VALUES ('72', '本源之力', '1', null, '100', '10', '本源之力，用于主角突破自身境界。', '0', '0', '0', '1', '1', '8', '2', '1', '15000', '30000', '传说', '0');
+INSERT INTO `x2_goods_store` VALUES ('73', '三生石', '1', null, '200', '10', '生物缘分刷新', '0', '0', '0', '1', '1', '8', '2', '1', '10000', '20000', '完美', '0');
+INSERT INTO `x2_goods_store` VALUES ('74', '功法玉简', '1', null, '200', '10', '获得随机技能书一本', '0', '0', '0', '1', '1', '8', '2', '1', '9800', '98', '完美', '0');
+INSERT INTO `x2_goods_store` VALUES ('75', '忘情水', '1', null, '200', '10', '修改角色名称。', '0', '0', '0', '1', '1', '8', '2', '1', '28800', '288', '完美', '0');
+INSERT INTO `x2_goods_store` VALUES ('76', '破界符', '1', null, '100', '10', '强制掠夺，胜利可以获得对方10%金币。', '0', '0', '0', '1', '1', '8', '2', '1', '10000', '100', '传说', '0');
+INSERT INTO `x2_goods_store` VALUES ('77', '符石', '1', null, '300', '10', '使用可获随机获得符石。', '0', '0', '0', '1', '1', '8', '2', '1', '3600', '126', '完美', '0');
+INSERT INTO `x2_goods_store` VALUES ('78', '彩虹泪', '1', null, '100', '10', '可改变异形颜色', '0', '0', '0', '1', '1', '8', '2', '1', '16800', '168', '传说', '0');
+INSERT INTO `x2_goods_store` VALUES ('79', '神石', '1', null, '100', '10', '20神石可合成神魔令，特殊召唤随机世界生物', '0', '0', '0', '1', '1', '8', '3', '1', '5000', '50', '传说', '0');
+INSERT INTO `x2_goods_store` VALUES ('80', '鸿蒙紫气', '1', null, '1', '10', '服用鸿蒙紫气，方挑战圣境。', '0', '0', '0', '1', '1', '8', '2', '1', '999900', '9999', '神话', '0');
+INSERT INTO `x2_goods_store` VALUES ('81', '盘古石', '1', null, '5', '10', '服用后，可学习任意种族技能一次。', '0', '0', '0', '1', '1', '8', '2', '1', '482000', '4820', '神话', '0');
+INSERT INTO `x2_goods_store` VALUES ('82', '孟婆汤', '1', null, '1000', '10', '生物转生，重塑肉身，不保留境界。', '0', '0', '0', '1', '1', '8', '2', '1', '3000', '30000', '稀有', '0');
+INSERT INTO `x2_goods_store` VALUES ('83', '潜能', '1', null, '60', '10', '随机学习生物天生技能', '0', '0', '0', '1', '1', '8', '2', '1', '36000', '360', '传说', '0');
+INSERT INTO `x2_goods_store` VALUES ('84', '技能绑定石', '1', null, '100', '10', '绑定技能。', '0', '0', '0', '1', '1', '8', '2', '1', '20000', '200000', '传说', '0');
+INSERT INTO `x2_goods_store` VALUES ('85', '阵法石', '1', null, '50', '10', '使用后获得随机阵法', '0', '0', '0', '1', '1', '8', '2', '1', '78000', '780000', '传说', '0');
+INSERT INTO `x2_goods_store` VALUES ('86', '道果', '1', null, '300', '10', '生物使用后，三围增加50', '0', '0', '0', '1', '1', '8', '2', '1', '66600', '666', '完美', '0');
+INSERT INTO `x2_goods_store` VALUES ('87', '仙魔石', '1', null, '500', '10', '可以使人性情大变，刷新生物性格', '0', '0', '0', '1', '1', '8', '2', '1', '2000', '20', '完美', '0');
+INSERT INTO `x2_goods_store` VALUES ('88', '藏宝图', '1', null, '1000', '10', '九宫格，每次挖掘消耗藏宝图+1', '0', '0', '0', '1', '1', '8', '2', '1', '800', '4000', '稀有', '0');
+INSERT INTO `x2_goods_store` VALUES ('89', '契约仙果', '1', null, '80', '10', '使用后无法融合，无法交易，成长+1，异形+2', '0', '0', '0', '1', '1', '8', '2', '1', '999999', '999999', '传说', '0');
+INSERT INTO `x2_goods_store` VALUES ('90', '仙炼石', '1', null, '10', '10', '可以仙炼武器', '0', '0', '0', '1', '1', '8', '1', '1', '0', null, '神话', '0');
+INSERT INTO `x2_goods_store` VALUES ('91', '妖炼石', '1', null, '10', '10', '可以妖炼武器', '0', '0', '0', '1', '1', '8', '1', '1', '0', null, '神话', '0');
+INSERT INTO `x2_goods_store` VALUES ('92', '神炼石', '1', null, '10', '10', '可以神炼武器', '0', '0', '0', '1', '1', '8', '1', '1', '0', null, '神话', '0');
+INSERT INTO `x2_goods_store` VALUES ('93', '何首乌', '1', null, '2000', '10', '普通药材', '0', '0', '0', '1', '1', '8', '1', '1', '600', null, '普通', '0');
+INSERT INTO `x2_goods_store` VALUES ('94', '千年人参', '1', null, '1000', '10', '千年人参，有极大的药效。', '0', '0', '0', '1', '1', '8', '1', '1', '2000', null, '稀有', '0');
+INSERT INTO `x2_goods_store` VALUES ('95', '金币', '1', null, '2000', '10', '金币堆，可以卖钱。', '0', '0', '0', '1', '1', '8', '1', '1', '100', null, '普通', '0');
+INSERT INTO `x2_goods_store` VALUES ('96', '灵石', '1', null, '2000', '10', '灵石堆，可以卖钱。', '0', '0', '0', '1', '1', '8', '1', '1', '500', null, '普通', '0');
+INSERT INTO `x2_goods_store` VALUES ('97', '金矿', '1', null, '1000', '10', '发现金矿，可以卖钱。', '0', '0', '0', '1', '1', '8', '1', '1', '1000', null, '稀有', '0');
+INSERT INTO `x2_goods_store` VALUES ('98', '灵脉', '1', null, '1000', '10', '发现灵脉，可以卖钱。', '0', '0', '0', '1', '1', '8', '1', '1', '3000', null, '稀有', '0');
+INSERT INTO `x2_goods_store` VALUES ('99', '百年人参', '1', null, '2000', '10', '百年人参，药效较低。', '0', '0', '0', '1', '1', '8', '1', '1', '800', null, '普通', '0');
+INSERT INTO `x2_goods_store` VALUES ('100', '雕像', '1', null, '2000', '10', '一个残破的雕像。', '0', '0', '0', '1', '1', '8', '1', '1', '200', null, '普通', '0');
+INSERT INTO `x2_goods_store` VALUES ('101', '龙凤镯', '1', null, '2000', '10', '一块普通手镯。', '0', '0', '0', '1', '1', '8', '1', '1', '600', null, '普通', '0');
+INSERT INTO `x2_goods_store` VALUES ('102', '古玉', '1', null, '2000', '10', '一块古玉。', '0', '0', '0', '1', '1', '8', '1', '1', '500', null, '普通', '0');
+INSERT INTO `x2_goods_store` VALUES ('103', '夜明珠', '1', null, '2000', '10', '夜明珠', '0', '0', '0', '1', '1', '8', '1', '1', '400', null, '普通', '0');
+INSERT INTO `x2_goods_store` VALUES ('104', '琉璃盏', '1', null, '2000', '10', '琉璃盏', '0', '0', '0', '1', '1', '8', '1', '1', '1200', null, '普通', '0');
+INSERT INTO `x2_goods_store` VALUES ('105', '造化玉蝶', '1', null, '1', '10', '造化神器', '0', '0', '0', '1', '1', '1', null, '0', '0', '0', '残破', '0');
+INSERT INTO `x2_goods_store` VALUES ('106', '二十四品青莲', '1', '/files/attach/images/20200610/1591780494723708.png', '1', '31', '', '0', '0', '0', '1', '1', '1', '1', '1', '1', '1', '良好', '0');
+INSERT INTO `x2_goods_store` VALUES ('113', null, '2', null, '0', '10', null, '0', '0', '0', '1', '1', '1', '1', '1', '0', '0', '残破', '0');
 
 -- ----------------------------
 -- Table structure for x2_goods_store_nature
@@ -1165,26 +1168,26 @@ CREATE TABLE `x2_goods_use` (
   `type` int(11) DEFAULT '1' COMMENT '购买类型 1武器 2 丹药 3道具  4生物',
   `fenjie` varchar(25) DEFAULT '普通' COMMENT '分解类型',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_goods_use
 -- ----------------------------
-INSERT INTO `x2_goods_use` VALUES ('9', '性格', '获得性格。', '100', '3', '普通');
-INSERT INTO `x2_goods_use` VALUES ('10', '秘境', '对应世界，生物难度。9个标记，可能物品，可能战斗，可能空，全部死亡退出场景。', '60', '3', '普通');
-INSERT INTO `x2_goods_use` VALUES ('11', '阵法', '使用后布置阵法。', '30', '3', '普通');
-INSERT INTO `x2_goods_use` VALUES ('8', '消耗物品', '使用的消耗物品。', '600', '3', '普通');
-INSERT INTO `x2_goods_use` VALUES ('7', '元神', '生物元神，附带生物技能，生物献祭5%概率获得元神。可以融合，最多保留2个技能', '100', '3', '普通');
-INSERT INTO `x2_goods_use` VALUES ('6', '符石', '用于神器刻画符文。', '100', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('9', '性格', '获得性格。', '100', '2', '普通');
+INSERT INTO `x2_goods_use` VALUES ('10', '秘境', '对应世界，生物难度。9个标记，可能物品，可能战斗，可能空，全部死亡退出场景。', '60', '2', '普通');
+INSERT INTO `x2_goods_use` VALUES ('11', '阵法', '使用后布置阵法。', '30', '2', '普通');
+INSERT INTO `x2_goods_use` VALUES ('8', '消耗物品', '使用的消耗物品。', '600', '2', '普通');
+INSERT INTO `x2_goods_use` VALUES ('7', '元神', '生物元神，附带生物技能，生物献祭5%概率获得元神。可以融合，最多保留2个技能', '100', '2', '普通');
+INSERT INTO `x2_goods_use` VALUES ('6', '符石', '用于神器刻画符文。', '100', '2', '普通');
 INSERT INTO `x2_goods_use` VALUES ('2', '丹药', '丹药类型，对生物使用获得特殊效果。', '1000', '2', '灵药');
-INSERT INTO `x2_goods_use` VALUES ('3', '缘分', '缘分类型。', '300', '3', '普通');
-INSERT INTO `x2_goods_use` VALUES ('4', '普通材料', '普通的使用材料，可以卖钱。', '5000', '3', '普通');
-INSERT INTO `x2_goods_use` VALUES ('5', '灵石材料', '普通的使用材料，可以卖灵石。', '20', '3', '普通');
-INSERT INTO `x2_goods_use` VALUES ('12', '技能书', '使用后生物获得的技能。', '400', '4', '普通');
+INSERT INTO `x2_goods_use` VALUES ('3', '缘分', '缘分类型。', '300', '2', '普通');
+INSERT INTO `x2_goods_use` VALUES ('4', '普通材料', '普通的使用材料，可以卖钱。', '5000', '1', '普通');
+INSERT INTO `x2_goods_use` VALUES ('5', '灵石材料', '普通的使用材料，可以卖灵石。', '20', '2', '普通');
+INSERT INTO `x2_goods_use` VALUES ('12', '技能书', '使用后生物获得的技能。', '400', '2', '普通');
 INSERT INTO `x2_goods_use` VALUES ('1', '武器', '\n\n\n\n获得武器。 普通 良好 优质 稀有 极品 完美 传说 神话', '2000', '1', '铁精');
-INSERT INTO `x2_goods_use` VALUES ('13', '生物', '获得生物。', '200', '5', '精魄');
-INSERT INTO `x2_goods_use` VALUES ('14', '神物', '获得神物，放在背包内有特殊加成。', '10', '3', '普通');
-INSERT INTO `x2_goods_use` VALUES ('15', '特殊物品', '使用获得特殊加成。--使用书籍可以直接破镜', '5', '3', '普通');
+INSERT INTO `x2_goods_use` VALUES ('13', '生物', '获得生物。', '200', '2', '精魄');
+INSERT INTO `x2_goods_use` VALUES ('14', '神物', '获得神物，放在背包内有特殊加成。', '10', '2', '普通');
+INSERT INTO `x2_goods_use` VALUES ('15', '特殊物品', '使用获得特殊加成。--使用书籍可以直接破镜', '5', '2', '普通');
 
 -- ----------------------------
 -- Table structure for x2_jump
@@ -1515,50 +1518,51 @@ CREATE TABLE `x2_words` (
   `describe` varchar(255) DEFAULT NULL COMMENT '描述',
   `down` varchar(255) DEFAULT NULL COMMENT '掉落',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of x2_words
 -- ----------------------------
-INSERT INTO `x2_words` VALUES ('1', '天下第一', '1', null, null, '1', '低武世界', '', null);
-INSERT INTO `x2_words` VALUES ('2', '三国演义', '1', null, null, '1', '低武世界', null, null);
-INSERT INTO `x2_words` VALUES ('3', '隋唐英雄传', '1', null, null, '2', '低武世界', null, null);
-INSERT INTO `x2_words` VALUES ('4', '水浒传', '1', null, null, '2', '低武世界', '来源于小说，水浒传为世界背景，以天师教道统为主，人物实力较高。', null);
-INSERT INTO `x2_words` VALUES ('5', '蝶舞天涯', '1', null, null, '3', '低武世界', '来源于电视剧，吕布与貂蝉为主线人物，原定名《三国传说》。', null);
-INSERT INTO `x2_words` VALUES ('6', '寻情记', '1', null, null, '4', '低武世界', '《三官经》：《太上三元赐福赦罪解厄消灾延生保命妙经》也作《三官经》或《三官感应妙经》。三官，指天、地、水三官大帝。转诵此经至满千遍，大作踊跃；悔过愆尤，断恶修善,即能除无妄之灾，解有仇之愆；赐千祥之福，脱九厄之难，离三途之苦。', '《三官经》');
-INSERT INTO `x2_words` VALUES ('7', '鹿鼎记', '1', null, null, '5', '低武世界', null, null);
-INSERT INTO `x2_words` VALUES ('8', '倚天屠龙记', '2', null, null, '1', '古武世界', null, '《九阳真经》《九阴真经》');
-INSERT INTO `x2_words` VALUES ('9', '笑傲江湖', '2', null, null, '2', '古武世界', null, '《道藏》');
-INSERT INTO `x2_words` VALUES ('10', '神雕侠侣', '2', null, null, '2', '古武世界', null, '《周易参同契》');
-INSERT INTO `x2_words` VALUES ('11', '天龙八部', '2', null, null, '3', '古武世界', '《南华经》：《南华真经》即《庄子》，战国时庄周撰。唐玄宗于天宝元年诏封庄子为“南华真人”，尊其书为《南华真经》。到宋徽宗时,又追封庄周为“微妙无通真君”', '《不老长春功》 《南华经》 《易筋经》 ');
-INSERT INTO `x2_words` VALUES ('12', '倩女幽魂', '2', null, null, '2', '古武世界', '《抱朴子》：《抱朴子》是对战国以来、直至汉代的神仙思想和炼丹养生方术所作的系统的总结，为魏晋神仙道教奠定理论基础的道教经典。作者是晋代葛洪祖师。', '《抱朴子》');
-INSERT INTO `x2_words` VALUES ('13', '侠客行', '2', null, null, '4', '古武世界', '《太玄经》，汉扬雄撰，也称《扬子太玄经》，其书模仿《周易》，以天地人三才为本，著重阐发宇宙生成、天地运行及人事变化之哲理，具有辩证法因素。该书对东汉以来天文象数学发展影响甚大，但其文辞艰深晦涩，故历代学者为之注释训诂者颇多。', '《太玄经》');
-INSERT INTO `x2_words` VALUES ('14', '秦时明月', '2', null, null, '4', '古武世界', '《道德经》：《道德经》又称《老子》、《五千言》，是中国古代先秦诸子分家前的一部著作，是中国历史上首部完整的哲学著作，是道家哲学思想的重要来源,春秋时期的老子李耳所撰写', '《道德经》');
-INSERT INTO `x2_words` VALUES ('15', '仙剑奇侠传', '3', null, null, '4', '仙侠世界', '《北斗经》：《北斗经》，全称《太上玄灵北斗本命延生真经》。经中称，北斗七星君乃造化之枢机，人神之主宰，有回生注死之功，消灾度厄之力。凡人性命五体，悉属本命星官主掌。', '《北斗经》');
-INSERT INTO `x2_words` VALUES ('16', '蜀山传奇', '3', null, null, '5', '仙侠世界', '《通玄经》：《通玄真经》即《文子》，战国时文子所著。唐玄宗崇道，于天宝元年（742）封文子为「通玄真人」，尊称其书为《通玄真经》。', '《通玄真经》');
-INSERT INTO `x2_words` VALUES ('17', '诛仙', '3', null, null, '4', '仙侠世界', null, '《天书》');
-INSERT INTO `x2_words` VALUES ('18', '大唐双龙传', '2', null, null, '5', '古武世界', '《冲虚经》：《冲虚经》即《列子》，旧题周列御寇撰。唐玄宗崇道，于天宝元年（742）封 列子为冲虚真人，尊称其书《冲虚真经》。至宋真宗景德（1004－1007）中加封列子为「冲虚至德真人」，故又名《冲虚至德真经》', '《长生诀》《冲虚经》');
-INSERT INTO `x2_words` VALUES ('19', '西游记', '4', null, null, '3', '神话世界', null, null);
-INSERT INTO `x2_words` VALUES ('20', '盘龙', '4', null, null, '3', '神话世界', '《阴符经》：《阴符经》，全称《黄帝阴符经》或《轩辕黄帝阴符经》，也称《黄帝天机经》，总共只有300多字。《阴符经》是唐朝著名道士李筌发现于嵩山，在骊山经骊山老母点化，此后才传抄流行于世。', '《阴符经》');
-INSERT INTO `x2_words` VALUES ('21', '斗破苍穹', '4', null, null, '2', '神话世界', '《常清静经》：《常清静经》是《太上老君说常清静经》的简称，大约成书于唐代，收录于《正统道藏》洞神部。它是多数道教学人必须背诵的经典，被视为道教在心性修练上的法宝。', '《常清静经》');
-INSERT INTO `x2_words` VALUES ('22', '遮天', '4', null, null, '4', '神话世界', '《度人经》：全称《太上洞玄灵宝无量度人上品妙经》，或称《元始无量度人上品妙经》。由《元始洞玄灵宝本章》、《元洞玉历章》和《前序》、《中序》、《后序》及《元始灵书》上、中、下篇组成。', '《度人经》');
-INSERT INTO `x2_words` VALUES ('23', '永生', '4', null, null, '5', '神话世界', '《心印经》：气功内丹术著作。全称《高上玉皇心印妙经》。一卷，唐代著作。此经为四言韵文，共五十句。主要讲述内丹术的基本理论，阐发精、气、神的含义及它们之间的关系，对后世有较大影响。', '《心印经');
-INSERT INTO `x2_words` VALUES ('24', '诸神黄昏', '4', null, null, '2', '神话世界', '', '《圣经》');
-INSERT INTO `x2_words` VALUES ('25', '凡人修仙传', '4', null, null, '4', '神话世界', '《玉皇经》：全称《高上玉皇本行集经》，有3卷。道士斋醮祈禳及道门功课的必诵经文。经文由《清微天宫神通品》、《太上大光明圆满大神咒品》、《诵持功德品》、《天真护持品》及《报应神验品》组成。', '《玉皇经》');
-INSERT INTO `x2_words` VALUES ('26', '玄黄', '5', null, null, '2', '起源世界', '玄黄，天地玄黄宇宙洪荒混沌', null);
-INSERT INTO `x2_words` VALUES ('27', '鸿蒙', '5', null, null, '1', '起源世界', '天地，天地玄黄宇宙洪荒混沌', null);
-INSERT INTO `x2_words` VALUES ('28', '洪荒', '5', null, null, '4', '起源世界', '洪荒，天地玄黄宇宙洪荒混沌', null);
-INSERT INTO `x2_words` VALUES ('29', '混沌', '5', null, null, '5', '起源世界', '混沌，天地玄黄宇宙洪荒混沌', null);
-INSERT INTO `x2_words` VALUES ('30', '我和僵尸有个约会', '3', null, null, '5', '仙侠世界', null, '《地书》《人书》');
-INSERT INTO `x2_words` VALUES ('31', '僵尸道长', '1', null, null, '5', '低武世界', '《上清经》被视为道家“三奇第一之奇”，历代流传不绝，宣称如果得到《上清 经》，根本不需要再炼丹修道，只需读上一万遍，便可以成仙。《上清经》的全称是 《上清大洞真经三十九章》，又称《大洞真经》、《三天龙书》、《九天太真道经》、 《三十九章经》，为上清派首经。', '《六甲天书 》《上清经》 ');
-INSERT INTO `x2_words` VALUES ('32', '神话', '2', null, null, '1', '古武世界', '《太平经》：《太平经》又名《太平清领书》。据《后汉书·襄楷传》称：汉顺帝时，琅玡人宫崇诣阙，献其师于吉所得神书，号曰《太平清领书》。此神书即《太平经》，系东汉原始道教重要经典。', '《太平经》');
-INSERT INTO `x2_words` VALUES ('33', '漫威', '4', null, null, '1', '神话世界', null, null);
-INSERT INTO `x2_words` VALUES ('34', '封神榜', '4', null, null, '4', '神话世界', null, null);
-INSERT INTO `x2_words` VALUES ('35', '宇宙', '5', null, null, '3', '起源世界', '宇宙，天地玄黄宇宙洪荒混沌', null);
-INSERT INTO `x2_words` VALUES ('36', '风云', '1', null, null, '3', '低武世界', null, null);
-INSERT INTO `x2_words` VALUES ('37', ' 连城诀', '1', null, null, '1', '低武世界', null, null);
-INSERT INTO `x2_words` VALUES ('38', '功夫', '1', null, null, '1', '低武世界', null, null);
-INSERT INTO `x2_words` VALUES ('39', '少年张三丰', '1', null, null, '1', '低武世界', null, null);
+INSERT INTO `x2_words` VALUES ('1', '无', '1', null, null, '1', '基础', '不属于任何世界', null);
+INSERT INTO `x2_words` VALUES ('2', '天下第一', '1', '', '', '1', '低武世界', '', '');
+INSERT INTO `x2_words` VALUES ('3', '三国演义', '1', '', '', '1', '低武世界', '', '');
+INSERT INTO `x2_words` VALUES ('4', '隋唐英雄传', '1', '', '', '2', '低武世界', '', '');
+INSERT INTO `x2_words` VALUES ('5', '水浒传', '1', '', '', '2', '低武世界', '来源于小说，水浒传为世界背景，以天师教道统为主，人物实力较高。', '');
+INSERT INTO `x2_words` VALUES ('6', '蝶舞天涯', '1', '', '', '3', '低武世界', '来源于电视剧，吕布与貂蝉为主线人物，原定名《三国传说》。', '');
+INSERT INTO `x2_words` VALUES ('7', '寻情记', '1', '', '', '4', '低武世界', '《三官经》：《太上三元赐福赦罪解厄消灾延生保命妙经》也作《三官经》或《三官感应妙经》。三官，指天、地、水三官大帝。转诵此经至满千遍，大作踊跃；悔过愆尤，断恶修善,即能除无妄之灾，解有仇之愆；赐千祥之福，脱九厄之难，离三途之苦。', '《三官经》');
+INSERT INTO `x2_words` VALUES ('8', '鹿鼎记', '1', '', '', '5', '低武世界', '', '');
+INSERT INTO `x2_words` VALUES ('9', '倚天屠龙记', '2', '', '', '1', '古武世界', '', '《九阳真经》《九阴真经》');
+INSERT INTO `x2_words` VALUES ('10', '笑傲江湖', '2', '', '', '2', '古武世界', '', '《道藏》');
+INSERT INTO `x2_words` VALUES ('11', '神雕侠侣', '2', '', '', '2', '古武世界', '', '《周易参同契》');
+INSERT INTO `x2_words` VALUES ('12', '天龙八部', '2', '', '', '3', '古武世界', '《南华经》：《南华真经》即《庄子》，战国时庄周撰。唐玄宗于天宝元年诏封庄子为“南华真人”，尊其书为《南华真经》。到宋徽宗时,又追封庄周为“微妙无通真君”', '《不老长春功》 《南华经》 《易筋经》 ');
+INSERT INTO `x2_words` VALUES ('13', '倩女幽魂', '2', '', '', '2', '古武世界', '《抱朴子》：《抱朴子》是对战国以来、直至汉代的神仙思想和炼丹养生方术所作的系统的总结，为魏晋神仙道教奠定理论基础的道教经典。作者是晋代葛洪祖师。', '《抱朴子》');
+INSERT INTO `x2_words` VALUES ('14', '侠客行', '2', '', '', '4', '古武世界', '《太玄经》，汉扬雄撰，也称《扬子太玄经》，其书模仿《周易》，以天地人三才为本，著重阐发宇宙生成、天地运行及人事变化之哲理，具有辩证法因素。该书对东汉以来天文象数学发展影响甚大，但其文辞艰深晦涩，故历代学者为之注释训诂者颇多。', '《太玄经》');
+INSERT INTO `x2_words` VALUES ('15', '秦时明月', '2', '', '', '4', '古武世界', '《道德经》：《道德经》又称《老子》、《五千言》，是中国古代先秦诸子分家前的一部著作，是中国历史上首部完整的哲学著作，是道家哲学思想的重要来源,春秋时期的老子李耳所撰写', '《道德经》');
+INSERT INTO `x2_words` VALUES ('16', '仙剑奇侠传', '3', '', '', '4', '仙侠世界', '《北斗经》：《北斗经》，全称《太上玄灵北斗本命延生真经》。经中称，北斗七星君乃造化之枢机，人神之主宰，有回生注死之功，消灾度厄之力。凡人性命五体，悉属本命星官主掌。', '《北斗经》');
+INSERT INTO `x2_words` VALUES ('17', '蜀山传奇', '3', '', '', '5', '仙侠世界', '《通玄经》：《通玄真经》即《文子》，战国时文子所著。唐玄宗崇道，于天宝元年（742）封文子为「通玄真人」，尊称其书为《通玄真经》。', '《通玄真经》');
+INSERT INTO `x2_words` VALUES ('18', '诛仙', '3', '', '', '4', '仙侠世界', '', '《天书》');
+INSERT INTO `x2_words` VALUES ('19', '大唐双龙传', '2', '', '', '5', '古武世界', '《冲虚经》：《冲虚经》即《列子》，旧题周列御寇撰。唐玄宗崇道，于天宝元年（742）封 列子为冲虚真人，尊称其书《冲虚真经》。至宋真宗景德（1004－1007）中加封列子为「冲虚至德真人」，故又名《冲虚至德真经》', '《长生诀》《冲虚经》');
+INSERT INTO `x2_words` VALUES ('20', '西游记', '4', '', '', '3', '神话世界', '', '');
+INSERT INTO `x2_words` VALUES ('21', '盘龙', '4', '', '', '3', '神话世界', '《阴符经》：《阴符经》，全称《黄帝阴符经》或《轩辕黄帝阴符经》，也称《黄帝天机经》，总共只有300多字。《阴符经》是唐朝著名道士李筌发现于嵩山，在骊山经骊山老母点化，此后才传抄流行于世。', '《阴符经》');
+INSERT INTO `x2_words` VALUES ('22', '斗破苍穹', '4', '', '', '2', '神话世界', '《常清静经》：《常清静经》是《太上老君说常清静经》的简称，大约成书于唐代，收录于《正统道藏》洞神部。它是多数道教学人必须背诵的经典，被视为道教在心性修练上的法宝。', '《常清静经》');
+INSERT INTO `x2_words` VALUES ('23', '遮天', '4', '', '', '4', '神话世界', '《度人经》：全称《太上洞玄灵宝无量度人上品妙经》，或称《元始无量度人上品妙经》。由《元始洞玄灵宝本章》、《元洞玉历章》和《前序》、《中序》、《后序》及《元始灵书》上、中、下篇组成。', '《度人经》');
+INSERT INTO `x2_words` VALUES ('24', '永生', '4', '', '', '5', '神话世界', '《心印经》：气功内丹术著作。全称《高上玉皇心印妙经》。一卷，唐代著作。此经为四言韵文，共五十句。主要讲述内丹术的基本理论，阐发精、气、神的含义及它们之间的关系，对后世有较大影响。', '《心印经');
+INSERT INTO `x2_words` VALUES ('25', '诸神黄昏', '4', '', '', '2', '神话世界', '', '《圣经》');
+INSERT INTO `x2_words` VALUES ('26', '凡人修仙传', '4', '', '', '4', '神话世界', '《玉皇经》：全称《高上玉皇本行集经》，有3卷。道士斋醮祈禳及道门功课的必诵经文。经文由《清微天宫神通品》、《太上大光明圆满大神咒品》、《诵持功德品》、《天真护持品》及《报应神验品》组成。', '《玉皇经》');
+INSERT INTO `x2_words` VALUES ('27', '玄黄', '5', '', '', '2', '起源世界', '玄黄，天地玄黄宇宙洪荒混沌', '');
+INSERT INTO `x2_words` VALUES ('28', '鸿蒙', '5', '', '', '1', '起源世界', '天地，天地玄黄宇宙洪荒混沌', '');
+INSERT INTO `x2_words` VALUES ('29', '洪荒', '5', '', '', '4', '起源世界', '洪荒，天地玄黄宇宙洪荒混沌', '');
+INSERT INTO `x2_words` VALUES ('30', '混沌', '5', '', '', '5', '起源世界', '混沌，天地玄黄宇宙洪荒混沌', '');
+INSERT INTO `x2_words` VALUES ('31', '我和僵尸有个约会', '3', '', '', '5', '仙侠世界', '', '《地书》《人书》');
+INSERT INTO `x2_words` VALUES ('32', '僵尸道长', '1', '', '', '5', '低武世界', '《上清经》被视为道家“三奇第一之奇”，历代流传不绝，宣称如果得到《上清 经》，根本不需要再炼丹修道，只需读上一万遍，便可以成仙。《上清经》的全称是 《上清大洞真经三十九章》，又称《大洞真经》、《三天龙书》、《九天太真道经》、 《三十九章经》，为上清派首经。', '《六甲天书 》《上清经》 ');
+INSERT INTO `x2_words` VALUES ('33', '神话', '2', '', '', '1', '古武世界', '《太平经》：《太平经》又名《太平清领书》。据《后汉书·襄楷传》称：汉顺帝时，琅玡人宫崇诣阙，献其师于吉所得神书，号曰《太平清领书》。此神书即《太平经》，系东汉原始道教重要经典。', '《太平经》');
+INSERT INTO `x2_words` VALUES ('34', '漫威', '4', '', '', '1', '神话世界', '', '');
+INSERT INTO `x2_words` VALUES ('35', '封神榜', '4', '', '', '4', '神话世界', '', '');
+INSERT INTO `x2_words` VALUES ('36', '宇宙', '5', '', '', '3', '起源世界', '宇宙，天地玄黄宇宙洪荒混沌', '');
+INSERT INTO `x2_words` VALUES ('37', '风云', '1', '', '', '3', '低武世界', '', '');
+INSERT INTO `x2_words` VALUES ('38', ' 连城诀', '1', '', '', '1', '低武世界', '', '');
+INSERT INTO `x2_words` VALUES ('39', '功夫', '1', '', '', '1', '低武世界', '', '');
+INSERT INTO `x2_words` VALUES ('40', '少年张三丰', '1', '', '', '1', '低武世界', '', '');
 
 -- ----------------------------
 -- Table structure for x2_words_story
