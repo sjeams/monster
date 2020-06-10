@@ -14,7 +14,7 @@ class BiologyCreate extends ActiveRecord
      */
     public static function getBiologyList($page=1,$pageSize=20,$where=""){
         $data['data'] = BiologyCreate::find()->select("*,name as key")->where(" $where")->offset($page*$pageSize)->limit($pageSize)->asarray()->All();
-        $data ['total'] = BiologyCreate::find()->select("id")->asarray()->count();
+        $data ['total'] = BiologyCreate::find()->select("id")->where(" $where")->asarray()->count();
       return $data;
     }
 }

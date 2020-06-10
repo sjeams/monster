@@ -14,7 +14,7 @@
                 <tr>
                     <td style="width:100%;">
                         <a class="mini-button" iconCls="icon-add" onclick="addRow()" plain="true" tooltip="增加...">增加</a>
-                        <!-- <a class="mini-button" iconCls="icon-add" onclick="editRow()" plain="true" tooltip="增加...">编辑</a> -->
+                        <a class="mini-button" iconCls="icon-add" onclick="editRow()" plain="true" tooltip="增加...">编辑</a>
                         <a class="mini-button" iconCls="icon-remove" onclick="removeRow()" plain="true">删除</a>
                         <span class="separator"></span>
                         <a class="mini-button" iconCls="icon-save" onclick="saveData()" plain="true">保存</a>   
@@ -28,9 +28,9 @@
                     <td>
                         <select name="type" id="using">
                             <option value="">全部</option>
-                            <option value="1">金币</option>
-                            <option value="2">灵石</option>
-                            <option value="3">特殊</option>
+                            <option value="1">不售</option>
+                            <option value="2">金币</option>
+                            <option value="3">灵石</option>
                         </select>
                     </td>
                     <td>
@@ -84,7 +84,7 @@
     </body>
 </html>
     <script type="text/javascript">
-        var Selltypes = [{ id: 0, text: '不可购买' },{ id: 1, text: '金币' }, { id: 2, text: '灵石'}];
+        var Selltypes = [{ id: 1, text: '不售' },{ id: 2, text: '金币' }, { id: 3, text: '灵石'}];
         var Types = [{ id: 1, text: '可用' }, { id: 2, text: '不可用'}];
         
         mini.parse();
@@ -140,17 +140,31 @@
             var json = mini.encode(rows);
             // console.log(json);
             if (rows.length > 0) {
-                if (confirm("删除不可恢复，是否继续本次操作？")) {
-                    $.ajax({
-                    url: "/admin/goods-store/biology-delete",
-                    data: { data: json },
-                    type: "post",
-                    success: function (text) {
-                        // 移除列
-                        grid.removeRows(rows, true);
-                        }  
-                    });
-                }
+
+                mini.confirm("确定删除记录？", "确定？",function (action) {
+                    if (action == "ok") {
+                        $.ajax({
+                        url: "/admin/goods-store/biology-delete",
+                        data: { data: json },
+                        type: "post",
+                        success: function (text) {
+                            // 移除列
+                            grid.removeRows(rows, true);
+                            }  
+                        });
+                    }   
+                });
+                // if (confirm("删除不可恢复，是否继续本次操作？")) {
+                //     $.ajax({
+                //     url: "/admin/goods-store/biology-delete",
+                //     data: { data: json },
+                //     type: "post",
+                //     success: function (text) {
+                //         // 移除列
+                //         grid.removeRows(rows, true);
+                //         }  
+                //     });
+                // }
             }
         }
         //保存和修改
@@ -187,11 +201,11 @@
         // 编辑调用方法
         function editmethod() {
             var row = grid.getSelected();
-            // console.log(row);
+            console.log(row);
             if (row) {
                 mini.open({
                     url: "/admin/goods-store/employee-window",
-                    title: "生物详情", width: 800, height: 780,
+                    title: "物品详情", width: 800, height: 480,
                     onload: function () {
                         var iframe = this.getIFrameEl();
                         var data = { action: "edit", id: row.id };

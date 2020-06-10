@@ -16,7 +16,7 @@ class Biology extends ActiveRecord
     public static function getBiologyList($page=1,$pageSize=20,$where=""){
         
         $data['data'] = Biology::find()->select("*,name as key")->where(" $where")->offset($page*$pageSize)->limit($pageSize)->asarray()->All();
-        $data ['total'] = Biology::find()->select("id")->asarray()->count();
+        $data ['total'] = Biology::find()->select("id")->where(" $where")->asarray()->count();
         // $data=  AdminInit::getChildren($adminIint);
         return $data;
     }

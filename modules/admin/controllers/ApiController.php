@@ -21,6 +21,7 @@ use app\modules\admin\models\BiologyNature;
 use app\modules\admin\models\BiologyCreate;
 use app\modules\admin\models\User;
 use app\modules\admin\models\UserBiology;
+use app\modules\admin\models\GoodsUse;
 
 
 class ApiController extends ApiControl {
@@ -441,7 +442,7 @@ class ApiController extends ApiControl {
     public function actionGoodsUse()
     {  
         // 查询 type = 1武器 2 丹药 3道具  4生物
-        $data= GoodsUse:: getValueList(3); 
+        $data= GoodsUse:: getValueList(); 
         echo json_encode($data);
     }
 

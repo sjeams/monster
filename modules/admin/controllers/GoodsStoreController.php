@@ -85,11 +85,12 @@ class GoodsStoreController extends ApiControl {
     {
       $data = Yii::$app->request->post('data');  
       $data = json_decode($data);
+      // var_dump($data);die;
         foreach($data as $v){
           if($v->_state=='modified'){ //改
             $model = GoodsStore::find()->where("id=$v->id")->One();
             $model->name=$v->name;
-            $model->describe=$v->describe;
+            $model->descript=$v->descript;
             $model->value=$v->value;
             $model->type=$v->type;
             $model->sellout=$v->sellout;
@@ -127,6 +128,11 @@ class GoodsStoreController extends ApiControl {
     {
       $id = Yii::$app->request->get('id');  
       $data = GoodsStore::find()->where("id=$id")->asarray()->One();
+      // $data =(new \yii\db\Query())->select('qa.*,q.name as wordName')
+      // ->from('x2_goods_store AS qa')
+      // ->leftJoin('x2_words AS q','qa.wordId=q.Id')
+      // ->where("qa.id=$id ")->asarray()->One();
+
       echo json_encode($data);
     }
 
