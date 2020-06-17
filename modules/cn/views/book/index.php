@@ -62,9 +62,12 @@
 .header{ position:fixed; margin:0px auto; left:0; right:0;top:0;width:100%; height:40px;  background: #000000; text-align: center; line-height: 40px; z-index: 100; color:  white;}
 .content{  position:absolute; margin:40px auto ; left:0; top:0; right:0;bottom:0;  width:calc(100% - 320px);  height:100%; }
 .left{ position:fixed; margin:40px 40px; float: left; }
-.center{  position:relative; margin:0px auto; 
+.center{  position:relative; margin:0px auto;  left:-1px;
  }
- .box{ left:-1px;   box-shadow:2px 2px 6px #000000 inset;  width:100%; height:80px; border-radius: 1px; background: rgba(0, 0, 0, 0.3) ;
+
+.gonggao{width:100%; height:80px; }
+
+ .box{     box-shadow:2px 2px 6px #000000 inset;  border-radius: 1px; background: rgba(0, 0, 0, 0.3) ;
 }
 .right{ position:fixed; margin:40px 40px; right:10px;bottom:20px;  color: white;
     box-shadow:2px 2px 6px rgba(0, 0, 0, 0) inset; width:80px; height:80px; border-radius: 1px; background: rgba(255, 255, 255, 0); 
@@ -88,6 +91,9 @@
     /* background: url(pc/image/lunbo/lunbo5) no-repeat; */
     background-size: cover;
 }
+
+.zhnshi{ width:100%; height:240px; }
+
 </style>
 <!-- <link rel="stylesheet" href="https://file.viplgw.cn/ui/book/cn/css/bookIndex.css?v=1.1.2"> -->
 <link rel="stylesheet" href="public/css/swiper.min.css">
@@ -101,8 +107,8 @@
     <div class="videocontainer">
         <video class="fullscreenvideo" playsinline="" autoplay="" muted="" loop="">
         <!-- <source src="http://fd.aigei.com/pvvdo_fast/vdo/mp4/f7/f77c9af3b0364be4b94f52fee154fc99.mp4?e=1592421660&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:EvR2Ky4jnZqjJzgzSLcWJvt9lcQ=" type="video/mp4"> -->
-        <source src="http://fd.aigei.com/pvvdo_fast/vdo/mp4/d1/d195d6afd6154b0badc1a5858ae2cdc8.mp4?e=1592421660&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:TyTx7zapVGwPgVDhzvtOI8sLWg0=" type="video/mp4">
-
+        <!-- <source src="http://fd.aigei.com/pvvdo_fast/vdo/mp4/d1/d195d6afd6154b0badc1a5858ae2cdc8.mp4?e=1592421660&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:TyTx7zapVGwPgVDhzvtOI8sLWg0=" type="video/mp4"> -->
+        <source src="/public/music/video.mp4" type="video/mp4">
         
         
         </video>
@@ -112,11 +118,17 @@
         <div class="content">
 
 
-            <div class="center box">
+            <!-- <div class="center box">
+                <div class="clear">最新公告：<br>
+                    服务器于2020年9月进行公测！
+                </div>
+            </div>  -->
+            <div class="center gonggao ">
                 <div class="clear">最新公告：<br>
                     服务器于2020年9月进行公测！
                 </div>
             </div> 
+
             <!--    轮播-->
             <div class="banner">
                 <div class="swiper-container  topBanner">
@@ -139,7 +151,7 @@
             </div>
 
 
-            <div class="center ">
+            <div class="center zhnshi box">
                 <div class="clear">最新公告：<br>
                     服务器于2020年9月进行公测！
                 </div>
