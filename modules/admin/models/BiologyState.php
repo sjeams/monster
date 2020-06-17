@@ -15,7 +15,7 @@ class BiologyState extends ActiveRecord
      * 查询境界列表
      */
     public static function getValueList(){
-      $data = BiologyState::find()->select('id,name as text')->where()->asarray()->All();
+      $data = BiologyState::find()->select('id,name as text')->asarray()->All();
       return $data;
     }
 
