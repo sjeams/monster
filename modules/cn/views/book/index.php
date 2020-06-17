@@ -18,10 +18,10 @@
 
 }
 .fullscreenvideo {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    min-width: 100%;
+    min-width: calc(100% - 35px);;
     min-height: 100%;
     width: auto;
     height: auto;
@@ -38,7 +38,11 @@
     height: 100%;
     overflow: scroll;
     z-index: -100; 
+    left: -1px;
+    top: 0;
 }
+
+
  
 .videocontainer:before{
     content: "";
@@ -71,7 +75,7 @@
 .saoma{width: 100%; text-align: center} 
 .topBanner{ height: 400px;      border-radius: 5px;  }
 .imgwidth{
-
+    opacity: 0.9;
     /* border: 1px solid blue; */
     position: absolute;
     /* margin-top:0px ; */
@@ -93,7 +97,11 @@
     </div> 
     <div class="videocontainer">
         <video class="fullscreenvideo" playsinline="" autoplay="" muted="" loop="">
-        <!-- <source src="pc/image/video/background.mov" type="video/mp4"> -->
+        <!-- <source src="http://fd.aigei.com/pvvdo_fast/vdo/mp4/f7/f77c9af3b0364be4b94f52fee154fc99.mp4?e=1592421660&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:EvR2Ky4jnZqjJzgzSLcWJvt9lcQ=" type="video/mp4"> -->
+        <source src="http://fd.aigei.com/pvvdo_fast/vdo/mp4/d1/d195d6afd6154b0badc1a5858ae2cdc8.mp4?e=1592421660&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:TyTx7zapVGwPgVDhzvtOI8sLWg0=" type="video/mp4">
+
+        
+        
         </video>
         <div class="left box2"><img src="pc/image/video/lunhui.png" alt="" class="log">  
         <!-- <iframe src="https://zhanyuzhang.github.io/lovely-cat/cat.html" id="catIframe" frameborder="0"></iframe> -->
