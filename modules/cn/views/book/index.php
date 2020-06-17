@@ -37,6 +37,7 @@
     width: 100%;
     height: 100%;
     overflow: scroll;
+    overflow-x:hidden;
     z-index: -100; 
     left: -1px;
     top: 0;
@@ -65,12 +66,12 @@
  }
  .box{ left:-1px;   box-shadow:2px 2px 6px #000000 inset;  width:100%; height:80px; border-radius: 1px; background: rgba(0, 0, 0, 0.3) ;
 }
-.right{ position:fixed; margin:40px 40px; right:10px;bottom:10px; 
+.right{ position:fixed; margin:40px 40px; right:10px;bottom:20px;  color: white;
     box-shadow:2px 2px 6px rgba(0, 0, 0, 0) inset; width:80px; height:80px; border-radius: 1px; background: rgba(255, 255, 255, 0); 
     }
 
 
-.foot{ position:fixed; margin:0px auto; left:0; right:0;bottom:0;width:100%; height:20px;  background: #FFFFFF; text-align: center; line-height: 20px; z-index: 100;color:  #000000; }
+.foot{ position:fixed; margin:0px auto; left:0; right:0;bottom:0;width:100%; height:30px;  background: rgba(0, 0, 0, 0.3); text-align: center; line-height: 30px; z-index: 100;color:  #FFFFFF; }
 /* .box2 img {box-shadow:2px 0px 0px #000}  */
 .clear{position: absolute; margin:10px 10px; color:white }
 .saoma{width: 100%; text-align: center} 
@@ -108,52 +109,53 @@
         <div class="left box2"><img src="pc/image/video/lunhui.png" alt="" class="log">  
         <!-- <iframe src="https://zhanyuzhang.github.io/lovely-cat/cat.html" id="catIframe" frameborder="0"></iframe> -->
         </div> 
-            <div class="content">
+        <div class="content">
 
 
-                <div class="center box">
-                    <div class="clear">最新公告：<br>
-                        服务器于2020年9月进行公测！
-                    </div>
-                </div> 
-                <!--    轮播-->
-                <div class="banner">
-                    <div class="swiper-container  topBanner">
-                        <div class="swiper-wrapper">
-                            <!-- <div class="swiper-slide imgwidth"><a href=""><img src="pc/image/lunbo/lunbo1.jpg" alt=""></a></div> -->
-                            <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo1.jpg" alt="" class="imgwidth"></a></div>
-                            <!-- <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo2.jpg" alt="" class="imgwidth"></a></div> -->
-                            <!-- <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo3.jpg" alt="" class="imgwidth"></a></div> -->
-                            <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo4.jpg" alt="" class="imgwidth"></a></div>
-                            <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo5.jpg" alt="" class="imgwidth"></a></div>
-                            <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo6.jpg" alt="" class="imgwidth"></a></div>
-                            <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo7.jpg" alt="" class="imgwidth"></a></div>
-                            <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo8.jpg" alt="" class="imgwidth"></a></div>
-                            <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo9.jpg" alt="" class="imgwidth"></a></div>
-
-                        </div>
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination topPagination"></div>
-                    </div>
+            <div class="center box">
+                <div class="clear">最新公告：<br>
+                    服务器于2020年9月进行公测！
                 </div>
-
-
-                <div class="center ">
-                    <div class="clear">最新公告：<br>
-                        服务器于2020年9月进行公测！
-                    </div>
-                </div> 
-                <div style="height:20px"> </div>
-            </div>
-            <div class="right">
-                <img src="pc/image/kefu/lun1.png" style="width:100%;height:100%"   alt="">
-                <div class="saoma">APP下载</div>
             </div> 
+            <!--    轮播-->
+            <div class="banner">
+                <div class="swiper-container  topBanner">
+                    <div class="swiper-wrapper">
+                        <!-- <div class="swiper-slide imgwidth"><a href=""><img src="pc/image/lunbo/lunbo1.jpg" alt=""></a></div> -->
+                        <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo1.jpg" alt="" class="imgwidth"></a></div>
+                        <!-- <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo2.jpg" alt="" class="imgwidth"></a></div> -->
+                        <!-- <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo3.jpg" alt="" class="imgwidth"></a></div> -->
+                        <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo4.jpg" alt="" class="imgwidth"></a></div>
+                        <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo5.jpg" alt="" class="imgwidth"></a></div>
+                        <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo6.jpg" alt="" class="imgwidth"></a></div>
+                        <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo7.jpg" alt="" class="imgwidth"></a></div>
+                        <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo8.jpg" alt="" class="imgwidth"></a></div>
+                        <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo9.jpg" alt="" class="imgwidth"></a></div>
+
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination topPagination"></div>
+                </div>
+            </div>
+
+
+            <div class="center ">
+                <div class="clear">最新公告：<br>
+                    服务器于2020年9月进行公测！
+                </div>
+            </div> 
+            <div style="height:20px"> </div>
+        </div>
+        <div class="right">
+            <img src="pc/image/kefu/lun1.png" style="width:100%;height:100%"   alt="">
+            <div class="saoma">APP下载</div>
+        </div> 
+        <div class="foot">
+                轮回工作室-邮箱：359824901@qq.com
+        </div> 
     </div>
 
-    <div class="foot">
-            轮回工作室-邮箱：359824901@qq.com
-    </div> 
+
 </section>
 
 <!-- 
