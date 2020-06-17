@@ -20,8 +20,8 @@
 .fullscreenvideo {
     position: fixed;
     top: 50%;
-    left: 50%;
-    min-width: calc(100% - 35px);;
+    left: calc(50% - 15px);
+    min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
@@ -47,7 +47,7 @@
 .videocontainer:before{
     content: "";
     position: absolute;
-    width: 100%;
+    width: calc(100% - 15px);
     height: 100%;
     display: block;
     z-index: -1;
