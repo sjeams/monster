@@ -73,7 +73,8 @@
 /* .box2 img {box-shadow:2px 0px 0px #000}  */
 .clear{position: absolute; margin:10px 10px; }
 .saoma{width: 100%; text-align: center} 
-.topBanner{ height: 400px;      border-radius: 5px;  }
+/* height:20vw;  */
+.topBanner{ height: 380px;      border-radius: 5px; left:-1px;  }
 .imgwidth{
     opacity: 0.9;
     /* border: 1px solid blue; */
