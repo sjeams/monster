@@ -31,19 +31,52 @@
     <meta name="renderer" content="webkit">
     <meta name="keywords" content="<?php echo $this->context->keywords ?>。">
     <meta name="description" content="<?php echo $this->context->description ?>">
-    <link rel="stylesheet" href="https://file.viplgw.cn/ui/book/cn/css/public.css?v=1.0.2">
-    <link rel="stylesheet" href="https://file.viplgw.cn/ui/home/cn/css/animate.min.css">
-    <link rel="stylesheet" href="https://file.viplgw.cn/ui/home/cn/css/index-3.css?v=2.1.11">
-    <script>
-        //        百度监控访问数据
-
-    </script>
-    <script type="text/javascript" src="https://file.viplgw.cn/ui/home/cn/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="https://file.viplgw.cn/ui/home/cn/js/jquery.SuperSlide.2.1.1.js"></script>
-    <script type="text/javascript" src="https://file.viplgw.cn/ui/book/cn/js/index.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" type="text/css" href="pc/css/kefu.css"> -->
+    <script src="pc/js/jquery-1.8.3.min.js" type="text/javascript"></script>
 </head>
 
-<?=$content?>
+<!-- <script type="text/javascript">
+$(function(){
+    $("#aFloatTools_Show").click(function(){
+        $('#divFloatToolsView').animate({width:'show',opacity:'show'},100,function(){$('#divFloatToolsView').show();});
+        $('#aFloatTools_Show').hide();
+        $('#aFloatTools_Hide').show();				
+    });
+    $("#aFloatTools_Hide").click(function(){
+        $('#divFloatToolsView').animate({width:'hide', opacity:'hide'},100,function(){$('#divFloatToolsView').hide();});
+        $('#aFloatTools_Show').show();
+        $('#aFloatTools_Hide').hide();	
+    });
+});
+</script> -->
+<!--kefu-->
+<!-- <div id="floatTools" class="rides-cs" style="height:246px;">
+  <div class="floatL">
+  	<a style="display:block" id="aFloatTools_Show" class="btnOpen" title="查看在线客服" style="top:20px" href="javascript:void(0);">展开</a>
+  	<a style="display:none" id="aFloatTools_Hide" class="btnCtn" title="关闭在线客服" style="top:20px" href="javascript:void(0);">收缩</a>
+  </div>
+  <div id="divFloatToolsView" class="floatR" style="display: none;height:237px;width: 140px;">
+    <div class="cn">
+      <h3 class="titZx">在线客服</h3>
+      <ul>
+        <li><span>客服1</span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes"><img border="0" src="pc/image/kefu/online.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a> </li>
+        <li><span>客服2</span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes"><img border="0" src="pc/image/kefu/online.png" alt="点击这里给我发消息" title="点击这里给我发消息"/></a> </li>
+        <li>
+            <a href="http://www.sucaijiayuan.com/Js" target="_blank">微信二维码</a>
 
+
+            <div class="div_clear"></div>
+        </li>
+
+
+      </ul>
+      <img src="pc/image/kefu/lun1.png" style="width:50%;" border="0"  alt="">
+    </div>
+  </div>
+</div> -->
+<!--kefu-->
+
+<?=$content?>
 </body>
 </html>
