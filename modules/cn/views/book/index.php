@@ -99,7 +99,8 @@
     <div class="videocontainer">
         <video class="fullscreenvideo" playsinline="" autoplay="" muted="" loop="">
         <!-- <source src="http://fd.aigei.com/pvvdo_fast/vdo/mp4/f7/f77c9af3b0364be4b94f52fee154fc99.mp4?e=1592421660&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:EvR2Ky4jnZqjJzgzSLcWJvt9lcQ=" type="video/mp4"> -->
-        <source src="http://fd.aigei.com/pvvdo_fast/vdo/mp4/d1/d195d6afd6154b0badc1a5858ae2cdc8.mp4?e=1592421660&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:TyTx7zapVGwPgVDhzvtOI8sLWg0=" type="video/mp4">
+        <!-- <source src="http://fd.aigei.com/pvvdo_fast/vdo/mp4/d1/d195d6afd6154b0badc1a5858ae2cdc8.mp4?e=1592421660&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:TyTx7zapVGwPgVDhzvtOI8sLWg0=" type="video/mp4"> -->
+        <source src="http://fd.aigei.com/pvvdo_fast/vdo/mp4/b3/b367a61dd15f4cf7a3266629b4ff5f71.mp4?e=1592424660&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:yiL19jCjeK-Quyqi6fvRO7W05ps=" type="video/mp4">
 
         
         
