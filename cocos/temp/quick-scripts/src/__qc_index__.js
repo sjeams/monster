@@ -1,4 +1,5 @@
 
+require('./assets/Script/commonjs/alert');
 require('./assets/Script/login/Alert');
 require('./assets/Script/login/ProgressBarScript');
 require('./assets/Script/login/SpriteTextTool');

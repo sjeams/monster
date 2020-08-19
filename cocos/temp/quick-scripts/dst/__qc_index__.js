@@ -10,6 +10,7 @@
                     };
                     function __define (exports, require, module) {
                         if (!nodeEnv) {__quick_compile_project__.registerModule(__filename, module);}
+require('./assets/Script/commonjs/alert');
 require('./assets/Script/login/Alert');
 require('./assets/Script/login/ProgressBarScript');
 require('./assets/Script/login/SpriteTextTool');

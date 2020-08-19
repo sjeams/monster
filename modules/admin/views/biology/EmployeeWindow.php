@@ -31,7 +31,7 @@
                 <td style="width:80px;">形象</td>
                 <td rowspan="5" style="border:1px solid #cccccc">   
                     <a href="#" class="btn btn-info" onclick="upImage();">   
-                        <img src="" id ="infor-picture" alt="形象" style="width:100%;height:160px">
+                        <img src="" id ="infor-picture" alt="形象" style="width:150px;height:160px">
                         <input name="picture" class="picture mini-textbox" style="display:none"  placeholder="图片地址">
                     </a>
                 </td>

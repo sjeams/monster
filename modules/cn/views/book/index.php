@@ -37,6 +37,7 @@
     width: 100%;
     height: 100%;
     overflow: scroll;
+    overflow-x:hidden;
     z-index: -100; 
     left: -1px;
     top: 0;
@@ -58,23 +59,27 @@
 
 
 /* 布局 */
-.header{ position:fixed; margin:0px auto; left:0; right:0;top:0;width:100%; height:40px;  background: #444444; text-align: center; line-height: 40px; z-index: 100; color:  white;}
+.header{ position:fixed; margin:0px auto; left:0; right:0;top:0;width:100%; height:40px;  background: #000000; text-align: center; line-height: 40px; z-index: 100; color:  white;}
 .content{  position:absolute; margin:40px auto ; left:0; top:0; right:0;bottom:0;  width:calc(100% - 320px);  height:100%; }
 .left{ position:fixed; margin:40px 40px; float: left; }
-.center{  position:relative; margin:0px auto; 
-    box-shadow:2px 2px 6px #000000 inset;  width:100%; height:200px; border-radius: 5px; background: rgba(255, 255, 255, 0.7) ;
+.center{  position:relative; margin:0px auto;  left:-1px;
  }
-.right{ position:fixed; margin:40px 40px; right:10px;bottom:10px; 
-    box-shadow:2px 2px 6px rgba(0, 0, 0, 0) inset; width:80px; height:80px; border-radius: 5px; background: rgba(255, 255, 255, 0); 
+
+.gonggao{width:100%; height:80px; }
+
+ .box{     box-shadow:2px 2px 6px #000000 inset;  border-radius: 1px; background: rgba(0, 0, 0, 0.3) ;
+}
+.right{ position:fixed; margin:40px 40px; right:10px;bottom:20px;  color: white;
+    box-shadow:2px 2px 6px rgba(0, 0, 0, 0) inset; width:80px; height:80px; border-radius: 1px; background: rgba(255, 255, 255, 0); 
     }
 
 
-.foot{ position:fixed; margin:0px auto; left:0; right:0;bottom:0;width:100%; height:20px;  background: #FFFFFF; text-align: center; line-height: 20px; z-index: 100;color:  #000000; }
+.foot{ position:fixed; margin:0px auto; left:0; right:0;bottom:0;width:100%; height:30px;  background: rgba(0, 0, 0, 0.3); text-align: center; line-height: 30px; z-index: 100;color:  #FFFFFF; }
 /* .box2 img {box-shadow:2px 0px 0px #000}  */
-.clear{position: absolute; margin:10px 10px; }
+.clear{position: absolute; margin:10px 10px; color:white }
 .saoma{width: 100%; text-align: center} 
 /* height:20vw;  */
-.topBanner{ height: 380px;      border-radius: 5px; left:-1px;  }
+.topBanner{ height: 380px;      border-radius: 1px; left:-1px;  }
 .imgwidth{
     opacity: 0.9;
     /* border: 1px solid blue; */
@@ -86,6 +91,9 @@
     /* background: url(pc/image/lunbo/lunbo5) no-repeat; */
     background-size: cover;
 }
+
+.zhnshi{ width:100%; height:240px; }
+
 </style>
 <!-- <link rel="stylesheet" href="https://file.viplgw.cn/ui/book/cn/css/bookIndex.css?v=1.1.2"> -->
 <link rel="stylesheet" href="public/css/swiper.min.css">
@@ -100,55 +108,76 @@
         <video class="fullscreenvideo" playsinline="" autoplay="" muted="" loop="">
         <!-- <source src="http://fd.aigei.com/pvvdo_fast/vdo/mp4/f7/f77c9af3b0364be4b94f52fee154fc99.mp4?e=1592421660&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:EvR2Ky4jnZqjJzgzSLcWJvt9lcQ=" type="video/mp4"> -->
         <!-- <source src="http://fd.aigei.com/pvvdo_fast/vdo/mp4/d1/d195d6afd6154b0badc1a5858ae2cdc8.mp4?e=1592421660&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:TyTx7zapVGwPgVDhzvtOI8sLWg0=" type="video/mp4"> -->
-        <source src="http://fd.aigei.com/pvvdo_fast/vdo/mp4/b3/b367a61dd15f4cf7a3266629b4ff5f71.mp4?e=1592424660&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:yiL19jCjeK-Quyqi6fvRO7W05ps=" type="video/mp4">
-
+       
+        <!-- <source src="http://fd.aigei.com/pvvdo_fast/vdo/mp4/b3/b367a61dd15f4cf7a3266629b4ff5f71.mp4?e=1592424660&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:yiL19jCjeK-Quyqi6fvRO7W05ps=" type="video/mp4"> -->
+        <source src="/public/music/video.mp4" type="video/mp4">
         
         
         </video>
         <div class="left box2"><img src="pc/image/video/lunhui.png" alt="" class="log">  
         <!-- <iframe src="https://zhanyuzhang.github.io/lovely-cat/cat.html" id="catIframe" frameborder="0"></iframe> -->
         </div> 
-            <div class="content">
-                <!--    轮播-->
-                <div class="banner">
-                    <div class="swiper-container  topBanner">
-                        <div class="swiper-wrapper">
-                            <!-- <div class="swiper-slide imgwidth"><a href=""><img src="pc/image/lunbo/lunbo1.jpg" alt=""></a></div> -->
-                            <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo1.jpg" alt="" class="imgwidth"></a></div>
-                            <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo2.jpg" alt="" class="imgwidth"></a></div>
-                            <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo3.jpg" alt="" class="imgwidth"></a></div>
-                            <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo4.jpg" alt="" class="imgwidth"></a></div>
-                            <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo5.jpg" alt="" class="imgwidth"></a></div>
-                            <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo6.jpg" alt="" class="imgwidth"></a></div>
-                            <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo7.jpg" alt="" class="imgwidth"></a></div>
-                            <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo8.jpg" alt="" class="imgwidth"></a></div>
-                            <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo9.jpg" alt="" class="imgwidth"></a></div>
+        <div class="content">
 
-                        </div>
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination topPagination"></div>
-                    </div>
+
+            <!-- <div class="center box">
+                <div class="clear">最新公告：<br>
+                    服务器于2020年9月进行公测！
                 </div>
-
-                <div class="center box">
-                    <div class="clear">最新公告：<br>
-                        服务器于2020年9月进行公测！
-                    </div>
-                </div> 
-                
-                <div style="height:20px"> </div>
-            </div>
-            <div class="right">
-                <img src="pc/image/kefu/lun1.png" style="width:100%;height:100%"   alt="">
-                <div class="saoma">APP下载</div>
+            </div>  -->
+            <div class="center gonggao ">
+                <div class="clear">最新公告：<br>
+                    服务器于2020年9月进行公测！
+                </div>
             </div> 
+
+            <!--    轮播-->
+            <div class="banner">
+                <div class="swiper-container  topBanner">
+                    <div class="swiper-wrapper">
+                        <!-- <div class="swiper-slide imgwidth"><a href=""><img src="pc/image/lunbo/lunbo1.jpg" alt=""></a></div> -->
+                        <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo1.jpg" alt="" class="imgwidth"></a></div>
+                        <!-- <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo2.jpg" alt="" class="imgwidth"></a></div> -->
+                        <!-- <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo3.jpg" alt="" class="imgwidth"></a></div> -->
+                        <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo4.jpg" alt="" class="imgwidth"></a></div>
+                        <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo5.jpg" alt="" class="imgwidth"></a></div>
+                        <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo6.jpg" alt="" class="imgwidth"></a></div>
+                        <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo7.jpg" alt="" class="imgwidth"></a></div>
+                        <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo8.jpg" alt="" class="imgwidth"></a></div>
+                        <div class="swiper-slide "><a href=""><img src="pc/image/lunbo/lunbo9.jpg" alt="" class="imgwidth"></a></div>
+
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination topPagination"></div>
+                </div>
+            </div>
+
+
+            <div class="center zhnshi box">
+                <div class="clear">最新公告：<br>
+                    服务器于2020年9月进行公测！
+                </div>
+            </div> 
+            <div style="height:20px"> </div>
+        </div>
+        <div class="right">
+            <img src="pc/image/kefu/lun1.png" style="width:100%;height:100%"   alt="">
+            <div class="saoma">APP下载</div>
+        </div> 
+        <div class="foot">
+                轮回工作室-邮箱：359824901@qq.com
+        </div> 
     </div>
 
-    <div class="foot">
-            轮回工作室-邮箱：359824901@qq.com
-    </div> 
+
 </section>
 
+<!-- 
+<audio autoplay="autoplay" loop="loop" controls="controls">
+    <source src="/public/music/如忆玉儿曲2.mp3"
+        type="audio/mpeg">
+</audio> -->
+<embed src="/public/music/如忆玉儿曲2.mp3" width=170 height=25 loop="true" autostart="true">
 <script>
         var BannerSwiper = new Swiper('.topBanner', {
             slidesPerView: 1,
