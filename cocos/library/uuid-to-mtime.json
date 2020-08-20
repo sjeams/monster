@@ -495,8 +495,8 @@
     "relativePath": "Scene\\loading.fire"
   },
   "c36e2d2a-abe2-4ce0-81f4-07ae095bbe93": {
-    "asset": 1597832589048,
-    "meta": 1597832589055,
+    "asset": 1597916460340,
+    "meta": 1597916460349,
     "relativePath": "Scene\\login.fire"
   },
   "6fec8c7b-21bb-4499-bd73-93b60f052f76": {
@@ -513,11 +513,6 @@
     "asset": 1590049607642,
     "meta": 1589266400944,
     "relativePath": "Script\\login"
-  },
-  "2045bef5-9c71-43c3-b5ff-2a0c7eeb1332": {
-    "asset": 1589534175584,
-    "meta": 1597716158976,
-    "relativePath": "Script\\login\\Alert.js"
   },
   "e483a6af-1f42-4371-808f-155228cd65ed": {
     "asset": 1589531688056,
@@ -550,7 +545,7 @@
     "relativePath": "Script\\scence"
   },
   "965131dd-c249-4d82-9895-ac1588ec29b0": {
-    "asset": 1597830566450,
+    "asset": 1597832233035,
     "meta": 1589256271081,
     "relativePath": "Textrue"
   },
@@ -627,11 +622,76 @@
   "4632fb66-2a90-495b-b8e3-68d35ce762dd": {
     "asset": 1597831561038,
     "meta": 1597831561073,
-    "relativePath": "Textrue\\玄幻-修仙地址-12_爱给网_aigei_com.jpg"
+    "relativePath": "Textrue\\login\\玄幻-修仙地址-12_爱给网_aigei_com.jpg"
   },
-  "4d177852-0b85-4228-b2d4-1899086aebe6": {
+  "0a7fee4f-d838-42e7-a302-b0fd4a53175a": {
+    "asset": 1597890678701,
+    "meta": 1597890678699,
+    "relativePath": "Textrue\\login"
+  },
+  "7a1ba5fc-9eab-44c0-94ab-6b10849093ca": {
+    "asset": 1597890675360,
+    "meta": 1597890794256,
+    "relativePath": "Textrue\\login\\13334.png"
+  },
+  "6e84f30f-b57f-4cf8-aa09-57512135d508": {
+    "asset": 1597830566448,
+    "meta": 1597890794258,
+    "relativePath": "Textrue\\login\\13333.png"
+  },
+  "b61107e5-88c6-4463-b502-5dcc0ae4eebb": {
     "asset": 1597832233034,
-    "meta": 1597832233053,
-    "relativePath": "Textrue\\159783220950570.png"
+    "meta": 1597890794266,
+    "relativePath": "Textrue\\login\\13335.png"
+  },
+  "3750e7e3-dc24-435c-a43c-f3f3352474fa": {
+    "asset": 1597891123787,
+    "meta": 1597891123851,
+    "relativePath": "Textrue\\login\\20200819100346.png"
+  },
+  "0b4def80-0f5b-48b0-badc-4bc8383ef3b3": {
+    "asset": 1597892191011,
+    "meta": 1597892192404,
+    "relativePath": "Textrue\\login\\1331.png"
+  },
+  "7d55b773-b808-433b-aa68-27c1885f5785": {
+    "asset": 1597892978151,
+    "meta": 1597892978180,
+    "relativePath": "Textrue\\login\\c20200819100346.png"
+  },
+  "0a93ad5f-359b-49b8-ac89-5d44af8d855a": {
+    "asset": 1597897074692,
+    "meta": 1597897092763,
+    "relativePath": "Textrue\\login\\13330.png"
+  },
+  "d08333d0-adda-401b-abb9-63edc482481c": {
+    "asset": 1597911752989,
+    "meta": 1597911753067,
+    "relativePath": "resources\\c20200819100346.prefab"
+  },
+  "62b6a7be-cc3d-4363-8a61-3f88d3328322": {
+    "asset": 1597911758995,
+    "meta": 1597911759010,
+    "relativePath": "resources\\prefabs\\c20200819100346.prefab"
+  },
+  "89e3adbb-010b-4d47-ab9b-a38017b7b36c": {
+    "asset": 1597914243362,
+    "meta": 1597914243429,
+    "relativePath": "Textrue\\login\\caa20200819100337.png"
+  },
+  "f48871b9-ebde-4788-9221-ba9c6114f3a7": {
+    "asset": 1597915509062,
+    "meta": 1597915509133,
+    "relativePath": "Textrue\\login\\cac20200819100337.png"
+  },
+  "2f79e2ca-9d55-462a-86df-6bd0b4d12626": {
+    "asset": 1597916319211,
+    "meta": 1597916329847,
+    "relativePath": "Textrue\\login\\canser.png"
+  },
+  "2045bef5-9c71-43c3-b5ff-2a0c7eeb1332": {
+    "asset": 1597916434315,
+    "meta": 1597916443603,
+    "relativePath": "Script\\login\\Alert.js"
   }
 }

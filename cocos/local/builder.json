@@ -1,8 +1,8 @@
 {
-  "platform": "web-mobile",
-  "actualPlatform": "web-mobile",
+  "platform": "android",
+  "actualPlatform": "android",
   "template": "link",
-  "buildPath": "./",
+  "buildPath": "fabu",
   "debug": false,
   "sourceMaps": false,
   "embedWebDebugger": false,
