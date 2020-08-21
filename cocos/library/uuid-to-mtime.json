@@ -480,7 +480,7 @@
     "relativePath": "model\\primitives.fbx"
   },
   "2a742be0-8ee9-423b-b78e-f806b436d97a": {
-    "asset": 1597718841191,
+    "asset": 1597911753066,
     "meta": 1589435170497,
     "relativePath": "resources"
   },
@@ -495,8 +495,8 @@
     "relativePath": "Scene\\loading.fire"
   },
   "c36e2d2a-abe2-4ce0-81f4-07ae095bbe93": {
-    "asset": 1597916460340,
-    "meta": 1597916460349,
+    "asset": 1598005868919,
+    "meta": 1598005868925,
     "relativePath": "Scene\\login.fire"
   },
   "6fec8c7b-21bb-4499-bd73-93b60f052f76": {
@@ -545,7 +545,7 @@
     "relativePath": "Script\\scence"
   },
   "965131dd-c249-4d82-9895-ac1588ec29b0": {
-    "asset": 1597832233035,
+    "asset": 1597892525068,
     "meta": 1589256271081,
     "relativePath": "Textrue"
   },
@@ -594,11 +594,6 @@
     "meta": 1597716159391,
     "relativePath": "Script\\scence\\wap.js"
   },
-  "bfe2cf6e-0736-4b65-b40b-e26d5e8f8b44": {
-    "asset": 1590052424037,
-    "meta": 1597716159213,
-    "relativePath": "Script\\login\\myserver.js"
-  },
   "691a3028-996b-4fba-9948-79747b2deb3d": {
     "asset": 1597717663257,
     "meta": 1597717633558,
@@ -610,7 +605,7 @@
     "relativePath": "Script\\commonjs\\alert.js"
   },
   "11419367-4da7-4096-a9a4-51666f1d1905": {
-    "asset": 1597718654731,
+    "asset": 1597911759010,
     "meta": 1597718654732,
     "relativePath": "resources\\prefabs"
   },
@@ -625,7 +620,7 @@
     "relativePath": "Textrue\\login\\玄幻-修仙地址-12_爱给网_aigei_com.jpg"
   },
   "0a7fee4f-d838-42e7-a302-b0fd4a53175a": {
-    "asset": 1597890678701,
+    "asset": 1597916329819,
     "meta": 1597890678699,
     "relativePath": "Textrue\\login"
   },
@@ -693,5 +688,50 @@
     "asset": 1597916434315,
     "meta": 1597916443603,
     "relativePath": "Script\\login\\Alert.js"
+  },
+  "86c0c464-5bc7-4d40-bbcc-a00029a3b7a5": {
+    "asset": 1597999426407,
+    "meta": 1598000516978,
+    "relativePath": "Textrue\\login\\role.jpg"
+  },
+  "c36814a1-f948-4855-b798-7a99aebbb506": {
+    "asset": 1598001948595,
+    "meta": 1598001948600,
+    "relativePath": "Scene\\register.fire"
+  },
+  "b72d4c0f-40be-45da-b936-956f39dc092c": {
+    "asset": 1598001864080,
+    "meta": 1598001864081,
+    "relativePath": "Scene\\model"
+  },
+  "34235350-b894-43aa-9725-8d614c5633e0": {
+    "asset": 1598002016377,
+    "meta": 1598002016383,
+    "relativePath": "Scene\\model\\dating.fire"
+  },
+  "0c0dbb1e-cbde-40a9-8be5-515480cc6520": {
+    "asset": 1598001910465,
+    "meta": 1598001910466,
+    "relativePath": "Textrue\\model"
+  },
+  "1ce798e8-8c3e-4853-b85a-2401c747c366": {
+    "asset": 1598001924102,
+    "meta": 1598001924104,
+    "relativePath": "Textrue\\model\\dating"
+  },
+  "65e013ac-efd8-4b8f-a6f9-e2e6344f9046": {
+    "asset": 1598001940162,
+    "meta": 1598002013491,
+    "relativePath": "Textrue\\model\\dating\\dating.jpg"
+  },
+  "ba214e94-6433-4303-b8d1-e836f12cef2c": {
+    "asset": 1598002257427,
+    "meta": 1598002289513,
+    "relativePath": "Script\\login\\role.js"
+  },
+  "bfe2cf6e-0736-4b65-b40b-e26d5e8f8b44": {
+    "asset": 1598002419085,
+    "meta": 1598002509118,
+    "relativePath": "Script\\login\\myserver.js"
   }
 }

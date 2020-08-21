@@ -93,12 +93,14 @@ class ApiServerController extends ApiControl{
             $login =  UserLogin ::find()->select('id')->where( "loginname = '{$data['loginname']}'  and  password = '{$data['password']}' "  )->asArray()->One();
             if(!empty($login)){ // 验证登录
                 $userinfo =  User::find()->where( "loginid = {$login['id']}  and  server = {$data['serverid']} ")->asArray()->One();
+                $server =  UserServer::find()->select("id,name")->where( "id = {$data['serverid']} ")->asArray()->One();
+                $server['loginid'] =$login['id']; // 定义loginid
                 if(!empty($userinfo)){
                     // var_dump($userinfo);die;
-                    die(json_encode(['code' => 1,'data'=>['userinfo' =>$userinfo],'message' => '登录成功'])); 
+                    die(json_encode(['code' => 1,'data'=>['userinfo' =>$userinfo,'server'=>$server],'message' => '登录成功'])); 
                     // 登录状态储存操作
                 }else{
-                    die(json_encode(['code' => 2,'data'=>['userinfo' =>null],'message' => '未创建角色'])); 
+                    die(json_encode(['code' => 2,'data'=>['userinfo' =>null,'server'=>$server],'message' => '未创建角色'])); 
                     // 登录状态储存操作
                 }
 
@@ -109,18 +111,20 @@ class ApiServerController extends ApiControl{
     /**
      * 创建角色
      * app/api-server/user-login
-     * http://localhost/monster/web/app/api-server/user-login
+     * http://localhost/monster/web/app/api-server/user-role
      */
-     public function actionUserCreatot(){
+     public function actionUserRole(){
         $data = json_decode(Yii::$app->request->post('data'),true);//游客标识码 // key =123&name =cc 拼接 
         if(!empty($data)){
             $userinfo =  new User();
             $userinfo->loginid =$data['loginid'];
-            $userinfo->serverid =$data['serverid'];
-            $userinfo->loginid =$data['name'];
+            $userinfo->server =$data['server'];
+            $userinfo->name =$data['name'];
+            $userinfo->servername =$data['servername'];
             $userinfo->save();
-            $userinfo =  User::find()->where( "loginid = {$data['loginid']}  and  server = {$data['serverid']} ")->asArray()->One();
-            die(json_encode(['code' => 0,'data'=>['userinfo' =>null],'message' => '未登录']));   
+            $id = $userinfo->attributes['userid'];
+            $userinfo =  User::find()->where( "userid =$id")->asArray()->One();
+            die(json_encode(['code' => 1,'data'=>['userinfo' =>$userinfo],'message' => 'succes']));   
         }
         die(json_encode(['code' => 0,'data'=>['userinfo' =>null],'message' => '未登录']));   
      }
