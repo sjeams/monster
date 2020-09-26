@@ -69,15 +69,26 @@ cc.Class({
 
       if (data.code == 0) {// 登录失败，或本地数据失效
         // 弹窗
-      }
+      } else {
+        // 设置服务器
+        cc.sys.localStorage.setItem('server', JSON.stringify(data.data.server));
 
-      if (data.code == 1) {
-        // 登录成功，进入游戏
-        cc.log(data.data.userinfo); // cc.sys.localStorage.getItem(key); //读取数据
-      }
+        if (data.code == 1) {
+          // 登录成功，进入游戏
+          // cc.log(data.data.userinfo); 
+          cc.sys.localStorage.setItem('userinfo', JSON.stringify(data.data.userinfo));
+          cc.director.loadScene('model/dating'); // cc.sys.localStorage.setItem('userinfo', JSON.stringify(data.data.userinfo));
+          // cc.sys.localStorage.getItem(key); //读取数据
+        }
 
-      if (data.code == 2) {// 登录成功，未定义角色
-        // 进入定义角色界面     
+        if (data.code == 2) {
+          // 登录成功，未定义角色
+          // 进入定义角色界面     
+          var server = JSON.parse(cc.sys.localStorage.getItem('server')); // cc.log(server); 
+          // 创建角色
+
+          cc.director.loadScene('register');
+        }
       }
     }); //这里 event 是一个 Touch Event 对象，你可以通过 event.target 取到事件的发送节点
     // var node = event.target;
