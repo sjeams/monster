@@ -1,5 +1,5 @@
 {
-  "title": "lunhui",
+  "title": "xunxian",
   "packageName": "org.cocos2d.demo",
   "startScene": "8ec67a9e-6d17-4e2d-a168-9480379a78e8",
   "excludeScenes": [],
@@ -15,7 +15,7 @@
   "inlineSpriteFrames_native": true,
   "mergeStartScene": false,
   "optimizeHotUpdate": false,
-  "md5Cache": true,
+  "md5Cache": false,
   "encryptJs": true,
   "xxteaKey": "68bfaeff-7615-4e",
   "zipCompressJs": true,

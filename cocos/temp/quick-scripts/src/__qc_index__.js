@@ -10,4 +10,5 @@ require('./assets/Script/login/loading');
 require('./assets/Script/login/myserver');
 require('./assets/Script/login/popup_dlg');
 require('./assets/Script/login/role');
+require('./assets/Script/scence/loadin_fist');
 require('./assets/Script/scence/wap');

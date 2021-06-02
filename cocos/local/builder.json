@@ -1,6 +1,6 @@
 {
-  "platform": "android",
-  "actualPlatform": "android",
+  "platform": "mini-game",
+  "actualPlatform": "wechatgame",
   "template": "link",
   "buildPath": "fabu",
   "debug": false,
@@ -16,5 +16,5 @@
   "apiLevel": "",
   "appABIs": [],
   "vsVersion": "2017",
-  "buildScriptsOnly": true
+  "buildScriptsOnly": false
 }
