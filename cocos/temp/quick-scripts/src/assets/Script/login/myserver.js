@@ -57,12 +57,15 @@ cc.Class({
     });
   },
   btnClick1: function btnClick1(event, customEventData) {
-    // 请求登录接口
-    var params = {
-      'loginname': 'yincan1993',
-      'password': 123456,
-      'serverid': 1
-    }; // let httpRequest =  new HttpHelper();  
+    // // 请求登录接口
+    // var params = {
+    //         'loginname': 'yincan1993',
+    //         'password': 123456,
+    //         'serverid': 1,
+    // };
+    // cc.sys.localStorage.setItem('params', JSON.stringify(params));
+    var params = JSON.parse(cc.sys.localStorage.getItem("params")); // cc.log(value); 
+    // let httpRequest =  new HttpHelper();  
 
     httpRequest.httpPost('http://www.monster.com/app/api-server/user-login', params, function (data) {
       cc.log(data);
@@ -77,7 +80,7 @@ cc.Class({
           // 登录成功，进入游戏
           // cc.log(data.data.userinfo); 
           cc.sys.localStorage.setItem('userinfo', JSON.stringify(data.data.userinfo));
-          cc.director.loadScene('model/dating'); // cc.sys.localStorage.setItem('userinfo', JSON.stringify(data.data.userinfo));
+          cc.director.loadScene('home/dating'); // cc.sys.localStorage.setItem('userinfo', JSON.stringify(data.data.userinfo));
           // cc.sys.localStorage.getItem(key); //读取数据
         }
 

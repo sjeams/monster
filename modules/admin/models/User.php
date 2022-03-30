@@ -306,7 +306,7 @@ class User extends ActiveRecord
         $agile = max($agile1,$agile2)+10;
         $intelligence = max($intelligence1,$intelligence2)+10;
    
-        $value =  BiologyExtenValue($power,$agile,$intelligence,$extendrand); //属性加成随机取值
+        $value =User:: BiologyExtenValue($power,$agile,$intelligence,$extendrand); //属性加成随机取值
 
         //概率融合 50
         if(rand(0,1)){//为真保留1

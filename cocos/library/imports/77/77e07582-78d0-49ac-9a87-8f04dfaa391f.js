@@ -150,10 +150,24 @@ cc.Class({
   },
   loadnextScene: function loadnextScene() {
     // 登录预加载
-    cc.director.preloadScene('login', function () {
-      cc.log('登录预加载');
+    cc.director.preloadScene('index', function () {
+      cc.log('登录预加载'); // // 请求登录接口
+      // var params = {
+      //         'loginname': 'yincan1993',
+      //         'password': 123456,
+      //         'serverid': 1,
+      // };
     });
-    cc.director.loadScene('login');
+    var params = cc.sys.localStorage.getItem("params");
+
+    if (params) {
+      cc.log('快速登录');
+      cc.log(params);
+      cc.director.loadScene('index'); // cc.sys.localStorage.setItem('params', JSON.stringify(params)); 
+    } else {
+      cc.log('账号注册/登录');
+      cc.director.loadScene('index'); // cc.sys.localStorage.setItem('params', JSON.stringify(params));
+    }
   } // 　　 changeBj: function(){
   // 　　　　var url = 'globalUI/video/gVideoPlayClick';
   // 　　　　var _this = this; cc.loader.loadRes(url,cc.SpriteFrame,function(err,spriteFrame)

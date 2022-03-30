@@ -198,7 +198,7 @@
       "array": [
         0,
         0,
-        232.31131456517568,
+        251.14736709748723,
         0,
         0,
         0,
@@ -2722,7 +2722,7 @@
   {
     "__type__": "cc.Node",
     "_name": "tips",
-    "_objFlags": 0,
+    "_objFlags": 512,
     "_parent": {
       "__id__": 2
     },
@@ -3004,7 +3004,7 @@
     },
     "_enabled": true,
     "_useOriginalSize": true,
-    "_string": "请大家在游戏中发言时，不要带有国家领导人或者侮辱性的。\n如果官方发现，一律严处。",
+    "_string": "\n如果官方发现，一律严处。",
     "returnType": 0,
     "maxLength": 400,
     "_tabIndex": 0,
@@ -3186,8 +3186,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "请大家在游戏中发言时，不要带有国家领导人或者侮辱性的。\n如果官方发现，一律严处。",
-    "_N$string": "请大家在游戏中发言时，不要带有国家领导人或者侮辱性的。\n如果官方发现，一律严处。",
+    "_string": "\n如果官方发现，一律严处。",
+    "_N$string": "\n如果官方发现，一律严处。",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,

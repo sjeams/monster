@@ -1,6 +1,6 @@
 "use strict";
 cc._RF.push(module, 'b005bs3OsxEXphcM4J27bYW', 'wap');
-// Script/scence/wap.js
+// Script/model/wap.js
 
 "use strict";
 
@@ -30,13 +30,10 @@ cc.Class({
   },
   // LIFE-CYCLE CALLBACKS:
   // onLoad () {},
-  start: function start() {
-    var _this = this;
-
-    this.updateCanvasSize();
-    cc.view.setResizeCallback(function () {
-      _this.updateCanvasSize();
-    });
+  start: function start() {// this.updateCanvasSize();
+    // cc.view.setResizeCallback(() => {
+    //     this.updateCanvasSize();
+    // })
   } // 自由切换横竖屏，动态设置设计分辨率和适配模式。
   // updateCanvasSize() {
   //     let size = cc.view.getFrameSize();

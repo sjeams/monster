@@ -1,5 +1,10 @@
 
+require('./assets/Script/bage/Conf');
+require('./assets/Script/bage/Game');
+require('./assets/Script/bage/Tool');
 require('./assets/Script/commonjs/alert');
+require('./assets/Script/commonjs/post');
+require('./assets/Script/home_js/userinfo');
 require('./assets/Script/login/Alert');
 require('./assets/Script/login/ProgressBarScript');
 require('./assets/Script/login/SpriteTextTool');
@@ -10,5 +15,6 @@ require('./assets/Script/login/loading');
 require('./assets/Script/login/myserver');
 require('./assets/Script/login/popup_dlg');
 require('./assets/Script/login/role');
-require('./assets/Script/scence/loadin_fist');
+require('./assets/Script/scence/loading_fist');
+require('./assets/Script/scence/scoretrump');
 require('./assets/Script/scence/wap');
